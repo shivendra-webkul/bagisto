@@ -1,6 +1,6 @@
 <v-datagrid-export {{ $attributes }}>
     <div class="transparent-button hover:bg-gray-200 dark:text-white dark:hover:bg-gray-800">
-        <span class="icon-export text-xl text-gray-600"></span>
+        <span class="icon-admin-export text-xl text-gray-600"></span>
 
         @lang('admin::app.export.export')
     </div>
@@ -13,20 +13,23 @@
     >
         <div>
             <x-admin::modal ref="exportModal">
+                <!-- Modal Toggler -->
                 <x-slot:toggle>
                     <button class="transparent-button hover:bg-gray-200 dark:text-white dark:hover:bg-gray-800">
-                        <span class="icon-export text-xl text-gray-600"></span>
+                        <span class="icon-admin-export text-xl text-gray-600"></span>
 
                         @lang('admin::app.export.export')
                     </button>
                 </x-slot>
 
+                <!-- Modal Header -->
                 <x-slot:header>
                     <p class="text-lg font-bold text-gray-800 dark:text-white">
                         @lang('admin::app.export.download')
                     </p>
                 </x-slot>
 
+                <!-- Modal Content -->
                 <x-slot:content>
                     <x-admin::form action="">
                         <x-admin::form.control-group class="!mb-0">
@@ -51,14 +54,15 @@
                     </x-admin::form>
                 </x-slot>
 
+                <!-- Modal Footer -->
                 <x-slot:footer>
-                    <button
-                        type="button"
+                    <!-- Save Button -->
+                    <x-admin::button
+                        button-type="button"
                         class="primary-button"
+                        :title="trans('admin::app.export.export')"
                         @click="download"
-                    >
-                        @lang('admin::app.export.export')
-                    </button>
+                    />
                 </x-slot>
             </x-admin::modal>
         </div>

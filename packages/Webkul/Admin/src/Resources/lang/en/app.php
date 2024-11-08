@@ -34,7 +34,7 @@ return [
 
     'notifications' => [
         'description-text'      => 'List all the Notifications',
-        'marked-success'        => 'Notification Marked Successfully',
+        'marked-success'        => 'All notifications has been marked as read',
         'no-record'             => 'No Record Found',
         'of'                    => 'of',
         'per-page'              => 'Per Page',
@@ -43,6 +43,7 @@ return [
         'view-all'              => 'View All',
 
         'order-status-messages' => [
+            'all'             => 'All',
             'canceled'        => 'Order Canceled',
             'closed'          => 'Order Closed',
             'completed'       => 'Order Completed',
@@ -1060,6 +1061,7 @@ return [
                     'date-time'           => 'Date Time',
                     'delete'              => 'Delete',
                     'edit'                => 'Edit',
+                    'false'               => 'False',
                     'file'                => 'File',
                     'id'                  => 'ID',
                     'image'               => 'Image',
@@ -1072,6 +1074,7 @@ return [
                     'select'              => 'Select',
                     'text'                => 'Text',
                     'textarea'            => 'Textarea',
+                    'true'                => 'True',
                     'type'                => 'Type',
                     'unique'              => 'Unique',
                 ],
@@ -3461,6 +3464,108 @@ return [
                         'vicuna'            => 'Vicuna',
                     ],
                 ],
+
+                'sitemap' => [
+                    'info'  => 'Set sitemap options.',
+                    'title' => 'Sitemap',
+
+                    'settings' => [
+                        'enabled' => 'Enabled',
+                        'info'    => 'Enable or disable the sitemap for your website to improve search engine optimization and enhance user experience.',
+                        'title'   => 'Settings',
+                    ],
+
+                    'file-limits' => [
+                        'info'             => 'Set file limits options.',
+                        'max-file-size'    => 'Maximum file size',
+                        'max-url-per-file' => 'Maximum no. of URLs per file',
+                        'title'            => 'File Limits',
+                    ],
+
+                    'store-url' => [
+                        'info'  => 'Set frequency and priority option for the store URL.',
+
+                        'frequency' => [
+                            'title' => 'Frequency',
+
+                            'options' => [
+                                'always'  => 'Always',
+                                'daily'   => 'Daily',
+                                'hourly'  => 'Hourly',
+                                'monthly' => 'Monthly',
+                                'never'   => 'Never',
+                                'weekly'  => 'Weekly',
+                                'yearly'  => 'Yearly',
+                            ],
+                        ],
+
+                        'title'    => 'Store URL',
+                        'priority' => 'Priority',
+                    ],
+
+                    'categories' => [
+                        'info'  => 'Set frequency and priority option for the categories.',
+
+                        'frequency' => [
+                            'title' => 'Frequency',
+
+                            'options' => [
+                                'always'  => 'Always',
+                                'daily'   => 'Daily',
+                                'hourly'  => 'Hourly',
+                                'monthly' => 'Monthly',
+                                'never'   => 'Never',
+                                'weekly'  => 'Weekly',
+                                'yearly'  => 'Yearly',
+                            ],
+                        ],
+
+                        'title'    => 'Categories',
+                        'priority' => 'Priority',
+                    ],
+
+                    'products' => [
+                        'info'  => 'Set frequency and priority option for the products.',
+
+                        'frequency' => [
+                            'title' => 'Frequency',
+
+                            'options' => [
+                                'always'  => 'Always',
+                                'daily'   => 'Daily',
+                                'hourly'  => 'Hourly',
+                                'monthly' => 'Monthly',
+                                'never'   => 'Never',
+                                'weekly'  => 'Weekly',
+                                'yearly'  => 'Yearly',
+                            ],
+                        ],
+
+                        'title'    => 'Products',
+                        'priority' => 'Priority',
+                    ],
+
+                    'cms' => [
+                        'info'  => 'Set frequency and priority option for the CMS pages.',
+
+                        'frequency' => [
+                            'title' => 'Frequency',
+
+                            'options' => [
+                                'always'  => 'Always',
+                                'daily'   => 'Daily',
+                                'hourly'  => 'Hourly',
+                                'monthly' => 'Monthly',
+                                'never'   => 'Never',
+                                'weekly'  => 'Weekly',
+                                'yearly'  => 'Yearly',
+                            ],
+                        ],
+
+                        'title'    => 'CMS Pages',
+                        'priority' => 'Priority',
+                    ],
+                ],
             ],
 
             'catalog' => [
@@ -3468,7 +3573,7 @@ return [
                 'title' => 'Catalog',
 
                 'products' => [
-                    'info'  => 'Set guest checkout, product view page, cart view page, store front, review and attribute social share.',
+                    'info'  => 'Product view page, cart view page, store front, review and attribute social share.',
                     'title' => 'Products',
 
                     'settings' => [
@@ -3558,13 +3663,14 @@ return [
                     ],
 
                     'review' => [
-                        'allow-customer-review' => 'Allow Customer Review',
-                        'allow-guest-review'    => 'Allow Guest Review',
-                        'display-review-count'  => 'Display the review count for ratings.',
-                        'display-star-count'    => 'Display the star count in ratings.',
-                        'summary'               => 'Summary',
-                        'title'                 => 'Review',
-                        'title-info'            => 'Evaluation or assessment of something, often involving opinions and feedback.',
+                        'allow-customer-review'   => 'Allow Customer Review',
+                        'allow-guest-review'      => 'Allow Guest Review',
+                        'censoring-reviewer-name' => 'Censoring Reviewer Name',
+                        'display-review-count'    => 'Display the review count for ratings.',
+                        'display-star-count'      => 'Display the star count in ratings.',
+                        'summary'                 => 'Summary',
+                        'title'                   => 'Review',
+                        'title-info'              => 'Evaluation or assessment of something, often involving opinions and feedback.',
                     ],
 
                     'attribute' => [
@@ -3922,10 +4028,13 @@ return [
                     ],
 
                     'pdf-print-outs' => [
+                        'footer-text'      => 'Footer text',
+                        'footer-text-info' => 'Enter the text that will appear in the footer of the PDF.',
                         'info'             => 'Configure PDF Print Outs to display Invoice ID, Order ID in the header, and include the invoice logo.',
                         'invoice-id-info'  => 'Configure display of Invoice ID in Invoice Header.',
                         'invoice-id-title' => 'Display Invoice ID in Header',
                         'logo'             => 'Logo',
+                        'logo-info'        => 'Image resolution should be like 131px X 30px.',
                         'order-id-info'    => 'Configure display of Order ID in Invoice Header.',
                         'order-id-title'   => 'Display Order ID in Header',
                         'title'            => 'PDF Print Outs',
@@ -3997,7 +4106,7 @@ return [
 
                 'checkout' => [
                     'title' => 'Checkout',
-                    'info'  => 'Enable or Disable Mini Cart, cart Summary.',
+                    'info'  => 'Set guest checkout, Enable or Disable Mini Cart, cart Summary.',
 
                     'shopping-cart' => [
                         'cart-page'              => 'Cart Page',

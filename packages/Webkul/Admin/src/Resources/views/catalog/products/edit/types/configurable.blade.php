@@ -146,15 +146,12 @@
         
                         <!-- Modal Footer -->
                         <x-slot:footer>
-                            <!-- Modal Submission -->
-                            <div class="flex items-center gap-x-2.5">
-                                <button 
-                                    type="submit"
-                                    class="primary-button"
-                                >
-                                    @lang('admin::app.catalog.products.edit.types.configurable.create.save-btn')
-                                </button>
-                            </div>
+                            <!-- Save Button -->
+                            <x-admin::button
+                                button-type="button"
+                                class="primary-button"
+                                :title="trans('admin::app.catalog.products.edit.types.configurable.create.save-btn')"
+                            />
                         </x-slot>
                     </x-admin::modal>
                 </form>
@@ -338,6 +335,7 @@
                                                     <v-field
                                                         type="text"
                                                         :name="'inventories[' + inventorySource.id + ']'"
+                                                        value="0"
                                                         class="flex min-h-[39px] w-full rounded-md border bg-white px-3 py-1.5 text-sm font-normal text-gray-600 transition-all hover:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300"
                                                         :class="[errors['inventories[' + inventorySource.id + ']'] ? 'border border-red-500' : '']"
                                                         rules="required|numeric|min:0"

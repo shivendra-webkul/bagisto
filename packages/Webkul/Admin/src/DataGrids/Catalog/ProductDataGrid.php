@@ -133,12 +133,13 @@ class ProductDataGrid extends DataGrid
             'index'      => 'base_image',
             'label'      => trans('admin::app.catalog.products.index.datagrid.image'),
             'type'       => 'string',
+            'exportable' => false,
         ]);
 
         $this->addColumn([
             'index'      => 'price',
             'label'      => trans('admin::app.catalog.products.index.datagrid.price'),
-            'type'       => 'string',
+            'type'       => 'decimal',
             'filterable' => true,
             'sortable'   => true,
         ]);
@@ -297,7 +298,7 @@ class ProductDataGrid extends DataGrid
                 'size'          => $pagination['per_page'],
                 'stored_fields' => [],
                 'query'         => [
-                    'bool' => $this->getElasticFilters($params['filters'] ?? []) ?: new \stdClass(),
+                    'bool' => $this->getElasticFilters($params['filters'] ?? []) ?: new \stdClass,
                 ],
                 'sort'          => $this->getElasticSort($params['sort'] ?? []),
             ],
