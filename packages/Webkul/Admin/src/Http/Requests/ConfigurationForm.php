@@ -43,7 +43,7 @@ class ConfigurationForm extends FormRequest
     }
 
     /**
-     * Transform validation rules into an array and map custom validation rules
+     * Transform validation rules into an array and map custom validation rules.
      *
      * @param string|array $validation
      * @return array
