@@ -42,4 +42,11 @@ return [
         'class' => 'Webkul\Product\Type\Bundle',
         'sort'  => 6,
     ],
+
+    'booking' => [
+        'key'   => 'booking',
+        'name'  => 'booking::app.admin.catalog.products.type.booking',
+        'class' => 'Webkul\Product\Type\Booking',
+        'sort'  => 7,
+    ],
 ];

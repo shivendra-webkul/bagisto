@@ -51,6 +51,12 @@ return [
         'route'      => 'admin.sales.transactions.index',
         'sort'       => 5,
         'icon'       => '',
+    ], [
+        'key'   => 'sales.bookings',
+        'name'  => 'booking::app.admin.sales.bookings.title',
+        'route' => 'admin.sales.bookings.index',
+        'sort'  => 6,
+        'icon'  => '',
     ],
 
     /**

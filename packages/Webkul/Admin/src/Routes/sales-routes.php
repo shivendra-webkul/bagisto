@@ -7,6 +7,7 @@ use Webkul\Admin\Http\Controllers\Sales\OrderController;
 use Webkul\Admin\Http\Controllers\Sales\RefundController;
 use Webkul\Admin\Http\Controllers\Sales\ShipmentController;
 use Webkul\Admin\Http\Controllers\Sales\TransactionController;
+use Webkul\BookingProduct\Http\Controllers\Admin\BookingController;
 
 /**
  * Sales routes.
@@ -103,5 +104,11 @@ Route::prefix('sales')->group(function () {
         Route::post('{id}/coupon', 'storeCoupon')->name('admin.sales.cart.store_coupon');
 
         Route::delete('{id}/coupon', 'destroyCoupon')->name('admin.sales.cart.remove_coupon');
+    });
+
+    Route::controller(BookingController::class)->prefix('bookings')->group(function () {
+        Route::get('', 'index')->name('admin.sales.bookings.index');
+
+        Route::get('get', 'get')->name('admin.sales.bookings.get');
     });
 });

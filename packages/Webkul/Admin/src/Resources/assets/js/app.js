@@ -46,6 +46,8 @@ import Emitter from "./plugins/emitter";
 import Flatpickr from "./plugins/flatpickr";
 import VeeValidate from "./plugins/vee-validate";
 import Draggable from "./plugins/draggable";
+import VueCal from 'vue-cal';
+import 'vue-cal/dist/vuecal.css';
 
 [
     Admin,
@@ -55,6 +57,7 @@ import Draggable from "./plugins/draggable";
     Flatpickr,
     VeeValidate,
     Draggable,
+    VueCal,
 ].forEach((plugin) => app.use(plugin));
 
 /**

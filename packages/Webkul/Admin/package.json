@@ -27,6 +27,8 @@
     "readline-sync": "^1.4.10",
     "vee-validate": "^4.9.1",
     "vue-flatpickr": "^2.3.0",
-    "vuedraggable": "^4.1.0"
+    "vuedraggable": "^4.1.0",
+    "vue": "^3.4.21",
+    "vue-cal": "^4.9.0"
   }
 }
