@@ -41,6 +41,5 @@ return [
     Webkul\Tax\Providers\TaxServiceProvider::class,
     Webkul\Theme\Providers\ThemeServiceProvider::class,
     Webkul\User\Providers\UserServiceProvider::class,
-    Webkul\GDPR\Providers\GDPRServiceProvider::class,
     Webkul\BookingProduct\Providers\BookingProductServiceProvider::class,
 ];
