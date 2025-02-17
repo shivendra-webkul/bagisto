@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\BookingProduct\Http\Controllers\Shop;
+namespace Webkul\Shop\Http\Controllers;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use Webkul\BookingProduct\Helpers\AppointmentSlot as AppointmentSlotHelper;
@@ -8,7 +8,6 @@ use Webkul\BookingProduct\Helpers\DefaultSlot as DefaultSlotHelper;
 use Webkul\BookingProduct\Helpers\EventTicket as EventTicketHelper;
 use Webkul\BookingProduct\Helpers\RentalSlot as RentalSlotHelper;
 use Webkul\BookingProduct\Helpers\TableSlot as TableSlotHelper;
-use Webkul\BookingProduct\Http\Controllers\Controller;
 use Webkul\BookingProduct\Repositories\BookingProductRepository;
 
 class BookingProductController extends Controller

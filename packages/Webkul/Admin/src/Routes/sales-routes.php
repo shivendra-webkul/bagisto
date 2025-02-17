@@ -7,7 +7,7 @@ use Webkul\Admin\Http\Controllers\Sales\OrderController;
 use Webkul\Admin\Http\Controllers\Sales\RefundController;
 use Webkul\Admin\Http\Controllers\Sales\ShipmentController;
 use Webkul\Admin\Http\Controllers\Sales\TransactionController;
-use Webkul\BookingProduct\Http\Controllers\Admin\BookingController;
+use Webkul\Admin\Http\Controllers\Sales\BookingController;
 
 /**
  * Sales routes.

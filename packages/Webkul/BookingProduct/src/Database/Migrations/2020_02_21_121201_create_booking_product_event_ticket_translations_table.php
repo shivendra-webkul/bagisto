@@ -14,13 +14,18 @@ return new class extends Migration
     public function up()
     {
         Schema::create('booking_product_event_ticket_translations', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->string('locale');
             $table->text('name')->nullable();
             $table->text('description')->nullable();
-            $table->integer('booking_product_event_ticket_id')->unsigned();
-            $table->unique(['booking_product_event_ticket_id', 'locale'], 'booking_product_event_ticket_translations_locale_unique');
-            $table->foreign('booking_product_event_ticket_id', 'booking_product_event_ticket_translations_locale_foreign')->references('id')->on('booking_product_event_tickets')->onDelete('cascade');
+
+            $table->unsignedBigInteger('booking_product_event_ticket_id');
+            $table->foreign('booking_product_event_ticket_id', 'bpet_translations_fk')
+                  ->references('id')
+                  ->on('booking_product_event_tickets')
+                  ->cascadeOnDelete();
+
+            $table->unique(['booking_product_event_ticket_id', 'locale'], 'bpet_locale_unique');
         });
     }
 

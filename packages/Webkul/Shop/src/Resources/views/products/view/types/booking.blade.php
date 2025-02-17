@@ -1,9 +1,10 @@
-@if (
-    $product->type == 'booking'
-    && $bookingProduct = app('\Webkul\BookingProduct\Repositories\BookingProductRepository')->findOneByField('product_id', $product->id)
-)
-    <!-- Vue Component -->
+@if ($product->type == 'booking')
+    
+    {!! view_render_event('bagisto.shop.products.view.booking.before', ['product' => $product]) !!}
+
     <v-booking-information></v-booking-information>
+
+    {!! view_render_event('bagisto.shop.products.view.booking.before', ['product' => $product]) !!}
 
     @pushOnce('scripts')
         <script
@@ -36,7 +37,7 @@
                 @endif
 
                 <div class="w-full max-w-[470px]">
-                    @include ('booking::shop.products.view.types.booking.' . $bookingProduct->type, ['bookingProduct' => $bookingProduct])
+                    @include ('admin::products.view.types.booking.' . $bookingProduct->type, ['bookingProduct' => $bookingProduct])
                 </div>
             </div>
         </script>

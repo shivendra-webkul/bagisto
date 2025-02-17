@@ -18,26 +18,12 @@ class BookingProductServiceProvider extends ServiceProvider
 
         $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'booking');
 
-        // $this->loadViewsFrom(__DIR__.'/../Resources/views', 'booking');
-
         Blade::anonymousComponentPath(__DIR__.'/../Resources/views/components', 'booking');
 
-        $this->app->bind(BaseCart::class, Cart::class);
+        // $this->app->bind(BaseCart::class, Cart::class);
 
         $this->app->register(EventServiceProvider::class);
 
         $this->app->register(ModuleServiceProvider::class);
-
-        $this->publishAssets();
-    }
-
-    /**
-     * publishing Assets.
-     */
-    protected function publishAssets(): void
-    {
-        $this->publishes([
-            __DIR__.'/../../publishable/build' => public_path('themes/booking/build'),
-        ], 'public');
     }
 }

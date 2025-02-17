@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\BookingProduct\DataGrids\Admin;
+namespace Webkul\Admin\DataGrids\Sales;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;

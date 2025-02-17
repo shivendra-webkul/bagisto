@@ -15,16 +15,19 @@ return new class extends Migration
     {
         Schema::create('booking_products', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('product_id');
             $table->string('type');
             $table->integer('qty')->default(0)->nullable();
             $table->string('location')->nullable();
-            $table->boolean('show_location')->default(0);
+            $table->boolean('show_location')->default(false);
             $table->boolean('available_every_week')->nullable();
-            $table->datetime('available_from')->nullable();
-            $table->datetime('available_to')->nullable();
+            $table->dateTime('available_from')->nullable();
+            $table->dateTime('available_to')->nullable();
 
-            $table->integer('product_id')->unsigned();
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('product_id')
+                  ->references('id')->on('products')
+                  ->cascadeOnDelete();
+
             $table->timestamps();
         });
     }

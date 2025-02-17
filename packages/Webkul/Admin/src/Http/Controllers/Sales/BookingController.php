@@ -1,10 +1,10 @@
 <?php
 
-namespace Webkul\BookingProduct\Http\Controllers\Admin;
+namespace Webkul\Admin\Http\Controllers\Sales;
 
 use Carbon\Carbon;
-use Webkul\BookingProduct\DataGrids\Admin\BookingDataGrid;
-use Webkul\BookingProduct\Http\Controllers\Controller;
+use Webkul\Admin\DataGrids\Sales\BookingDataGrid;
+use Webkul\Admin\Http\Controllers\Controller;
 use Webkul\BookingProduct\Repositories\BookingRepository;
 
 class BookingController extends Controller
@@ -24,7 +24,7 @@ class BookingController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            return app(BookingDataGrid::class)->toJson();
+            return datagrid(BookingDataGrid::class)->process();
         }
 
         return view('booking::admin.sales.bookings.index');
@@ -38,7 +38,7 @@ class BookingController extends Controller
     public function get()
     {
         if (! request('view_type')) {
-            return app(BookingDataGrid::class)->toJson();
+            return app(BookingDataGrid::class)->process();
         }
 
         $startDate = request()->get('startDate')
