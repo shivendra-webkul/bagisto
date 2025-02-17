@@ -691,6 +691,21 @@ return [
                 'grouped' => [
                     'name' => 'Name',
                 ],
+
+                'booking' => [
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes Minutes',
+                        'slot-duration'            => 'Slot Duration',
+                    ],
+
+                    'slots'       => [
+                        'book-an-appointment' => 'Book an Appointment',
+                        'date'                => 'Date',
+                        'no-slots-available'  => 'No slots available',
+                        'select-slot'         => 'Select Slot',
+                        'title'               => 'Slot',
+                    ],
+                ]
             ],
 
             'gallery' => [

@@ -7,14 +7,14 @@
     >
         <div>
             <x-shop::form.control-group.label class="required">
-                {{ $title  ?? trans('booking::app.shop.products.view.types.booking.slots.book-an-appointment') }}
+                {{ $title  ?? trans('shop::app.products.view.type.booking.slots.book-an-appointment') }}
             </x-shop::form.control-group.label>
 
             <div class="grid grid-cols-2 gap-x-4">
                 <!-- Select Date -->
                 <x-shop::form.control-group class="!mb-0">
                     <x-shop::form.control-group.label class="hidden">
-                        @lang('booking::app.shop.products.view.types.booking.slots.date')
+                        @lang('shop::app.products.view.type.booking.slots.date')
                     </x-shop::form.control-group.label>
 
                     <x-shop::form.control-group.control
@@ -22,7 +22,7 @@
                         class="py-4"
                         name="booking[date]"
                         rules="required"
-                        :label="trans('booking::app.shop.products.view.types.booking.slots.date')"
+                        :label="trans('shop::app.products.view.type.booking.slots.date')"
                         :placeholder="trans('YYYY-MM-DD')"
                         data-min-date="today"
                         @change="getAvailableSlots"
@@ -34,7 +34,7 @@
                 <!-- Select Slots -->
                 <x-shop::form.control-group class="!mb-0">
                     <x-shop::form.control-group.label class="hidden">
-                        @lang('booking::app.shop.products.view.types.booking.slots.title')
+                        @lang('shop::app.products.view.type.booking.slots.title')
                     </x-shop::form.control-group.label>
 
                     <x-shop::form.control-group.control
@@ -43,15 +43,15 @@
                         name="booking[slot]"
                         rules="required"
                         v-model="selectedSlot"
-                        :label="trans('booking::app.shop.products.view.types.booking.slots.title')"
-                        :placeholder="trans('booking::app.shop.products.view.types.booking.slots.title')"
+                        :label="trans('shop::app.products.view.type.booking.slots.title')"
+                        :placeholder="trans('shop::app.products.view.type.booking.slots.title')"
                     >
                         <option value="">
-                            @lang('booking::app.shop.products.view.types.booking.slots.select-slot')
+                            @lang('shop::app.products.view.type.booking.slots.select-slot')
                         </option>
                         
                         <option v-if="! slots?.length">
-                            @lang('booking::app.shop.products.view.types.booking.slots.no-slots-available')
+                            @lang('shop::app.products.view.type.booking.slots.no-slots-available')
                         </option>
 
                         <option

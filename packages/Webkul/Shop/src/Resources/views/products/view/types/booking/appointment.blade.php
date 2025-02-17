@@ -4,11 +4,11 @@
 
         <div class="grid grid-cols-1 gap-1.5 text-sm font-medium">
             <p class="text-[#6E6E6E]">
-                @lang('booking::app.shop.products.view.types.booking.slot-duration') :
+                @lang('shop::app.products.view.type.booking.slot-duration') :
             </p>
 
             <div>
-                @lang('booking::app.shop.products.view.types.booking.slot-duration-in-minutes', [
+                @lang('shop::app.products.view.type.booking.slot-duration-in-minutes', [
                     'minutes' => $bookingProduct->appointment_slot->duration
                 ])
             </div>
@@ -44,10 +44,10 @@
         type="text/x-template"
         id="v-toggler-template"
     >
-        <div class="grid gap-3 w-max select-none">
+        <div class="grid w-max select-none gap-3">
             <!-- Details Toggler -->
             <p
-                class="flex gap-x-[15px] items-center text-blue-600 text-sm font-medium cursor-pointer"
+                class="flex cursor-pointer items-center gap-x-[15px] text-sm font-medium text-blue-600"
                 @click="showDaysAvailability = ! showDaysAvailability"
             >
                 @lang('shop::app.checkout.cart.mini-cart.see-details')
@@ -67,7 +67,7 @@
             >
                 <!-- Name -->
                 <p
-                    class="text-sm text-gray font-medium"
+                    class="text-gray text-sm font-medium"
                     v-text="day.name"
                 >
                 </p>

@@ -1,4 +1,8 @@
 @if ($product->type == 'booking')
+
+    @php
+        $bookingProduct = $product->booking_products()->first();
+    @endphp
     
     {!! view_render_event('bagisto.shop.products.view.booking.before', ['product' => $product]) !!}
 
@@ -37,7 +41,7 @@
                 @endif
 
                 <div class="w-full max-w-[470px]">
-                    @include ('admin::products.view.types.booking.' . $bookingProduct->type, ['bookingProduct' => $bookingProduct])
+                    @include ('shop::products.view.types.booking.' . $bookingProduct->type, ['bookingProduct' => $bookingProduct])
                 </div>
             </div>
         </script>
