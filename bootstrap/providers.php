@@ -42,4 +42,5 @@ return [
     Webkul\Theme\Providers\ThemeServiceProvider::class,
     Webkul\User\Providers\UserServiceProvider::class,
     Webkul\BookingProduct\Providers\BookingProductServiceProvider::class,
+    Webkul\GDPR\Providers\GDPRServiceProvider::class,
 ];
