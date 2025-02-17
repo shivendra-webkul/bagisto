@@ -21,26 +21,26 @@ return new class extends Migration
 
             $table->unsignedInteger('order_item_id')->nullable();
             $table->foreign('order_item_id')
-                  ->references('id')
-                  ->on('order_items')
-                  ->nullOnDelete();
+                ->references('id')
+                ->on('order_items')
+                ->nullOnDelete();
 
             $table->foreignId('booking_product_event_ticket_id')
-                  ->nullable()
-                  ->constrained('booking_product_event_tickets')
-                  ->nullOnDelete();
+                ->nullable()
+                ->constrained('booking_product_event_tickets')
+                ->nullOnDelete();
 
             $table->unsignedInteger('order_id')->nullable();
             $table->foreign('order_id')
-                  ->references('id')
-                  ->on('orders')
-                  ->nullOnDelete();
+                ->references('id')
+                ->on('orders')
+                ->nullOnDelete();
 
             $table->unsignedInteger('product_id')->nullable();
             $table->foreign('product_id')
-                  ->references('id')
-                  ->on('products')
-                  ->nullOnDelete();
+                ->references('id')
+                ->on('products')
+                ->nullOnDelete();
 
             $table->timestamps();
         });

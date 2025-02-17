@@ -21,9 +21,9 @@ return new class extends Migration
 
             $table->unsignedBigInteger('booking_product_event_ticket_id');
             $table->foreign('booking_product_event_ticket_id', 'bpet_translations_fk')
-                  ->references('id')
-                  ->on('booking_product_event_tickets')
-                  ->cascadeOnDelete();
+                ->references('id')
+                ->on('booking_product_event_tickets')
+                ->cascadeOnDelete();
 
             $table->unique(['booking_product_event_ticket_id', 'locale'], 'bpet_locale_unique');
         });

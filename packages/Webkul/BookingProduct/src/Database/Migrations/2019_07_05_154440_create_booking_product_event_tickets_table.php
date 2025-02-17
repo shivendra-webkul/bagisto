@@ -23,9 +23,9 @@ return new class extends Migration
 
             $table->unsignedInteger('booking_product_id');
             $table->foreign('booking_product_id')
-                  ->references('id')
-                  ->on('booking_products')
-                  ->onDelete('cascade');
+                ->references('id')
+                ->on('booking_products')
+                ->onDelete('cascade');
         });
     }
 

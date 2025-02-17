@@ -25,8 +25,8 @@ return new class extends Migration
             $table->dateTime('available_to')->nullable();
 
             $table->foreign('product_id')
-                  ->references('id')->on('products')
-                  ->cascadeOnDelete();
+                ->references('id')->on('products')
+                ->cascadeOnDelete();
 
             $table->timestamps();
         });
