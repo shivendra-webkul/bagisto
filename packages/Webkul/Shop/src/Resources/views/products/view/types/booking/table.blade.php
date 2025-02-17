@@ -4,11 +4,11 @@
 
         <div class="grid grid-cols-1 gap-1.5 text-sm font-medium">
             <p class="text-[#6E6E6E]">
-                @lang('booking::app.shop.products.view.types.booking.slot-duration') :
+                @lang('shop::app.products.view.type.booking.table.slot-duration') :
             </p>
 
             <div>
-                @lang('booking::app.shop.products.view.types.booking.slot-duration-in-minutes', ['minutes' => $bookingProduct->table_slot->duration])
+                @lang('shop::app.products.view.type.booking.table.slot-duration-in-minutes', ['minutes' => $bookingProduct->table_slot->duration])
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
         <div class="grid grid-cols-1 gap-4">
             <div class="grid grid-cols-1 gap-1.5 text-sm font-medium">
                 <p class="text-[#6E6E6E]">
-                    @lang('booking::app.shop.products.view.types.booking.table.today-availability')
+                    @lang('shop::app.products.view.type.booking.table.today-availability')
                 </p>
     
                 <span>
@@ -34,15 +34,15 @@
         </div>
     </div>
 
-    @include ('booking::shop.products.view.types.booking.slots', [
+    @include ('shop::products.view.types.booking.slots', [
         'bookingProduct' => $bookingProduct, 
-        'title' => trans('booking::app.shop.products.view.types.booking.table.book-a-table')
+        'title' => trans('shop::app.products.view.type.booking.table.book-a-table')
     ])
 
     <!-- Notes -->
     <x-shop::form.control-group class="!mb-0 w-full">
         <x-shop::form.control-group.label class="required">
-            @lang('booking::app.shop.products.view.types.booking.table.special-notes')
+            @lang('shop::app.products.view.type.booking.table.special-notes')
         </x-shop::form.control-group.label>
 
         <x-shop::form.control-group.control
@@ -50,8 +50,8 @@
             class="!mb-0 max-sm:px-2.5 max-sm:py-1.5 max-sm:text-xs"
             name="booking[note]"
             rules="required"
-            :label="trans('booking::app.shop.products.view.types.booking.table.special-notes')"
-            :placeholder="trans('booking::app.shop.products.view.types.booking.table.special-notes')"
+            :label="trans('shop::app.products.view.type.booking.table.special-notes')"
+            :placeholder="trans('shop::app.products.view.type.booking.table.special-notes')"
         />
 
         <x-shop::form.control-group.error control-name="booking[note]" />
@@ -69,7 +69,7 @@
                 class="flex cursor-pointer items-center gap-x-[15px] text-sm font-medium text-blue-600"
                 @click="showDaysAvailability = ! showDaysAvailability"
             >
-                @lang('booking::app.shop.products.view.types.booking.table.slots-for-all-days')
+                @lang('shop::app.products.view.type.booking.table.slots-for-all-days')
 
                 <span
                     class="text-xl font-bold"
@@ -98,7 +98,7 @@
                     </template>
 
                     <div v-else>
-                        @lang('booking::app.shop.products.view.types.booking.table.closed')
+                        @lang('shop::app.products.view.type.booking.table.closed')
                     </div>
                 </p>
             </div>

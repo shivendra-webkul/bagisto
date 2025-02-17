@@ -36,7 +36,7 @@ class BookingDataGrid extends DataGrid
     {
         $this->addColumn([
             'index'      => 'id',
-            'label'      => trans('booking::app.admin.sales.bookings.index.datagrid.id'),
+            'label'      => trans('admin::app.sales.booking.index.datagrid.id'),
             'type'       => 'string',
             'searchable' => false,
             'sortable'   => true,
@@ -45,7 +45,7 @@ class BookingDataGrid extends DataGrid
 
         $this->addColumn([
             'index'      => 'order_id',
-            'label'      => trans('booking::app.admin.sales.bookings.index.datagrid.order-id'),
+            'label'      => trans('admin::app.sales.booking.index.datagrid.order-id'),
             'type'       => 'string',
             'searchable' => true,
             'sortable'   => true,
@@ -54,7 +54,7 @@ class BookingDataGrid extends DataGrid
 
         $this->addColumn([
             'index'      => 'qty',
-            'label'      => trans('booking::app.admin.sales.bookings.index.datagrid.qty'),
+            'label'      => trans('admin::app.sales.booking.index.datagrid.qty'),
             'type'       => 'string',
             'searchable' => true,
             'sortable'   => true,
@@ -63,7 +63,7 @@ class BookingDataGrid extends DataGrid
 
         $this->addColumn([
             'index'      => 'from',
-            'label'      => trans('booking::app.admin.sales.bookings.index.datagrid.from'),
+            'label'      => trans('admin::app.sales.booking.index.datagrid.from'),
             'type'       => 'string',
             'searchable' => true,
             'sortable'   => true,
@@ -75,7 +75,7 @@ class BookingDataGrid extends DataGrid
 
         $this->addColumn([
             'index'      => 'to',
-            'label'      => trans('booking::app.admin.sales.bookings.index.datagrid.to'),
+            'label'      => trans('admin::app.sales.booking.index.datagrid.to'),
             'type'       => 'string',
             'searchable' => true,
             'sortable'   => true,
@@ -87,7 +87,7 @@ class BookingDataGrid extends DataGrid
 
         $this->addColumn([
             'index'      => 'created_at',
-            'label'      => trans('booking::app.admin.sales.bookings.index.datagrid.created-date'),
+            'label'      => trans('admin::app.sales.booking.index.datagrid.created-date'),
             'type'       => 'datetime',
             'searchable' => true,
             'sortable'   => true,
@@ -104,7 +104,7 @@ class BookingDataGrid extends DataGrid
     {
         $this->addAction([
             'icon'   => 'icon-view',
-            'title'  => trans('booking::app.admin.sales.bookings.index.datagrid.view'),
+            'title'  => trans('admin::app.sales.booking.index.datagrid.view'),
             'method' => 'GET',
             'url'    => function ($row) {
                 return route('admin.sales.orders.view', $row->order_id);

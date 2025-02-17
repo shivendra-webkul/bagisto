@@ -18,7 +18,7 @@
             <!-- Booking Type -->
             <x-admin::form.control-group class="w-full">
                 <x-admin::form.control-group.label class="required">
-                    @lang('booking::app.admin.catalog.products.edit.types.booking.title')
+                    @lang('admin::app.catalog.products.edit.types.booking.title')
                 </x-admin::form.control-group.label>
 
                 <x-admin::form.control-group.control
@@ -33,12 +33,12 @@
                     rules="required"
                     ::value="booking.type"
                     v-model="booking.type"
-                    :label="trans('booking::app.admin.catalog.products.edit.types.booking.title')"
+                    :label="trans('admin::app.catalog.products.edit.types.booking.title')"
                     ::disabled="! is_new"
                 >
                     @foreach (['default', 'appointment', 'event', 'rental', 'table'] as $item)
                         <option value={{ $item }}>
-                            @lang('booking::app.admin.catalog.products.edit.types.booking.type.' . $item)
+                            @lang('admin::app.catalog.products.edit.types.booking.type.' . $item)
                         </option>
                     @endforeach
                 </x-admin::form.control-group.control>
@@ -49,14 +49,14 @@
             <!-- Location -->
             <x-admin::form.control-group class="w-full">
                 <x-admin::form.control-group.label class="required">
-                    @lang('booking::app.admin.catalog.products.edit.types.booking.location')
+                    @lang('admin::app.catalog.products.edit.types.booking.location')
                 </x-admin::form.control-group.label>
 
                 <x-admin::form.control-group.control
                     type="text"
                     name="booking[location]"
                     v-model="booking.location"
-                    :label="trans('booking::app.admin.catalog.products.edit.types.booking.location')"
+                    :label="trans('admin::app.catalog.products.edit.types.booking.location')"
                 />
 
                 <x-admin::form.control-group.error  control-name="booking[location]" />
@@ -70,7 +70,7 @@
                     || booking.type == 'rental'"
             >
                 <x-admin::form.control-group.label class="required">
-                    @lang('booking::app.admin.catalog.products.edit.types.booking.qty')
+                    @lang('admin::app.catalog.products.edit.types.booking.qty')
                 </x-admin::form.control-group.label>
 
                 <x-admin::form.control-group.control
@@ -78,7 +78,7 @@
                     name="booking[qty]"
                     rules="required|numeric|min:0"
                     v-model="booking.qty"
-                    :label="trans('booking::app.admin.catalog.products.edit.types.booking.qty')"
+                    :label="trans('admin::app.catalog.products.edit.types.booking.qty')"
                 />
 
                 <x-admin::form.control-group.error  control-name="booking[qty]" />
@@ -90,7 +90,7 @@
                 v-if="booking.type != 'event' && booking.type != 'default'"
             >
                 <x-admin::form.control-group.label class="required">
-                    @lang('booking::app.admin.catalog.products.edit.types.booking.available-every-week.title')
+                    @lang('admin::app.catalog.products.edit.types.booking.available-every-week.title')
                 </x-admin::form.control-group.label>
 
                 <x-admin::form.control-group.control
@@ -98,15 +98,15 @@
                     name="booking[available_every_week]"
                     rules="required"
                     v-model="booking.available_every_week"
-                    :label="trans('booking::app.admin.catalog.products.edit.types.booking.available-every-week.title')"
+                    :label="trans('admin::app.catalog.products.edit.types.booking.available-every-week.title')"
                     @change="booking.availableEveryWeekSwatch= ! booking.availableEveryWeekSwatch"
                 >
                     <option value="1">
-                        @lang('booking::app.admin.catalog.products.edit.types.booking.available-every-week.yes')
+                        @lang('admin::app.catalog.products.edit.types.booking.available-every-week.yes')
                     </option>
 
                     <option value="0">
-                        @lang('booking::app.admin.catalog.products.edit.types.booking.available-every-week.no')
+                        @lang('admin::app.catalog.products.edit.types.booking.available-every-week.no')
                     </option>
                 </x-admin::form.control-group.control>
 
@@ -120,7 +120,7 @@
                 <!-- Available From  -->
                 <x-admin::form.control-group class="w-full">
                     <x-admin::form.control-group.label class="required">
-                        @lang('booking::app.admin.catalog.products.edit.types.booking.available-from')
+                        @lang('admin::app.catalog.products.edit.types.booking.available-from')
                     </x-admin::form.control-group.label>
 
                     @php
@@ -132,8 +132,8 @@
                         name="booking[available_from]"
                         :rules="'required|after:' . $dateMin"
                         v-model="booking.available_from"
-                        :label="trans('booking::app.admin.catalog.products.edit.types.booking.available-from')"
-                        :placeholder="trans('booking::app.admin.catalog.products.edit.types.booking.available-from')"
+                        :label="trans('admin::app.catalog.products.edit.types.booking.available-from')"
+                        :placeholder="trans('admin::app.catalog.products.edit.types.booking.available-from')"
                     />
 
                     <x-admin::form.control-group.error  control-name="booking[available_from]" />
@@ -142,7 +142,7 @@
                 <!-- Available To -->
                 <x-admin::form.control-group class="w-full">
                     <x-admin::form.control-group.label class="required">
-                        @lang('booking::app.admin.catalog.products.edit.types.booking.available-to')
+                        @lang('admin::app.catalog.products.edit.types.booking.available-to')
                     </x-admin::form.control-group.label>
 
                     <x-admin::form.control-group.control
@@ -150,8 +150,8 @@
                         name="booking[available_to]"
                         ::rules="'required|after:' + booking.available_from"
                         v-model="booking.available_to"
-                        :label="trans('booking::app.admin.catalog.products.edit.types.booking.available-to')"
-                        :placeholder="trans('booking::app.admin.catalog.products.edit.types.booking.available-to')"
+                        :label="trans('admin::app.catalog.products.edit.types.booking.available-to')"
+                        :placeholder="trans('admin::app.catalog.products.edit.types.booking.available-to')"
                     />
 
                     <x-admin::form.control-group.error  control-name="booking[available_to]" />

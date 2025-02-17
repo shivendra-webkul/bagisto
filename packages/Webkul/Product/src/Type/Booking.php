@@ -127,7 +127,7 @@ class Booking extends AbstractType
     public function prepareForCart($data)
     {
         if (empty($data['booking'])) {
-            return trans('booking::app.shop.products.booking.cart.integrity.missing_options');
+            return trans('shop::app.products.booking.cart.integrity.missing_options');
         }
 
         $products = [];
@@ -141,7 +141,7 @@ class Booking extends AbstractType
                 $hours = floor($time / 60) / 60;
 
                 if ($hours > 1) {
-                    return trans('booking::app.shop.products.booking.cart.integrity.select_hourly_duration');
+                    return trans('shop::app.products.booking.cart.integrity.select_hourly_duration');
                 }
             }
 
@@ -151,7 +151,7 @@ class Booking extends AbstractType
                 Carbon::now() > $bookingProduct->available_from
                 && Carbon::now() > $bookingProduct->available_to
             ) {
-                return trans('booking::app.shop.products.booking.cart.integrity.event.expired');
+                return trans('shop::app.products.booking.cart.integrity.event.expired');
             }
 
             $filtered = Arr::where($data['booking']['qty'], function ($qty, $key) {
@@ -159,7 +159,7 @@ class Booking extends AbstractType
             });
 
             if (! count($filtered)) {
-                return trans('booking::app.shop.products.booking.cart.integrity.missing_options');
+                return trans('shop::app.products.booking.cart.integrity.missing_options');
             }
 
             $cartProductsList = [];
@@ -189,7 +189,7 @@ class Booking extends AbstractType
         $typeHelper = app($this->bookingHelper->getTypeHelper($bookingProduct->type));
 
         if (! $typeHelper->isSlotAvailable($products)) {
-            return trans('booking::app.shop.products.booking.cart.integrity.inventory_warning');
+            return trans('shop::app.products.booking.cart.integrity.inventory_warning');
         }
 
         $products = $typeHelper->addAdditionalPrices($products);

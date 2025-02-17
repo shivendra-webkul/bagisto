@@ -124,7 +124,7 @@ class Booking
 
         return count($slots)
             ? implode(' | ', $slots)
-            : '<span class="text-danger">'.trans('booking::app.shop.products.booking.closed').'</span>';
+            : '<span class="text-danger">'.trans('shop::app.products.booking.closed').'</span>';
     }
 
     /**
@@ -311,15 +311,15 @@ class Booking
 
                 $data['attributes'] = [
                     [
-                        'attribute_name' => trans('booking::app.shop.products.booking.cart.event-ticket'),
+                        'attribute_name' => trans('shop::app.products.booking.cart.event-ticket'),
                         'option_id'      => 0,
                         'option_label'   => $ticket->name,
                     ], [
-                        'attribute_name' => trans('booking::app.shop.products.booking.cart.event-from'),
+                        'attribute_name' => trans('shop::app.products.booking.cart.event-from'),
                         'option_id'      => 0,
                         'option_label'   => Carbon::createFromTimeString($bookingProduct->available_from)->format('d F, Y'),
                     ], [
-                        'attribute_name' => trans('booking::app.shop.products.booking.cart.event-till'),
+                        'attribute_name' => trans('shop::app.products.booking.cart.event-till'),
                         'option_id'      => 0,
                         'option_label'   => Carbon::createFromTimeString($bookingProduct->available_to)->format('d F, Y'),
                     ],
@@ -341,15 +341,15 @@ class Booking
 
                 $data['attributes'] = [
                     [
-                        'attribute_name' => trans('booking::app.shop.products.booking.cart.rent-type'),
+                        'attribute_name' => trans('shop::app.products.booking.cart.rent-type'),
                         'option_id'      => 0,
-                        'option_label'   => trans('booking::app.shop.products.booking.cart.'.$rentingType),
+                        'option_label'   => trans('shop::app.products.booking.cart.'.$rentingType),
                     ], [
-                        'attribute_name' => trans('booking::app.shop.products.booking.cart.rent-from'),
+                        'attribute_name' => trans('shop::app.products.booking.cart.rent-from'),
                         'option_id'      => 0,
                         'option_label'   => $from,
                     ], [
-                        'attribute_name' => trans('booking::app.shop.products.booking.cart.rent-till'),
+                        'attribute_name' => trans('shop::app.products.booking.cart.rent-till'),
                         'option_id'      => 0,
                         'option_label'   => $to,
                     ],
@@ -361,11 +361,11 @@ class Booking
 
                 $attributes = [
                     [
-                        'attribute_name' => trans('booking::app.shop.products.booking.cart.booking-from'),
+                        'attribute_name' => trans('shop::app.products.booking.cart.booking-from'),
                         'option_id'      => 0,
                         'option_label'   => Carbon::createFromTimestamp($timestamps[0])->isoFormat('Do MMM, YYYY h:mm A'),
                     ], [
-                        'attribute_name' => trans('booking::app.shop.products.booking.cart.booking-till'),
+                        'attribute_name' => trans('shop::app.products.booking.cart.booking-till'),
                         'option_id'      => 0,
                         'option_label'   => Carbon::createFromTimestamp($timestamps[1])->isoFormat('Do MMM, YYYY h:mm A'),
                     ],
@@ -373,7 +373,7 @@ class Booking
 
                 if ($data['booking']['note'] !== '') {
                     $attributes[] = [
-                        'attribute_name' => trans('booking::app.shop.products.booking.cart.special-note'),
+                        'attribute_name' => trans('shop::app.products.booking.cart.special-note'),
                         'option_id'      => 0,
                         'option_label'   => $data['booking']['note'],
                     ];
@@ -387,11 +387,11 @@ class Booking
 
                 $data['attributes'] = [
                     [
-                        'attribute_name' => trans('booking::app.shop.products.booking.cart.booking-from'),
+                        'attribute_name' => trans('shop::app.products.booking.cart.booking-from'),
                         'option_id'      => 0,
                         'option_label'   => Carbon::createFromTimestamp($timestamps[0])->format('d F, Y h:i A'),
                     ], [
-                        'attribute_name' => trans('booking::app.shop.products.booking.cart.booking-till'),
+                        'attribute_name' => trans('shop::app.products.booking.cart.booking-till'),
                         'option_id'      => 0,
                         'option_label'   => Carbon::createFromTimestamp($timestamps[1])->format('d F, Y h:i A'),
                     ],

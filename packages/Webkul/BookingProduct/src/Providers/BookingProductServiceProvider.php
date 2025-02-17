@@ -14,12 +14,6 @@ class BookingProductServiceProvider extends ServiceProvider
     {
         $this->loadMigrationsFrom(__DIR__.'/../Database/Migrations');
 
-        $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'booking');
-
-        Blade::anonymousComponentPath(__DIR__.'/../Resources/views/components', 'booking');
-
         $this->app->register(EventServiceProvider::class);
-
-        $this->app->register(ModuleServiceProvider::class);
     }
 }

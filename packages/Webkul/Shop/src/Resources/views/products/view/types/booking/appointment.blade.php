@@ -4,11 +4,11 @@
 
         <div class="grid grid-cols-1 gap-1.5 text-sm font-medium">
             <p class="text-[#6E6E6E]">
-                @lang('shop::app.products.view.type.booking.slot-duration') :
+                @lang('shop::app.products.view.type.booking.appointment.slot-duration') :
             </p>
 
             <div>
-                @lang('shop::app.products.view.type.booking.slot-duration-in-minutes', [
+                @lang('shop::app.products.view.type.booking.appointment.slot-duration-in-minutes', [
                     'minutes' => $bookingProduct->appointment_slot->duration
                 ])
             </div>
@@ -23,7 +23,7 @@
         <div class="grid grid-cols-1 gap-4">
             <div class="grid grid-cols-1 gap-1.5 text-sm font-medium">
                 <p class="text-[#6E6E6E]">
-                    @lang('booking::app.shop.products.view.types.booking.appointment.today-availability')
+                    @lang('shop::app.products.view.type.booking.appointment.today-availability')
                 </p>
     
                 <span>
@@ -36,7 +36,7 @@
         </div>
     </div>
     
-    @include ('booking::shop.products.view.types.booking.slots', ['bookingProduct' => $bookingProduct])
+    @include ('shop::products.view.types.booking.slots', ['bookingProduct' => $bookingProduct])
 </div>
 
 @pushOnce('scripts')
@@ -50,7 +50,7 @@
                 class="flex cursor-pointer items-center gap-x-[15px] text-sm font-medium text-blue-600"
                 @click="showDaysAvailability = ! showDaysAvailability"
             >
-                @lang('shop::app.checkout.cart.mini-cart.see-details')
+                @lang('shop::app.products.view.type.booking.appointment.see-details')
 
                 <span
                     class="text-xl font-bold"
@@ -81,7 +81,7 @@
                     </template>
 
                     <div v-else>
-                        @lang('booking::app.shop.products.view.types.booking.appointment.closed')
+                        @lang('shop::app.products.view.type.booking.appointment.closed')
                     </div>
                 </p>
             </div>

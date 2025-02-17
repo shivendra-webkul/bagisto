@@ -45,7 +45,7 @@ return [
 
     'booking' => [
         'key'   => 'booking',
-        'name'  => 'booking::app.admin.catalog.products.type.booking',
+        'name'  => 'product::app.type.booking',
         'class' => 'Webkul\Product\Type\Booking',
         'sort'  => 7,
     ],

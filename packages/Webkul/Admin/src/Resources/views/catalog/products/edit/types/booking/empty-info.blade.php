@@ -3,29 +3,29 @@
         type="text/x-template"
         id="v-empty-info-template"
     >
-        <div class="grid gap-3.5 justify-center justify-items-center py-10 px-2.5">
+        <div class="grid justify-center justify-items-center gap-3.5 px-2.5 py-10">
             <img
                 src="{{ bagisto_asset('images/icon-add-product.svg') }}"
-                class="w-20 h-20 dark:invert dark:mix-blend-exclusion"
+                class="h-20 w-20 dark:mix-blend-exclusion dark:invert"
             >
 
-            <div class="flex flex-col gap-2 items-center">
+            <div class="flex flex-col items-center gap-2">
                 <p
-                    class="text-base text-gray-400 font-semibold"
+                    class="text-base font-semibold text-gray-400"
                     v-if="type == 'event'"
                 >
-                    @lang('booking::app.admin.catalog.products.edit.types.booking.empty-info.tickets.add')
+                    @lang('admin::app.catalog.products.edit.types.booking.empty-info.tickets.add')
                 </p>
 
                 <p
-                    class="text-base text-gray-400 font-semibold"
+                    class="text-base font-semibold text-gray-400"
                     v-else
                 >
-                    @lang('booking::app.admin.catalog.products.edit.types.booking.empty-info.slots.add')
+                    @lang('admin::app.catalog.products.edit.types.booking.empty-info.slots.add')
                 </p>
 
                 <p class="text-gray-400">
-                    @lang('booking::app.admin.catalog.products.edit.types.booking.empty-info.slots.description')
+                    @lang('admin::app.catalog.products.edit.types.booking.empty-info.slots.description')
                 </p>
             </div>
         </div>

@@ -6,7 +6,7 @@
 
         <div class="grid grid-cols-1 gap-1.5 text-sm font-medium">
             <p class="text-[#6E6E6E]">
-                @lang('booking::app.shop.products.view.types.booking.event-on') :
+                @lang('shop::app.products.view.type.booking.event.title') :
             </p>
 
             <div>
@@ -26,7 +26,7 @@
     >
         <div class="grid grid-cols-1 gap-4">
             <div class="text-xl font-medium max-sm:text-base">
-                @lang('booking::app.shop.products.view.types.booking.event.book-your-ticket')
+                @lang('shop::app.products.view.type.booking.event.book-your-ticket')
             </div>
 
             <div
@@ -59,7 +59,7 @@
                         </p>
                     </div>
 
-                    <!-- Fromatted Price -->
+                    <!-- Formatted Price -->
                     <p
                         v-else
                         v-text="ticket.formatted_price_text"

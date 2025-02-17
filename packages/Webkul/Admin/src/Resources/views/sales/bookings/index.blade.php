@@ -1,7 +1,7 @@
 <x-admin::layouts>
     <!-- Page Title -->
     <x-slot:title>
-        @lang('booking::app.admin.sales.bookings.index.title')
+        @lang('admin::app.sales.booking.index.title')
     </x-slot>
 
     <v-booking-products></v-booking-products>
@@ -10,7 +10,7 @@
         <script type="text/x-template" id="v-booking-products-template">
             <div class="flex items-center justify-between gap-[16px] max-sm:flex-wrap">
                 <p class="py-3 text-xl font-bold text-gray-800 dark:text-white">
-                    @lang('booking::app.admin.sales.bookings.index.title')
+                    @lang('admin::app.sales.booking.index.title')
                 </p>
         
                 <div class="flex items-center gap-2.5">
@@ -24,7 +24,7 @@
                     <div class="grid grid-cols-2 border border-gray-300 dark:border-gray-700">
                         <!-- List Icon -->
                         <button
-                            class="icon-list cursor-pointer p-1.5 text-xl"
+                            class="icon-sales cursor-pointer p-1.5 text-xl"
                             :class="{'bg-blue-700 text-white' : viewType == 'table'}"
                             @click="viewType ='table'"
                         >

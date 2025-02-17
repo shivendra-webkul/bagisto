@@ -22,7 +22,7 @@
 
                         <div class="grid grid-cols-1 gap-1.5 text-sm font-medium">
                             <p class="text-[#6E6E6E]">
-                                @lang('booking::app.shop.products.view.types.booking.location')
+                                @lang('shop::app.products.view.type.booking.location')
                             </p>
 
                             <div class="grid grid-cols-1 gap-4">
@@ -33,7 +33,7 @@
                                     target="_blank"
                                     class="w-fit text-blue-600"
                                 >
-                                    @lang('booking::app.shop.products.view.types.booking.view-on-map')
+                                    @lang('shop::app.products.view.type.booking.view-on-map')
                                 </a>
                             </div>
                         </div>

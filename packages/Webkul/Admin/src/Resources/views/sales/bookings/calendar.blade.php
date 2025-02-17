@@ -67,7 +67,7 @@
                 <!-- Modal Header -->
                 <x-slot:header class="!p-0">
                     <div class="text-lg font-medium text-[#1F2937]">
-                        @lang('booking::app.admin.sales.bookings.calendar.booking-detailes')
+                        @lang('admin::app.sales.booking.calendar.booking-details')
                     </div>
                 </x-slot>
 
@@ -78,7 +78,7 @@
                             <div class="grid grid-cols-[100px_auto] gap-2">
                                 <div
                                     class="text-gray-500"
-                                    v-text="'@lang('booking::app.admin.sales.bookings.calendar.booking-date')'"
+                                    v-text="'@lang('admin::app.sales.booking.calendar.booking-date')'"
                                 >
                                 </div>
 
@@ -92,7 +92,7 @@
                             <div class="grid grid-cols-[100px_auto] gap-2">
                                 <div
                                     class="text-gray-500"
-                                    v-text="'@lang('booking::app.admin.sales.bookings.calendar.time-slot')'"
+                                    v-text="'@lang('admin::app.sales.booking.calendar.time-slot')'"
                                 >
                                 </div>
 
@@ -106,7 +106,7 @@
                             <div class="grid grid-cols-1 gap-2">
                                 <div
                                     class="text-gray-500"
-                                    v-text="'@lang('booking::app.admin.sales.bookings.calendar.order-id')'"
+                                    v-text="'@lang('admin::app.sales.booking.calendar.order-id')'"
                                 >
                                 </div>
 
@@ -118,7 +118,7 @@
                             <div class="grid grid-cols-1 gap-2">
                                 <div
                                     class="text-gray-500"
-                                    v-text="'@lang('booking::app.admin.sales.bookings.calendar.price')'"
+                                    v-text="'@lang('admin::app.sales.booking.calendar.price')'"
                                 >
                                 </div>
 
@@ -132,7 +132,7 @@
                             <div class="grid grid-cols-1 gap-2">
                                 <div
                                     class="text-gray-500"
-                                    v-text="'@lang('booking::app.admin.sales.bookings.calendar.status')'"
+                                    v-text="'@lang('admin::app.sales.booking.calendar.status')'"
                                 >
                                 </div>
 
@@ -147,10 +147,10 @@
                                     ]"
                                 >
                                     <span v-text="
-                                        event.status === 'completed' ? '@lang('booking::app.admin.sales.bookings.calendar.done')' :
-                                        event.status === 'pending' ? '@lang('booking::app.admin.sales.bookings.calendar.pending')' :
-                                        event.status === 'canceled' ? '@lang('booking::app.admin.sales.bookings.calendar.canceled')' :
-                                        event.status === 'closed' ? '@lang('booking::app.admin.sales.bookings.calendar.closed')' :
+                                        event.status === 'completed' ? '@lang('admin::app.sales.booking.calendar.done')' :
+                                        event.status === 'pending' ? '@lang('admin::app.sales.booking.calendar.pending')' :
+                                        event.status === 'canceled' ? '@lang('admin::app.sales.booking.calendar.canceled')' :
+                                        event.status === 'closed' ? '@lang('admin::app.sales.booking.calendar.closed')' :
                                         event.status"
                                     >
                                     </span>
@@ -205,7 +205,7 @@
                         class="primary-button h-9 p-2.5 text-base"
                         @click="redirect"
                     >
-                        @lang('booking::app.admin.sales.bookings.calendar.view-details')
+                        @lang('admin::app.sales.booking.calendar.view-details')
                     </button>
                 </x-slot>
             </x-admin::modal>
