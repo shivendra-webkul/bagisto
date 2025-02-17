@@ -21,6 +21,7 @@ class BookingProductDefaultSlot extends Model implements BookingProductDefaultSl
      * The attributes that should be cast.
      */
     protected $casts = ['slots' => 'array'];
+
     /**
      * The attributes that are mass assignable.
      */

@@ -16,6 +16,7 @@ class BookingProductAppointmentSlot extends Model implements BookingProductAppoi
      * The attributes that should be cast.
      */
     protected $casts = ['slots' => 'array'];
+
     /**
      * The attributes that are mass assignable.
      */
