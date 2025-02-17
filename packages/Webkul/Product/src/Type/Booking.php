@@ -25,7 +25,7 @@ class Booking extends AbstractType
      *
      * @var bool
      */
-    protected $isComposite = false;
+    protected $isComposite = true;
 
     /**
      * Create a new product type instance.

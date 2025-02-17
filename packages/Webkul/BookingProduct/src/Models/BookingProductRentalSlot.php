@@ -7,10 +7,19 @@ use Webkul\BookingProduct\Contracts\BookingProductRentalSlot as BookingProductRe
 
 class BookingProductRentalSlot extends Model implements BookingProductRentalSlotContract
 {
+    /**
+     * Indicates if the model should be timestamped.
+     */
     public $timestamps = false;
 
+    /**
+     * The attributes that should be cast.
+     */
     protected $casts = ['slots' => 'array'];
 
+    /**
+     * The attributes that are mass assignable.
+     */
     protected $fillable = [
         'renting_type',
         'daily_price',

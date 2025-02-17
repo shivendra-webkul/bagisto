@@ -7,12 +7,23 @@ use Webkul\BookingProduct\Contracts\BookingProductDefaultSlot as BookingProductD
 
 class BookingProductDefaultSlot extends Model implements BookingProductDefaultSlotContract
 {
+    /**
+     * The table associated with the model.
+     */
     protected $table = 'booking_product_default_slots';
 
+    /**
+     * Indicates if the model should be timestamped.
+     */
     public $timestamps = false;
 
+    /**
+     * The attributes that should be cast.
+     */
     protected $casts = ['slots' => 'array'];
-
+    /**
+     * The attributes that are mass assignable.
+     */
     protected $fillable = [
         'booking_type',
         'duration',

@@ -3,6 +3,7 @@
 namespace Webkul\BookingProduct\Repositories;
 
 use Webkul\Core\Eloquent\Repository;
+use Webkul\BookingProduct\Contracts\BookingProductDefaultSlot;
 
 class BookingProductDefaultSlotRepository extends Repository
 {
@@ -11,6 +12,6 @@ class BookingProductDefaultSlotRepository extends Repository
      */
     public function model(): string
     {
-        return 'Webkul\BookingProduct\Contracts\BookingProductDefaultSlot';
+        return BookingProductDefaultSlot::class;
     }
 }

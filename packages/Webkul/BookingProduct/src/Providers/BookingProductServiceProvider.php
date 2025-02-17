@@ -4,8 +4,6 @@ namespace Webkul\BookingProduct\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Webkul\BookingProduct\Models\Cart;
-use Webkul\Checkout\Models\Cart as BaseCart;
 
 class BookingProductServiceProvider extends ServiceProvider
 {
@@ -19,8 +17,6 @@ class BookingProductServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'booking');
 
         Blade::anonymousComponentPath(__DIR__.'/../Resources/views/components', 'booking');
-
-        // $this->app->bind(BaseCart::class, Cart::class);
 
         $this->app->register(EventServiceProvider::class);
 

@@ -63,7 +63,7 @@
                 </vue-cal>
             </div>
 
-            <x-booking::modal ref="myModal">
+            <x-admin::modal ref="myModal">
                 <!-- Modal Header -->
                 <x-slot:header class="!p-0">
                     <div class="text-lg font-medium text-[#1F2937]">
@@ -208,7 +208,7 @@
                         @lang('booking::app.admin.sales.bookings.calendar.view-details')
                     </button>
                 </x-slot>
-            </x-booking::modal>
+            </x-admin::modal>
         </div>
     </script>
 

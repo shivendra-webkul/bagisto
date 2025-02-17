@@ -5,6 +5,7 @@ namespace Webkul\BookingProduct\Repositories;
 use Carbon\Carbon;
 use Illuminate\Container\Container;
 use Webkul\Core\Eloquent\Repository;
+use Webkul\BookingProduct\Contracts\BookingProduct;
 
 class BookingProductRepository extends Repository
 {
@@ -42,11 +43,11 @@ class BookingProductRepository extends Repository
      */
     public function model(): string
     {
-        return 'Webkul\BookingProduct\Contracts\BookingProduct';
+        return BookingProduct::class;
     }
 
     /**
-     * @return \Webkul\BookingProduct\Contracts\BookingProduct
+     * @return BookingProduct
      */
     public function create(array $data)
     {
@@ -66,7 +67,7 @@ class BookingProductRepository extends Repository
      *
      * @param  int  $id
      * @param  string  $attribute
-     * @return \Webkul\BookingProduct\Contracts\BookingProduct|void
+     * @return BookingProduct|void
      */
     public function update(array $data, $id, $attribute = 'id')
     {
@@ -172,10 +173,9 @@ class BookingProductRepository extends Repository
     }
 
     /**
-     * @param  array  $data
-     * @return array
+     * Skip over lapping slots.
      */
-    public function skipOverLappingSlots($slots)
+    public function skipOverLappingSlots(array $slots)
     {
         $tempSlots = [];
 

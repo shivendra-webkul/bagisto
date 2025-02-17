@@ -5,6 +5,8 @@ namespace Webkul\BookingProduct\Repositories;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Str;
 use Webkul\Core\Eloquent\Repository;
+use Webkul\BookingProduct\Contracts\BookingProductEventTicket;
+use Webkul\BookingProduct\Contracts\BookingProduct;
 
 class BookingProductEventTicketRepository extends Repository
 {
@@ -13,16 +15,13 @@ class BookingProductEventTicketRepository extends Repository
      */
     public function model(): string
     {
-        return 'Webkul\BookingProduct\Contracts\BookingProductEventTicket';
+        return BookingProductEventTicket::class;
     }
 
     /**
-     * @param  array  $data
-     * @param  \Webkul\BookingProduct\Contracts\BookingProduct  $bookingProduct
-     *
-     * @throws \Prettus\Validator\Exceptions\ValidatorException
+     * Summary of save Event Tickets.
      */
-    public function saveEventTickets($data, $bookingProduct): void
+    public function saveEventTickets(array $data, BookingProduct $bookingProduct): void
     {
         Event::dispatch('booking_product.booking.event-ticket.save.before', ['data' => $data, 'bookingProduct' => $bookingProduct]);
 
@@ -61,7 +60,12 @@ class BookingProductEventTicketRepository extends Repository
         }
     }
 
-    // Function to sanitize the inputs
+    /**
+     * Summary of sanitize Input.
+     *
+     * @param string $fieldName
+     * @param array $inputs
+     */
     private function sanitizeInput($fieldName, &$inputs)
     {
         $fieldValue = $inputs[$fieldName] ?? null;

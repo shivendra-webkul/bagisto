@@ -27,7 +27,7 @@ class BookingController extends Controller
             return datagrid(BookingDataGrid::class)->process();
         }
 
-        return view('booking::admin.sales.bookings.index');
+        return view('admin::sales.bookings.index');
     }
 
     /**

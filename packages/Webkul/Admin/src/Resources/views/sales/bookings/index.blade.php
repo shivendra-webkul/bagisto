@@ -1,10 +1,3 @@
-@push('styles')
-    @bagistoVite([
-        'src/Resources/assets/css/app.css',
-        'src/Resources/assets/js/app.js'
-    ], 'booking')
-@endpush
-
 <x-admin::layouts>
     <!-- Page Title -->
     <x-slot:title>
@@ -53,7 +46,7 @@
             </template>
 
             <template v-else>
-                @include('booking::admin.sales.bookings.calendar')
+                @include('admin::sales.bookings.calendar')
             </template>
         </script>
 

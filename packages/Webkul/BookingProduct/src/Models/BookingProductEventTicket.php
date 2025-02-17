@@ -12,6 +12,9 @@ class BookingProductEventTicket extends TranslatableModel implements BookingProd
 {
     use HasFactory;
 
+    /**
+     * Indicates if the model should be timestamped.
+     */
     public $timestamps = false;
 
     public $translatedAttributes = [
@@ -19,6 +22,9 @@ class BookingProductEventTicket extends TranslatableModel implements BookingProd
         'description',
     ];
 
+    /**
+     * The attributes that are mass assignable.
+     */
     protected $fillable = [
         'price',
         'qty',

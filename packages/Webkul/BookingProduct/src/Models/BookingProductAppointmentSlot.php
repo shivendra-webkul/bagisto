@@ -7,10 +7,18 @@ use Webkul\BookingProduct\Contracts\BookingProductAppointmentSlot as BookingProd
 
 class BookingProductAppointmentSlot extends Model implements BookingProductAppointmentSlotContract
 {
+    /**
+     * Indicates if the model should be timestamped.
+     */
     public $timestamps = false;
 
+    /**
+     * The attributes that should be cast.
+     */
     protected $casts = ['slots' => 'array'];
-
+    /**
+     * The attributes that are mass assignable.
+     */
     protected $fillable = [
         'duration',
         'break_time',

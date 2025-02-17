@@ -22,31 +22,10 @@ class EventServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap services.
-     *
-     * @return void
      */
     public function boot()
     {
         parent::boot();
-
-        /**
-         * Styles loading.
-         */
-        // Event::listen('bagisto.admin.layout.head', function ($viewRenderEventManager) {
-        //     $viewRenderEventManager->addTemplate('booking::components.layouts.style');
-        // });
-
-        // Event::listen('bagisto.admin.catalog.product.edit.form.videos.after', static function (ViewRenderEventManager $viewRenderEventManager) {
-        //     if (View::exists('booking::admin.catalog.products.edit.types.booking')) {
-        //         $viewRenderEventManager->addTemplate('booking::admin.catalog.products.edit.types.booking');
-        //     }
-        // });
-
-        // Event::listen('bagisto.shop.products.short_description.after', static function (ViewRenderEventManager $viewRenderEventManager) {
-        //     if (View::exists('booking::shop.products.view.types.booking')) {
-        //         $viewRenderEventManager->addTemplate('booking::shop.products.view.types.booking');
-        //     }
-        // });
 
         Event::listen('bagisto.admin.catalog.product.edit.form.inventories.controls.before', static function (ViewRenderEventManager $viewRenderEventManager) {
             if (View::exists('booking::admin.catalog.products.edit.inventories')) {

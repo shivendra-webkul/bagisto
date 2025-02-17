@@ -13,6 +13,9 @@ class BookingProduct extends Model implements BookingProductContract
 {
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     */
     protected $fillable = [
         'location',
         'show_location',
@@ -23,7 +26,9 @@ class BookingProduct extends Model implements BookingProductContract
         'available_to',
         'product_id',
     ];
-
+    /**
+     * The relations to eager load on every query.
+     */
     protected $with = [
         'default_slot',
         'appointment_slot',
@@ -32,6 +37,9 @@ class BookingProduct extends Model implements BookingProductContract
         'table_slot',
     ];
 
+    /**
+     * The attributes that should be cast.
+     */
     protected $casts = [
         'available_from' => 'datetime',
         'available_to'   => 'datetime',

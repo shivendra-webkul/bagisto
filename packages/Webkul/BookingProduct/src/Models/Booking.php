@@ -9,8 +9,14 @@ use Webkul\Sales\Models\OrderProxy;
 
 class Booking extends Model implements BookingContract
 {
+    /**
+     * Indicates if the model should be timestamped.
+     */
     public $timestamps = false;
 
+    /**
+     * The attributes that are mass assignable.
+     */
     protected $fillable = [
         'qty',
         'from',
