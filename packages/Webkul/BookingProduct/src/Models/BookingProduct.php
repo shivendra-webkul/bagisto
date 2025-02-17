@@ -26,6 +26,7 @@ class BookingProduct extends Model implements BookingProductContract
         'available_to',
         'product_id',
     ];
+
     /**
      * The relations to eager load on every query.
      */

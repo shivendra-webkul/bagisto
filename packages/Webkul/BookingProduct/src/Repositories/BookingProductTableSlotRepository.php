@@ -2,8 +2,8 @@
 
 namespace Webkul\BookingProduct\Repositories;
 
-use Webkul\Core\Eloquent\Repository;
 use Webkul\BookingProduct\Contracts\BookingProductTableSlot;
+use Webkul\Core\Eloquent\Repository;
 
 class BookingProductTableSlotRepository extends Repository
 {

@@ -4,9 +4,9 @@ namespace Webkul\BookingProduct\Repositories;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Str;
-use Webkul\Core\Eloquent\Repository;
-use Webkul\BookingProduct\Contracts\BookingProductEventTicket;
 use Webkul\BookingProduct\Contracts\BookingProduct;
+use Webkul\BookingProduct\Contracts\BookingProductEventTicket;
+use Webkul\Core\Eloquent\Repository;
 
 class BookingProductEventTicketRepository extends Repository
 {
@@ -63,8 +63,8 @@ class BookingProductEventTicketRepository extends Repository
     /**
      * Summary of sanitize Input.
      *
-     * @param string $fieldName
-     * @param array $inputs
+     * @param  string  $fieldName
+     * @param  array  $inputs
      */
     private function sanitizeInput($fieldName, &$inputs)
     {

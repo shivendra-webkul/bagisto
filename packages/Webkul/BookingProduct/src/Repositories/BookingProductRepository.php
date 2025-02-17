@@ -4,8 +4,8 @@ namespace Webkul\BookingProduct\Repositories;
 
 use Carbon\Carbon;
 use Illuminate\Container\Container;
-use Webkul\Core\Eloquent\Repository;
 use Webkul\BookingProduct\Contracts\BookingProduct;
+use Webkul\Core\Eloquent\Repository;
 
 class BookingProductRepository extends Repository
 {
