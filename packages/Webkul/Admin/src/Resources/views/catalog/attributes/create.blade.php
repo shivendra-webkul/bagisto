@@ -207,7 +207,7 @@
                                                 @lang('admin::app.catalog.attributes.create.admin-name')
                                             </x-admin::table.th>
 
-                                            <!-- Loacles tables heading -->
+                                            <!-- Locales tables heading -->
                                             @foreach ($locales as $locale)
                                                 <x-admin::table.th>
                                                     {{ $locale->name . ' (' . $locale->code . ')' }}
@@ -444,6 +444,8 @@
                                     name="default_value"
                                     :label="trans('admin::app.catalog.attributes.create.default-value')"
                                 />
+
+                                <x-admin::form.control-group.error control-name="default_value" />
                             </x-admin::form.control-group>
                         </x-slot>
                     </x-admin::accordion>
@@ -584,7 +586,7 @@
                                 </label>
                             </x-admin::form.control-group>
 
-                            <!-- Use to create configuable product -->
+                            <!-- Use to create configurable product -->
                             <x-admin::form.control-group class="!mb-2 flex select-none items-center gap-2.5">
                                 <x-admin::form.control-group.control
                                     type="checkbox"
@@ -602,23 +604,23 @@
                                 </label>
                             </x-admin::form.control-group>
 
-                                <!-- Visible On Product View Page On Fornt End -->
-                                <x-admin::form.control-group class="!mb-2 flex select-none items-center gap-2.5">
-                                    <x-admin::form.control-group.control
-                                        type="checkbox"
-                                        id="is_visible_on_front"
-                                        name="is_visible_on_front"
-                                        value="1"
-                                        for="is_visible_on_front"
-                                    />
+                            <!-- Visible On Product View Page On Front End -->
+                            <x-admin::form.control-group class="!mb-2 flex select-none items-center gap-2.5">
+                                <x-admin::form.control-group.control
+                                    type="checkbox"
+                                    id="is_visible_on_front"
+                                    name="is_visible_on_front"
+                                    value="1"
+                                    for="is_visible_on_front"
+                                />
 
-                                    <label
-                                        class="cursor-pointer text-xs font-medium text-gray-600 dark:text-gray-300"
-                                        for="is_visible_on_front"
-                                    >
-                                        @lang('admin::app.catalog.attributes.edit.is-visible-on-front')
-                                    </label>
-                                </x-admin::form.control-group>
+                                <label
+                                    class="cursor-pointer text-xs font-medium text-gray-600 dark:text-gray-300"
+                                    for="is_visible_on_front"
+                                >
+                                    @lang('admin::app.catalog.attributes.edit.is-visible-on-front')
+                                </label>
+                            </x-admin::form.control-group>
 
                             <!-- Attribute is Comparable -->
                             <x-admin::form.control-group class="!mb-2 flex select-none items-center gap-2.5">
@@ -812,7 +814,7 @@
 
                         inputValidation: false,
 
-                        swatchType: '',
+                        swatchType: 'dropdown',
 
                         swatchAttribute: false,
 
@@ -842,33 +844,36 @@
 
                 methods: {
                     storeOptions(params, { resetForm }) {
+                        const sortedLocales = Object.values(this.locales).sort((a, b) => a.name.localeCompare(b.name));
+
+                        this.locales = sortedLocales.map(({ code, name }) => ({ code, name }));
+
+                        const sortedParams = sortedLocales.reduce((acc, locale) => {
+                            acc[locale.code] = params[locale.code] || null;
+                            return acc;
+                        }, {});
+
                         if (params.id) {
                             let foundIndex = this.options.findIndex(item => item.id === params.id);
 
-                            this.options.splice(foundIndex, 1, {
-                                ...this.options[foundIndex],
-                                params: {
-                                    ...this.options[foundIndex].params,
-                                    ...params,
-                                }
-                            });
+                            if (foundIndex !== -1) {
+                                Object.assign(this.options[foundIndex].params, sortedParams);
+                            }
                         } else {
                             this.options.push({
-                                id: 'option_' + this.optionRowCount,
-                                params
+                                id: `option_${this.optionRowCount}`,
+                                params: { admin_name: params.admin_name, ...sortedParams }
                             });
 
-                            params.id = 'option_' + this.optionRowCount;
+                            params.id = `option_${this.optionRowCount}`;
                             this.optionRowCount++;
                         }
 
-                        let formData = new FormData(this.$refs.createOptionsForm);
+                        const formData = new FormData(this.$refs.createOptionsForm);
 
                         const sliderImage = formData.get("swatch_value[]");
 
-                        if (sliderImage) {
-                            params.swatch_value = sliderImage;
-                        }
+                        if (sliderImage) params.swatch_value = sliderImage;
 
                         this.$refs.addOptionsRow.toggle();
 
@@ -914,7 +919,7 @@
 
                         dataTransfer.items.add(event.swatch_value);
 
-                        // use settimeout because need to wait for render dom before set the src or get the ref value
+                        // use set timeout because need to wait for render dom before set the src or get the ref value
                         setTimeout(() => {
                             this.$refs['image_' + event.id].src =  URL.createObjectURL(event.swatch_value);
 

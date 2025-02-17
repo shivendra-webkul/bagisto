@@ -36,7 +36,7 @@
             </div>
         </div>
     
-        <!-- Full Pannel -->
+        <!-- Full Panel -->
         <div class="mt-3.5 flex gap-2.5 max-xl:flex-wrap">
             <!-- Left Section -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
@@ -444,7 +444,7 @@
                         type="text"
                         id="postcode"
                         name="postcode"
-                        rules="required"
+                        rules="required|postcode"
                         :value="old('postcode')"
                         :label="trans('admin::app.settings.inventory-sources.create.postcode')"
                         :placeholder="trans('admin::app.settings.inventory-sources.create.postcode')"

@@ -3,32 +3,35 @@
 return [
     'users' => [
         'sessions' => [
-            'email'                => 'Endereço de Email',
-            'forget-password-link' => 'Esqueceu a Senha?',
-            'password'             => 'Senha',
-            'submit-btn'           => 'Entrar',
-            'title'                => 'Entrar',
+            'email'                  => 'Endereço de Email',
+            'forget-password-link'   => 'Esqueceu a Senha?',
+            'password'               => 'Senha',
+            'powered-by-description' => 'Desenvolvido por :bagisto, um projeto de código aberto da :webkul.',
+            'submit-btn'             => 'Entrar',
+            'title'                  => 'Entrar',
         ],
 
         'forget-password' => [
             'create' => [
-                'email'           => 'Email Registrado',
-                'email-not-exist' => 'Email não Existe',
-                'page-title'      => 'Esqueceu a Senha',
-                'reset-link-sent' => 'Link de Redefinição de Senha enviado',
-                'sign-in-link'    => 'Voltar para Entrar?',
-                'submit-btn'      => 'Redefinir',
-                'title'           => 'Recuperar Senha',
+                'email'                  => 'Email Registrado',
+                'email-not-exist'        => 'Email não Existe',
+                'page-title'             => 'Esqueceu a Senha',
+                'powered-by-description' => 'Desenvolvido por :bagisto, um projeto de código aberto da :webkul.',
+                'reset-link-sent'        => 'Link de Redefinição de Senha enviado',
+                'sign-in-link'           => 'Voltar para Entrar?',
+                'submit-btn'             => 'Redefinir',
+                'title'                  => 'Recuperar Senha',
             ],
         ],
 
         'reset-password' => [
-            'back-link-title'  => 'Voltar para Entrar?',
-            'confirm-password' => 'Confirmar Senha',
-            'email'            => 'Email Registrado',
-            'password'         => 'Senha',
-            'submit-btn'       => 'Redefinir Senha',
-            'title'            => 'Redefinir Senha',
+            'back-link-title'        => 'Voltar para Entrar?',
+            'confirm-password'       => 'Confirmar Senha',
+            'email'                  => 'Email Registrado',
+            'password'               => 'Senha',
+            'powered-by-description' => 'Desenvolvido por :bagisto, um projeto de código aberto da :webkul.',
+            'submit-btn'             => 'Redefinir Senha',
+            'title'                  => 'Redefinir Senha',
         ],
     ],
 
@@ -187,6 +190,11 @@ return [
                 'title'                   => 'Criar Pedido para :name',
 
                 'types' => [
+                    'simple' => [
+                        'none'         => 'Nenhum',
+                        'total-amount' => 'Valor Total',
+                    ],
+
                     'configurable' => [
                         'select-options' => 'Por favor, selecione uma opção',
                     ],
@@ -202,6 +210,11 @@ return [
 
                     'downloadable' => [
                         'title' => 'Links',
+                    ],
+
+                    'virtual' => [
+                        'none'         => 'Nenhum',
+                        'total-amount' => 'Valor Total',
                     ],
                 ],
 
@@ -716,7 +729,6 @@ return [
                     'payment-method'   => 'Método de Pagamento',
                     'status'           => 'Status',
                     'title'            => 'Detalhes da Transação',
-                    'transaction-data' => 'Dados da Transação',
                     'transaction-id'   => 'ID da Transação',
                 ],
             ],
@@ -856,6 +868,93 @@ return [
                 ],
 
                 'types' => [
+                    'simple' => [
+                        'customizable-options' => [
+                            'add-btn'           => 'Adicionar opção',
+                            'empty-info'        => 'Para criar opções personalizáveis rapidamente.',
+                            'empty-title'       => 'Adicionar opção',
+                            'info'              => 'Isso personalizará o produto simples.',
+                            'title'             => 'Item personalizável',
+
+                            'update-create' => [
+                                'is-required'               => 'É obrigatório',
+                                'max-characters'            => 'Máximo de caracteres',
+                                'name'                      => 'Título',
+                                'no'                        => 'Não',
+                                'price'                     => 'Preço',
+                                'save-btn'                  => 'Salvar',
+                                'supported-file-extensions' => 'Extensões de arquivo suportadas',
+                                'title'                     => 'Opção',
+                                'type'                      => 'Tipo',
+                                'yes'                       => 'Sim',
+                            ],
+
+                            'option' => [
+                                'add-btn'     => 'Adicionar opção',
+                                'delete'      => 'Excluir',
+                                'delete-btn'  => 'Excluir',
+                                'edit-btn'    => 'Editar',
+                                'empty-info'  => 'Para criar várias combinações de produtos rapidamente.',
+                                'empty-title' => 'Adicionar opção',
+
+                                'types' => [
+                                    'text' => [
+                                        'title' => 'Texto',
+                                    ],
+
+                                    'textarea' => [
+                                        'title' => 'Área de texto',
+                                    ],
+
+                                    'checkbox' => [
+                                        'title' => 'Caixa de seleção',
+                                    ],
+
+                                    'radio' => [
+                                        'title' => 'Rádio',
+                                    ],
+
+                                    'select' => [
+                                        'title' => 'Selecionar',
+                                    ],
+
+                                    'multiselect' => [
+                                        'title' => 'Seleção múltipla',
+                                    ],
+
+                                    'date' => [
+                                        'title' => 'Data',
+                                    ],
+
+                                    'datetime' => [
+                                        'title' => 'Data e hora',
+                                    ],
+
+                                    'time' => [
+                                        'title' => 'Hora',
+                                    ],
+
+                                    'file' => [
+                                        'title' => 'Arquivo',
+                                    ],
+                                ],
+
+                                'items' => [
+                                    'update-create' => [
+                                        'label'    => 'Etiqueta',
+                                        'price'    => 'Preço',
+                                        'save-btn' => 'Salvar',
+                                        'title'    => 'Opção',
+                                    ],
+                                ],
+                            ],
+
+                            'validations' => [
+                                'associated-product' => 'O produto já está associado a um produto configurável, agrupado ou em pacote.',
+                            ],
+                        ],
+                    ],
+
                     'configurable' => [
                         'add-btn'           => 'Adicionar Variante',
                         'delete-btn'        => 'Excluir',
@@ -1411,6 +1510,7 @@ return [
                     'gender'         => 'Gênero',
                     'group'          => 'Grupo',
                     'id'             => 'ID do Cliente',
+                    'id-value'       => 'ID - :id',
                     'inactive'       => 'Inativo',
                     'method-error'   => 'Erro! Método incorreto detectado, por favor, verifique a configuração da ação em massa',
                     'name'           => 'Nome do Cliente',
@@ -1662,6 +1762,44 @@ return [
                     'id'     => 'ID',
                     'name'   => 'Nome',
                 ],
+            ],
+        ],
+
+        'gdpr' => [
+            'index' => [
+                'title' => 'Solicitação de GDPR',
+
+                'datagrid' => [
+                    'completed'     => 'Concluído',
+                    'created-at'    => 'Criado Em',
+                    'customer-name' => 'Nome do Cliente',
+                    'declined'      => 'Recusado',
+                    'delete'        => 'Excluir',
+                    'edit'          => 'Editar',
+                    'id'            => 'ID',
+                    'message'       => 'Mensagem',
+                    'pending'       => 'Pendente',
+                    'processing'    => 'Processando',
+                    'status'        => 'Status',
+                    'type'          => 'Tipo',
+                ],
+
+                'modal' => [
+                    'completed'  => 'Concluído',
+                    'declined'   => 'Recusado',
+                    'pending'    => 'Pendente',
+                    'processing' => 'Processando',
+                    'status'     => 'Status',
+                    'title'      => 'Editar Solicitação de Dados GDPR',
+                    'type'       => 'Tipo',
+                    'message'    => 'Mensagem',
+                    'save-btn'   => 'Salvar',
+                ],
+
+                'update-success'              => 'Solicitação de Dados atualizada com sucesso e Email enviado ao Cliente.',
+                'delete-success'              => 'Solicitação de Dados excluída com sucesso.',
+                'attribute-reason-error'      => 'Não foi possível excluir.',
+                'update-success-unsent-email' => 'Solicitação de Dados atualizada com sucesso, mas Email não enviado ao Cliente.',
             ],
         ],
 
@@ -2527,6 +2665,7 @@ return [
                     'general'           => 'Geral',
                     'group-separator'   => 'Separador de Grupo',
                     'name'              => 'Nome',
+                    'separator-note'    => 'O campo :attribute só pode aceitar os operadores vírgula (,) e ponto (.)',
                     'save-btn'          => 'Salvar Moeda',
                     'symbol'            => 'Símbolo',
                     'title'             => 'Criar Nova Moeda',
@@ -2575,6 +2714,7 @@ return [
                     'allowed-errors'      => 'Erros permitidos',
                     'back-btn'            => 'Voltar',
                     'create-update'       => 'Criar/Atualizar',
+                    'current-file'        => 'Arquivo Carregado Atual',
                     'delete'              => 'Excluir',
                     'download-sample'     => 'Baixar Exemplo',
                     'field-separator'     => 'Separador de Campos',
@@ -2802,10 +2942,11 @@ return [
                         'title'   => 'Editar Categorias de Imposto',
                     ],
 
-                    'create-success'  => 'Nova Categoria de Imposto criada',
-                    'delete-failed'   => 'Falha ao excluir a Categoria de Imposto',
-                    'delete-success'  => 'Categoria de Imposto excluída com sucesso',
-                    'update-success'  => 'Categoria de Imposto atualizada com sucesso',
+                    'can-not-delete' => 'Categorias atribuídas às taxas de imposto não podem ser excluídas.',
+                    'create-success' => 'Nova Categoria de Imposto criada',
+                    'delete-failed'  => 'Falha ao excluir a Categoria de Imposto',
+                    'delete-success' => 'Categoria de Imposto excluída com sucesso',
+                    'update-success' => 'Categoria de Imposto atualizada com sucesso',
                 ],
             ],
 
@@ -3080,17 +3221,18 @@ return [
                 'title'      => 'Temas',
 
                 'datagrid' => [
-                    'active'       => 'Ativo',
-                    'channel_name' => 'Nome do Canal',
-                    'delete'       => 'Excluir',
-                    'id'           => 'ID',
-                    'inactive'     => 'Inativo',
-                    'name'         => 'Nome',
-                    'sort-order'   => 'Ordem de Classificação',
-                    'status'       => 'Status',
-                    'theme'        => 'Tema',
-                    'type'         => 'Tipo',
-                    'view'         => 'Ver',
+                    'active'        => 'Ativo',
+                    'channel_name'  => 'Nome do Canal',
+                    'change-status' => 'Alterar status',
+                    'delete'        => 'Excluir',
+                    'id'            => 'ID',
+                    'inactive'      => 'Inativo',
+                    'name'          => 'Nome',
+                    'sort-order'    => 'Ordem de Classificação',
+                    'status'        => 'Status',
+                    'theme'         => 'Tema',
+                    'type'          => 'Tipo',
+                    'view'          => 'Ver',
                 ],
             ],
 
@@ -3347,7 +3489,7 @@ return [
                 'title' => 'Geral',
 
                 'general' => [
-                    'info'  => 'Definir opções de unidades.',
+                    'info'  => 'Definir opções de unidades e ativar ou desativar migalhas de pão.',
                     'title' => 'Geral',
 
                     'unit-options' => [
@@ -3365,7 +3507,7 @@ return [
                 ],
 
                 'content' => [
-                    'info'  => 'Definir opções de comparação, opções de lista de desejos, opções de pesquisa de imagem, rodapé, alternar rodapé e scripts personalizados.',
+                    'info'  => 'Defina o título da oferta do cabeçalho e scripts personalizados.',
                     'title' => 'Conteúdo',
 
                     'header-offer' => [
@@ -3385,7 +3527,7 @@ return [
                 ],
 
                 'design' => [
-                    'info'  => 'Definir logotipo e ícone de favicon.',
+                    'info'  => 'Defina o logotipo e o ícone favicon para o painel de administração.',
                     'title' => 'Design',
 
                     'admin-logo' => [
@@ -3397,7 +3539,7 @@ return [
                 ],
 
                 'magic-ai' => [
-                    'info'  => 'Definir opções de Magic AI.',
+                    'info'  => 'Defina as opções do Magic AI e permita algumas opções para automatizar a criação de conteúdo.',
                     'title' => 'Magic AI',
 
                     'settings' => [
@@ -3568,6 +3710,46 @@ return [
                 ],
             ],
 
+            'gdpr' => [
+                'title' => 'GDPR',
+                'info'  => 'GDPR',
+
+                'settings' => [
+                    'title'   => 'Configurações de GDPR',
+                    'info'    => 'Configurações de GDPR',
+                    'enabled' => 'Habilitado',
+                ],
+
+                'agreement' => [
+                    'title'          => 'Acordo de GDPR',
+                    'info'           => 'Acordo de GDPR',
+                    'enable'         => 'Habilitar Acordo do Cliente',
+                    'checkbox-label' => 'Rótulo da Caixa de Seleção do Acordo',
+                    'content'        => 'Conteúdo do Acordo',
+                ],
+
+                'cookie' => [
+                    'title'        => 'Configurações de Mensagem de Cookie',
+                    'info'         => 'Configurações de Mensagem de Cookie',
+                    'enable'       => 'Habilitar Aviso de Cookie',
+                    'position'     => 'Posição de Exibição do Bloco de Cookie',
+                    'bottom-left'  => 'Inferior Esquerdo',
+                    'bottom-right' => 'Inferior Direito',
+                    'identifier'   => 'Identificador do Bloco Estático',
+                    'description'  => 'Descrição',
+                ],
+
+                'cookie-consent' => [
+                    'title'                  => 'Sua Preferência de Consentimento de Cookie',
+                    'info'                   => 'Sua Preferência de Consentimento de Cookie',
+                    'strictly-necessary'     => 'Estritamente Necessário',
+                    'basic-interaction'      => 'Interações Básicas e Funcionalidades',
+                    'experience-enhancement' => 'Melhorias na Experiência',
+                    'measurement'            => 'Medições',
+                    'targeting-advertising'  => 'Segmentação e Publicidade',
+                ],
+            ],
+
             'catalog' => [
                 'info'  => 'Catálogo',
                 'title' => 'Catálogo',
@@ -3723,7 +3905,7 @@ return [
 
                 'inventory' => [
                     'title'      => 'Inventário',
-                    'title-info' => 'Configure as configurações de inventário para permitir pedidos pendentes, definir quantidades mínimas e máximas no carrinho e definir o limite de estoque esgotado.',
+                    'title-info' => 'Configure as configurações de inventário para permitir pedidos em atraso e definir o limite de estoque esgotado.',
 
                     'product-stock-options' => [
                         'allow-back-orders'       => 'Permitir Pedidos Pendentes',
@@ -3762,7 +3944,7 @@ return [
 
                 'captcha' => [
                     'info'  => 'Definir chave do site, chave secreta e status.',
-                    'title' => 'Captcha',
+                    'title' => 'Google Captcha',
 
                     'credentials' => [
                         'secret-key' => 'Chave Secreta',
@@ -3779,7 +3961,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'Definir inscrições de newsletter, verificações de e-mail e login social.',
+                    'settings-info' => 'Defina lista de desejos, redirecionamento de login, assinaturas de newsletter, opção de grupo padrão, verificações de e-mail e login social.',
                     'title'         => 'Configurações',
 
                     'login-as-customer' => [
@@ -3864,19 +4046,23 @@ return [
                 ],
 
                 'notifications' => [
-                    'cancel-order'                                     => 'Enviar uma notificação após cancelar um pedido',
-                    'customer'                                         => 'Enviar as credenciais da conta do cliente após o registro',
-                    'customer-registration-confirmation-mail-to-admin' => 'Enviar um e-mail de confirmação para o administrador após o registro do cliente',
-                    'info'                                             => 'Configure as opções de estoque do produto para permitir pedidos em atraso, definir quantidades mínimas e máximas no carrinho e definir limites de estoque indisponível.',
-                    'new-admin'                                        => 'Enviar um e-mail de confirmação para o administrador após fazer um novo pedido',
-                    'new-inventory-source'                             => 'Enviar um e-mail de notificação para a fonte de inventário após criar um envio',
-                    'new-invoice'                                      => 'Enviar um e-mail de notificação para o cliente após criar uma nova fatura',
-                    'new-order'                                        => 'Enviar um e-mail de confirmação para o cliente após fazer um novo pedido',
-                    'new-refund'                                       => 'Enviar um e-mail de notificação para o cliente após criar um reembolso',
-                    'new-shipment'                                     => 'Enviar um e-mail de notificação para o cliente após criar um envio',
-                    'registration'                                     => 'Enviar um e-mail de confirmação após o registro do cliente',
+                    'cancel-order'                                     => 'Enviar uma notificação ao cliente após cancelar um pedido',
+                    'cancel-order-mail-to-admin'                       => 'Envie um e-mail de notificação ao administrador após cancelar um pedido',
+                    'customer'                                         => 'Envie as credenciais da conta do cliente após o registro',
+                    'customer-registration-confirmation-mail-to-admin' => 'Envie um e-mail de confirmação ao administrador após o registro do cliente',
+                    'info'                                             => 'Configure para receber e-mails de verificação de conta, confirmações de pedidos, atualizações sobre faturas, reembolsos, remessas e cancelamentos de pedidos.',
+                    'new-inventory-source'                             => 'Envie um e-mail de notificação para a fonte de inventário após criar um envio',
+                    'new-invoice'                                      => 'Envie um e-mail de notificação ao cliente após criar uma nova fatura',
+                    'new-invoice-mail-to-admin'                        => 'Envie um e-mail de notificação ao administrador após criar uma nova fatura',
+                    'new-order'                                        => 'Envie um e-mail de confirmação ao cliente após realizar um novo pedido',
+                    'new-order-mail-to-admin'                          => 'Envie um e-mail de confirmação ao administrador após realizar um novo pedido',
+                    'new-refund'                                       => 'Envie um e-mail de notificação ao cliente após criar um reembolso',
+                    'new-refund-mail-to-admin'                         => 'Envie um e-mail de notificação ao administrador após criar um novo reembolso',
+                    'new-shipment'                                     => 'Envie um e-mail de notificação ao cliente após criar uma remessa',
+                    'new-shipment-mail-to-admin'                       => 'Envie um e-mail de notificação ao administrador após criar uma nova remessa',
+                    'registration'                                     => 'Envie um e-mail de confirmação após o registro do cliente',
                     'title'                                            => 'Notificações',
-                    'verification'                                     => 'Enviar um e-mail de verificação após o registro do cliente',
+                    'verification'                                     => 'Envie um e-mail de verificação após o registro do cliente',
                 ],
             ],
 
@@ -4216,6 +4402,11 @@ return [
                 'transactions'             => 'Transações',
                 'url-rewrites'             => 'Reescritas de URL',
                 'users'                    => 'Usuários',
+                'gdpr-data-requests'       => 'Solicitações de Dados GDPR',
+            ],
+
+            'powered-by' => [
+                'description' => 'Desenvolvido por :bagisto, um projeto de código aberto da :webkul.',
             ],
         ],
 
@@ -4525,6 +4716,10 @@ return [
                 'greeting'    => 'Damos as boas-vindas ao novo cliente, :customer_name que acaba de se registrar conosco!',
                 'subject'     => 'Cadastro de Novo Cliente',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'O status do seu pedido de GDPR',
         ],
 
         'orders' => [

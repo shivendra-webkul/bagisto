@@ -30,7 +30,7 @@
                         @lang('admin::app.catalog.products.edit.types.bundle.info')
                     </p>
                 </div>
-                
+
                 <!-- Add Button -->
                 <div class="flex items-center gap-x-1">
                     <div
@@ -104,7 +104,7 @@
                                 @lang('admin::app.catalog.products.edit.types.bundle.update-create.title')
                             </p>
                         </x-slot>
-        
+
                         <!-- Modal Content -->
                         <x-slot:content>
                             <x-admin::form.control-group>
@@ -119,11 +119,12 @@
                                     ::value="selectedOption.label"
                                     :label="trans('admin::app.catalog.products.edit.types.bundle.update-create.name')"
                                 />
-        
+
                                 <x-admin::form.control-group.error control-name="label" />
                             </x-admin::form.control-group>
 
                             <div class="flex gap-4">
+                                <!-- Type -->
                                 <x-admin::form.control-group class="flex-1">
                                     <x-admin::form.control-group.label class="required">
                                         @lang('admin::app.catalog.products.edit.types.bundle.update-create.type')
@@ -152,10 +153,11 @@
                                             @lang('admin::app.catalog.products.edit.types.bundle.update-create.multiselect')
                                         </option>
                                     </x-admin::form.control-group.control>
-        
+
                                     <x-admin::form.control-group.error control-name="type" />
                                 </x-admin::form.control-group>
 
+                                <!-- Is Required -->
                                 <x-admin::form.control-group class="flex-1">
                                     <x-admin::form.control-group.label class="required">
                                         @lang('admin::app.catalog.products.edit.types.bundle.update-create.is-required')
@@ -176,12 +178,12 @@
                                             @lang('admin::app.catalog.products.edit.types.bundle.update-create.no')
                                         </option>
                                     </x-admin::form.control-group.control>
-        
+
                                     <x-admin::form.control-group.error control-name="is_required" />
                                 </x-admin::form.control-group>
                             </div>
                         </x-slot>
-        
+
                         <!-- Modal Footer -->
                         <x-slot:footer>
                             <!-- Save Button -->
@@ -242,7 +244,7 @@
                         @{{ types[option.type].info }}
                     </p>
                 </div>
-                
+
                 <!-- Add Button -->
                 <div class="flex items-center gap-x-5">
                     <p
@@ -309,7 +311,7 @@
                                     >
                                     </label>
                                 </div>
-                                
+
                                 <!-- Image -->
                                 <div
                                     class="relative h-[60px] max-h-[60px] w-full max-w-[60px] overflow-hidden rounded"
@@ -317,12 +319,12 @@
                                 >
                                     <template v-if="! element.product.images.length">
                                         <img src="{{ bagisto_asset('images/product-placeholders/front.svg') }}">
-                                    
+
                                         <p class="absolute bottom-1.5 w-full text-center text-[6px] font-semibold text-gray-400">
                                             @lang('admin::app.catalog.products.edit.types.bundle.image-placeholder')
                                         </p>
                                     </template>
-                
+
                                     <template v-else>
                                         <img :src="element.product.images[0].url">
                                     </template>
@@ -343,16 +345,16 @@
                             <!-- Actions -->
                             <div class="grid place-content-start gap-1 ltr:text-right rtl:text-left">
                                 <p class="font-semibold text-gray-800 dark:text-white">
-                                    @{{ $admin.formatPrice(element.product.price) }}    
+                                    @{{ $admin.formatPrice(element.product.price) }}
                                 </p>
-                                
+
                                 <!-- Hidden Input -->
                                 <input
                                     type="hidden"
                                     :name="'bundle_options[' + option.id + '][products][' + element.id + '][product_id]'"
                                     :value="element.product.id"
                                 />
-                                
+
                                 <input
                                     type="hidden"
                                     :name="'bundle_options[' + option.id + '][products][' + element.id + '][sort_order]'"
@@ -383,7 +385,7 @@
                                         </p>
                                     </v-error-message>
                                 </x-admin::form.control-group>
-                                
+
                                 <p
                                     class="cursor-pointer text-red-600 transition-all hover:underline"
                                     @click="removeProduct(element)"
@@ -430,7 +432,7 @@
             <x-admin::products.search
                 ::ref="'productSearch' + option.id"
                 ::added-product-ids="addedProductIds"
-                ::query-params="{type: 'simple'}"
+                ::query-params="{type: 'simple', exclude_customizable_products: 1}"
                 @onProductAdded="addSelected($event)"
             />
         </div>

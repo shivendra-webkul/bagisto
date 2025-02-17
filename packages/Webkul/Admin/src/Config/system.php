@@ -66,15 +66,17 @@ return [
         'sort'   => 1,
         'fields' => [
             [
-                'name'    => 'title',
-                'title'   => 'admin::app.configuration.index.general.content.header-offer.offer-title',
-                'type'    => 'text',
-                'default' => 'Get UPTO 40% OFF on your 1st order',
+                'name'       => 'title',
+                'title'      => 'admin::app.configuration.index.general.content.header-offer.offer-title',
+                'type'       => 'text',
+                'default'    => 'Get UPTO 40% OFF on your 1st order',
+                'validation' => 'max:100',
             ], [
-                'name'    => 'redirection_title',
-                'title'   => 'admin::app.configuration.index.general.content.header-offer.redirection-title',
-                'type'    => 'text',
-                'default' => 'SHOP NOW',
+                'name'       => 'redirection_title',
+                'title'      => 'admin::app.configuration.index.general.content.header-offer.redirection-title',
+                'type'       => 'text',
+                'default'    => 'SHOP NOW',
+                'validation' => 'max:25',
             ], [
                 'name'    => 'redirection_link',
                 'title'   => 'admin::app.configuration.index.general.content.header-offer.redirection-link',
@@ -543,6 +545,132 @@ return [
                 'validation'    => 'decimal:1|min:0|max:1',
                 'default'       => '0.8',
                 'channel_based' => true,
+            ],
+        ],
+    ], [
+        'key'  => 'general.gdpr',
+        'name' => 'admin::app.configuration.index.general.gdpr.title',
+        'info' => 'admin::app.configuration.index.general.gdpr.info',
+        'icon' => 'settings/store.svg',
+        'sort' => 4,
+    ], [
+        'key'    => 'general.gdpr.settings',
+        'name'   => 'admin::app.configuration.index.general.gdpr.settings.title',
+        'info'   => 'admin::app.configuration.index.general.gdpr.settings.info',
+        'sort'   => 1,
+        'fields' => [
+            [
+                'name'          => 'enabled',
+                'title'         => 'admin::app.configuration.index.general.gdpr.settings.enabled',
+                'type'          => 'boolean',
+                'channel_based' => false,
+            ],
+        ],
+    ], [
+        'key'    => 'general.gdpr.agreement',
+        'name'   => 'admin::app.configuration.index.general.gdpr.agreement.title',
+        'info'   => 'admin::app.configuration.index.general.gdpr.agreement.info',
+        'sort'   => 2,
+        'fields' => [
+            [
+                'name'          => 'enabled',
+                'title'         => 'admin::app.configuration.index.general.gdpr.agreement.enable',
+                'type'          => 'boolean',
+                'channel_based' => false,
+            ], [
+                'name'          => 'agreement_label',
+                'title'         => 'admin::app.configuration.index.general.gdpr.agreement.checkbox-label',
+                'type'          => 'text',
+                'default'       => 'I agree with the terms and conditions.',
+                'depends'       => 'enabled:true',
+                'channel_based' => false,
+            ], [
+                'name'          => 'agreement_content',
+                'title'         => 'admin::app.configuration.index.general.gdpr.agreement.content',
+                'type'          => 'textarea',
+                'depends'       => 'enabled:true',
+                'channel_based' => false,
+            ],
+        ],
+    ], [
+        'key'    => 'general.gdpr.cookie',
+        'name'   => 'admin::app.configuration.index.general.gdpr.cookie.title',
+        'info'   => 'admin::app.configuration.index.general.gdpr.cookie.info',
+        'sort'   => 3,
+        'fields' => [
+            [
+                'name'          => 'enabled',
+                'title'         => 'admin::app.configuration.index.general.gdpr.cookie.enable',
+                'type'          => 'boolean',
+                'channel_based' => false,
+            ], [
+                'name'          => 'position',
+                'title'         => 'admin::app.configuration.index.general.gdpr.cookie.position',
+                'type'          => 'select',
+                'default'       => 'bottom_left',
+                'depends'       => 'enabled:true',
+                'options'       => [
+                    [
+                        'title' => 'admin::app.configuration.index.general.gdpr.cookie.bottom-left',
+                        'value' => 'bottom_left',
+                    ], [
+                        'title' => 'admin::app.configuration.index.general.gdpr.cookie.bottom-right',
+                        'value' => 'bottom_right',
+                    ],
+                ],
+                'channel_based' => false,
+            ], [
+                'name'          => 'static_block_identifier',
+                'title'         => 'admin::app.configuration.index.general.gdpr.cookie.identifier',
+                'type'          => 'text',
+                'default'       => 'Cookie Block',
+                'depends'       => 'enabled:true',
+                'channel_based' => false,
+            ], [
+                'name'          => 'description',
+                'title'         => 'admin::app.configuration.index.general.gdpr.cookie.description',
+                'type'          => 'textarea',
+                'default'       => 'This website uses cookies to ensure you get the best experience on our website.',
+                'depends'       => 'enabled:true',
+                'channel_based' => false,
+            ],
+        ],
+    ], [
+        'key'    => 'general.gdpr.cookie_consent',
+        'name'   => 'admin::app.configuration.index.general.gdpr.cookie-consent.title',
+        'info'   => 'admin::app.configuration.index.general.gdpr.cookie-consent.info',
+        'sort'   => 4,
+        'fields' => [
+            [
+                'name'          => 'strictly_necessary',
+                'title'         => 'admin::app.configuration.index.general.gdpr.cookie-consent.strictly-necessary',
+                'type'          => 'textarea',
+                'default'       => 'I agree with the terms and conditions.',
+                'channel_based' => false,
+            ], [
+                'name'          => 'basic_interaction',
+                'title'         => 'admin::app.configuration.index.general.gdpr.cookie-consent.basic-interaction',
+                'type'          => 'textarea',
+                'default'       => 'These trackers enable basic interactions and functionalities that allow you to access selected features of our service and facilitate your communication with us.',
+                'channel_based' => false,
+            ], [
+                'name'          => 'experience_enhancement',
+                'title'         => 'admin::app.configuration.index.general.gdpr.cookie-consent.experience-enhancement',
+                'type'          => 'textarea',
+                'default'       => 'These trackers help us to provide a personalized user experience by improving the quality of your preference management options, and by enabling the interaction with external networks and platforms.',
+                'channel_based' => false,
+            ], [
+                'name'          => 'measurements',
+                'title'         => 'admin::app.configuration.index.general.gdpr.cookie-consent.measurement',
+                'type'          => 'textarea',
+                'default'       => 'These trackers help us to measure traffic and analyze your behavior with the goal of improving our service.',
+                'channel_based' => false,
+            ], [
+                'name'          => 'targeting_advertising',
+                'title'         => 'admin::app.configuration.index.general.gdpr.cookie-consent.targeting-advertising',
+                'type'          => 'textarea',
+                'default'       => 'These trackers help us to deliver personalized marketing content to you based on your behavior and to operate, serve and track ads.',
+                'channel_based' => false,
             ],
         ],
     ],
@@ -1048,7 +1176,7 @@ return [
                 'name'          => 'street_lines',
                 'title'         => 'admin::app.configuration.index.customer.address.information.street-lines',
                 'type'          => 'text',
-                'validation'    => 'between:1,4',
+                'validation'    => 'between:1,4|integer',
                 'channel_based' => true,
                 'default_value' => 1,
             ],
@@ -1326,7 +1454,7 @@ return [
                 'title' => 'admin::app.configuration.index.email.notifications.customer-registration-confirmation-mail-to-admin',
                 'type'  => 'boolean',
             ], [
-                'name'  => 'emails.general.notifications.customer',
+                'name'  => 'emails.general.notifications.customer_account_credentials',
                 'title' => 'admin::app.configuration.index.email.notifications.customer',
                 'type'  => 'boolean',
             ], [
@@ -1334,20 +1462,32 @@ return [
                 'title' => 'admin::app.configuration.index.email.notifications.new-order',
                 'type'  => 'boolean',
             ], [
-                'name'  => 'emails.general.notifications.new_admin',
-                'title' => 'admin::app.configuration.index.email.notifications.new-admin',
+                'name'  => 'emails.general.notifications.new_order_mail_to_admin',
+                'title' => 'admin::app.configuration.index.email.notifications.new-order-mail-to-admin',
                 'type'  => 'boolean',
             ], [
                 'name'  => 'emails.general.notifications.new_invoice',
                 'title' => 'admin::app.configuration.index.email.notifications.new-invoice',
                 'type'  => 'boolean',
             ], [
+                'name'  => 'emails.general.notifications.new_invoice_mail_to_admin',
+                'title' => 'admin::app.configuration.index.email.notifications.new-invoice-mail-to-admin',
+                'type'  => 'boolean',
+            ], [
                 'name'  => 'emails.general.notifications.new_refund',
                 'title' => 'admin::app.configuration.index.email.notifications.new-refund',
                 'type'  => 'boolean',
             ], [
+                'name'  => 'emails.general.notifications.new_refund_mail_to_admin',
+                'title' => 'admin::app.configuration.index.email.notifications.new-refund-mail-to-admin',
+                'type'  => 'boolean',
+            ], [
                 'name'  => 'emails.general.notifications.new_shipment',
                 'title' => 'admin::app.configuration.index.email.notifications.new-shipment',
+                'type'  => 'boolean',
+            ], [
+                'name'  => 'emails.general.notifications.new_shipment_mail_to_admin',
+                'title' => 'admin::app.configuration.index.email.notifications.new-shipment-mail-to-admin',
                 'type'  => 'boolean',
             ], [
                 'name'  => 'emails.general.notifications.new_inventory_source',
@@ -1356,6 +1496,10 @@ return [
             ], [
                 'name'  => 'emails.general.notifications.cancel_order',
                 'title' => 'admin::app.configuration.index.email.notifications.cancel-order',
+                'type'  => 'boolean',
+            ],  [
+                'name'  => 'emails.general.notifications.cancel_order_mail_to_admin',
+                'title' => 'admin::app.configuration.index.email.notifications.cancel-order-mail-to-admin',
                 'type'  => 'boolean',
             ],
         ],
@@ -1413,7 +1557,7 @@ return [
                 'name'          => 'zipcode',
                 'title'         => 'admin::app.configuration.index.sales.shipping-setting.origin.zip',
                 'type'          => 'text',
-                'validation'    => 'required',
+                'validation'    => 'required|postcode',
                 'channel_based' => true,
                 'locale_based'  => true,
             ], [
@@ -1431,6 +1575,7 @@ return [
                 'name'          => 'contact',
                 'title'         => 'admin::app.configuration.index.sales.shipping-setting.origin.contact-number',
                 'type'          => 'text',
+                'validation'    => 'phone',
                 'channel_based' => true,
             ], [
                 'name'          => 'bank_details',
@@ -1499,7 +1644,7 @@ return [
                 'title'         => 'admin::app.configuration.index.sales.shipping-methods.flat-rate-shipping.rate',
                 'type'          => 'text',
                 'depends'       => 'active:1',
-                'validation'    => 'required_if:active,1',
+                'validation'    => 'required_if:active,1|numeric',
                 'channel_based' => true,
                 'locale_based'  => false,
             ], [
@@ -1814,7 +1959,7 @@ return [
         'key'    => 'sales.payment_methods.paypal_smart_button',
         'name'   => 'admin::app.configuration.index.sales.payment-methods.paypal-smart-button',
         'info'   => 'admin::app.configuration.index.sales.payment-methods.paypal-smart-button-info',
-        'sort'   => 0,
+        'sort'   => 4,
         'fields' => [
             [
                 'name'          => 'title',
@@ -1920,7 +2065,7 @@ return [
                 'name'          => 'order_number_length',
                 'title'         => 'admin::app.configuration.index.sales.order-settings.order-number.length',
                 'type'          => 'text',
-                'validation'    => 'numeric',
+                'validation'    => 'between:1,10|integer',
                 'channel_based' => true,
             ], [
                 'name'          => 'order_number_suffix',
@@ -2014,7 +2159,7 @@ return [
                 'name'          => 'invoice_number_length',
                 'title'         => 'admin::app.configuration.index.sales.invoice-settings.invoice-number.length',
                 'type'          => 'text',
-                'validation'    => 'numeric',
+                'validation'    => 'numeric|min:0|max:10',
                 'channel_based' => true,
                 'locale_based'  => true,
             ], [
@@ -2424,10 +2569,11 @@ return [
                 'type'    => 'boolean',
                 'default' => 1,
             ], [
-                'name'    => 'offer_info',
-                'title'   => 'admin::app.configuration.index.sales.checkout.mini-cart.mini-cart-offer-info',
-                'type'    => 'text',
-                'default' => 'Get Up To 30% OFF on your 1st order',
+                'name'       => 'offer_info',
+                'title'      => 'admin::app.configuration.index.sales.checkout.mini-cart.mini-cart-offer-info',
+                'type'       => 'text',
+                'default'    => 'Get Up To 30% OFF on your 1st order',
+                'validation' => 'max:200',
             ],
         ],
     ],

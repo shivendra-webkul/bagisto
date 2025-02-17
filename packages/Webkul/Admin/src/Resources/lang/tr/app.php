@@ -3,32 +3,35 @@
 return [
     'users' => [
         'sessions' => [
-            'email'                => 'E-posta Adresi',
-            'forget-password-link' => 'Şifremi Unuttum ?',
-            'password'             => 'Şifre',
-            'submit-btn'           => 'Giriş Yap',
-            'title'                => 'Giriş Yap',
+            'email'                  => 'E-posta Adresi',
+            'forget-password-link'   => 'Şifremi Unuttum ?',
+            'password'               => 'Şifre',
+            'powered-by-description' => ':webkul tarafından geliştirilen açık kaynaklı bir proje olan :bagisto tarafından desteklenmektedir.',
+            'submit-btn'             => 'Giriş Yap',
+            'title'                  => 'Giriş Yap',
         ],
 
         'forget-password' => [
             'create' => [
-                'email'           => 'Kayıtlı E-posta',
-                'email-not-exist' => 'E-posta Bulunamadı',
-                'page-title'      => 'Şifremi Unuttum',
-                'reset-link-sent' => 'Şifre Sıfırlama Bağlantısı Gönderildi',
-                'sign-in-link'    => 'Giriş Yap’a Geri Dön ?',
-                'submit-btn'      => 'Sıfırla',
-                'title'           => 'Şifre Kurtarma',
+                'email'                  => 'Kayıtlı E-posta',
+                'email-not-exist'        => 'E-posta Bulunamadı',
+                'page-title'             => 'Şifremi Unuttum',
+                'powered-by-description' => ':webkul tarafından geliştirilen açık kaynaklı bir proje olan :bagisto tarafından desteklenmektedir.',
+                'reset-link-sent'        => 'Şifre Sıfırlama Bağlantısı Gönderildi',
+                'sign-in-link'           => 'Giriş Yap’a Geri Dön ?',
+                'submit-btn'             => 'Sıfırla',
+                'title'                  => 'Şifre Kurtarma',
             ],
         ],
 
         'reset-password' => [
-            'back-link-title'  => 'Giriş Yap’a Geri Dön ?',
-            'confirm-password' => 'Şifreyi Onayla',
-            'email'            => 'Kayıtlı E-posta',
-            'password'         => 'Şifre',
-            'submit-btn'       => 'Şifre Sıfırla',
-            'title'            => 'Şifre Sıfırlama',
+            'back-link-title'        => 'Giriş Yap’a Geri Dön ?',
+            'confirm-password'       => 'Şifreyi Onayla',
+            'email'                  => 'Kayıtlı E-posta',
+            'password'               => 'Şifre',
+            'powered-by-description' => ':webkul tarafından geliştirilen açık kaynaklı bir proje olan :bagisto tarafından desteklenmektedir.',
+            'submit-btn'             => 'Şifre Sıfırla',
+            'title'                  => 'Şifre Sıfırlama',
         ],
     ],
 
@@ -187,6 +190,11 @@ return [
                 'title'                   => ':name için Sipariş Oluştur',
 
                 'types' => [
+                    'simple' => [
+                        'none'         => 'Yok',
+                        'total-amount' => 'Toplam Tutar',
+                    ],
+
                     'configurable' => [
                         'select-options' => 'Lütfen bir seçenek seçin',
                     ],
@@ -202,6 +210,11 @@ return [
 
                     'downloadable' => [
                         'title' => 'Bağlantılar',
+                    ],
+
+                    'virtual' => [
+                        'none'         => 'Yok',
+                        'total-amount' => 'Toplam Tutar',
                     ],
                 ],
 
@@ -716,7 +729,6 @@ return [
                     'payment-method'   => 'Ödeme Yöntemi',
                     'status'           => 'Durum',
                     'title'            => 'İşlem Detayları',
-                    'transaction-data' => 'İşlem Verileri',
                     'transaction-id'   => 'İşlem ID',
                 ],
             ],
@@ -856,6 +868,93 @@ return [
                 ],
 
                 'types' => [
+                    'simple' => [
+                        'customizable-options' => [
+                            'add-btn'           => 'Seçenek ekle',
+                            'empty-info'        => 'Özelleştirilebilir seçenekler oluşturmak için.',
+                            'empty-title'       => 'Seçenek ekle',
+                            'info'              => 'Bu, basit ürünü özelleştirecektir.',
+                            'title'             => 'Özelleştirilebilir Öğe',
+
+                            'update-create' => [
+                                'is-required'               => 'Gerekli mi',
+                                'max-characters'            => 'Maksimum Karakter',
+                                'name'                      => 'Başlık',
+                                'no'                        => 'Hayır',
+                                'price'                     => 'Fiyat',
+                                'save-btn'                  => 'Kaydet',
+                                'supported-file-extensions' => 'Desteklenen Dosya Uzantıları',
+                                'title'                     => 'Seçenek',
+                                'type'                      => 'Tür',
+                                'yes'                       => 'Evet',
+                            ],
+
+                            'option' => [
+                                'add-btn'     => 'Seçenek ekle',
+                                'delete'      => 'Sil',
+                                'delete-btn'  => 'Sil',
+                                'edit-btn'    => 'Düzenle',
+                                'empty-info'  => 'Çeşitli ürün kombinasyonları oluşturmak için.',
+                                'empty-title' => 'Seçenek ekle',
+
+                                'types' => [
+                                    'text' => [
+                                        'title' => 'Metin',
+                                    ],
+
+                                    'textarea' => [
+                                        'title' => 'Metin Alanı',
+                                    ],
+
+                                    'checkbox' => [
+                                        'title' => 'Onay Kutusu',
+                                    ],
+
+                                    'radio' => [
+                                        'title' => 'Radyo',
+                                    ],
+
+                                    'select' => [
+                                        'title' => 'Seç',
+                                    ],
+
+                                    'multiselect' => [
+                                        'title' => 'Çoklu Seçim',
+                                    ],
+
+                                    'date' => [
+                                        'title' => 'Tarih',
+                                    ],
+
+                                    'datetime' => [
+                                        'title' => 'Tarih ve Saat',
+                                    ],
+
+                                    'time' => [
+                                        'title' => 'Saat',
+                                    ],
+
+                                    'file' => [
+                                        'title' => 'Dosya',
+                                    ],
+                                ],
+
+                                'items' => [
+                                    'update-create' => [
+                                        'label'    => 'Etiket',
+                                        'price'    => 'Fiyat',
+                                        'save-btn' => 'Kaydet',
+                                        'title'    => 'Seçenek',
+                                    ],
+                                ],
+                            ],
+
+                            'validations' => [
+                                'associated-product' => 'Bu ürün zaten başka bir ürünle ilişkilendirilmiş.',
+                            ],
+                        ],
+                    ],
+
                     'configurable' => [
                         'add-btn'           => 'Çeşit Ekle',
                         'delete-btn'        => 'Sil',
@@ -1411,6 +1510,7 @@ return [
                     'gender'         => 'Cinsiyet',
                     'group'          => 'Grup',
                     'id'             => 'Müşteri ID',
+                    'id-value'       => 'Kimlik - :id',
                     'inactive'       => 'Pasif',
                     'method-error'   => 'Hata! Yanlış yöntem algılandı, lütfen kitlesel eylem yapılandırmasını kontrol edin',
                     'name'           => 'Müşteri Adı',
@@ -1662,6 +1762,44 @@ return [
                     'id'     => 'ID',
                     'name'   => 'Adı',
                 ],
+            ],
+        ],
+
+        'gdpr' => [
+            'index' => [
+                'title' => 'GDPR Talebi',
+
+                'datagrid' => [
+                    'completed'     => 'Tamamlandı',
+                    'created-at'    => 'Oluşturulma Tarihi',
+                    'customer-name' => 'Müşteri Adı',
+                    'declined'      => 'Reddedildi',
+                    'delete'        => 'Sil',
+                    'edit'          => 'Düzenle',
+                    'id'            => 'ID',
+                    'message'       => 'Mesaj',
+                    'pending'       => 'Beklemede',
+                    'processing'    => 'İşleniyor',
+                    'status'        => 'Durum',
+                    'type'          => 'Tür',
+                ],
+
+                'modal' => [
+                    'completed'  => 'Tamamlandı',
+                    'declined'   => 'Reddedildi',
+                    'pending'    => 'Beklemede',
+                    'processing' => 'İşleniyor',
+                    'status'     => 'Durum',
+                    'title'      => 'GDPR Veri Talebini Düzenle',
+                    'type'       => 'Tür',
+                    'message'    => 'Mesaj',
+                    'save-btn'   => 'Kaydet',
+                ],
+
+                'update-success'              => 'Veri Talebi başarıyla güncellendi ve Müşteriye E-posta Gönderildi.',
+                'delete-success'              => 'Veri Talebi başarıyla silindi.',
+                'attribute-reason-error'      => 'Silinemiyor.',
+                'update-success-unsent-email' => 'Veri Talebi başarıyla güncellendi ancak Müşteriye E-posta gönderilemedi.',
             ],
         ],
 
@@ -2527,6 +2665,7 @@ return [
                     'general'           => 'Genel',
                     'group-separator'   => 'Grup Ayırıcı',
                     'name'              => 'Adı',
+                    'separator-note'    => ':attribute alanı yalnızca virgül (,) ve nokta (.) operatörlerini kabul edebilir',
                     'save-btn'          => 'Para Birimini Kaydet',
                     'symbol'            => 'Sembol',
                     'title'             => 'Yeni Para Birimi Oluştur',
@@ -2575,6 +2714,7 @@ return [
                     'allowed-errors'      => 'İzin Verilen Hatalar',
                     'back-btn'            => 'Geri',
                     'create-update'       => 'Oluştur/Güncelle',
+                    'current-file'        => 'Mevcut Yüklenen Dosya',
                     'delete'              => 'Sil',
                     'download-sample'     => 'Örnek İndir',
                     'field-separator'     => 'Alan Ayracı',
@@ -2802,6 +2942,7 @@ return [
                         'title'   => 'Vergi Kategorilerini Düzenle',
                     ],
 
+                    'can-not-delete' => 'Vergi Oranı Atanmış Kategoriler silinemez.',
                     'create-success' => 'Yeni Vergi Kategorisi Oluşturuldu',
                     'delete-failed'  => 'Vergi Kategorisi Silme Başarısız',
                     'delete-success' => 'Vergi Kategorisi Başarıyla Silindi',
@@ -3080,17 +3221,18 @@ return [
                 'title'      => 'Temalar',
 
                 'datagrid' => [
-                    'active'       => 'Aktif',
-                    'channel_name' => 'Kanal Adı',
-                    'delete'       => 'Sil',
-                    'id'           => 'Kimlik',
-                    'inactive'     => 'Pasif',
-                    'name'         => 'Ad',
-                    'sort-order'   => 'Sıralama Sırası',
-                    'status'       => 'Durum',
-                    'theme'        => 'Tema',
-                    'type'         => 'Tür',
-                    'view'         => 'Görünüm',
+                    'active'        => 'Aktif',
+                    'channel_name'  => 'Kanal Adı',
+                    'change-status' => 'Durumu değiştir',
+                    'delete'        => 'Sil',
+                    'id'            => 'Kimlik',
+                    'inactive'      => 'Pasif',
+                    'name'          => 'Ad',
+                    'sort-order'    => 'Sıralama Sırası',
+                    'status'        => 'Durum',
+                    'theme'         => 'Tema',
+                    'type'          => 'Tür',
+                    'view'          => 'Görünüm',
                 ],
             ],
 
@@ -3347,7 +3489,7 @@ return [
                 'title' => 'Genel',
 
                 'general' => [
-                    'info'  => 'Birim seçeneklerini ayarlayın.',
+                    'info'  => 'Birim seçeneklerini ayarlayın ve breadcrumbs\'ı etkinleştirin veya devre dışı bırakın.',
                     'title' => 'Genel',
 
                     'unit-options' => [
@@ -3365,7 +3507,7 @@ return [
                 ],
 
                 'content' => [
-                    'info'  => 'Karşılaştırma seçeneklerini, dilek listesi seçeneklerini, görüntü arama seçeneklerini, alt bilgiyi, alt bilgiyi açma/kapatma ve özel komut dosyalarını ayarlayın.',
+                    'info'  => 'Başlık teklif başlığını ve özel komut dosyalarını ayarlayın.',
                     'title' => 'İçerik',
 
                     'header-offer' => [
@@ -3385,7 +3527,7 @@ return [
                 ],
 
                 'design' => [
-                    'info'  => 'Logo ve favicon simgesini ayarlayın.',
+                    'info'  => 'Yönetici paneli için logo ve favicon simgesini ayarlayın.',
                     'title' => 'Tasarım',
 
                     'admin-logo' => [
@@ -3397,7 +3539,7 @@ return [
                 ],
 
                 'magic-ai' => [
-                    'info'  => 'Magic AI seçeneklerini ayarlayın.',
+                    'info'  => 'Magic AI seçeneklerini ayarlayın ve içerik oluşturmayı otomatikleştirmek için bazı seçeneklere izin verin.',
                     'title' => 'Magic AI',
 
                     'settings' => [
@@ -3568,6 +3710,46 @@ return [
                 ],
             ],
 
+            'gdpr' => [
+                'title' => 'GDPR',
+                'info'  => 'GDPR',
+
+                'settings' => [
+                    'title'   => 'GDPR Ayarları',
+                    'info'    => 'GDPR Ayarları',
+                    'enabled' => 'Etkin',
+                ],
+
+                'agreement' => [
+                    'title'          => 'GDPR Anlaşması',
+                    'info'           => 'GDPR Anlaşması',
+                    'enable'         => 'Müşteri Anlaşmasını Etkinleştir',
+                    'checkbox-label' => 'Anlaşma Onay Kutusu Etiketi',
+                    'content'        => 'Anlaşma İçeriği',
+                ],
+
+                'cookie' => [
+                    'title'        => 'Çerez Mesajı Ayarları',
+                    'info'         => 'Çerez Mesajı Ayarları',
+                    'enable'       => 'Çerez Bildirimini Etkinleştir',
+                    'position'     => 'Çerez Bloğu Görüntüleme Konumu',
+                    'bottom-left'  => 'Sol Alt',
+                    'bottom-right' => 'Sağ Alt',
+                    'identifier'   => 'Statik Blok Tanımlayıcısı',
+                    'description'  => 'Açıklama',
+                ],
+
+                'cookie-consent' => [
+                    'title'                  => 'Çerez İzni Tercihiniz',
+                    'info'                   => 'Çerez İzni Tercihiniz',
+                    'strictly-necessary'     => 'Kesinlikle Gerekli',
+                    'basic-interaction'      => 'Temel Etkileşimler ve İşlevsellikler',
+                    'experience-enhancement' => 'Deneyim Geliştirmeleri',
+                    'measurement'            => 'Ölçümler',
+                    'targeting-advertising'  => 'Hedefleme ve Reklam',
+                ],
+            ],
+
             'catalog' => [
                 'info'  => 'Katalog',
                 'title' => 'Katalog',
@@ -3723,7 +3905,7 @@ return [
 
                 'inventory' => [
                     'title'      => 'Envanter',
-                    'title-info' => 'Envanter ayarlarını yapılandırarak geri siparişlere izin verme, minimum ve maksimum sepet miktarlarını belirleme ve stokta olmayan eşik değerini tanımlama.',
+                    'title-info' => 'Geri siparişlere izin vermek ve stok dışı eşik değerini tanımlamak için envanter ayarlarını yapılandırın.',
 
                     'product-stock-options' => [
                         'allow-back-orders'       => 'Geri Siparişlere İzin Ver',
@@ -3762,7 +3944,7 @@ return [
 
                 'captcha' => [
                     'info'  => 'Site anahtarını, gizli anahtarını ve durumunu ayarlayın.',
-                    'title' => 'Captcha',
+                    'title' => 'Google Captcha',
 
                     'credentials' => [
                         'secret-key' => 'Gizli Anahtar',
@@ -3779,7 +3961,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'Bülten aboneliklerini, e-posta doğrulamalarını ve sosyal girişi ayarlayın.',
+                    'settings-info' => 'İstek listesi, giriş yönlendirmesi, bülten abonelikleri, varsayılan grup seçeneği, e-posta doğrulamaları ve sosyal giriş ayarlarını yapılandırın.',
                     'title'         => 'Ayarlar',
 
                     'login-as-customer' => [
@@ -3864,16 +4046,20 @@ return [
                 ],
 
                 'notifications' => [
-                    'cancel-order'                                     => 'Bir sipariş iptal edildikten sonra bildirim gönder',
-                    'customer'                                         => 'Kayıt olduktan sonra müşteri hesap bilgilerini gönder',
+                    'cancel-order'                                     => 'Sipariş iptal edildikten sonra müşteriye bildirim gönder',
+                    'cancel-order-mail-to-admin'                       => 'Sipariş iptal edildikten sonra yöneticiye bir bildirim e-postası gönder',
+                    'customer'                                         => 'Kayıttan sonra müşteri hesap bilgilerini gönder',
                     'customer-registration-confirmation-mail-to-admin' => 'Müşteri kaydından sonra yöneticiye bir onay e-postası gönder',
-                    'info'                                             => 'Geri siparişlere izin vermek için ürün stok seçeneklerini yapılandırın, minimum ve maksimum sepet miktarlarını ayarlayın ve stok dışı eşiklerini tanımlayın.',
-                    'new-admin'                                        => 'Yeni bir sipariş verildikten sonra yöneticiye bir onay e-postası gönder',
-                    'new-inventory-source'                             => 'Bir sevkiyat oluşturduktan sonra envanter kaynağına bir bildirim e-postası gönder',
-                    'new-invoice'                                      => 'Yeni bir fatura oluşturduktan sonra müşteriye bir bildirim e-postası gönder',
+                    'info'                                             => 'Hesap doğrulaması, sipariş onayları, faturalar, iadeler, gönderimler ve sipariş iptalleri hakkında e-postalar almak için yapılandırın.',
+                    'new-inventory-source'                             => 'Gönderim oluşturulduktan sonra envanter kaynağına bir bildirim e-postası gönder',
+                    'new-invoice'                                      => 'Yeni bir fatura oluşturulduktan sonra müşteriye bir bildirim e-postası gönder',
+                    'new-invoice-mail-to-admin'                        => 'Yeni bir fatura oluşturulduktan sonra yöneticiye bir bildirim e-postası gönder',
                     'new-order'                                        => 'Yeni bir sipariş verildikten sonra müşteriye bir onay e-postası gönder',
-                    'new-refund'                                       => 'Bir iade oluşturduktan sonra müşteriye bir bildirim e-postası gönder',
-                    'new-shipment'                                     => 'Bir sevkiyat oluşturduktan sonra müşteriye bir bildirim e-postası gönder',
+                    'new-order-mail-to-admin'                          => 'Yeni bir sipariş verildikten sonra yöneticiye bir onay e-postası gönder',
+                    'new-refund'                                       => 'Bir iade oluşturulduktan sonra müşteriye bir bildirim e-postası gönder',
+                    'new-refund-mail-to-admin'                         => 'Yeni bir iade oluşturulduktan sonra yöneticiye bir bildirim e-postası gönder',
+                    'new-shipment'                                     => 'Bir gönderim oluşturulduktan sonra müşteriye bir bildirim e-postası gönder',
+                    'new-shipment-mail-to-admin'                       => 'Yeni bir gönderim oluşturulduktan sonra yöneticiye bir bildirim e-postası gönder',
                     'registration'                                     => 'Müşteri kaydından sonra bir onay e-postası gönder',
                     'title'                                            => 'Bildirimler',
                     'verification'                                     => 'Müşteri kaydından sonra bir doğrulama e-postası gönder',
@@ -4216,6 +4402,11 @@ return [
                 'transactions'             => 'İşlemler',
                 'url-rewrites'             => 'URL Yeniden Yazma',
                 'users'                    => 'Kullanıcılar',
+                'gdpr-data-requests'       => 'GDPR Veri Talepleri',
+            ],
+
+            'powered-by' => [
+                'description' => ':webkul tarafından geliştirilen açık kaynaklı bir proje olan :bagisto tarafından desteklenmektedir.',
             ],
         ],
 
@@ -4525,6 +4716,10 @@ return [
                 'greeting'    => 'Aramıza yeni kaydolan yeni müşterimiz :customer_name `e sıcak bir karşılama dileriz!',
                 'subject'     => 'Yeni Müşteri Kaydı',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'GDPR talebinizin durumu',
         ],
 
         'orders' => [

@@ -3,38 +3,41 @@
 return [
     'users' => [
         'sessions' => [
-            'email'                => 'ईमेल पता',
-            'forget-password-link' => 'पासवर्ड भूल गए?',
-            'password'             => 'पासवर्ड',
-            'submit-btn'           => 'साइन इन करें',
-            'title'                => 'साइन इन करें',
+            'email'                  => 'ईमेल पता',
+            'forget-password-link'   => 'पासवर्ड भूल गए?',
+            'password'               => 'पासवर्ड',
+            'powered-by-description' => ':bagisto द्वारा संचालित, :webkul द्वारा एक ओपन-सोर्स परियोजना।',
+            'submit-btn'             => 'साइन इन करें',
+            'title'                  => 'साइन इन करें',
         ],
 
         'forget-password' => [
             'create'    => [
-                'email'           => 'रजिस्टर्ड ईमेल',
-                'email-not-exist' => 'ईमेल मौजूद नहीं है',
-                'page-title'      => 'पासवर्ड भूल गए',
-                'reset-link-sent' => 'पासवर्ड लिंक भेज दिया गया',
-                'sign-in-link'    => 'साइन इन पर वापस जाएं?',
-                'submit-btn'      => 'रीसेट करें',
-                'title'           => 'पासवर्ड बहाल करें',
+                'email'                  => 'रजिस्टर्ड ईमेल',
+                'email-not-exist'        => 'ईमेल मौजूद नहीं है',
+                'page-title'             => 'पासवर्ड भूल गए',
+                'powered-by-description' => ':bagisto द्वारा संचालित, :webkul द्वारा एक ओपन-सोर्स परियोजना।',
+                'reset-link-sent'        => 'पासवर्ड लिंक भेज दिया गया',
+                'sign-in-link'           => 'साइन इन पर वापस जाएं?',
+                'submit-btn'             => 'रीसेट करें',
+                'title'                  => 'पासवर्ड बहाल करें',
             ],
         ],
 
         'reset-password' => [
-            'back-link-title'  => 'साइन इन पर वापस जाएं?',
-            'confirm-password' => 'पासवर्ड की पुष्टि करें',
-            'email'            => 'रजिस्टर्ड ईमेल',
-            'password'         => 'पासवर्ड',
-            'submit-btn'       => 'पासवर्ड रीसेट करें',
-            'title'            => 'पासवर्ड रीसेट करें',
+            'back-link-title'        => 'साइन इन पर वापस जाएं?',
+            'confirm-password'       => 'पासवर्ड की पुष्टि करें',
+            'email'                  => 'रजिस्टर्ड ईमेल',
+            'password'               => 'पासवर्ड',
+            'powered-by-description' => ':bagisto द्वारा संचालित, :webkul द्वारा एक ओपन-सोर्स परियोजना।',
+            'submit-btn'             => 'पासवर्ड रीसेट करें',
+            'title'                  => 'पासवर्ड रीसेट करें',
         ],
     ],
 
     'notifications' => [
         'description-text' => 'सभी सूचनाएँ सूचीबद्ध करें',
-        'marked-success'   => 'सभी सूचनाओं को पढ़ा हुआ चिह्नित कर दिया गया है',
+        'marked-success'   => 'सभी सूचनाओं को पढ़ा गया के रूप में चिह्नित किया गया है',
         'no-record'        => 'कोई रिकॉर्ड नहीं मिला',
         'of'               => 'का',
         'per-page'         => 'प्रति पृष्ठ',
@@ -187,6 +190,11 @@ return [
                 'title'                   => ':name के लिए आदेश बनाएं',
 
                 'types' => [
+                    'simple' => [
+                        'none'         => 'कोई नहीं',
+                        'total-amount' => 'कुल राशि',
+                    ],
+
                     'configurable' => [
                         'select-options' => 'कृपया एक विकल्प चुनें',
                     ],
@@ -202,6 +210,11 @@ return [
 
                     'downloadable' => [
                         'title' => 'लिंक',
+                    ],
+
+                    'virtual' => [
+                        'none'         => 'कोई नहीं',
+                        'total-amount' => 'कुल राशि',
                     ],
                 ],
 
@@ -716,7 +729,6 @@ return [
                     'payment-method'   => 'भुगतान का तरीका',
                     'status'           => 'स्थिति',
                     'title'            => 'लेन-देन का विवरण',
-                    'transaction-data' => 'लेन-देन डेटा',
                     'transaction-id'   => 'लेन-देन आईडी',
                 ],
             ],
@@ -856,6 +868,93 @@ return [
                 ],
 
                 'types' => [
+                    'simple' => [
+                        'customizable-options' => [
+                            'add-btn'           => 'विकल्प जोड़ें',
+                            'empty-info'        => 'त्वरित रूप से अनुकूलन विकल्प बनाने के लिए।',
+                            'empty-title'       => 'विकल्प जोड़ें',
+                            'info'              => 'यह साधारण उत्पाद को अनुकूलित करेगा।',
+                            'title'             => 'अनुकूलन योग्य आइटम',
+
+                            'update-create' => [
+                                'is-required'               => 'आवश्यक है',
+                                'max-characters'            => 'अधिकतम वर्ण',
+                                'name'                      => 'शीर्षक',
+                                'no'                        => 'नहीं',
+                                'price'                     => 'मूल्य',
+                                'save-btn'                  => 'सहेजें',
+                                'supported-file-extensions' => 'समर्थित फ़ाइल एक्सटेंशन्स',
+                                'title'                     => 'विकल्प',
+                                'type'                      => 'प्रकार',
+                                'yes'                       => 'हाँ',
+                            ],
+
+                            'option' => [
+                                'add-btn'     => 'विकल्प जोड़ें',
+                                'delete'      => 'हटाएं',
+                                'delete-btn'  => 'हटाएं',
+                                'edit-btn'    => 'संपादित करें',
+                                'empty-info'  => 'त्वरित रूप से विभिन्न उत्पाद संयोजन बनाने के लिए।',
+                                'empty-title' => 'विकल्प जोड़ें',
+
+                                'types' => [
+                                    'text' => [
+                                        'title' => 'पाठ',
+                                    ],
+
+                                    'textarea' => [
+                                        'title' => 'पाठ क्षेत्र',
+                                    ],
+
+                                    'checkbox' => [
+                                        'title' => 'चेकबॉक्स',
+                                    ],
+
+                                    'radio' => [
+                                        'title' => 'रेडियो',
+                                    ],
+
+                                    'select' => [
+                                        'title' => 'चयन करें',
+                                    ],
+
+                                    'multiselect' => [
+                                        'title' => 'मल्टीसेलेक्ट',
+                                    ],
+
+                                    'date' => [
+                                        'title' => 'तारीख',
+                                    ],
+
+                                    'datetime' => [
+                                        'title' => 'तारीख और समय',
+                                    ],
+
+                                    'time' => [
+                                        'title' => 'समय',
+                                    ],
+
+                                    'file' => [
+                                        'title' => 'फ़ाइल',
+                                    ],
+                                ],
+
+                                'items' => [
+                                    'update-create' => [
+                                        'label'    => 'लेबल',
+                                        'price'    => 'मूल्य',
+                                        'save-btn' => 'सहेजें',
+                                        'title'    => 'विकल्प',
+                                    ],
+                                ],
+                            ],
+
+                            'validations' => [
+                                'associated-product' => 'यह उत्पाद पहले से ही एक कॉन्फिगरेबल, ग्रुप्ड या बंडल उत्पाद के साथ जुड़ा हुआ है।',
+                            ],
+                        ],
+                    ],
+
                     'configurable' => [
                         'add-btn'           => 'वेरिएंट जोड़ें',
                         'delete-btn'        => 'हटाएं',
@@ -1411,6 +1510,7 @@ return [
                     'gender'         => 'लिंग',
                     'group'          => 'समूह',
                     'id'             => 'ग्राहक आईडी',
+                    'id-value'       => 'आईडी - :id',
                     'inactive'       => 'निष्क्रिय',
                     'method-error'   => 'त्रुटि! गलत विधि का पता लगा, कृपया मास एक्शन कॉन्फ़िगरेशन की जाँच करें',
                     'name'           => 'ग्राहक का नाम',
@@ -1662,6 +1762,44 @@ return [
                     'id'     => 'आईडी',
                     'name'   => 'नाम',
                 ],
+            ],
+        ],
+
+        'gdpr' => [
+            'index' => [
+                'title' => 'GDPR अनुरोध',
+
+                'datagrid' => [
+                    'completed'     => 'पूरा हुआ',
+                    'created-at'    => 'बनाया गया',
+                    'customer-name' => 'ग्राहक का नाम',
+                    'declined'      => 'अस्वीकृत',
+                    'delete'        => 'हटाएं',
+                    'edit'          => 'संपादित करें',
+                    'id'            => 'आईडी',
+                    'message'       => 'संदेश',
+                    'pending'       => 'लंबित',
+                    'processing'    => 'प्रसंस्करण',
+                    'status'        => 'स्थिति',
+                    'type'          => 'प्रकार',
+                ],
+
+                'modal' => [
+                    'completed'  => 'पूरा हुआ',
+                    'declined'   => 'अस्वीकृत',
+                    'pending'    => 'लंबित',
+                    'processing' => 'प्रसंस्करण',
+                    'status'     => 'स्थिति',
+                    'title'      => 'GDPR डेटा अनुरोध संपादित करें',
+                    'type'       => 'प्रकार',
+                    'message'    => 'संदेश',
+                    'save-btn'   => 'सहेजें',
+                ],
+
+                'update-success'              => 'डेटा अनुरोध सफलतापूर्वक अपडेट किया गया और ग्राहक को ईमेल भेजा गया।',
+                'delete-success'              => 'डेटा अनुरोध सफलतापूर्वक हटाया गया।',
+                'attribute-reason-error'      => 'हटाने में असमर्थ।',
+                'update-success-unsent-email' => 'डेटा अनुरोध सफलतापूर्वक अपडेट किया गया लेकिन ग्राहक को ईमेल नहीं भेजा गया।',
             ],
         ],
 
@@ -2527,6 +2665,7 @@ return [
                     'general'           => 'सामान्य',
                     'group-separator'   => 'समूह विभाजक',
                     'name'              => 'नाम',
+                    'separator-note'    => ':attribute फ़ील्ड केवल कॉमा (,) और डॉट (.) ऑपरेटर स्वीकार कर सकता है',
                     'save-btn'          => 'मुद्रा सहेजें',
                     'symbol'            => 'प्रतीक',
                     'title'             => 'नई मुद्रा बनाएं',
@@ -2575,6 +2714,7 @@ return [
                     'allowed-errors'      => 'अनुमatiत त्रुटियाँ',
                     'back-btn'            => 'पिछला',
                     'create-update'       => 'बनाए�/अपडेट करे',
+                    'current-file'        => 'वर्तमान अपलोड की गई फ़ाइल',
                     'delete'              => 'मिटाए',
                     'download-sample'     => 'उदाहरण डाउनलोड करे',
                     'field-separator'     => 'फ़ील्ड अलगाव',
@@ -2802,6 +2942,7 @@ return [
                         'title' => 'कर श्रेणियाँ संपादित करें',
                     ],
 
+                    'can-not-delete' => 'कर दर असाइन की गई श्रेणियाँ हटाई नहीं जा सकतीं।',
                     'create-success' => 'नई कर श्रेणी बनाई गई',
                     'delete-failed'  => 'कर श्रेणी हटाने में विफल हुआ',
                     'delete-success' => 'कर श्रेणी सफलतापूर्वक हटाई गई',
@@ -3080,17 +3221,18 @@ return [
                 'title'      => 'थीम्स',
 
                 'datagrid' => [
-                    'active'       => 'सक्रिय',
-                    'channel_name' => 'चैनल नाम',
-                    'delete'       => 'हटाएँ',
-                    'id'           => 'आईडी',
-                    'inactive'     => 'निष्क्रिय',
-                    'name'         => 'नाम',
-                    'sort-order'   => 'क्रमबद्ध करें',
-                    'status'       => 'स्थिति',
-                    'theme'        => 'थीम',
-                    'type'         => 'प्रकार',
-                    'view'         => 'देखें',
+                    'active'        => 'सक्रिय',
+                    'channel_name'  => 'चैनल नाम',
+                    'change-status' => 'स्थिति बदलें',
+                    'delete'        => 'हटाएँ',
+                    'id'            => 'आईडी',
+                    'inactive'      => 'निष्क्रिय',
+                    'name'          => 'नाम',
+                    'sort-order'    => 'क्रमबद्ध करें',
+                    'status'        => 'स्थिति',
+                    'theme'         => 'थीम',
+                    'type'          => 'प्रकार',
+                    'view'          => 'देखें',
                 ],
             ],
 
@@ -3347,7 +3489,7 @@ return [
                 'title' => 'सामान्य',
 
                 'general' => [
-                    'info'  => 'इकाई विकल्प सेट करें।',
+                    'info'  => 'इकाई विकल्प सेट करें और ब्रेडक्रंब को सक्षम या अक्षम करें।',
                     'title' => 'सामान्य',
 
                     'unit-options' => [
@@ -3365,7 +3507,7 @@ return [
                 ],
 
                 'content' => [
-                    'info'  => 'तुलना विकल्प, इच्छा-सूची विकल्प, छवि खोज विकल्प, फ़ुटर, फ़ुटर टॉगल और कस्टम स्क्रिप्ट सेट करें।',
+                    'info'  => 'हैडर ऑफर शीर्षक और कस्टम स्क्रिप्ट सेट करें।',
                     'title' => 'सामग्री',
 
                     'header-offer' => [
@@ -3385,7 +3527,7 @@ return [
                 ],
 
                 'design' => [
-                    'info'  => 'लोगो और फ़ेविकॉन आइकन सेट करें।',
+                    'info'  => 'व्यवस्थापक पैनल के लिए लोगो और फेविकॉन आइकन सेट करें।',
                     'title' => 'डिज़ाइन',
 
                     'admin-logo' => [
@@ -3397,7 +3539,7 @@ return [
                 ],
 
                 'magic-ai' => [
-                    'info'  => 'मैजिक एआई विकल्प सेट करें।',
+                    'info'  => 'मैजिक एआई विकल्प सेट करें और सामग्री निर्माण को स्वचालित करने के लिए कुछ विकल्पों की अनुमति दें।',
                     'title' => 'मैजिक एआई',
 
                     'settings' => [
@@ -3568,6 +3710,46 @@ return [
                 ],
             ],
 
+            'gdpr' => [
+                'title' => 'GDPR',
+                'info'  => 'GDPR',
+
+                'settings' => [
+                    'title'   => 'GDPR सेटिंग्स',
+                    'info'    => 'GDPR सेटिंग्स',
+                    'enabled' => 'सक्षम',
+                ],
+
+                'agreement' => [
+                    'title'          => 'GDPR समझौता',
+                    'info'           => 'GDPR समझौता',
+                    'enable'         => 'ग्राहक समझौता सक्षम करें',
+                    'checkbox-label' => 'समझौता चेकबॉक्स लेबल',
+                    'content'        => 'समझौता सामग्री',
+                ],
+
+                'cookie' => [
+                    'title'        => 'कुकी संदेश सेटिंग्स',
+                    'info'         => 'कुकी संदेश सेटिंग्स',
+                    'enable'       => 'कुकी सूचना सक्षम करें',
+                    'position'     => 'कुकी ब्लॉक प्रदर्शन स्थिति',
+                    'bottom-left'  => 'नीचे बाईं ओर',
+                    'bottom-right' => 'नीचे दाईं ओर',
+                    'identifier'   => 'स्थिर ब्लॉक पहचानकर्ता',
+                    'description'  => 'विवरण',
+                ],
+
+                'cookie-consent' => [
+                    'title'                  => 'आपकी कुकी सहमति प्राथमिकता',
+                    'info'                   => 'आपकी कुकी सहमति प्राथमिकता',
+                    'strictly-necessary'     => 'सख्ती से आवश्यक',
+                    'basic-interaction'      => 'मूल इंटरैक्शन और कार्यक्षमताएँ',
+                    'experience-enhancement' => 'अनुभव संवर्द्धन',
+                    'measurement'            => 'माप',
+                    'targeting-advertising'  => 'लक्ष्यीकरण और विज्ञापन',
+                ],
+            ],
+
             'catalog' => [
                 'info'  => 'कैटलॉग',
                 'title' => 'कैटलॉग',
@@ -3723,7 +3905,7 @@ return [
 
                 'inventory' => [
                     'title'      => 'इन्वेंटरी',
-                    'title-info' => 'इन्वेंटरी सेटिंग्स को कॉन्फ़िगर करें ताकि बैक ऑर्डर की अनुमति हो, कार्ट में न्यूनतम और अधिकतम मात्रा सेट की जा सके, और अप्राप्य स्थिति को परिभाषित किया जा सके।',
+                    'title-info' => 'बैक ऑर्डर की अनुमति देने और अप्राप्य स्थिति की सीमा को परिभाषित करने के लिए इन्वेंटरी सेटिंग्स कॉन्फ़िगर करें।',
 
                     'product-stock-options' => [
                         'allow-back-orders'       => 'बैक ऑर्डर की अनुमति दें',
@@ -3762,7 +3944,7 @@ return [
 
                 'captcha' => [
                     'info'  => 'साइट कुंजी, गुप्त कुंजी और स्थिति सेट करें।',
-                    'title' => 'कैप्चा',
+                    'title' => 'Google कैप्चा',
 
                     'credentials' => [
                         'secret-key' => 'गुप्त कुंजी',
@@ -3779,7 +3961,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'न्यूजलेटर सदस्यता, ईमेल सत्यापन और सामाजिक लॉगिन सेट करें।',
+                    'settings-info' => 'इच्छा-सूची, लॉगिन पुनर्निर्देशन, न्यूजलेटर सदस्यता, डिफ़ॉल्ट समूह विकल्प, ईमेल सत्यापन और सामाजिक लॉगिन सेट करें।',
                     'title'         => 'सेटिंग्स',
 
                     'login-as-customer' => [
@@ -3864,19 +4046,23 @@ return [
                 ],
 
                 'notifications' => [
-                    'cancel-order'                                     => 'Send a notification after canceling an order',
-                    'customer'                                         => 'Send the customer account credentials after registration',
-                    'customer-registration-confirmation-mail-to-admin' => 'Send a confirmation e-mail to admin after customer registration',
-                    'info'                                             => 'बैक ऑर्डर्स की अनुमति देने, कार्ट के न्यूनतम और अधिकतम मात्रा सेट करने, और अस्टॉक की थ्रेशोल्ड को परिभाषित करने के लिए प्रोडक्ट स्टॉक विकल्प कॉन्फ़िगर करें।',
-                    'new-admin'                                        => 'Send a confirmation e-mail to the admin after placing a new order',
-                    'new-inventory-source'                             => 'Send a notification e-mail to the inventory source after creating a shipment',
-                    'new-invoice'                                      => 'Send a notification e-mail to the customer after creating a new invoice',
-                    'new-order'                                        => 'Send a confirmation e-mail to the customer after placing a new order',
-                    'new-refund'                                       => 'Send a notification e-mail to the customer after creating a refund',
-                    'new-shipment'                                     => 'Send a notification e-mail to the customer after creating a shipment',
-                    'registration'                                     => 'Send a confirmation e-mail after customer registration',
-                    'title'                                            => 'Notifications',
-                    'verification'                                     => 'Send a verification e-mail after customer registration',
+                    'cancel-order'                                     => 'एक आदेश रद्द करने के बाद ग्राहक को सूचना भेजें',
+                    'cancel-order-mail-to-admin'                       => 'ऑर्डर रद्द करने के बाद प्रशासक को ई-मेल सूचना भेजें',
+                    'customer'                                         => 'पंजीकरण के बाद ग्राहक खाते का विवरण भेजें',
+                    'customer-registration-confirmation-mail-to-admin' => 'ग्राहक पंजीकरण के बाद प्रशासक को पुष्टिकरण ई-मेल भेजें',
+                    'info'                                             => 'खाता सत्यापन, ऑर्डर पुष्टिकरण, चालानों, धनवापसी, शिपमेंट्स, और ऑर्डर रद्दीकरण के लिए ईमेल प्राप्त करने के लिए कॉन्फ़िगर करें।',
+                    'new-inventory-source'                             => 'शिपमेंट बनाने के बाद इन्वेंट्री स्रोत को एक सूचना ई-मेल भेजें',
+                    'new-invoice'                                      => 'नया चालान बनाने के बाद ग्राहक को एक सूचना ई-मेल भेजें',
+                    'new-invoice-mail-to-admin'                        => 'नया चालान बनाने के बाद प्रशासक को एक सूचना ई-मेल भेजें',
+                    'new-order'                                        => 'नया ऑर्डर करने के बाद ग्राहक को पुष्टिकरण ई-मेल भेजें',
+                    'new-order-mail-to-admin'                          => 'नया ऑर्डर करने के बाद प्रशासक को पुष्टिकरण ई-मेल भेजें',
+                    'new-refund'                                       => 'रिफंड बनाने के बाद ग्राहक को एक सूचना ई-मेल भेजें',
+                    'new-refund-mail-to-admin'                         => 'नया रिफंड बनाने के बाद प्रशासक को एक सूचना ई-मेल भेजें',
+                    'new-shipment'                                     => 'शिपमेंट बनाने के बाद ग्राहक को एक सूचना ई-मेल भेजें',
+                    'new-shipment-mail-to-admin'                       => 'नया शिपमेंट बनाने के बाद प्रशासक को एक सूचना ई-मेल भेजें',
+                    'registration'                                     => 'ग्राहक पंजीकरण के बाद एक पुष्टिकरण ई-मेल भेजें',
+                    'title'                                            => 'सूचनाएं',
+                    'verification'                                     => 'ग्राहक पंजीकरण के बाद एक सत्यापन ई-मेल भेजें',
                 ],
             ],
 
@@ -4216,6 +4402,11 @@ return [
                 'transactions'             => 'लेन-देन',
                 'url-rewrites'             => 'URL पुनर्लेखन',
                 'users'                    => 'उपयोगकर्ता',
+                'gdpr-data-requests'       => 'GDPR डेटा अनुरोध',
+            ],
+
+            'powered-by' => [
+                'description' => ':bagisto द्वारा संचालित, :webkul द्वारा एक ओपन-सोर्स परियोजना।',
             ],
         ],
 
@@ -4525,6 +4716,10 @@ return [
                 'greeting'    => 'हम नए ग्राहक का हार्दिक स्वागत करते हैं, :customer_name जिसने अभी-अभी हमारे साथ पंजीकरण कराया है!',
                 'subject'     => 'नया ग्राहक पंजीकरण',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'आपके GDPR अनुरोध की स्थिति',
         ],
 
         'orders' => [

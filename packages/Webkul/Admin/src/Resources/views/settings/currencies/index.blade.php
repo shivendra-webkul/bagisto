@@ -160,10 +160,10 @@
                                     type="text"
                                     name="code"
                                     rules="required|min:3|max:3"
-                                    :value="old('code')"
-                                    v-model="selectedCurrency.code"
+                                    ::value="selectedCurrency.code"
                                     :label="trans('admin::app.settings.currencies.index.create.code')"
                                     :placeholder="trans('admin::app.settings.currencies.index.create.code')"
+                                    ::disabled="selectedCurrency.code"
                                 />
 
                                 <x-admin::form.control-group.error control-name="code" />
@@ -216,18 +216,16 @@
                                     type="text"
                                     name="decimal"
                                     :value="old('decimal')"
+                                    rules="numeric|between:0,9"
                                     v-model="selectedCurrency.decimal"
                                     :label="trans('admin::app.settings.currencies.index.create.decimal')"
                                     :placeholder="trans('admin::app.settings.currencies.index.create.decimal')"
                                 />
 
-                                <x-admin::form.control-group.error
-                                    control-name="decimal"
-                                >
-                                </x-admin::form.control-group.error>
+                                <x-admin::form.control-group.error control-name="decimal" />
                             </x-admin::form.control-group>
 
-                            <!-- Thousand Separator -->
+                            <!-- Group Separator -->
                             <x-admin::form.control-group>
                                 <x-admin::form.control-group.label>
                                     @lang('admin::app.settings.currencies.index.create.group-separator')
@@ -237,16 +235,19 @@
                                     type="text"
                                     name="group_separator"
                                     :value="old('group_separator')"
+                                    ::rules="{ regex: /^[,\.]+$/ }"
                                     v-model="selectedCurrency.group_separator"
                                     :label="trans('admin::app.settings.currencies.index.create.group-separator')"
                                     :placeholder="trans('admin::app.settings.currencies.index.create.group-separator')"
-                                >
-                                </x-admin::form.control-group.control>
+                                />
 
-                                <x-admin::form.control-group.error
-                                    control-name="group_separator"
-                                >
-                                </x-admin::form.control-group.error>
+                                <p class="mt-1 block text-xs italic leading-5 text-gray-600 dark:text-gray-300">
+                                    @lang('admin::app.settings.currencies.index.create.separator-note', [
+                                        'attribute' => trans('admin::app.settings.currencies.index.create.group-separator')
+                                    ])
+                                </p>
+
+                                <x-admin::form.control-group.error control-name="group_separator" />
                             </x-admin::form.control-group>
 
                             <!-- Decimal Separator -->
@@ -259,16 +260,19 @@
                                     type="text"
                                     name="decimal_separator"
                                     :value="old('decimal_separator')"
+                                    ::rules="{ regex: /^[,\.]+$/ }"
                                     v-model="selectedCurrency.decimal_separator"
                                     :label="trans('admin::app.settings.currencies.index.create.decimal-separator')"
                                     :placeholder="trans('admin::app.settings.currencies.index.create.decimal-separator')"
-                                >
-                                </x-admin::form.control-group.control>
+                                />
 
-                                <x-admin::form.control-group.error
-                                    control-name="decimal_separator"
-                                >
-                                </x-admin::form.control-group.error>
+                                <p class="mt-1 block text-xs italic leading-5 text-gray-600 dark:text-gray-300">
+                                    @lang('admin::app.settings.currencies.index.create.separator-note', [
+                                        'attribute' => trans('admin::app.settings.currencies.index.create.decimal-separator')
+                                    ])
+                                </p>
+
+                                <x-admin::form.control-group.error control-name="decimal_separator" />
                             </x-admin::form.control-group>
 
                             <!-- Currency Position -->
@@ -364,9 +368,9 @@
 
                                 this.$refs.currencyUpdateOrCreateModal.close();
 
-                                this.$refs.datagrid.get();
-
                                 this.$emitter.emit('add-flash', { type: 'success', message: response.data.message });
+
+                                this.$refs.datagrid.get();
 
                                 resetForm();
                             })
@@ -380,6 +384,8 @@
                     },
 
                     editModal(url) {
+                        this.isEditable = 1;
+
                         this.$axios.get(url)
                             .then((response) => {
                                 this.selectedCurrency = response.data;

@@ -241,7 +241,7 @@ class Cart
             try {
                 $this->addProduct($guestCartItem->product, $guestCartItem->additional);
             } catch (\Exception $e) {
-                //Ignore exception
+                // Ignore exception
             }
         }
 
@@ -261,7 +261,9 @@ class Cart
             $this->createCart([]);
         }
 
-        $cartProducts = $product->getTypeInstance()->prepareForCart($data);
+        $cartProducts = $product->getTypeInstance()->prepareForCart(array_merge([
+            'cart_id' => $this->cart->id,
+        ], $data));
 
         if (is_string($cartProducts)) {
             if (! $this->cart->all_items->count()) {
@@ -367,6 +369,10 @@ class Cart
                 'base_total_incl_tax' => $item->base_price_incl_tax * $quantity,
                 'total_weight'        => $item->weight * $quantity,
                 'base_total_weight'   => $item->weight * $quantity,
+                'additional'          => [
+                    ...$item->additional,
+                    'quantity' => $quantity,
+                ],
             ], $itemId);
 
             Event::dispatch('checkout.cart.update.after', $item);

@@ -3,32 +3,35 @@
 return [
     'users' => [
         'sessions' => [
-            'email'                => 'メールアドレス',
-            'forget-password-link' => 'パスワードを忘れましたか？',
-            'password'             => 'パスワード',
-            'submit-btn'           => 'サインイン',
-            'title'                => 'サインイン',
+            'email'                  => 'メールアドレス',
+            'forget-password-link'   => 'パスワードを忘れましたか？',
+            'password'               => 'パスワード',
+            'powered-by-description' => ':webkul によるオープンソースプロジェクト :bagisto によって提供されています。',
+            'submit-btn'             => 'サインイン',
+            'title'                  => 'サインイン',
         ],
 
         'forget-password' => [
             'create'    => [
-                'email'           => '登録済みメールアドレス',
-                'email-not-exist' => 'メールアドレスが存在しません',
-                'page-title'      => 'パスワードを忘れる',
-                'reset-link-sent' => 'パスワードリセットリンク送信済み',
-                'sign-in-link'    => 'サインイン画面に戻る？',
-                'submit-btn'      => 'リセット',
-                'title'           => 'パスワードを回復',
+                'email'                  => '登録済みメールアドレス',
+                'email-not-exist'        => 'メールアドレスが存在しません',
+                'page-title'             => 'パスワードを忘れる',
+                'powered-by-description' => ':webkul によるオープンソースプロジェクト :bagisto によって提供されています。',
+                'reset-link-sent'        => 'パスワードリセットリンク送信済み',
+                'sign-in-link'           => 'サインイン画面に戻る？',
+                'submit-btn'             => 'リセット',
+                'title'                  => 'パスワードを回復',
             ],
         ],
 
         'reset-password' => [
-            'back-link-title'  => 'サインイン画面に戻る？',
-            'confirm-password' => 'パスワードを確認',
-            'email'            => '登録済みメールアドレス',
-            'password'         => 'パスワード',
-            'submit-btn'       => 'パスワードをリセット',
-            'title'            => 'パスワードをリセット',
+            'back-link-title'        => 'サインイン画面に戻る？',
+            'confirm-password'       => 'パスワードを確認',
+            'email'                  => '登録済みメールアドレス',
+            'password'               => 'パスワード',
+            'powered-by-description' => ':webkul によるオープンソースプロジェクト :bagisto によって提供されています。',
+            'submit-btn'             => 'パスワードをリセット',
+            'title'                  => 'パスワードをリセット',
         ],
     ],
 
@@ -187,6 +190,11 @@ return [
                 'title'                   => ':name の注文を作成',
 
                 'types' => [
+                    'simple' => [
+                        'none'         => 'なし',
+                        'total-amount' => '合計金額',
+                    ],
+
                     'configurable' => [
                         'select-options' => 'オプションを選択してください',
                     ],
@@ -202,6 +210,11 @@ return [
 
                     'downloadable' => [
                         'title' => 'リンク',
+                    ],
+
+                    'virtual' => [
+                        'none'         => 'なし',
+                        'total-amount' => '合計金額',
                     ],
                 ],
 
@@ -716,7 +729,6 @@ return [
                     'payment-method'   => '支払い方法',
                     'status'           => 'ステータス',
                     'title'            => '取引の詳細',
-                    'transaction-data' => '取引データ',
                     'transaction-id'   => '取引ID',
                 ],
             ],
@@ -856,6 +868,93 @@ return [
                 ],
 
                 'types' => [
+                    'simple' => [
+                        'customizable-options' => [
+                            'add-btn'           => 'オプションを追加',
+                            'empty-info'        => 'カスタマイズ可能なオプションをすぐに作成できます。',
+                            'empty-title'       => 'オプションを追加',
+                            'info'              => 'これにより、シンプルな製品がカスタマイズされます。',
+                            'title'             => 'カスタマイズ可能なアイテム',
+
+                            'update-create' => [
+                                'is-required'               => '必須',
+                                'max-characters'            => '最大文字数',
+                                'name'                      => 'タイトル',
+                                'no'                        => 'いいえ',
+                                'price'                     => '価格',
+                                'save-btn'                  => '保存',
+                                'supported-file-extensions' => 'サポートされているファイル拡張子',
+                                'title'                     => 'オプション',
+                                'type'                      => 'タイプ',
+                                'yes'                       => 'はい',
+                            ],
+
+                            'option' => [
+                                'add-btn'     => 'オプションを追加',
+                                'delete'      => '削除',
+                                'delete-btn'  => '削除',
+                                'edit-btn'    => '編集',
+                                'empty-info'  => 'さまざまな製品の組み合わせをすぐに作成できます。',
+                                'empty-title' => 'オプションを追加',
+
+                                'types' => [
+                                    'text' => [
+                                        'title' => 'テキスト',
+                                    ],
+
+                                    'textarea' => [
+                                        'title' => 'テキストエリア',
+                                    ],
+
+                                    'checkbox' => [
+                                        'title' => 'チェックボックス',
+                                    ],
+
+                                    'radio' => [
+                                        'title' => 'ラジオボタン',
+                                    ],
+
+                                    'select' => [
+                                        'title' => '選択',
+                                    ],
+
+                                    'multiselect' => [
+                                        'title' => 'マルチセレクト',
+                                    ],
+
+                                    'date' => [
+                                        'title' => '日付',
+                                    ],
+
+                                    'datetime' => [
+                                        'title' => '日付と時刻',
+                                    ],
+
+                                    'time' => [
+                                        'title' => '時間',
+                                    ],
+
+                                    'file' => [
+                                        'title' => 'ファイル',
+                                    ],
+                                ],
+
+                                'items' => [
+                                    'update-create' => [
+                                        'label'    => 'ラベル',
+                                        'price'    => '価格',
+                                        'save-btn' => '保存',
+                                        'title'    => 'オプション',
+                                    ],
+                                ],
+                            ],
+
+                            'validations' => [
+                                'associated-product' => 'この製品は既にコンフィギュラブル、グループ、またはバンドル製品に関連付けられています。',
+                            ],
+                        ],
+                    ],
+
                     'configurable' => [
                         'add-btn'           => 'バリエーションを追加',
                         'delete-btn'        => '削除',
@@ -1074,7 +1173,7 @@ return [
                     'select'              => '選択',
                     'text'                => 'テキスト',
                     'textarea'            => 'テキストエリア',
-                    'true'                => '真実',
+                    'true'                => '真',
                     'type'                => 'タイプ',
                     'unique'              => 'ユニーク',
                 ],
@@ -1411,6 +1510,7 @@ return [
                     'gender'         => '性別',
                     'group'          => 'グループ',
                     'id'             => '顧客ID',
+                    'id-value'       => 'ID - :id',
                     'inactive'       => '非アクティブ',
                     'method-error'   => 'エラー！誤ったメソッドが検出されました。マスアクションの構成を確認してください',
                     'name'           => '顧客名',
@@ -1662,6 +1762,44 @@ return [
                     'id'     => 'ID',
                     'name'   => '名前',
                 ],
+            ],
+        ],
+
+        'gdpr' => [
+            'index' => [
+                'title' => 'GDPRリクエスト',
+
+                'datagrid' => [
+                    'completed'     => '完了',
+                    'created-at'    => '作成日時',
+                    'customer-name' => '顧客名',
+                    'declined'      => '拒否',
+                    'delete'        => '削除',
+                    'edit'          => '編集',
+                    'id'            => 'ID',
+                    'message'       => 'メッセージ',
+                    'pending'       => '保留中',
+                    'processing'    => '処理中',
+                    'status'        => 'ステータス',
+                    'type'          => 'タイプ',
+                ],
+
+                'modal' => [
+                    'completed'  => '完了',
+                    'declined'   => '拒否',
+                    'pending'    => '保留中',
+                    'processing' => '処理中',
+                    'status'     => 'ステータス',
+                    'title'      => 'GDPRデータリクエストを編集',
+                    'type'       => 'タイプ',
+                    'message'    => 'メッセージ',
+                    'save-btn'   => '保存',
+                ],
+
+                'update-success'              => 'データリクエストが正常に更新され、顧客にメールが送信されました。',
+                'delete-success'              => 'データリクエストが正常に削除されました。',
+                'attribute-reason-error'      => '削除できません。',
+                'update-success-unsent-email' => 'データリクエストが正常に更新されましたが、顧客にメールが送信されませんでした。',
             ],
         ],
 
@@ -2527,6 +2665,7 @@ return [
                     'general'           => '一般',
                     'group-separator'   => 'グループ区切り',
                     'name'              => '名前',
+                    'separator-note'    => ':attribute フィールドはカンマ (,) とドット (.) のみを受け付けます',
                     'save-btn'          => '通貨を保存',
                     'symbol'            => '記号',
                     'title'             => '新しい通貨を作成',
@@ -2575,6 +2714,7 @@ return [
                     'allowed-errors'      => '許可されたエラー',
                     'back-btn'            => '戻る',
                     'create-update'       => '作成/更新',
+                    'current-file'        => '現在アップロードされたファイル',
                     'delete'              => '削除',
                     'download-sample'     => 'サンプルをダウンロード',
                     'field-separator'     => 'フィールドセパレータ',
@@ -2802,6 +2942,7 @@ return [
                         'title' => '税カテゴリーを編集',
                     ],
 
+                    'can-not-delete' => '税率が割り当てられているカテゴリは削除できません。',
                     'create-success' => '新しい税カテゴリーが作成されました',
                     'delete-failed'  => '税カテゴリーの削除に失敗しました',
                     'delete-success' => '税カテゴリーが正常に削除されました',
@@ -3080,17 +3221,18 @@ return [
                 'title'      => 'テーマ',
 
                 'datagrid' => [
-                    'active'       => 'アクティブ',
-                    'channel_name' => 'チャンネル名',
-                    'delete'       => '削除',
-                    'id'           => 'ID',
-                    'inactive'     => '非アクティブ',
-                    'name'         => '名前',
-                    'sort-order'   => '並び替え順',
-                    'status'       => 'ステータス',
-                    'theme'        => 'テーマ',
-                    'type'         => 'タイプ',
-                    'view'         => '表示',
+                    'active'        => 'アクティブ',
+                    'channel_name'  => 'チャンネル名',
+                    'change-status' => 'ステータスを変更',
+                    'delete'        => '削除',
+                    'id'            => 'ID',
+                    'inactive'      => '非アクティブ',
+                    'name'          => '名前',
+                    'sort-order'    => '並び替え順',
+                    'status'        => 'ステータス',
+                    'theme'         => 'テーマ',
+                    'type'          => 'タイプ',
+                    'view'          => '表示',
                 ],
             ],
 
@@ -3347,7 +3489,7 @@ return [
                 'title' => '一般',
 
                 'general' => [
-                    'info'  => 'ユニットオプションを設定します。',
+                    'info'  => 'ユニットオプションを設定し、パンくずリストを有効または無効にします。',
                     'title' => '一般',
 
                     'unit-options' => [
@@ -3365,7 +3507,7 @@ return [
                 ],
 
                 'content' => [
-                    'info'  => '比較オプション、ウィッシュリストオプション、画像検索オプション、フッター、フッターの切り替え、カスタムスクリプトを設定します。',
+                    'info'  => 'ヘッダーオファータイトルとカスタムスクリプトを設定します。',
                     'title' => 'コンテンツ',
 
                     'header-offer' => [
@@ -3385,7 +3527,7 @@ return [
                 ],
 
                 'design' => [
-                    'info'  => 'ロゴとファビコンアイコンを設定します。',
+                    'info'  => '管理パネルのロゴとファビコンアイコンを設定します。',
                     'title' => 'デザイン',
 
                     'admin-logo' => [
@@ -3397,7 +3539,7 @@ return [
                 ],
 
                 'magic-ai' => [
-                    'info'  => 'Magic AIオプションを設定します。',
+                    'info'  => 'Magic AIオプションを設定し、コンテンツの作成を自動化するためのいくつかのオプションを許可します。',
                     'title' => 'Magic AI',
 
                     'settings' => [
@@ -3568,6 +3710,46 @@ return [
                 ],
             ],
 
+            'gdpr' => [
+                'title' => 'GDPR',
+                'info'  => 'GDPR',
+
+                'settings' => [
+                    'title'   => 'GDPR設定',
+                    'info'    => 'GDPR設定',
+                    'enabled' => '有効',
+                ],
+
+                'agreement' => [
+                    'title'          => 'GDPR同意',
+                    'info'           => 'GDPR同意',
+                    'enable'         => '顧客同意を有効にする',
+                    'checkbox-label' => '同意チェックボックスラベル',
+                    'content'        => '同意内容',
+                ],
+
+                'cookie' => [
+                    'title'        => 'クッキーメッセージ設定',
+                    'info'         => 'クッキーメッセージ設定',
+                    'enable'       => 'クッキー通知を有効にする',
+                    'position'     => 'クッキーブロック表示位置',
+                    'bottom-left'  => '左下',
+                    'bottom-right' => '右下',
+                    'identifier'   => '静的ブロック識別子',
+                    'description'  => '説明',
+                ],
+
+                'cookie-consent' => [
+                    'title'                  => 'クッキー同意の設定',
+                    'info'                   => 'クッキー同意の設定',
+                    'strictly-necessary'     => '厳密に必要',
+                    'basic-interaction'      => '基本的な相互作用と機能',
+                    'experience-enhancement' => '体験の向上',
+                    'measurement'            => '測定',
+                    'targeting-advertising'  => 'ターゲティングと広告',
+                ],
+            ],
+
             'catalog' => [
                 'info'  => 'カタログ',
                 'title' => 'カタログ',
@@ -3723,7 +3905,7 @@ return [
 
                 'inventory' => [
                     'title'      => '在庫',
-                    'title-info' => 'バックオーダーを許可し、最小および最大のカート数量を設定し、在庫切れのしきい値を定義するための在庫設定を構成します。',
+                    'title-info' => 'バックオーダーを許可し、在庫切れのしきい値を定義するために在庫設定を構成します。',
 
                     'product-stock-options' => [
                         'allow-back-orders'       => 'バックオーダーを許可する',
@@ -3762,7 +3944,7 @@ return [
 
                 'captcha' => [
                     'info'  => 'サイトキー、シークレットキー、ステータスを設定します。',
-                    'title' => 'キャプチャ',
+                    'title' => 'Google キャプチャ',
 
                     'credentials' => [
                         'secret-key' => 'シークレットキー',
@@ -3779,7 +3961,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'ニュースレターの購読、メールの確認、ソーシャルログインを設定します。',
+                    'settings-info' => 'ウィッシュリスト、ログインリダイレクト、ニュースレター購読、デフォルトグループオプション、メール確認、およびソーシャルログインを設定します。',
                     'title'         => '設定',
 
                     'login-as-customer' => [
@@ -3864,16 +4046,20 @@ return [
                 ],
 
                 'notifications' => [
-                    'cancel-order'                                     => '注文をキャンセルした後に通知を送信する',
-                    'customer'                                         => '登録後に顧客アカウントの資格情報を送信する',
-                    'customer-registration-confirmation-mail-to-admin' => '顧客登録後に管理者に確認メールを送信する',
-                    'info'                                             => '製品の在庫オプションを設定し、バックオーダーを許可し、カートの最小および最大数量を設定し、在庫切れのしきい値を定義します。',
-                    'new-admin'                                        => '新しい注文後に管理者に確認メールを送信する',
+                    'cancel-order'                                     => '注文がキャンセルされた後、顧客に通知を送信する',
+                    'cancel-order-mail-to-admin'                       => '注文キャンセル後に管理者へ通知メールを送信する',
+                    'customer'                                         => '登録後に顧客のアカウント情報を送信する',
+                    'customer-registration-confirmation-mail-to-admin' => '顧客登録後に管理者へ確認メールを送信する',
+                    'info'                                             => 'アカウント確認、注文確認、請求書、払い戻し、出荷、注文キャンセルのメールを受信するように設定します。',
                     'new-inventory-source'                             => '出荷作成後に在庫ソースに通知メールを送信する',
-                    'new-invoice'                                      => '新しい請求書作成後に顧客に通知メールを送信する',
-                    'new-order'                                        => '新しい注文後に顧客に確認メールを送信する',
-                    'new-refund'                                       => '返金作成後に顧客に通知メールを送信する',
-                    'new-shipment'                                     => '出荷作成後に顧客に通知メールを送信する',
+                    'new-invoice'                                      => '新しい請求書作成後に顧客へ通知メールを送信する',
+                    'new-invoice-mail-to-admin'                        => '新しい請求書作成後に管理者へ通知メールを送信する',
+                    'new-order'                                        => '新規注文後に顧客へ確認メールを送信する',
+                    'new-order-mail-to-admin'                          => '新規注文後に管理者へ確認メールを送信する',
+                    'new-refund'                                       => '払い戻し作成後に顧客へ通知メールを送信する',
+                    'new-refund-mail-to-admin'                         => '払い戻し作成後に管理者へ通知メールを送信する',
+                    'new-shipment'                                     => '出荷作成後に顧客へ通知メールを送信する',
+                    'new-shipment-mail-to-admin'                       => '出荷作成後に管理者へ通知メールを送信する',
                     'registration'                                     => '顧客登録後に確認メールを送信する',
                     'title'                                            => '通知',
                     'verification'                                     => '顧客登録後に確認メールを送信する',
@@ -4182,7 +4368,7 @@ return [
                 'currencies'               => '通貨',
                 'customers'                => '顧客',
                 'dashboard'                => 'ダッシュボード',
-                'data-transfer'            => 'Data Transfer',
+                'data-transfer'            => 'データ転送',
                 'discount'                 => '割引',
                 'email-templates'          => 'メールテンプレート',
                 'events'                   => 'イベント',
@@ -4216,6 +4402,11 @@ return [
                 'transactions'             => '取引',
                 'url-rewrites'             => 'URL書き換え',
                 'users'                    => 'ユーザー',
+                'gdpr-data-requests'       => 'GDPRデータリクエスト',
+            ],
+
+            'powered-by' => [
+                'description' => ':webkul によるオープンソースプロジェクト :bagisto によって提供されています。',
             ],
         ],
 
@@ -4525,6 +4716,10 @@ return [
                 'greeting'    => '私たちに登録したばかりの新しい顧客、:customer_name を温かく歓迎します。',
                 'subject'     => '新規顧客登録',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'あなたのGDPRリクエストのステータス',
         ],
 
         'orders' => [

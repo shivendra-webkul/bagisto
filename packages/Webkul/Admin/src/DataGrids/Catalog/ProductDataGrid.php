@@ -160,10 +160,20 @@ class ProductDataGrid extends DataGrid
         ]);
 
         $this->addColumn([
-            'index'      => 'status',
-            'label'      => trans('admin::app.catalog.products.index.datagrid.status'),
-            'type'       => 'boolean',
-            'filterable' => true,
+            'index'              => 'status',
+            'label'              => trans('admin::app.catalog.products.index.datagrid.status'),
+            'type'               => 'boolean',
+            'filterable'         => true,
+            'filterable_options' => [
+                [
+                    'label' => trans('admin::app.catalog.products.index.datagrid.active'),
+                    'value' => 1,
+                ],
+                [
+                    'label' => trans('admin::app.catalog.products.index.datagrid.disable'),
+                    'value' => 0,
+                ],
+            ],
             'sortable'   => true,
         ]);
 
@@ -294,13 +304,14 @@ class ProductDataGrid extends DataGrid
         $results = Elasticsearch::search([
             'index' => $indexNames,
             'body'  => [
-                'from'          => ($pagination['page'] * $pagination['per_page']) - $pagination['per_page'],
-                'size'          => $pagination['per_page'],
-                'stored_fields' => [],
-                'query'         => [
+                'from'             => ($pagination['page'] * $pagination['per_page']) - $pagination['per_page'],
+                'size'             => $pagination['per_page'],
+                'stored_fields'    => [],
+                'query'            => [
                     'bool' => $this->getElasticFilters($params['filters'] ?? []) ?: new \stdClass,
                 ],
-                'sort'          => $this->getElasticSort($params['sort'] ?? []),
+                'sort'             => $this->getElasticSort($params['sort'] ?? []),
+                'track_total_hits' => true,
             ],
         ]);
 

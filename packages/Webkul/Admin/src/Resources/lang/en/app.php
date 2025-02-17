@@ -3,38 +3,41 @@
 return [
     'users' => [
         'sessions' => [
-            'email'                => 'Email Address',
-            'forget-password-link' => 'Forget Password ?',
-            'password'             => 'Password',
-            'submit-btn'           => 'Sign In',
-            'title'                => 'Sign In',
+            'email'                  => 'Email Address',
+            'forget-password-link'   => 'Forget Password ?',
+            'password'               => 'Password',
+            'powered-by-description' => 'Powered by :bagisto, an open-source project by :webkul.',
+            'submit-btn'             => 'Sign In',
+            'title'                  => 'Sign In',
         ],
 
         'forget-password' => [
             'create' => [
-                'email'           => 'Registered Email',
-                'email-not-exist' => 'Email Not Exists',
-                'page-title'      => 'Forget Password',
-                'reset-link-sent' => 'Reset Password link sent',
-                'sign-in-link'    => 'Back to Sign In ?',
-                'submit-btn'      => 'Reset',
-                'title'           => 'Recover Password',
+                'email'                  => 'Registered Email',
+                'email-not-exist'        => 'Email Not Exists',
+                'page-title'             => 'Forget Password',
+                'powered-by-description' => 'Powered by :bagisto, an open-source project by :webkul.',
+                'reset-link-sent'        => 'Reset Password link sent',
+                'sign-in-link'           => 'Back to Sign In ?',
+                'submit-btn'             => 'Reset',
+                'title'                  => 'Recover Password',
             ],
         ],
 
         'reset-password' => [
-            'back-link-title'  => 'Back to Sign In ?',
-            'confirm-password' => 'Confirm Password',
-            'email'            => 'Registered Email',
-            'password'         => 'Password',
-            'submit-btn'       => 'Reset Password',
-            'title'            => 'Reset Password',
+            'back-link-title'        => 'Back to Sign In ?',
+            'confirm-password'       => 'Confirm Password',
+            'email'                  => 'Registered Email',
+            'password'               => 'Password',
+            'powered-by-description' => 'Powered by :bagisto, an open-source project by :webkul.',
+            'submit-btn'             => 'Reset Password',
+            'title'                  => 'Reset Password',
         ],
     ],
 
     'notifications' => [
         'description-text'      => 'List all the Notifications',
-        'marked-success'        => 'All notifications has been marked as read',
+        'marked-success'        => 'All notifications have been marked as read',
         'no-record'             => 'No Record Found',
         'of'                    => 'of',
         'per-page'              => 'Per Page',
@@ -180,13 +183,18 @@ return [
                 'error'                   => 'Something went wrong',
                 'minimum-order-error'     => 'The minimum order amount is not met.',
                 'order-placed-success'    => 'Order placed successfully.',
-                'payment-not-supported'   => 'This payment method is not supported',
+                'payment-not-supported'   => 'This payment method is not supported.',
                 'save-btn'                => 'Create Order',
                 'specify-payment-method'  => 'Payment method is missing.',
                 'specify-shipping-method' => 'Shipping method is missing.',
                 'title'                   => 'Create Order for :name',
 
                 'types' => [
+                    'simple' => [
+                        'none'         => 'None',
+                        'total-amount' => 'Total Amount',
+                    ],
+
                     'configurable' => [
                         'select-options' => 'Please select an option',
                     ],
@@ -202,6 +210,11 @@ return [
 
                     'downloadable' => [
                         'title' => 'Links',
+                    ],
+
+                    'virtual' => [
+                        'none'         => 'None',
+                        'total-amount' => 'Total Amount',
                     ],
                 ],
 
@@ -716,7 +729,6 @@ return [
                     'payment-method'   => 'Payment Method',
                     'status'           => 'Status',
                     'title'            => 'Transaction Details',
-                    'transaction-data' => 'Transaction Data',
                     'transaction-id'   => 'Transaction ID ',
                 ],
             ],
@@ -751,8 +763,8 @@ return [
                     'copy-of'                => 'Copy Of :value',
                     'delete'                 => 'Delete',
                     'disable'                => 'Disable',
-                    'id-value'               => 'Id - :id',
-                    'id'                     => 'Id',
+                    'id-value'               => 'ID - :id',
+                    'id'                     => 'ID',
                     'image'                  => 'Image',
                     'mass-delete-success'    => 'Selected Products Deleted Successfully',
                     'mass-update-success'    => 'Selected Products Updated Successfully',
@@ -856,6 +868,93 @@ return [
                 ],
 
                 'types' => [
+                    'simple' => [
+                        'customizable-options' => [
+                            'add-btn'           => 'Add Option',
+                            'empty-info'        => 'To create customizable options on a go.',
+                            'empty-title'       => 'Add Option',
+                            'info'              => 'This will customize the simple product.',
+                            'title'             => 'Customizable Item',
+
+                            'update-create' => [
+                                'is-required'               => 'Is Required',
+                                'max-characters'            => 'Max Characters',
+                                'name'                      => 'Title',
+                                'no'                        => 'No',
+                                'price'                     => 'Price',
+                                'save-btn'                  => 'Save',
+                                'supported-file-extensions' => 'Supported File Extensions',
+                                'title'                     => 'Option',
+                                'type'                      => 'Type',
+                                'yes'                       => 'Yes',
+                            ],
+
+                            'option' => [
+                                'add-btn'     => 'Add Option',
+                                'delete'      => 'Delete',
+                                'delete-btn'  => 'Delete',
+                                'edit-btn'    => 'Edit',
+                                'empty-info'  => 'To create various combination of product on a go.',
+                                'empty-title' => 'Add Option',
+
+                                'types' => [
+                                    'text' => [
+                                        'title' => 'Text',
+                                    ],
+
+                                    'textarea' => [
+                                        'title' => 'Textarea',
+                                    ],
+
+                                    'checkbox' => [
+                                        'title' => 'Checkbox',
+                                    ],
+
+                                    'radio' => [
+                                        'title' => 'Radio',
+                                    ],
+
+                                    'select' => [
+                                        'title' => 'Select',
+                                    ],
+
+                                    'multiselect' => [
+                                        'title' => 'Multiselect',
+                                    ],
+
+                                    'date' => [
+                                        'title' => 'Date',
+                                    ],
+
+                                    'datetime' => [
+                                        'title' => 'Datetime',
+                                    ],
+
+                                    'time' => [
+                                        'title' => 'Time',
+                                    ],
+
+                                    'file' => [
+                                        'title' => 'File',
+                                    ],
+                                ],
+
+                                'items' => [
+                                    'update-create' => [
+                                        'label'    => 'Label',
+                                        'price'    => 'Price',
+                                        'save-btn' => 'Save',
+                                        'title'    => 'Option',
+                                    ],
+                                ],
+                            ],
+
+                            'validations' => [
+                                'associated-product' => 'The product is already associated with a configurable, grouped, or bundle product.',
+                            ],
+                        ],
+                    ],
+
                     'configurable' => [
                         'add-btn'           => 'Add Variant',
                         'delete-btn'        => 'Delete',
@@ -1302,11 +1401,11 @@ return [
             ],
 
             'category'             => 'Category',
-            'create-success'       => 'category created successfully.',
+            'create-success'       => 'Category created successfully.',
             'delete-category-root' => 'The Root category can not be deleted.',
             'delete-failed'        => 'Error encountered while deleting category',
             'delete-success'       => 'The category has been successfully deleted.',
-            'update-success'       => 'category updated successfully.',
+            'update-success'       => 'Category updated successfully.',
         ],
 
         'families' => [
@@ -1411,6 +1510,7 @@ return [
                     'gender'         => 'Gender',
                     'group'          => 'Group',
                     'id'             => 'Customer ID',
+                    'id-value'       => 'ID - :id',
                     'inactive'       => 'Inactive',
                     'method-error'   => 'Error! Wrong method detected, please check mass action configuration',
                     'name'           => 'Customer Name',
@@ -1662,6 +1762,44 @@ return [
                     'id'     => 'ID',
                     'name'   => 'Name',
                 ],
+            ],
+        ],
+
+        'gdpr' => [
+            'index' => [
+                'title' => 'GDPR Request',
+
+                'datagrid' => [
+                    'completed'     => 'Completed',
+                    'created-at'    => 'Created At',
+                    'customer-name' => 'Customer Name',
+                    'declined'      => 'Declined',
+                    'delete'        => 'Delete',
+                    'edit'          => 'Edit',
+                    'id'            => 'ID',
+                    'message'       => 'Message',
+                    'pending'       => 'Pending',
+                    'processing'    => 'Processing',
+                    'status'        => 'Status',
+                    'type'          => 'Type',
+                ],
+
+                'modal' => [
+                    'completed'  => 'Completed',
+                    'declined'   => 'Declined',
+                    'pending'    => 'Pending',
+                    'processing' => 'Processing',
+                    'status'     => 'Status',
+                    'title'      => 'Edit GDPR Data Request',
+                    'type'       => 'Type',
+                    'message'    => 'Message',
+                    'save-btn'   => 'Save',
+                ],
+
+                'update-success'              => 'Data Request updated successfully and Email Sent to Customer.',
+                'delete-success'              => 'Data Request deleted successfully.',
+                'attribute-reason-error'      => 'Unable to Delete.',
+                'update-success-unsent-email' => 'Data Request updated successfully But Email unsent to Customer.',
             ],
         ],
 
@@ -2527,6 +2665,7 @@ return [
                     'general'           => 'General',
                     'group-separator'   => 'Group Separator',
                     'name'              => 'Name',
+                    'separator-note'    => 'The :attribute field can only accept the comma (,) and dot (.) operators',
                     'save-btn'          => 'Save Currency',
                     'symbol'            => 'Symbol',
                     'title'             => 'Create New Currency',
@@ -2575,6 +2714,7 @@ return [
                     'allowed-errors'      => 'Allowed Errors',
                     'back-btn'            => 'Back',
                     'create-update'       => 'Create/Update',
+                    'current-file'        => 'Current Uploaded File',
                     'delete'              => 'Delete',
                     'download-sample'     => 'Download Sample',
                     'field-separator'     => 'Field Separator',
@@ -2802,10 +2942,11 @@ return [
                         'title' => 'Edit Tax Categories',
                     ],
 
-                    'create-success' => 'New Tax Category Created',
+                    'can-not-delete' => 'Tax Rates Assigned Categories cannot be deleted.',
+                    'create-success' => 'New Tax Category Created.',
                     'delete-failed'  => 'Tax Category Deleted Failed',
-                    'delete-success' => 'Tax Category Deleted Successfully',
-                    'update-success' => 'Tax Category Successfully Updated',
+                    'delete-success' => 'Tax Category Deleted Successfully.',
+                    'update-success' => 'Tax Category Successfully Updated.',
                 ],
             ],
 
@@ -3080,17 +3221,18 @@ return [
                 'title'      => 'Themes',
 
                 'datagrid' => [
-                    'active'       => 'Active',
-                    'channel_name' => 'Channel Name',
-                    'delete'       => 'Delete',
-                    'id'           => 'Id',
-                    'inactive'     => 'Inactive',
-                    'name'         => 'Name',
-                    'sort-order'   => 'Sort Order',
-                    'status'       => 'Status',
-                    'theme'        => 'Theme',
-                    'type'         => 'Type',
-                    'view'         => 'View',
+                    'active'        => 'Active',
+                    'channel_name'  => 'Channel Name',
+                    'change-status' => 'Change status',
+                    'delete'        => 'Delete',
+                    'id'            => 'Id',
+                    'inactive'      => 'Inactive',
+                    'name'          => 'Name',
+                    'sort-order'    => 'Sort Order',
+                    'status'        => 'Status',
+                    'theme'         => 'Theme',
+                    'type'          => 'Type',
+                    'view'          => 'View',
                 ],
             ],
 
@@ -3347,7 +3489,7 @@ return [
                 'title' => 'General',
 
                 'general' => [
-                    'info'  => 'Set units options.',
+                    'info'  => 'Set units options and enable or disable breadcrumbs.',
                     'title' => 'General',
 
                     'unit-options' => [
@@ -3365,7 +3507,7 @@ return [
                 ],
 
                 'content' => [
-                    'info'  => 'Set compare options, wishlist options, image search options, footer, toggle footer and custom scripts.',
+                    'info'  => 'Set header offer title and custom scripts.',
                     'title' => 'Content',
 
                     'header-offer' => [
@@ -3385,7 +3527,7 @@ return [
                 ],
 
                 'design' => [
-                    'info'  => 'Set logo and favicon icon.',
+                    'info'  => 'Set logo and favicon icon for admin panel.',
                     'title' => 'Design',
 
                     'admin-logo' => [
@@ -3397,7 +3539,7 @@ return [
                 ],
 
                 'magic-ai' => [
-                    'info'  => 'Set Magic AI options.',
+                    'info'  => 'Set Magic AI options and allow some options to automate the creation of content.',
                     'title' => 'Magic AI',
 
                     'settings' => [
@@ -3462,6 +3604,47 @@ return [
                         'title'             => 'Personalized Checkout Message',
                         'title-info'        => 'Craft a personalized checkout message for customers on the Thank-You page, tailoring the content to resonate with individual preferences and enhancing the overall post-purchase experience.',
                         'vicuna'            => 'Vicuna',
+                    ],
+                ],
+
+                'gdpr' => [
+                    'title' => 'GDPR',
+                    'info'  => 'GDPR',
+
+                    'settings' => [
+                        'title'   => 'GDPR Settings',
+                        'info'    => 'GDPR Settings',
+                        'enabled' => 'Enabled',
+                    ],
+
+                    'agreement' => [
+                        'title'          => 'GDPR Agreement',
+                        'info'           => 'GDPR Agreement',
+                        'enable'         => 'Enable Customer Agreement',
+                        'checkbox-label' => 'Agreement Checkbox Label',
+                        'content'        => 'Agreement Content',
+                    ],
+
+                    'cookie' => [
+                        'title'        => 'Cookie Message Settings',
+                        'info'         => 'Cookie Message Settings',
+                        'enable'       => 'Enable Cookie Notice',
+                        'position'     => 'Cookie Block Display Position',
+                        'bottom-left'  => ' Bottom Left',
+                        'bottom-right' => ' Bottom Right',
+                        'identifier'   => 'Static Block Identifier',
+                        'description'  => 'Description',
+                    ],
+
+                    'cookie-consent' => [
+                        'title'                  => 'Your Cookie Consent Preference',
+                        'info'                   => ' Your Cookie Consent Preference',
+                        'strictly-necessary'     => 'Strictly Necessary',
+                        'basic-interaction'      => 'Basic Interactions & Functionalities',
+                        'experience-enhancement' => 'Experience Enhancements',
+                        'measurement'            => 'Measurements',
+                        'targeting-advertising'  => 'Targeting & Advertising',
+
                     ],
                 ],
 
@@ -3723,7 +3906,7 @@ return [
 
                 'inventory' => [
                     'title'      => 'Inventory',
-                    'title-info' => 'Configure inventory settings to allow back orders, set minimum and maximum cart quantities, and define the out-of-stock threshold.',
+                    'title-info' => 'Configure inventory settings to allow back orders and define the out-of-stock threshold.',
 
                     'product-stock-options' => [
                         'allow-back-orders'       => 'Allow Back Orders',
@@ -3762,7 +3945,7 @@ return [
 
                 'captcha' => [
                     'info'  => 'Set site key, secret key and status.',
-                    'title' => 'Captcha',
+                    'title' => 'Google Captcha',
 
                     'credentials' => [
                         'secret-key' => 'Secret Key',
@@ -3779,7 +3962,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'Set newsletter subscriptions, email verifications and social login.',
+                    'settings-info' => 'Set wishlist, login redirection, newsletter subscriptions, default group option , email verifications and social login.',
                     'title'         => 'Settings',
 
                     'login-as-customer' => [
@@ -3864,16 +4047,20 @@ return [
                 ],
 
                 'notifications' => [
-                    'cancel-order'                                     => 'Send a notification after canceling an order',
+                    'cancel-order'                                     => 'Send a notification to customer after canceling an order',
+                    'cancel-order-mail-to-admin'                       => 'Send a notification e-mail to admin after canceling an order',
                     'customer'                                         => 'Send the customer account credentials after registration',
                     'customer-registration-confirmation-mail-to-admin' => 'Send a confirmation e-mail to admin after customer registration',
                     'info'                                             => 'To configure, receive emails for account verification, order confirmations, updates on invoices, refunds, shipments, and order cancellations.',
-                    'new-admin'                                        => 'Send a confirmation e-mail to the admin after placing a new order',
                     'new-inventory-source'                             => 'Send a notification e-mail to the inventory source after creating a shipment',
                     'new-invoice'                                      => 'Send a notification e-mail to the customer after creating a new invoice',
+                    'new-invoice-mail-to-admin'                        => 'Send a notification e-mail to the admin after creating a new invoice',
                     'new-order'                                        => 'Send a confirmation e-mail to the customer after placing a new order',
+                    'new-order-mail-to-admin'                          => 'Send a confirmation e-mail to the admin after placing a new order',
                     'new-refund'                                       => 'Send a notification e-mail to the customer after creating a refund',
+                    'new-refund-mail-to-admin'                         => 'Send a notification e-mail to the admin after creating a new refund',
                     'new-shipment'                                     => 'Send a notification e-mail to the customer after creating a shipment',
+                    'new-shipment-mail-to-admin'                       => 'Send a notification e-mail to the admin after creating a new shipment',
                     'registration'                                     => 'Send a confirmation e-mail after customer registration',
                     'title'                                            => 'Notifications',
                     'verification'                                     => 'Send a verification e-mail after customer registration',
@@ -4216,6 +4403,11 @@ return [
                 'transactions'             => 'Transactions',
                 'url-rewrites'             => 'URL Rewrites',
                 'users'                    => 'Users',
+                'gdpr-data-requests'       => 'GDPR Data Requests',
+            ],
+
+            'powered-by' => [
+                'description' => 'Powered by :bagisto, an open-source project by :webkul.',
             ],
         ],
 
@@ -4525,6 +4717,10 @@ return [
                 'greeting'    => 'We extend a warm welcome to the new customer, :customer_name who has just registered with us!',
                 'subject'     => 'New Customer Registration',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'Your GDPR Request Status',
         ],
 
         'orders' => [

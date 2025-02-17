@@ -55,17 +55,32 @@
                                 @endif
 
                                 <div class="grid place-content-start gap-1.5">
-                                    <p class="text-base font-semibold text-gray-800 dark:text-white">
+                                    <p class="break-all text-base font-semibold text-gray-800 dark:text-white">
                                         {{ $item->name }}
                                     </p>
 
                                     <div class="flex flex-col place-items-start gap-1.5">
                                         @if (isset($item->additional['attributes']))
-                                            <p class="text-gray-600 dark:text-gray-300">
-                                                @foreach ($item->additional['attributes'] as $attribute)
-                                                    {{ $attribute['attribute_name'] }} : {{ $attribute['option_label'] }}
-                                                @endforeach
-                                            </p>
+                                            @foreach ($item->additional['attributes'] as $attribute)
+                                                <p class="text-gray-600 dark:text-gray-300">
+                                                    @if (
+                                                        ! isset($attribute['attribute_type'])
+                                                        || $attribute['attribute_type'] !== 'file'
+                                                    )
+                                                        {{ $attribute['attribute_name'] }} : {{ $attribute['option_label'] }}
+                                                    @else
+                                                        {{ $attribute['attribute_name'] }} :
+
+                                                        <a
+                                                            href="{{ Storage::url($attribute['option_label']) }}"
+                                                            class="text-blue-600 hover:underline"
+                                                            download="{{ File::basename($attribute['option_label']) }}"
+                                                        >
+                                                            {{ File::basename($attribute['option_label']) }}
+                                                        </a>
+                                                    @endif
+                                                </p>
+                                            @endforeach
                                         @endif
 
                                         <p class="text-gray-600 dark:text-gray-300">

@@ -7,6 +7,7 @@ use Webkul\Checkout\Models\CartAddress;
 use Webkul\Checkout\Models\CartItem;
 use Webkul\Checkout\Models\CartPayment;
 use Webkul\Checkout\Models\CartShippingRate;
+use Webkul\Core\Models\CoreConfig;
 use Webkul\Customer\Models\Customer;
 use Webkul\Customer\Models\CustomerAddress;
 use Webkul\Faker\Helpers\Product as ProductFaker;
@@ -562,7 +563,7 @@ it('should store the order refund', function () {
             'adjustment_fee'    => '0',
         ],
     ])
-        ->assertRedirect(route('admin.sales.refunds.index'))
+        ->assertRedirect(route('admin.sales.orders.view', $order->id))
         ->isRedirection();
 
     $cart->refresh();
@@ -637,9 +638,13 @@ it('should store the order refund', function () {
     ]);
 });
 
-it('should store the order refund and send email to the customer', function () {
+it('should store the order refund and send email to the customer and admin', function () {
     // Arrange.
     Mail::fake();
+
+    CoreConfig::where('code', 'emails.general.notifications.emails.general.notifications.new_refund_mail_to_admin')->update([
+        'value' => 1,
+    ]);
 
     $product = (new ProductFaker([
         'attributes' => [
@@ -777,7 +782,7 @@ it('should store the order refund and send email to the customer', function () {
             'adjustment_fee'    => '0',
         ],
     ])
-        ->assertRedirect(route('admin.sales.refunds.index'))
+        ->assertRedirect(route('admin.sales.orders.view', $order->id))
         ->isRedirection();
 
     $cart->refresh();

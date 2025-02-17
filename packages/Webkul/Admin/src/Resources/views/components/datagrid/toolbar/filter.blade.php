@@ -43,7 +43,7 @@
                         <div>
                             <div
                                 class="relative inline-flex w-full max-w-max cursor-pointer select-none appearance-none items-center justify-between gap-x-1 rounded-md border bg-white px-1 py-1.5 text-center text-gray-600 transition-all marker:shadow hover:border-gray-400 focus:outline-none focus:ring-2 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-gray-400 ltr:pl-3 ltr:pr-5 rtl:pl-5 rtl:pr-3"
-                                :class="{'[&>*]:text-blue-600 [&>*]:dark:text-white': hasAnyAppliedColumn() }"
+                                :class="{'[&>*]:text-blue-600 border-blue-600 [&>*]:dark:text-white': hasAnyAppliedColumn() }"
                             >
                                 <span class="icon-filter text-2xl"></span>
 
@@ -194,7 +194,7 @@
                                                                 </button>
                                                             </x-slot>
 
-                                                            <x-slot:menu>
+                                                            <x-slot:menu class="max-h-[200px] overflow-auto">
                                                                 <x-admin::dropdown.menu.item
                                                                     v-for="option in column.filterable_options"
                                                                     v-text="option.label"
@@ -566,7 +566,7 @@
                                                                 </button>
                                                             </x-slot>
 
-                                                            <x-slot:menu>
+                                                            <x-slot:menu class="max-h-[200px] overflow-auto">
                                                                 <x-admin::dropdown.menu.item
                                                                     v-for="option in column.filterable_options"
                                                                     v-text="option.label"
@@ -619,13 +619,14 @@
                                                         </div>
                                                     </div>
 
+                                                    <!-- Text type Input field -->
                                                     <div class="mb-2 mt-1.5 grid">
                                                         <input
                                                             type="text"
                                                             class="block w-full rounded-md border bg-white px-2 py-1.5 text-sm leading-6 text-gray-600 transition-all hover:border-gray-400 focus:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-gray-400 dark:focus:border-gray-400"
                                                             :name="column.index"
                                                             :placeholder="column.label"
-                                                            @keyup.enter="addFilter($event, column)"
+                                                            @change="addFilter($event, column)"
                                                         />
                                                     </div>
 
@@ -773,13 +774,11 @@
                                                                             @{{ getFormattedDates(column) }}
                                                                         </span>
 
-                                                                        <div>
-                                                                            <span
-                                                                                class="icon-cross cursor-pointer text-lg text-white ltr:ml-1.5 rtl:mr-1.5"
-                                                                                @click="removeSavedFilterColumnValue(column, appliedColumnValue)"
-                                                                            >
-                                                                            </span>
-                                                                        </div>
+                                                                        <span
+                                                                            class="icon-cross cursor-pointer text-lg text-white ltr:ml-1.5 rtl:mr-1.5"
+                                                                            @click="removeSavedFilterColumnValue(column, appliedColumnValue)"
+                                                                        >
+                                                                        </span>
                                                                     </p>
                                                                 </template>
 
@@ -795,13 +794,11 @@
                                                                                 @{{ appliedColumnValue }}
                                                                             </span>
 
-                                                                            <div>
-                                                                                <span
-                                                                                    class="icon-cross cursor-pointer text-lg text-white ltr:ml-1.5 rtl:mr-1.5"
-                                                                                    @click="removeSavedFilterColumnValue(column, appliedColumnValue)"
-                                                                                >
-                                                                                </span>
-                                                                            </div>
+                                                                            <span
+                                                                                class="icon-cross cursor-pointer text-lg text-white ltr:ml-1.5 rtl:mr-1.5"
+                                                                                @click="removeSavedFilterColumnValue(column, appliedColumnValue)"
+                                                                            >
+                                                                            </span>
                                                                         </p>
                                                                     </template>
 
@@ -812,13 +809,11 @@
                                                                                 @{{ column.value }}
                                                                             </span>
 
-                                                                            <div>
-                                                                                <span
-                                                                                    class="icon-cross cursor-pointer text-lg text-white ltr:ml-1.5 rtl:mr-1.5"
-                                                                                    @click="removeSavedFilterColumnValue(column, column.value)"
-                                                                                >
-                                                                                </span>
-                                                                            </div>
+                                                                            <span
+                                                                                class="icon-cross cursor-pointer text-lg text-white ltr:ml-1.5 rtl:mr-1.5"
+                                                                                @click="removeSavedFilterColumnValue(column, column.value)"
+                                                                            >
+                                                                            </span>
                                                                         </p>
                                                                     </template>
                                                                 </template>

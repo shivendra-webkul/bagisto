@@ -58,7 +58,7 @@
 
                         @auth('customer')
                             <div class="flex flex-col justify-between gap-2.5 max-md:gap-0">
-                                <p class="font-mediums text-2xl max-md:text-xl">Hello! {{ auth()->user()?->first_name }}</p>
+                                <p class="font-mediums break-all text-2xl max-md:text-xl">Hello! {{ auth()->user()?->first_name }}</p>
 
                                 <p class="text-zinc-500 no-underline max-md:text-sm">{{ auth()->user()?->email }}</p>
                             </div>
@@ -140,7 +140,7 @@
                                     </p>
                                 </div>
     
-                                <p class="py-2px mt-3 w-full border border-zinc-200"></p>
+                                <p class="mt-3 w-full border border-zinc-200"></p>
     
                                 {!! view_render_event('bagisto.shop.components.layouts.header.mobile.index.customers_action.before') !!}
 
@@ -182,7 +182,7 @@
                                     </p>
                                 </div>
     
-                                <p class="py-2px mt-3 w-full border border-zinc-200"></p>
+                                <p class="mt-3 w-full border border-zinc-200"></p>
     
                                 <div class="mt-2.5 grid gap-1 pb-2.5">
                                     {!! view_render_event('bagisto.shop.components.layouts.header.mobile.index.profile_dropdown.links.before') !!}

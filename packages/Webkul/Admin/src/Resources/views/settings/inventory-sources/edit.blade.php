@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <!-- Full Pannel -->
+        <!-- Full Panel -->
         <div class="mt-3.5 flex gap-2.5 max-xl:flex-wrap">
     
             <!-- Left Section -->
@@ -224,7 +224,7 @@
                     </x-slot>
                 
                     <x-slot:content>
-                        <!-- Latitute -->
+                        <!-- Latitude -->
                         <x-admin::form.control-group>
                             <x-admin::form.control-group.label>
                                 @lang('admin::app.settings.inventory-sources.edit.latitude')
@@ -443,7 +443,7 @@
                         type="text"
                         id="postcode"
                         name="postcode"
-                        rules="required"
+                        rules="required|postcode"
                         :value="old('postcode') ?? $inventorySource->postcode"
                         :label="trans('admin::app.settings.inventory-sources.edit.postcode')"
                         :placeholder="trans('admin::app.settings.inventory-sources.edit.postcode')"

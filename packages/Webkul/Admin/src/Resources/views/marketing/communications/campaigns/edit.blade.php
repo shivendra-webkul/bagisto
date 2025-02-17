@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <!-- Informations -->
+        <!-- Information -->
         <div class="mb-2 mt-7 flex gap-2.5">
             <!-- Left Section -->
             <div class="flex flex-1 flex-col gap-2 max-xl:flex-auto">
@@ -230,6 +230,12 @@
 
                             @php $selectedOption = old('status') ?: $campaign->status; @endphp
 
+                            <x-admin::form.control-group.control
+                                type="hidden"
+                                name="status"
+                                :value="0"
+                            />
+                            
                             <x-admin::form.control-group.control
                                 type="switch"
                                 name="status"

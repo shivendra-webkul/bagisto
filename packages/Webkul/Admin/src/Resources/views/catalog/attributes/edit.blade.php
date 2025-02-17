@@ -202,11 +202,9 @@
                                                     @lang('admin::app.catalog.attributes.edit.admin-name')
                                                 </x-admin::table.th>
 
-                                                <!-- Loacles tables heading -->
+                                                <!-- Locales tables heading -->
                                                 <x-admin::table.th v-for="locale in locales">
-                                                    <x-admin::table.th>
-                                                        @{{ locale.name + '(' + [locale.code] + ')' }}
-                                                    </x-admin::table.th>
+                                                    @{{ locale.name + '(' + [locale.code] + ')' }}
                                                 </x-admin::table.th>
 
                                                 <!-- Action tables heading -->
@@ -228,17 +226,19 @@
                                                     class="hover:bg-gray-50 dark:hover:bg-gray-950"
                                                     v-show="! element.isDelete"
                                                 >
-                                                    <input
-                                                        type="hidden"
-                                                        :name="'options[' + element.id + '][isNew]'"
-                                                        :value="element.isNew"
-                                                    >
-
-                                                    <input
-                                                        type="hidden"
-                                                        :name="'options[' + element.id + '][isDelete]'"
-                                                        :value="element.isDelete"
-                                                    >
+                                                    <th>
+                                                        <input
+                                                            type="hidden"
+                                                            :name="'options[' + element.id + '][isNew]'"
+                                                            :value="element.isNew"
+                                                        >
+        
+                                                        <input
+                                                            type="hidden"
+                                                            :name="'options[' + element.id + '][isDelete]'"
+                                                            :value="element.isDelete"
+                                                        >
+                                                    </th>
 
                                                     <!-- Draggable Icon -->
                                                     <x-admin::table.td class="!px-0 text-center">
@@ -298,7 +298,7 @@
                                                         />
                                                     </x-admin::table.td>
 
-                                                    <!-- Loacles -->
+                                                    <!-- Locales -->
                                                     <x-admin::table.td v-for="locale in locales">
                                                         <p class="dark:text-white">
                                                             @{{ element['locales'][locale.code] }}
@@ -368,7 +368,7 @@
 
                 <!-- Right sub-component -->
                 <div class="flex w-[360px] max-w-full flex-col gap-2 max-sm:w-full">
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordian.general.before', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.general.before', ['attribute' => $attribute]) !!}
 
                     <!-- General -->
                     <x-admin::accordion>
@@ -385,18 +385,13 @@
                                     @lang('admin::app.catalog.attributes.edit.code')
                                 </x-admin::form.control-group.label>
 
-                                @php
-                                    $selectedOption = old('type') ?: $attribute->code;
-                                @endphp
-
                                 <x-admin::form.control-group.control
                                     type="text"
                                     class="cursor-not-allowed"
                                     name="code"
                                     rules="required"
-                                    :value="$selectedOption"
-                                    :disabled="(boolean) $selectedOption"
-                                    readonly
+                                    :value="old('code') ?? $attribute->code"
+                                    disabled="true"
                                     :label="trans('admin::app.catalog.attributes.edit.code')"
                                     :placeholder="trans('admin::app.catalog.attributes.edit.code')"
                                 />
@@ -404,7 +399,7 @@
                                 <x-admin::form.control-group.control
                                     type="hidden"
                                     name="code"
-                                    :value="$selectedOption"
+                                    :value="$attribute->code"
                                 />
 
                                 <x-admin::form.control-group.error control-name="code" />
@@ -493,9 +488,9 @@
                         </x-slot>
                     </x-admin::accordion>
                     
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordian.general.after', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.general.after', ['attribute' => $attribute]) !!}
 
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordian.validations.before', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.validations.before', ['attribute' => $attribute]) !!}
 
                     <!-- Validations -->
                     <x-admin::accordion>
@@ -621,9 +616,9 @@
                         </x-slot>
                     </x-admin::accordion>
 
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordian.validations.after', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.validations.after', ['attribute' => $attribute]) !!}
 
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordian.configuration.before', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.configuration.before', ['attribute' => $attribute]) !!}
 
                     <!-- Configurations -->
                     <x-admin::accordion>
@@ -665,7 +660,7 @@
                             <!-- Value Per Channel -->
                             <x-admin::form.control-group class="!mb-2 flex select-none items-center gap-2.5 opacity-70">
                                 @php
-                                    $valuePerChannel = old('value_per_channel') ?? $attribute->value_per_channel
+                                    $valuePerChannel = old('value_per_channel') ?? $attribute->value_per_channel;
                                 @endphp
 
                                 <x-admin::form.control-group.control
@@ -689,7 +684,10 @@
                             </x-admin::form.control-group>
 
                             <!-- Use in Layered -->
-                            <x-admin::form.control-group class="!mb-2 flex select-none items-center gap-2.5">
+                            <x-admin::form.control-group
+                                class="!mb-2 flex select-none items-center gap-2.5"
+                                ::class="{ 'opacity-70' : isFilterableDisabled }"
+                            >
                                 @php
                                     $isFilterable = old('is_filterable') ?? $attribute->is_filterable;
                                 @endphp
@@ -701,6 +699,7 @@
                                     value="1"
                                     for="is_filterable"
                                     :checked="(boolean) $isFilterable"
+                                    ::disabled="isFilterableDisabled"
                                 />
 
                                 <label
@@ -717,7 +716,7 @@
                                 />
                             </x-admin::form.control-group>
 
-                            <!-- Use to create configuable product -->
+                            <!-- Use to create configurable product -->
                             <x-admin::form.control-group class="!mb-2 flex select-none items-center gap-2.5">
                                 @php
                                     $isConfigurable = old('is_configurable') ?? $attribute->is_configurable;
@@ -746,7 +745,7 @@
                                 />
                             </x-admin::form.control-group>
 
-                            <!-- Visible On Product View Page On Fornt End -->
+                            <!-- Visible On Product View Page On Front End -->
                             <x-admin::form.control-group class="!mb-2 flex select-none items-center gap-2.5">
                                 @php
                                     $isVisibleOnFront = old('is_visible_on_front') ?? $attribute->is_visible_on_front;
@@ -806,7 +805,7 @@
                         </x-slot>
                     </x-admin::accordion>
 
-                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordian.configuration.configuration.after', ['attribute' => $attribute]) !!}
+                    {!! view_render_event('bagisto.admin.catalog.attributes.edit.card.accordion.configuration.configuration.after', ['attribute' => $attribute]) !!}
                 </div>
             </div>
 
@@ -954,6 +953,8 @@
                     return {
                         showSwatch: {{ in_array($attribute->type, ['select', 'checkbox', 'price', 'multiselect']) ? 'true' : 'false' }},
 
+                        attributeType: "{{ $attribute->type }}",
+
                         swatchType: "{{ $attribute->swatch_type == '' ? 'dropdown' : $attribute->swatch_type }}",
 
                         isNullOptionChecked: false,
@@ -974,13 +975,21 @@
                     }
                 },
 
+                computed: {
+                    isFilterableDisabled() {
+                        return this.attributeType == 'price' || this.attributeType == 'checkbox'
+                            || this.attributeType == 'select' || this.attributeType == 'multiselect'
+                            ? false : true;
+                    },
+                },
+
                 created () {
                     this.getAttributesOption();
                 },
 
                 methods: {
                     storeOptions(params, { resetForm, setValues }) {
-                        const lastId = this.optionsData.map(item => item.id).pop() ?? 0 ;
+                        const lastId = this.optionsData.map(item => item.id).pop() ?? 0;
 
                         if (! params.id) {
                             params.id = `options_${lastId + 1}`;
@@ -1002,15 +1011,15 @@
 
                         const sliderImage = formData.get("swatch_value[]");
 
-                        if (sliderImage) {
+                        if (sliderImage?.name) {
                             params.swatch_value = sliderImage;
+
+                            if (sliderImage instanceof File) {
+                                this.setFile(sliderImage, params.id);
+                            }
                         }
 
                         this.$refs.addOptionsRow.toggle();
-
-                        if (params.swatch_value instanceof File) {
-                            this.setFile(sliderImage, params.id);
-                        }
 
                         resetForm();
                     },

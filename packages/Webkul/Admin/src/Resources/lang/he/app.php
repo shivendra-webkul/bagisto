@@ -3,32 +3,35 @@
 return [
     'users' => [
         'sessions' => [
-            'email'                => 'כתובת אימייל',
-            'forget-password-link' => 'שכחת סיסמה?',
-            'password'             => 'סיסמה',
-            'submit-btn'           => 'כניסה',
-            'title'                => 'כניסה',
+            'email'                  => 'כתובת אימייל',
+            'forget-password-link'   => 'שכחת סיסמה?',
+            'password'               => 'סיסמה',
+            'powered-by-description' => 'מופעל על ידי :bagisto, פרויקט קוד פתוח על ידי :webkul.',
+            'submit-btn'             => 'כניסה',
+            'title'                  => 'כניסה',
         ],
 
         'forget-password' => [
             'create' => [
-                'email'           => 'אימייל רשום',
-                'email-not-exist' => 'אימייל לא קיים',
-                'page-title'      => 'שכחתי סיסמה',
-                'reset-link-sent' => 'קישור לאיפוס סיסמה נשלח',
-                'sign-in-link'    => 'חזור להתחברות?',
-                'submit-btn'      => 'איפוס',
-                'title'           => 'שחזור סיסמה',
+                'email'                  => 'אימייל רשום',
+                'email-not-exist'        => 'אימייל לא קיים',
+                'page-title'             => 'שכחתי סיסמה',
+                'powered-by-description' => 'מופעל על ידי :bagisto, פרויקט קוד פתוח על ידי :webkul.',
+                'reset-link-sent'        => 'קישור לאיפוס סיסמה נשלח',
+                'sign-in-link'           => 'חזור להתחברות?',
+                'submit-btn'             => 'איפוס',
+                'title'                  => 'שחזור סיסמה',
             ],
         ],
 
         'reset-password' => [
-            'back-link-title'  => 'חזור להתחברות?',
-            'confirm-password' => 'אימות סיסמה',
-            'email'            => 'אימייל רשום',
-            'password'         => 'סיסמה',
-            'submit-btn'       => 'איפוס סיסמה',
-            'title'            => 'איפוס סיסמה',
+            'back-link-title'        => 'חזור להתחברות?',
+            'confirm-password'       => 'אימות סיסמה',
+            'email'                  => 'אימייל רשום',
+            'password'               => 'סיסמה',
+            'powered-by-description' => 'מופעל על ידי :bagisto, פרויקט קוד פתוח על ידי :webkul.',
+            'submit-btn'             => 'איפוס סיסמה',
+            'title'                  => 'איפוס סיסמה',
         ],
     ],
 
@@ -187,6 +190,11 @@ return [
                 'title'                   => 'צור הזמנה עבור :name',
 
                 'types' => [
+                    'simple' => [
+                        'none'         => 'ללא',
+                        'total-amount' => 'סכום כולל',
+                    ],
+
                     'configurable' => [
                         'select-options' => 'בחר אפשרות',
                     ],
@@ -202,6 +210,11 @@ return [
 
                     'downloadable' => [
                         'title' => 'קישורים',
+                    ],
+
+                    'virtual' => [
+                        'none'         => 'ללא',
+                        'total-amount' => 'סכום כולל',
                     ],
                 ],
 
@@ -716,7 +729,6 @@ return [
                     'payment-method'   => 'אמצעי תשלום',
                     'status'           => 'סטטוס',
                     'title'            => 'פרטי התשלום',
-                    'transaction-data' => 'נתוני התשלום',
                     'transaction-id'   => 'מזהה עסקה',
                 ],
             ],
@@ -856,6 +868,93 @@ return [
                 ],
 
                 'types' => [
+                    'simple' => [
+                        'customizable-options' => [
+                            'add-btn'           => 'הוסף אפשרות',
+                            'empty-info'        => 'ליצירת אפשרויות מותאמות אישית במהירות.',
+                            'empty-title'       => 'הוסף אפשרות',
+                            'info'              => 'זה יתאים אישית את המוצר הפשוט.',
+                            'title'             => 'פריט ניתן להתאמה אישית',
+
+                            'update-create' => [
+                                'is-required'               => 'נדרש',
+                                'max-characters'            => 'מקסימום תווים',
+                                'name'                      => 'כותרת',
+                                'no'                        => 'לא',
+                                'price'                     => 'מחיר',
+                                'save-btn'                  => 'שמור',
+                                'supported-file-extensions' => 'סיומות קבצים נתמכות',
+                                'title'                     => 'אפשרות',
+                                'type'                      => 'סוג',
+                                'yes'                       => 'כן',
+                            ],
+
+                            'option' => [
+                                'add-btn'     => 'הוסף אפשרות',
+                                'delete'      => 'מחק',
+                                'delete-btn'  => 'מחק',
+                                'edit-btn'    => 'ערוך',
+                                'empty-info'  => 'ליצירת שילובים שונים של מוצרים במהירות.',
+                                'empty-title' => 'הוסף אפשרות',
+
+                                'types' => [
+                                    'text' => [
+                                        'title' => 'טקסט',
+                                    ],
+
+                                    'textarea' => [
+                                        'title' => 'אזור טקסט',
+                                    ],
+
+                                    'checkbox' => [
+                                        'title' => 'תיבת סימון',
+                                    ],
+
+                                    'radio' => [
+                                        'title' => 'רדיו',
+                                    ],
+
+                                    'select' => [
+                                        'title' => 'בחר',
+                                    ],
+
+                                    'multiselect' => [
+                                        'title' => 'רב-בחירה',
+                                    ],
+
+                                    'date' => [
+                                        'title' => 'תאריך',
+                                    ],
+
+                                    'datetime' => [
+                                        'title' => 'תאריך ושעה',
+                                    ],
+
+                                    'time' => [
+                                        'title' => 'זמן',
+                                    ],
+
+                                    'file' => [
+                                        'title' => 'קובץ',
+                                    ],
+                                ],
+
+                                'items' => [
+                                    'update-create' => [
+                                        'label'    => 'תווית',
+                                        'price'    => 'מחיר',
+                                        'save-btn' => 'שמור',
+                                        'title'    => 'אפשרות',
+                                    ],
+                                ],
+                            ],
+
+                            'validations' => [
+                                'associated-product' => 'המוצר כבר מקושר למוצר ניתן להתאמה, מקובץ או בחבילה.',
+                            ],
+                        ],
+                    ],
+
                     'configurable' => [
                         'add-btn'           => 'הוסף נציג',
                         'delete-btn'        => 'מחק',
@@ -1061,7 +1160,7 @@ return [
                     'date-time'           => 'תאריך ושעה',
                     'delete'              => 'מחק',
                     'edit'                => 'ערוך',
-                    'false'               => 'שקר',
+                    'false'               => 'שגוי',
                     'file'                => 'קובץ',
                     'id'                  => 'מזהה',
                     'image'               => 'תמונה',
@@ -1411,6 +1510,7 @@ return [
                     'gender'         => 'מגדר',
                     'group'          => 'קבוצה',
                     'id'             => 'מזהה לקוח',
+                    'id-value'       => 'מזהה - :id',
                     'inactive'       => 'לא פעיל',
                     'method-error'   => 'שגיאה! אותרה שיטת לא נכונה, נא לבדוק את הגדרות פעולה מראש',
                     'name'           => 'שם הלקוח',
@@ -1662,6 +1762,44 @@ return [
                     'id'     => 'מזהה',
                     'name'   => 'שם',
                 ],
+            ],
+        ],
+
+        'gdpr' => [
+            'index' => [
+                'title' => 'בקשת GDPR',
+
+                'datagrid' => [
+                    'completed'     => 'הושלם',
+                    'created-at'    => 'נוצר בתאריך',
+                    'customer-name' => 'שם הלקוח',
+                    'declined'      => 'נדחה',
+                    'delete'        => 'מחק',
+                    'edit'          => 'ערוך',
+                    'id'            => 'מזהה',
+                    'message'       => 'הודעה',
+                    'pending'       => 'ממתין',
+                    'processing'    => 'מעבד',
+                    'status'        => 'סטטוס',
+                    'type'          => 'סוג',
+                ],
+
+                'modal' => [
+                    'completed'  => 'הושלם',
+                    'declined'   => 'נדחה',
+                    'pending'    => 'ממתין',
+                    'processing' => 'מעבד',
+                    'status'     => 'סטטוס',
+                    'title'      => 'ערוך בקשת נתוני GDPR',
+                    'type'       => 'סוג',
+                    'message'    => 'הודעה',
+                    'save-btn'   => 'שמור',
+                ],
+
+                'update-success'              => 'בקשת הנתונים עודכנה בהצלחה ואימייל נשלח ללקוח.',
+                'delete-success'              => 'בקשת הנתונים נמחקה בהצלחה.',
+                'attribute-reason-error'      => 'לא ניתן למחוק.',
+                'update-success-unsent-email' => 'בקשת הנתונים עודכנה בהצלחה אך האימייל לא נשלח ללקוח.',
             ],
         ],
 
@@ -2527,6 +2665,7 @@ return [
                     'general'           => 'כללי',
                     'group-separator'   => 'מפריד קבוצה',
                     'name'              => 'שם',
+                    'separator-note'    => 'השדה :attribute יכול לקבל רק את המפעילים פסיק (,) ונקודה (.)',
                     'save-btn'          => 'שמור מטבע',
                     'symbol'            => 'סמל',
                     'title'             => 'צור מטבע חדש',
@@ -2575,6 +2714,7 @@ return [
                     'allowed-errors'      => 'שגיאות מותרות',
                     'back-btn'            => 'חזרה',
                     'create-update'       => 'יצירה/עדכון',
+                    'current-file'        => 'קובץ שהועלה נוכחי',
                     'delete'              => 'מחיקה',
                     'download-sample'     => 'הורד דוגמא',
                     'field-separator'     => 'מפריד שדות',
@@ -2802,6 +2942,7 @@ return [
                         'title' => 'ערוך קטגוריות מס',
                     ],
 
+                    'can-not-delete' => 'לא ניתן למחוק קטגוריות שהוקצו לשערי מס.',
                     'create-success' => 'קטגוריית מס חדשה נוצרה בהצלחה',
                     'delete-failed'  => 'מחיקת קטגוריית מס נכשלה',
                     'delete-success' => 'קטגוריית מס נמחקה בהצלחה',
@@ -3080,17 +3221,18 @@ return [
                 'title'      => 'ערכות עיצוב',
 
                 'datagrid' => [
-                    'active'       => 'פעיל',
-                    'channel_name' => 'שם הערוץ',
-                    'delete'       => 'מחק',
-                    'id'           => 'מזהה',
-                    'inactive'     => 'לא פעיל',
-                    'name'         => 'שם',
-                    'sort-order'   => 'סדר מיון',
-                    'status'       => 'סטטוס',
-                    'theme'        => 'נושא',
-                    'type'         => 'סוג',
-                    'view'         => 'הצג',
+                    'active'        => 'פעיל',
+                    'channel_name'  => 'שם הערוץ',
+                    'change-status' => 'שנה סטטוס',
+                    'delete'        => 'מחק',
+                    'id'            => 'מזהה',
+                    'inactive'      => 'לא פעיל',
+                    'name'          => 'שם',
+                    'sort-order'    => 'סדר מיון',
+                    'status'        => 'סטטוס',
+                    'theme'         => 'נושא',
+                    'type'          => 'סוג',
+                    'view'          => 'הצג',
                 ],
             ],
 
@@ -3347,7 +3489,7 @@ return [
                 'title' => 'כללי',
 
                 'general' => [
-                    'info'  => 'הגדר אפשרויות יחידות.',
+                    'info'  => 'הגדר אפשרויות יחידות והפעל או השבת מסלולי ניווט.',
                     'title' => 'כללי',
 
                     'unit-options' => [
@@ -3365,7 +3507,7 @@ return [
                 ],
 
                 'content' => [
-                    'info'  => 'הגדר אפשרויות השוואה, אפשרויות רשימת המשאלות, אפשרויות חיפוש תמונות, תחתית, הפעל/השבת תחתית וקודים מותאמים אישית.',
+                    'info'  => 'הגדר כותרת הצעת הדף הראשי וקודים מותאמים אישית.',
                     'title' => 'תוכן',
 
                     'header-offer' => [
@@ -3385,7 +3527,7 @@ return [
                 ],
 
                 'design' => [
-                    'info'  => 'הגדר לוגו וסמל favicon.',
+                    'info'  => 'הגדר לוגו וסמל Favicon עבור לוח הניהול.',
                     'title' => 'עיצוב',
 
                     'admin-logo' => [
@@ -3397,7 +3539,7 @@ return [
                 ],
 
                 'magic-ai' => [
-                    'info'  => 'הגדר אפשרויות Magic AI.',
+                    'info'  => 'הגדר אפשרויות Magic AI ואפשר אפשרויות מסוימות לאוטומציה של יצירת תוכן.',
                     'title' => 'Magic AI',
 
                     'settings' => [
@@ -3568,6 +3710,46 @@ return [
                 ],
             ],
 
+            'gdpr' => [
+                'title' => 'GDPR',
+                'info'  => 'GDPR',
+
+                'settings' => [
+                    'title'   => 'הגדרות GDPR',
+                    'info'    => 'הגדרות GDPR',
+                    'enabled' => 'מופעל',
+                ],
+
+                'agreement' => [
+                    'title'          => 'הסכם GDPR',
+                    'info'           => 'הסכם GDPR',
+                    'enable'         => 'אפשר הסכם לקוח',
+                    'checkbox-label' => 'תווית תיבת הסימון להסכם',
+                    'content'        => 'תוכן ההסכם',
+                ],
+
+                'cookie' => [
+                    'title'        => 'הגדרות הודעת עוגיות',
+                    'info'         => 'הגדרות הודעת עוגיות',
+                    'enable'       => 'אפשר הודעת עוגיות',
+                    'position'     => 'מיקום תצוגת בלוק העוגיות',
+                    'bottom-left'  => 'תחתון שמאלי',
+                    'bottom-right' => 'תחתון ימני',
+                    'identifier'   => 'מזהה בלוק סטטי',
+                    'description'  => 'תיאור',
+                ],
+
+                'cookie-consent' => [
+                    'title'                  => 'העדפת הסכמת העוגיות שלך',
+                    'info'                   => 'העדפת הסכמת העוגיות שלך',
+                    'strictly-necessary'     => 'הכרחי בהחלט',
+                    'basic-interaction'      => 'אינטראקציות בסיסיות ופונקציות',
+                    'experience-enhancement' => 'שיפורי חוויה',
+                    'measurement'            => 'מדידות',
+                    'targeting-advertising'  => 'מיקוד ופרסום',
+                ],
+            ],
+
             'catalog' => [
                 'info'  => 'קטלוג',
                 'title' => 'קטלוג',
@@ -3723,7 +3905,7 @@ return [
 
                 'inventory' => [
                     'title'      => 'מלאי',
-                    'title-info' => 'הגדרות מלאי לאפשר הזמנות לאחור, להגדיר כמויות מינימליות ומקסימליות בעגלת הקניות ולהגדיר את סף המוצרים שאזלו מהמלאי.',
+                    'title-info' => 'הגדר אפשרויות מלאי כדי לאפשר הזמנות מאחור ולהגדיר את סף חוסר המלאי.',
 
                     'product-stock-options' => [
                         'allow-back-orders'       => 'אפשר הזמנות לאחור',
@@ -3762,7 +3944,7 @@ return [
 
                 'captcha' => [
                     'info'  => 'הגדרת מפתח אתר, מפתח סודי ומצב.',
-                    'title' => 'קפצ',
+                    'title' => 'Google קפצ',
 
                     'credentials' => [
                         'secret-key' => 'מפתח סודי',
@@ -3779,7 +3961,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'הגדרת רישומים לניוזלטר, אימותי אימייל והתחברות חברתית.',
+                    'settings-info' => 'הגדר רשימת משאלות, הפניית התחברות, הרשמות לניוזלטר, אפשרות קבוצת ברירת מחדל, אימותי אימייל והתחברות חברתית.',
                     'title'         => 'הגדרות',
 
                     'login-as-customer' => [
@@ -3864,19 +4046,23 @@ return [
                 ],
 
                 'notifications' => [
-                    'cancel-order'                                     => 'שלח הודעה לאחר ביטול הזמנה',
-                    'customer'                                         => 'שלח את פרטי חשבון הלקוח לאחר הרשמה',
-                    'customer-registration-confirmation-mail-to-admin' => 'שלח הודעת אימייל אישור למנהל לאחר הרשמת לקוח',
-                    'info'                                             => 'הגדר אפשרויות מלאי המוצר כדי לאפשר הזמנות מאחור, להגדיר כמויות מינימום ומקסימום בעגלה, ולהגדיר את סף האין במלאי.',
-                    'new-admin'                                        => 'שלח הודעת אימייל אישור למנהל לאחר הזמנה חדשה',
-                    'new-inventory-source'                             => 'שלח הודעת אימייל למקור המלאי לאחר יצירת משלוח',
-                    'new-invoice'                                      => 'שלח הודעת אימייל ללקוח לאחר יצירת חשבונית חדשה',
-                    'new-order'                                        => 'שלח הודעת אימייל אישור ללקוח לאחר הזמנה חדשה',
-                    'new-refund'                                       => 'שלח הודעת אימייל ללקוח לאחר יצירת החזר',
-                    'new-shipment'                                     => 'שלח הודעת אימייל ללקוח לאחר יצירת משלוח',
-                    'registration'                                     => 'שלח הודעת אימייל אישור לאחר הרשמת לקוח',
+                    'cancel-order'                                     => 'שלח התראה ללקוח לאחר ביטול הזמנה',
+                    'cancel-order-mail-to-admin'                       => 'שלח דוא"ל התראה למנהל לאחר ביטול הזמנה',
+                    'customer'                                         => 'שלח ללקוח פרטי חשבון לאחר הרשמה',
+                    'customer-registration-confirmation-mail-to-admin' => 'שלח דוא"ל אישור למנהל לאחר הרשמת לקוח',
+                    'info'                                             => 'כדי להגדיר קבלת מיילים לאימות חשבון, אישורי הזמנות, עדכונים על חשבוניות, החזרים, משלוחים וביטולי הזמנות.',
+                    'new-inventory-source'                             => 'שלח דוא"ל התראה למקור המלאי לאחר יצירת משלוח',
+                    'new-invoice'                                      => 'שלח דוא"ל התראה ללקוח לאחר יצירת חשבונית חדשה',
+                    'new-invoice-mail-to-admin'                        => 'שלח דוא"ל התראה למנהל לאחר יצירת חשבונית חדשה',
+                    'new-order'                                        => 'שלח דוא"ל אישור ללקוח לאחר ביצוע הזמנה חדשה',
+                    'new-order-mail-to-admin'                          => 'שלח דוא"ל אישור למנהל לאחר ביצוע הזמנה חדשה',
+                    'new-refund'                                       => 'שלח דוא"ל התראה ללקוח לאחר יצירת החזר',
+                    'new-refund-mail-to-admin'                         => 'שלח דוא"ל התראה למנהל לאחר יצירת החזר חדש',
+                    'new-shipment'                                     => 'שלח דוא"ל התראה ללקוח לאחר יצירת משלוח',
+                    'new-shipment-mail-to-admin'                       => 'שלח דוא"ל התראה למנהל לאחר יצירת משלוח חדש',
+                    'registration'                                     => 'שלח דוא"ל אישור לאחר הרשמת לקוח',
                     'title'                                            => 'התראות',
-                    'verification'                                     => 'שלח הודעת אימייל אימות לאחר הרשמת לקוח',
+                    'verification'                                     => 'שלח דוא"ל אימות לאחר הרשמת לקוח',
                 ],
             ],
 
@@ -4208,7 +4394,7 @@ return [
                 'search-terms'             => 'מונחים לחיפוש',
                 'settings'                 => 'הגדרות',
                 'shipments'                => 'משלוחים',
-                'sitemaps'                 => 'מפותרכים',
+                'sitemaps'                 => 'מפות אתר',
                 'tax-categories'           => 'קטגוריות מס',
                 'tax-rates'                => 'שערי מס',
                 'taxes'                    => 'מיסים',
@@ -4216,6 +4402,11 @@ return [
                 'transactions'             => 'עסקאות',
                 'url-rewrites'             => 'כתיבת URL מחדש',
                 'users'                    => 'משתמשים',
+                'gdpr-data-requests'       => 'בקשות נתוני GDPR',
+            ],
+
+            'powered-by' => [
+                'description' => 'מופעל על ידי :bagisto, פרויקט קוד פתוח על ידי :webkul.',
             ],
         ],
 
@@ -4525,6 +4716,10 @@ return [
                 'greeting'    => 'אנו מקבלים בברכה את הלקוח החדש, :customer_name שזה עתה נרשם אלינו!',
                 'subject'     => 'רישום לקוח חדש',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'מצב בקשת ה-GDPR שלך',
         ],
 
         'orders' => [
