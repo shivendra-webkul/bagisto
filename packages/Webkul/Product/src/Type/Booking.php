@@ -108,7 +108,7 @@ class Booking extends AbstractType
         return true;
     }
 
-     /**
+    /**
      * Return true if this product can be composite.
      *
      * @return bool

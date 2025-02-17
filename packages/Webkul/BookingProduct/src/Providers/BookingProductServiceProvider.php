@@ -4,7 +4,6 @@ namespace Webkul\BookingProduct\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Webkul\BookingProduct\Console\Commands\Booking as BookingCommand;
 use Webkul\BookingProduct\Models\Cart;
 use Webkul\Checkout\Models\Cart as BaseCart;
 

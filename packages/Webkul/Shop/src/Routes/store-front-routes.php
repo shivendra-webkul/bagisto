@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Webkul\BookingProduct\Http\Controllers\Shop\BookingProductController;
 use Webkul\Shop\Http\Controllers\CompareController;
 use Webkul\Shop\Http\Controllers\HomeController;
 use Webkul\Shop\Http\Controllers\PageController;
@@ -8,7 +9,6 @@ use Webkul\Shop\Http\Controllers\ProductController;
 use Webkul\Shop\Http\Controllers\ProductsCategoriesProxyController;
 use Webkul\Shop\Http\Controllers\SearchController;
 use Webkul\Shop\Http\Controllers\SubscriptionController;
-use Webkul\BookingProduct\Http\Controllers\Shop\BookingProductController;
 
 /**
  * CMS pages.
