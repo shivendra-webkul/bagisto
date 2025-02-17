@@ -743,7 +743,7 @@ return [
                     'order-id'     => 'Order ID',
                     'qty'          => 'QTY',
                     'to'           => 'To',
-                    'view'        => 'View',
+                    'view'         => 'View',
                 ],
 
                 'title'    => 'Bookings Product',
