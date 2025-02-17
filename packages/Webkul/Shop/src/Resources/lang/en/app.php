@@ -705,7 +705,7 @@ return [
                         'select-slot'         => 'Select Slot',
                         'title'               => 'Slot',
                     ],
-                ]
+                ],
             ],
 
             'gallery' => [
