@@ -823,7 +823,7 @@ return [
             ],
 
             'per-ticket-price' => ':price 每张票',
-        ]
+        ],
     ],
 
     'categories' => [

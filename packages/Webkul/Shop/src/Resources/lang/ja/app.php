@@ -823,7 +823,7 @@ return [
             ],
 
             'per-ticket-price' => 'チケット1枚あたり :price',
-        ]
+        ],
     ],
 
     'categories' => [

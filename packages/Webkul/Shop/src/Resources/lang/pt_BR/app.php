@@ -693,7 +693,7 @@ return [
                 ],
 
                 'booking' => [
-                   'location'    => 'Localização',
+                    'location'    => 'Localização',
                     'view-on-map' => 'Ver no Mapa',
 
                     'default' => [
@@ -823,7 +823,7 @@ return [
             ],
 
             'per-ticket-price' => ':price Por Ingresso',
-        ]
+        ],
     ],
 
     'categories' => [

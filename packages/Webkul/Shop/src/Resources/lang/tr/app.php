@@ -824,7 +824,7 @@ return [
             ],
 
             'per-ticket-price' => ':price Bilet Başına',
-        ]
+        ],
     ],
 
     'categories' => [

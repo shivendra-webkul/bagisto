@@ -718,7 +718,7 @@ return [
             ],
 
             'per-ticket-price' => ':price Per entrada',
-        ]
+        ],
     ],
 
     'categories' => [

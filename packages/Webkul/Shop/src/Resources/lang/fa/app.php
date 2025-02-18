@@ -823,7 +823,7 @@ return [
             ],
 
             'per-ticket-price' => ':price به ازای هر بلیط',
-        ]
+        ],
     ],
 
     'categories' => [
