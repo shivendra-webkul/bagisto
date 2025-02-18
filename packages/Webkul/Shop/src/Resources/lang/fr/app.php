@@ -691,6 +691,62 @@ return [
                 'grouped' => [
                     'name' => 'Nom',
                 ],
+
+                'booking' => [
+                    'location'    => 'Emplacement',
+                    'view-on-map' => 'Voir sur la carte',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes Minutes',
+                        'slot-duration'            => 'Durée du créneau',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'Fermé',
+                        'see-details'              => 'Voir les détails',
+                        'slot-duration'            => 'Durée du créneau',
+                        'slot-duration-in-minutes' => ':minutes Minutes',
+                        'today-availability'       => 'Disponibilité aujourd\'hui',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'Réservez votre billet',
+                        'title'            => 'Événement le :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'Choisissez l\'option de location',
+                        'daily-basis'        => 'Base quotidienne',
+                        'from'               => 'De',
+                        'hourly-basis'       => 'Base horaire',
+                        'rent-an-item'       => 'Louer un article',
+                        'select-date'        => 'Sélectionner une date',
+                        'select-rent-time'   => 'Sélectionner l\'heure de location',
+                        'select-slot'        => 'Sélectionner un créneau',
+                        'select-time-slot'   => 'Sélectionner un créneau horaire',
+                        'slot'               => 'Créneau',
+                        'no-slots-available' => 'Aucun créneau disponible',
+                        'to'                 => 'À',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'Réserver une table',
+                        'closed'                   => 'Fermé',
+                        'slot-duration'            => 'Durée du créneau',
+                        'slot-duration-in-minutes' => ':minutes Minutes',
+                        'slots-for-all-days'       => 'Afficher pour tous les jours',
+                        'special-notes'            => 'Demande/Notes spéciales',
+                        'today-availability'       => 'Disponibilité aujourd\'hui',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'Prendre un rendez-vous',
+                        'date'                => 'Date',
+                        'no-slots-available'  => 'Aucun créneau disponible',
+                        'select-slot'         => 'Sélectionner un créneau',
+                        'title'               => 'Créneau',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -736,6 +792,38 @@ return [
                 'offers' => 'Achetez :qty pour :price chacun et économisez :discount',
             ],
         ],
+
+        'booking' => [
+            'closed' => 'Fermé',
+
+            'cart'             => [
+                'booking-from' => 'Réservation de',
+                'booking-till' => 'Réservation jusqu\'à',
+                'daily'        => 'Base quotidienne',
+                'event-from'   => 'Événement de',
+                'event-ticket' => 'Billet d\'événement',
+                'event-till'   => 'Événement jusqu\'à',
+                'hourly'       => 'Base horaire',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'Cet événement a expiré.',
+                    ],
+
+                    'missing_options'        => 'Les options sont manquantes pour ce produit.',
+                    'inventory_warning'      => 'La quantité demandée n\'est pas disponible, veuillez réessayer plus tard.',
+                    'select_hourly_duration' => 'Sélectionnez une durée de créneau d\'une heure.',
+                ],
+
+                'rent-from'    => 'Louer de',
+                'rent-till'    => 'Louer jusqu\'à',
+                'rent-type'    => 'Type de location',
+                'renting_type' => 'Type de location',
+                'special-note' => 'Demande/Notes spéciales',
+            ],
+
+            'per-ticket-price' => ':price Par Billet',
+        ]
     ],
 
     'categories' => [
