@@ -23,11 +23,16 @@ class BookingProductEventTicketRepository extends Repository
      */
     public function saveEventTickets(array $data, BookingProduct $bookingProduct): void
     {
-        Event::dispatch('booking_product.booking.event-ticket.save.before', ['data' => $data, 'bookingProduct' => $bookingProduct]);
+        Event::dispatch('booking_product.booking.event-ticket.save.before', [
+            'data'           => $data,
+            'bookingProduct' => $bookingProduct,
+        ]);
 
-        $previousTicketIds = $bookingProduct->event_tickets()->pluck('id');
+        $previousTicketIds = $bookingProduct->event_tickets()->pluck('id')->toArray();
 
-        if (isset($data['tickets'])) {
+        $savedTickets = [];
+
+        if (! empty($data['tickets'])) {
             foreach ($data['tickets'] as $ticketId => &$ticketInputs) {
                 $this->sanitizeInput('special_price', $ticketInputs);
 
@@ -40,23 +45,24 @@ class BookingProductEventTicketRepository extends Repository
                         'booking_product_id' => $bookingProduct->id,
                     ], $ticketInputs));
                 } else {
-                    if (is_numeric($index = $previousTicketIds->search($ticketId))) {
-                        $previousTicketIds->forget($index);
+                    if (($index = array_search($ticketId, $previousTicketIds)) !== false) {
+                        unset($previousTicketIds[$index]);
                     }
 
                     $ticket = $this->update($ticketInputs, $ticketId);
                 }
 
-                $savedTickets[$ticketId]['ticket'] = $ticket;
-
-                $savedTickets[$ticketId]['ticketInputs'] = $ticketInputs;
+                $savedTickets[$ticketId] = [
+                    'ticket'       => $ticket,
+                    'ticketInputs' => $ticketInputs,
+                ];
             }
 
             Event::dispatch('booking_product.booking.event-ticket.save.after', ['tickets' => $savedTickets]);
         }
 
-        foreach ($previousTicketIds as $previousTicketId) {
-            $this->delete($previousTicketId);
+        if (! empty($previousTicketIds)) {
+            $this->destroy($previousTicketIds);
         }
     }
 

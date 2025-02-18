@@ -58,7 +58,6 @@ class DefaultSlot extends Booking
      * Returns slots for One Booking For Many Days
      *
      * @param  \Webkul\BookingProduct\Contracts\BookingProductTableSlot  $bookingProductSlot
-     * @return array
      */
     public function getOneBookingForManyDaysSlots($bookingProductSlot, object $requestedDate)
     {
@@ -91,7 +90,6 @@ class DefaultSlot extends Booking
      * Returns slots for Many Bookings for One Day
      *
      * @param  \Webkul\BookingProduct\Contracts\BookingProductTableSlot  $bookingProductSlot
-     * @return array
      */
     public function getManyBookingsForOneDaySlots($bookingProductSlot, object $requestedDate)
     {

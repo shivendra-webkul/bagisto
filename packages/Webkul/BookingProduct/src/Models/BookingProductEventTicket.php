@@ -17,6 +17,9 @@ class BookingProductEventTicket extends TranslatableModel implements BookingProd
      */
     public $timestamps = false;
 
+    /**
+     * Summary of translatedAttributes
+     */
     public $translatedAttributes = [
         'name',
         'description',

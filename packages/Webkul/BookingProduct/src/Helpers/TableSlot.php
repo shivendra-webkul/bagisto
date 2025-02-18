@@ -13,6 +13,10 @@ class TableSlot extends Booking
     {
         $bookingProduct = $this->bookingProductRepository->findOneByField('product_id', $cartItem['product_id']);
 
+        if (! $bookingProduct) {
+            return false;
+        }
+
         $bookedQty = $this->getBookedQuantity($cartItem);
 
         $tableSlot = $bookingProduct->table_slot;
@@ -20,17 +24,13 @@ class TableSlot extends Booking
         $requestedQty = $cartItem['quantity'];
 
         if ($tableSlot->price_type == 'table') {
-            $requestedQty *= $tableSlot->guest_limit;
-            $bookedQty *= $tableSlot->guest_limit;
+            $multiplier = $tableSlot->guest_limit;
+
+            $requestedQty *= $multiplier;
+
+            $bookedQty *= $multiplier;
         }
 
-        if (
-            $bookingProduct->qty - $bookedQty < $requestedQty
-            || $this->isSlotExpired($cartItem)
-        ) {
-            return false;
-        }
-
-        return true;
+        return $bookingProduct->qty - $bookedQty >= $requestedQty && ! $this->isSlotExpired($cartItem);
     }
 }
