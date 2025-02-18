@@ -25,18 +25,16 @@
                         <!-- List Icon -->
                         <button
                             class="icon-sales cursor-pointer p-1.5 text-xl"
-                            :class="{'bg-blue-700 text-white' : viewType == 'table'}"
-                            @click="viewType ='table'"
-                        >
-                        </button>
+                            :class="{'bg-blue-700 text-white' : viewType === 'table'}"
+                            @click="viewType = 'table'"
+                        ></button>
         
-                        <!-- Calender Icon -->
+                        <!-- Calendar Icon -->
                         <button
                             class="icon-calendar cursor-pointer p-1.5 text-xl"
-                            :class="{'bg-blue-700 text-white' : viewType == 'calendar'}"
-                            @click="viewType ='calendar'"
-                        >
-                        </button>
+                            :class="{'bg-blue-700 text-white' : viewType === 'calendar'}"
+                            @click="viewType = 'calendar'"
+                        ></button>
                     </div>
                 </div>
             </div>

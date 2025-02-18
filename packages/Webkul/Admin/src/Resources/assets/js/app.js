@@ -49,6 +49,8 @@ import Draggable from "./plugins/draggable";
 import VueCal from 'vue-cal';
 import 'vue-cal/dist/vuecal.css';
 
+app.component('vue-cal', VueCal);
+
 [
     Admin,
     Axios,
@@ -57,7 +59,6 @@ import 'vue-cal/dist/vuecal.css';
     Flatpickr,
     VeeValidate,
     Draggable,
-    VueCal,
 ].forEach((plugin) => app.use(plugin));
 
 /**

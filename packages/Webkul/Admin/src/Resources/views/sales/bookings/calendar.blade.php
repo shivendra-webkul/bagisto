@@ -45,7 +45,6 @@
                                 'bg-green-100 border-green-600 hover:border-green-600 hover:bg-green-200',
                                 event.time_difference ? 'p-2' : 'p-1'
                             ]"
-                            @click="showTooltip($event)"
                         >
                             <span>
                                 @{{ new Date(event.start).toLocaleTimeString('en-US', { hour12: true, hour: 'numeric', minute: '2-digit' }) }} - @{{ new Date(event.end).toLocaleTimeString('en-US', { hour12: true, hour: 'numeric', minute: '2-digit' }) }}
@@ -65,7 +64,7 @@
 
             <x-admin::modal ref="myModal">
                 <!-- Modal Header -->
-                <x-slot:header class="!p-0">
+                <x-slot:header>
                     <div class="text-lg font-medium text-[#1F2937]">
                         @lang('admin::app.sales.booking.calendar.booking-details')
                     </div>
@@ -200,7 +199,7 @@
                 </x-slot>
 
                 <!-- Modal Footer -->
-                <x-slot:footer class="!pb-0">
+                <x-slot:footer>
                     <button
                         class="primary-button h-9 p-2.5 text-base"
                         @click="redirect"
@@ -253,38 +252,6 @@
                     this.event = event;
 
                     this.$refs.myModal.toggle();
-                },
-
-                showTooltip(event) {
-                    const element = event.currentTarget;
-                    const elementTopOffset = element.getBoundingClientRect().top + window.pageYOffset;
-                    const parentOffsetLeft = element.closest(".vuecal__cell--has-events")?.offsetLeft;
-                    const sidebar = document.querySelector('.sidebar-collapsed, .sidebar-not-collapsed');
-                    const parentLeftOffset = sidebar ? parentOffsetLeft : parentOffsetLeft + 200;
-                    const calendar = document.querySelector('.calendar');
-                    const elementWidth = element.offsetWidth;
-                    const calendarWidth = calendar.offsetWidth;
-
-                    calendar.style.top = Math.min(elementTopOffset, document.body.clientHeight - calendar.offsetHeight) + 'px';
-                    calendar.style.right = '';
-                    calendar.style.left = '';
-
-                    const sidebarFirstChildWidth = sidebar?.querySelector(':first-child')?.clientWidth;
-
-                    if (parentLeftOffset > calendarWidth) {
-                        if (sidebar) {
-                            calendar.style.left = parentLeftOffset - 75 + "px";
-                        } else if (parentLeftOffset - sidebarFirstChildWidth > calendarWidth) {
-                            calendar.style.left = parentLeftOffset - 75 + "px";
-                        } else {
-                            calendar.style.right = parentLeftOffset - sidebarFirstChildWidth - 5 + elementWidth + "px";
-                        }
-                    } else if (elementWidth < parentLeftOffset) {
-                        calendar.style.right = parentLeftOffset + elementWidth + 10 + "px";
-                    } else {
-                        calendar.style.left = calendarWidth + (elementWidth - parentLeftOffset) + 60 + "px";
-                    }
-                    calendar.classList.add('show');
                 },
 
                 redirect(event) {
