@@ -24,6 +24,7 @@ return [
     Webkul\DataTransfer\Providers\DataTransferServiceProvider::class,
     Webkul\DebugBar\Providers\DebugBarServiceProvider::class,
     Webkul\FPC\Providers\FPCServiceProvider::class,
+    Webkul\GDPR\Providers\GDPRServiceProvider::class,
     Webkul\Installer\Providers\InstallerServiceProvider::class,
     Webkul\Inventory\Providers\InventoryServiceProvider::class,
     Webkul\MagicAI\Providers\MagicAIServiceProvider::class,
@@ -42,5 +43,4 @@ return [
     Webkul\Tax\Providers\TaxServiceProvider::class,
     Webkul\Theme\Providers\ThemeServiceProvider::class,
     Webkul\User\Providers\UserServiceProvider::class,
-    Webkul\GDPR\Providers\GDPRServiceProvider::class,
 ];
