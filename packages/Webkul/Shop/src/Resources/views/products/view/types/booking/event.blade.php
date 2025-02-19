@@ -76,6 +76,7 @@
                         ::name="'booking[qty][' + ticket.id + ']'"
                         rules="required|numeric|min_value:0"
                         ::value="tickets.length > 1 ? 1 : 0"
+                        ::min-value="0"
                     />
                 </div>
             </div>

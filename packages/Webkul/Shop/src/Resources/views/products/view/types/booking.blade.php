@@ -21,17 +21,17 @@
                         <span class="icon-location text-2xl"></span>
 
                         <div class="grid grid-cols-1 gap-1.5 text-sm font-medium">
-                            <p class="text-[#6E6E6E]">
+                            <p>
                                 @lang('shop::app.products.view.type.booking.location')
                             </p>
 
-                            <div class="grid grid-cols-1 gap-4">
-                                <p>{{ $bookingProduct->location }}</p>
+                            <div class="grid grid-cols-1 gap-3">
+                                <p class="text-[#6E6E6E]">{{ $bookingProduct->location }}</p>
 
                                 <a
                                     href="https://maps.google.com/maps?q={{ $bookingProduct->location }}"
                                     target="_blank"
-                                    class="w-fit text-blue-600"
+                                    class="w-fit text-blue-600 hover:text-blue-800"
                                 >
                                     @lang('shop::app.products.view.type.booking.view-on-map')
                                 </a>
