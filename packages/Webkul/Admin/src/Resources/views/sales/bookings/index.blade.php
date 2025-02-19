@@ -22,18 +22,18 @@
         
                     <!-- View Switcher -->
                     <div class="grid grid-cols-2 border border-gray-300 dark:border-gray-700">
-                        <!-- List Icon -->
-                        <button
-                            class="icon-list cursor-pointer p-1.5 text-xl"
-                            :class="{'bg-blue-700 text-white' : viewType === 'table'}"
-                            @click="viewType = 'table'"
-                        ></button>
-        
                         <!-- Calendar Icon -->
                         <button
                             class="icon-calendar cursor-pointer p-1.5 text-xl"
                             :class="{'bg-blue-700 text-white' : viewType === 'calendar'}"
                             @click="viewType = 'calendar'"
+                        ></button>
+
+                        <!-- List Icon -->
+                        <button
+                            class="icon-list cursor-pointer p-1.5 text-xl"
+                            :class="{'bg-blue-700 text-white' : viewType === 'table'}"
+                            @click="viewType = 'table'"
                         ></button>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 
                 data() {
                     return {
-                        viewType: 'table',
+                        viewType: 'calendar',
                     };
                 },
             });
