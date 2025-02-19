@@ -376,7 +376,7 @@ return [
                 'title'              => 'Liste de souhaits',
             ],
 
-            'rgpd' => [
+            'gdpr' => [
                 'completed'                   => 'Terminé',
                 'date'                        => 'Date',
                 'declined'                    => 'Refusé',
@@ -394,7 +394,7 @@ return [
                     'create-btn' => 'Créer une demande',
                     'html'       => 'HTML',
                     'pdf'        => 'PDF',
-                    'title'      => 'Demandes de données RGPD',
+                    'title'      => 'Demandes de données GDPR',
 
                     'modal' => [
                         'message' => 'Message',
@@ -1117,7 +1117,7 @@ return [
     'layouts' => [
         'address'               => 'Adresse',
         'downloadable-products' => 'Produits téléchargeables',
-        'gdpr-request'          => 'Demandes RGPD',
+        'gdpr-request'          => 'Demandes GDPR',
         'my-account'            => 'Mon compte',
         'orders'                => 'Commandes',
         'profile'               => 'Profil',
@@ -1178,7 +1178,7 @@ return [
                 'unsubscribe' => 'Se désabonner',
             ],
 
-            'rgpd' => [
+            'gdpr' => [
                 'nouvelle-demande-suppression' => 'Nouvelle demande de suppression de données',
                 'nouvelle-demande-mise-a-jour' => 'Nouvelle demande de mise à jour de données',
 

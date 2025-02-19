@@ -368,6 +368,10 @@
     "file": "assets/email-5AJwT575.svg",
     "src": "src/Resources/assets/images/settings/email.svg"
   },
+  "src/Resources/assets/images/settings/gdpr.svg": {
+    "file": "assets/gdpr-B-AZsTju.svg",
+    "src": "src/Resources/assets/images/settings/gdpr.svg"
+  },
   "src/Resources/assets/images/settings/inventory.svg": {
     "file": "assets/inventory-D1uKZcKj.svg",
     "src": "src/Resources/assets/images/settings/inventory.svg"

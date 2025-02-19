@@ -1973,7 +1973,7 @@ return [
 
         'gdpr' => [
             'index' => [
-                'title' => 'Demande RGPD',
+                'title' => 'Demande GDPR',
 
                 'datagrid' => [
                     'completed'     => 'Terminé',
@@ -1996,7 +1996,7 @@ return [
                     'pending'    => 'En attente',
                     'processing' => 'En traitement',
                     'status'     => 'Statut',
-                    'title'      => 'Modifier la demande de données RGPD',
+                    'title'      => 'Modifier la demande de données GDPR',
                     'type'       => 'Type',
                     'message'    => 'Message',
                     'save-btn'   => 'Enregistrer',
@@ -3917,18 +3917,18 @@ return [
             ],
 
             'gdpr' => [
-                'title' => 'RGPD',
-                'info'  => 'RGPD',
+                'title' => 'GDPR',
+                'info'  => 'GDPR',
 
                 'settings' => [
-                    'title'   => 'Paramètres RGPD',
-                    'info'    => 'Paramètres RGPD',
+                    'title'   => 'Paramètres GDPR',
+                    'info'    => 'Paramètres GDPR',
                     'enabled' => 'Activé',
                 ],
 
                 'agreement' => [
-                    'title'          => 'Accord RGPD',
-                    'info'           => 'Accord RGPD',
+                    'title'          => 'Accord GDPR',
+                    'info'           => 'Accord GDPR',
                     'enable'         => 'Activer l\'accord client',
                     'checkbox-label' => 'Étiquette de la case à cocher de l\'accord',
                     'content'        => 'Contenu de l\'accord',
