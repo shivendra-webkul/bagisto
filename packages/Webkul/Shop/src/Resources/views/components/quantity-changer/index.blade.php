@@ -70,7 +70,7 @@
                 },
 
                 decrease() {
-                    if (this.quantity > 1) {
+                    if (this.quantity > 0) {
                         this.quantity -= 1;
 
                         this.$emit('change', this.quantity);

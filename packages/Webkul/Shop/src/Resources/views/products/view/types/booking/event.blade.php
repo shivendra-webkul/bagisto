@@ -6,12 +6,12 @@
 
         <div class="grid grid-cols-1 gap-1.5 text-sm font-medium">
             <p class="text-[#6E6E6E]">
-                @lang('shop::app.products.view.type.booking.event.title') :
+                @lang('shop::app.products.view.type.booking.event.title')
             </p>
 
-            <div>
+            <p>
                 {!! $bookingSlotHelper->getEventDate($bookingProduct) !!}
-            </div>
+            </p>
         </div>
     </div>
 
@@ -75,8 +75,7 @@
                         class="mt-5 w-max gap-x-4 rounded-xl !border-[#E9E9E9] px-4 py-2.5 max-sm:p-1.5"
                         ::name="'booking[qty][' + ticket.id + ']'"
                         rules="required|numeric|min_value:0"
-                        ::value="defaultQty"
-                        ::min-quantity="defaultQty"
+                        ::value="tickets.length > 1 ? 1 : 0"
                     />
                 </div>
             </div>
@@ -90,12 +89,6 @@
             data() {
                 return {
                     tickets: @json($bookingSlotHelper->getTickets($bookingProduct)),
-                }
-            },
-
-            computed: {
-                defaultQty() {
-                    return this.tickets.length > 1 ? 0 : 1;
                 }
             }
         });

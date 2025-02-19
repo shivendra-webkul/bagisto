@@ -28,7 +28,7 @@ class EventTicket extends Booking
      *
      * @param  \Webkul\BookingProduct\Contracts\BookingProduct  $bookingProduct
      */
-    public function getTickets($bookingProduct): array
+    public function getTickets($bookingProduct)
     {
         if (! $bookingProduct->event_tickets()->count()) {
             return [];
@@ -42,7 +42,7 @@ class EventTicket extends Booking
      *
      * @param  array  $tickets
      */
-    public function formatPrice($tickets): array
+    public function formatPrice($tickets)
     {
         foreach ($tickets as $index => $ticket) {
             $price = $ticket->price;

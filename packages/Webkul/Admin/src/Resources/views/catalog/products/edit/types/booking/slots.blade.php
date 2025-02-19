@@ -140,7 +140,7 @@
                 enctype="multipart/form-data"
                 ref="createOptionsForm"
             >
-                <x-admin::drawer ref="drawerform">
+                <x-admin::drawer ref="drawerForm">
                     <x-slot:header>
                         <div class="flex items-center justify-between">
                             <p class="my-2.5 text-xl font-medium dark:text-white">
@@ -323,13 +323,15 @@
                 if (this.bookingProduct.same_slot_all_days) {
                     this.slots['same_for_week'] = slots ?? this.slots['same_for_week'];
                 } else {
-                    this.slots['different_for_week'] = slots.slice(0, 7);
+                    this.slots['different_for_week'] = Object.values(slots).slice(0, 7);
                 }
 
                 this.slots['different_for_week'].forEach((slot, index) => {
                     if (this.slotSpansTwoDays(slot)) {
                         const secondDaySlot = { ...slot, from: '00:00' };
+                        
                         this.slots['different_for_week'].splice(index + 1, 0, secondDaySlot);
+                        
                         index++;
                     }
                 });
@@ -344,6 +346,7 @@
                     if (slot.length) {
                         slot.forEach(element => {
                             const from = element['from'].split(':');
+
                             const to = element['to'].split(':');
 
                             return parseInt(from) > parseInt(to);
@@ -394,8 +397,11 @@
                     if (parseInt(this.sameSlotAllDays)) {
                         for (let i = 0; i < Object.keys(params).length / 3; i++) {
                             const fromKey = `booking[slots][${i}][from]`;
+
                             const toKey = `booking[slots][${i}][to]`;
+
                             const fromValue = params[fromKey];
+
                             const toValue = params[toKey];
 
                             if (fromValue && toValue) {
@@ -420,6 +426,7 @@
                         for (let i = 0; i < Object.keys(params).length / 3; i++) {
                             const fromKey = `booking[slots][${this.currentIndex}][${i}][from]`;
                             const toKey = `booking[slots][${this.currentIndex}][${i}][to]`;
+
                             const fromValue = params[fromKey];
                             const toValue = params[toKey];
 
@@ -463,7 +470,7 @@
 
                     this.add();
 
-                    this.$refs.drawerform.toggle();
+                    this.$refs.drawerForm.toggle();
                 },
             },
         });

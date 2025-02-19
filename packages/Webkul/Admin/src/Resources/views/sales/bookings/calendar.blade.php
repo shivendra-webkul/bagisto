@@ -174,7 +174,7 @@
 
                             <!-- Customer Phone Number -->
                             <div class="flex gap-2">
-                                <span class="icon-phone-number text-2xl text-gray-500"></span>
+                                <span class="icon-phone text-2xl text-gray-500"></span>
 
                                 <span v-text="event.contact"></span>
                             </div>

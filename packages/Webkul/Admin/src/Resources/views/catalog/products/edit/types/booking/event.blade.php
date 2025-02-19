@@ -160,14 +160,14 @@
             </div>
         </div>
 
-        <!-- Add Drawe Form -->
+        <!-- Add Drawer Form -->
         <x-admin::form
             v-slot="{ meta, errors, handleSubmit }"
             as="div"
             ref="modelForm"
         >
             <form @submit.prevent="handleSubmit($event, store)">
-                <x-admin::drawer ref="drawerform">
+                <x-admin::drawer ref="drawerForm">
                     <x-slot:header>
                         <div class="flex items-center justify-between">
                             <p
@@ -321,7 +321,7 @@
                                 type="textarea"
                                 name="[description]"
                                 rules="required"
-                                v-model="ticketItem.description" 
+                                v-model="ticketItem.description"
                                 :label="trans('admin::app.catalog.products.edit.types.booking.event.description')"
                                 :placeholder="trans('admin::app.catalog.products.edit.types.booking.event.description')"
                                 rows="9"
@@ -400,7 +400,7 @@
                 },
 
                 toggle() {
-                    this.$refs.drawerform.toggle();
+                    this.$refs.drawerForm.toggle();
                 },
             }
         });

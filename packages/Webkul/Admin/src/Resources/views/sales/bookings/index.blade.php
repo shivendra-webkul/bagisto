@@ -24,7 +24,7 @@
                     <div class="grid grid-cols-2 border border-gray-300 dark:border-gray-700">
                         <!-- List Icon -->
                         <button
-                            class="icon-sales cursor-pointer p-1.5 text-xl"
+                            class="icon-list cursor-pointer p-1.5 text-xl"
                             :class="{'bg-blue-700 text-white' : viewType === 'table'}"
                             @click="viewType = 'table'"
                         ></button>
