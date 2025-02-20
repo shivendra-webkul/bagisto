@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'Ihre Cookie-Einwilligungspräferenzen',
-                    'save-and-continue'                      => 'Speichern und fortfahren',
-                    'strictly-necessary'                     => 'Unbedingt erforderlich',
-                    'basic-interactions-and-functionalities' => 'Grundlegende Interaktionen und Funktionen',
-                    'experience-enhancement'                 => 'Erlebnisverbesserung',
-                    'measurement'                            => 'Messung',
-                    'targeting-and-advertising'              => 'Zielgerichtete Werbung',
+                    'your-cookie-consent-preferences'         => 'Ihre Cookie-Einwilligungspräferenzen',
+                    'save-and-continue'                       => 'Speichern und fortfahren',
+                    'strictly-necessary'                      => 'Unbedingt erforderlich',
+                    'basic-interactions'                      => 'Grundlegende Interaktionen und Funktionen',
+                    'experience-enhancement'                  => 'Erlebnisverbesserung',
+                    'measurements'                            => 'Messung',
+                    'targeting-and-advertising'               => 'Zielgerichtete Werbung',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'Nachricht : ',
                     'request-status' => 'Anfragestatus : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'Falls Sie die Zahlung bereits vorgenommen haben, ignorieren Sie bitte diese Nachricht.',
+                'invoice-overdue' => 'Dies ist eine freundliche Erinnerung daran, dass Ihre Rechnung überfällig ist. Bitte nehmen Sie die Zahlung so bald wie möglich vor.',
+                'subject'         => 'Rechnungserinnerung',
             ],
         ],
 

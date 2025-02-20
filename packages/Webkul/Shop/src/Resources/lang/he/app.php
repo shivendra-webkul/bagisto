@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'העדפות הסכמת העוגיות שלך',
-                    'save-and-continue'                      => 'שמור והמשך',
-                    'strictly-necessary'                     => 'הכרחי בהחלט',
-                    'basic-interactions-and-functionalities' => 'אינטראקציות ותפקודים בסיסיים',
-                    'experience-enhancement'                 => 'שיפור חווית משתמש',
-                    'measurement'                            => 'מדידה',
-                    'targeting-and-advertising'              => 'מיקוד ופרסום',
+                    'your-cookie-consent-preferences'         => 'העדפות הסכמת העוגיות שלך',
+                    'save-and-continue'                       => 'שמור והמשך',
+                    'strictly-necessary'                      => 'הכרחי בהחלט',
+                    'basic-interactions'                      => 'אינטראקציות ותפקודים בסיסיים',
+                    'experience-enhancement'                  => 'שיפור חווית משתמש',
+                    'measurements'                            => 'מדידה',
+                    'targeting-and-advertising'               => 'מיקוד ופרסום',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'הודעה : ',
                     'request-status' => 'סטטוס הבקשה : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'אם כבר ביצעת את התשלום, אנא התעלם מהודעה זו.',
+                'invoice-overdue' => 'זוהי תזכורת ידידותית כי החשבונית שלך באיחור. אנו מבקשים ממך לבצע את התשלום בהקדם האפשרי.',
+                'subject'         => 'תזכורת חשבונית',
             ],
         ],
 

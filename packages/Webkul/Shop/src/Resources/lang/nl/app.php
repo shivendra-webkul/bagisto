@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'Uw cookievoorkeuren',
-                    'save-and-continue'                      => 'Opslaan en doorgaan',
-                    'strictly-necessary'                     => 'Strikt noodzakelijk',
-                    'basic-interactions-and-functionalities' => 'Basisinteracties en functionaliteiten',
-                    'experience-enhancement'                 => 'Ervaring verbetering',
-                    'measurement'                            => 'Meting',
-                    'targeting-and-advertising'              => 'Targeting en adverteren',
+                    'your-cookie-consent-preferences'         => 'Uw cookievoorkeuren',
+                    'save-and-continue'                       => 'Opslaan en doorgaan',
+                    'strictly-necessary'                      => 'Strikt noodzakelijk',
+                    'basic-interactions'                      => 'Basisinteracties en functionaliteiten',
+                    'experience-enhancement'                  => 'Ervaring verbetering',
+                    'measurements'                            => 'Meting',
+                    'targeting-and-advertising'               => 'Targeting en adverteren',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'Bericht : ',
                     'request-status' => 'Verzoekstatus : ',
                 ],
+            ],
+
+            'reminder' => [
+                'already-paid'    => 'Als u de betaling al heeft gedaan, negeer dan dit bericht.',
+                'invoice-overdue' => 'Dit is een vriendelijke herinnering dat uw factuur nu achterstallig is. Wij verzoeken u vriendelijk om de betaling zo spoedig mogelijk te voldoen.',
+                'subject'         => 'Factuurherinnering',
             ],
         ],
 

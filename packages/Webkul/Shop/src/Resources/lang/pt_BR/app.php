@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'Suas Preferências de Consentimento de Cookies',
-                    'save-and-continue'                      => 'Salvar e Continuar',
-                    'strictly-necessary'                     => 'Estritamente Necessário',
-                    'basic-interactions-and-functionalities' => 'Interações e Funcionalidades Básicas',
-                    'experience-enhancement'                 => 'Melhoria da Experiência',
-                    'measurement'                            => 'Medição',
-                    'targeting-and-advertising'              => 'Segmentação e Publicidade',
+                    'your-cookie-consent-preferences'         => 'Suas Preferências de Consentimento de Cookies',
+                    'save-and-continue'                       => 'Salvar e Continuar',
+                    'strictly-necessary'                      => 'Estritamente Necessário',
+                    'basic-interactions'                      => 'Interações e Funcionalidades Básicas',
+                    'experience-enhancement'                  => 'Melhoria da Experiência',
+                    'measurements'                            => 'Medição',
+                    'targeting-and-advertising'               => 'Segmentação e Publicidade',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'Mensagem : ',
                     'request-status' => 'Status da Solicitação : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'Se você já efetuou o pagamento, por favor ignore esta mensagem.',
+                'invoice-overdue' => 'Este é um lembrete amigável de que sua fatura está vencida. Solicitamos gentilmente que efetue o pagamento o mais rápido possível.',
+                'subject'         => 'Lembrete de fatura',
             ],
         ],
 

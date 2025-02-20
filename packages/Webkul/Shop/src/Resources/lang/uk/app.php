@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'Ваші налаштування згоди на використання файлів cookie',
-                    'save-and-continue'                      => 'Зберегти та продовжити',
-                    'strictly-necessary'                     => 'Суворо необхідні',
-                    'basic-interactions-and-functionalities' => 'Основні взаємодії та функціональність',
-                    'experience-enhancement'                 => 'Покращення досвіду',
-                    'measurement'                            => 'Вимірювання',
-                    'targeting-and-advertising'              => 'Цільова реклама',
+                    'your-cookie-consent-preferences'         => 'Ваші налаштування згоди на використання файлів cookie',
+                    'save-and-continue'                       => 'Зберегти та продовжити',
+                    'strictly-necessary'                      => 'Суворо необхідні',
+                    'basic-interactions'                      => 'Основні взаємодії та функціональність',
+                    'experience-enhancement'                  => 'Покращення досвіду',
+                    'measurements'                            => 'Вимірювання',
+                    'targeting-and-advertising'               => 'Цільова реклама',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'request-type'   => 'Тип запиту : ',
                     'summary'        => 'Резюме запиту на видалення',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'Якщо ви вже здійснили оплату, будь ласка, проігноруйте це повідомлення.',
+                'invoice-overdue' => 'Це дружнє нагадування про те, що ваш рахунок прострочений. Будь ласка, здійсніть оплату якнайшвидше.',
+                'subject'         => 'Нагадування про рахунок',
             ],
         ],
 

@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'Tus Preferencias de Consentimiento de Cookies',
-                    'save-and-continue'                      => 'Guardar y Continuar',
-                    'strictly-necessary'                     => 'Estríctamente Necesarias',
-                    'basic-interactions-and-functionalities' => 'Interacciones y Funcionalidades Básicas',
-                    'experience-enhancement'                 => 'Mejora de la Experiencia',
-                    'measurement'                            => 'Medición',
-                    'targeting-and-advertising'              => 'Segmentación y Publicidad',
+                    'your-cookie-consent-preferences'         => 'Tus Preferencias de Consentimiento de Cookies',
+                    'save-and-continue'                       => 'Guardar y Continuar',
+                    'strictly-necessary'                      => 'Estríctamente Necesarias',
+                    'basic-interactions'                      => 'Interacciones y Funcionalidades Básicas',
+                    'experience-enhancement'                  => 'Mejora de la Experiencia',
+                    'measurements'                            => 'Medición',
+                    'targeting-and-advertising'               => 'Segmentación y Publicidad',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'Mensaje : ',
                     'request-status' => 'Estado de la Solicitud : ',
                 ],
+            ],
+
+            'reminder' => [
+                'already-paid'    => 'Si ya ha realizado el pago, ignore este mensaje.',
+                'invoice-overdue' => 'Este es un recordatorio amable de que su factura está vencida. Le pedimos amablemente que realice el pago lo antes posible.',
+                'subject'         => 'Recordatorio de factura',
             ],
         ],
 

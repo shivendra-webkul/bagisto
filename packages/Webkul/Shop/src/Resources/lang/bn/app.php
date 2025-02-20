@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'আপনার কুকি সম্মতি পছন্দগুলি',
-                    'save-and-continue'                      => 'সংরক্ষণ করুন এবং চালিয়ে যান',
-                    'strictly-necessary'                     => 'কঠোরভাবে প্রয়োজনীয়',
-                    'basic-interactions-and-functionalities' => 'মৌলিক ইন্টারঅ্যাকশন এবং কার্যকারিতা',
-                    'experience-enhancement'                 => 'অভিজ্ঞতা উন্নতি',
-                    'measurement'                            => 'পরিমাপ',
-                    'targeting-and-advertising'              => 'টার্গেটিং এবং বিজ্ঞাপন',
+                    'your-cookie-consent-preferences'         => 'আপনার কুকি সম্মতি পছন্দগুলি',
+                    'save-and-continue'                       => 'সংরক্ষণ করুন এবং চালিয়ে যান',
+                    'strictly-necessary'                      => 'কঠোরভাবে প্রয়োজনীয়',
+                    'basic-interactions'                      => 'মৌলিক ইন্টারঅ্যাকশন এবং কার্যকারিতা',
+                    'experience-enhancement'                  => 'অভিজ্ঞতা উন্নতি',
+                    'measurements'                            => 'পরিমাপ',
+                    'targeting-and-advertising'               => 'টার্গেটিং এবং বিজ্ঞাপন',
                 ],
             ],
         ],
@@ -1113,6 +1113,12 @@ return [
                     'message'        => 'বার্তা : ',
                     'request-status' => 'অনুরোধের অবস্থা : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'যদি আপনি ইতিমধ্যে অর্থপ্রদান করে থাকেন, তাহলে দয়া করে এই বার্তাটি উপেক্ষা করুন।',
+                'invoice-overdue' => 'এটি একটি বন্ধুত্বপূর্ণ অনুস্মারক যে আপনার চালান এখন বকেয়া। অনুগ্রহ করে যত তাড়াতাড়ি সম্ভব অর্থপ্রদান করুন।',
+                'subject'         => 'চালান অনুস্মারক',
             ],
         ],
 

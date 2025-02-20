@@ -536,13 +536,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'Çerez İzin Tercihleriniz',
-                    'save-and-continue'                      => 'Kaydet ve Devam Et',
-                    'strictly-necessary'                     => 'Kesinlikle Gerekli',
-                    'basic-interactions-and-functionalities' => 'Temel Etkileşimler ve İşlevler',
-                    'experience-enhancement'                 => 'Deneyim Geliştirme',
-                    'measurement'                            => 'Ölçüm',
-                    'targeting-and-advertising'              => 'Hedefleme ve Reklam',
+                    'your-cookie-consent-preferences'         => 'Çerez İzin Tercihleriniz',
+                    'save-and-continue'                       => 'Kaydet ve Devam Et',
+                    'strictly-necessary'                      => 'Kesinlikle Gerekli',
+                    'basic-interactions'                      => 'Temel Etkileşimler ve İşlevler',
+                    'experience-enhancement'                  => 'Deneyim Geliştirme',
+                    'measurements'                            => 'Ölçüm',
+                    'targeting-and-advertising'               => 'Hedefleme ve Reklam',
                 ],
             ],
         ],
@@ -1113,6 +1113,12 @@ return [
                     'message'        => 'Mesaj : ',
                     'request-status' => 'Talep Durumu : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'Eğer ödemeyi zaten yaptıysanız, lütfen bu mesajı dikkate almayın.',
+                'invoice-overdue' => 'Bu, faturanızın vadesinin geçtiğine dair nazik bir hatırlatmadır. Lütfen ödemeyi en kısa sürede yapınız.',
+                'subject'         => 'Fatura hatırlatma',
             ],
         ],
 

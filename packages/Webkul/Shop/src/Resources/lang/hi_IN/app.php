@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'आपकी कुकी सहमति प्राथमिकताएँ',
-                    'save-and-continue'                      => 'सहेजें और जारी रखें',
-                    'strictly-necessary'                     => 'सख्ती से आवश्यक',
-                    'basic-interactions-and-functionalities' => 'मूल इंटरैक्शन और कार्यक्षमताएँ',
-                    'experience-enhancement'                 => 'अनुभव वृद्धि',
-                    'measurement'                            => 'मापन',
-                    'targeting-and-advertising'              => 'लक्ष्यीकरण और विज्ञापन',
+                    'your-cookie-consent-preferences'         => 'आपकी कुकी सहमति प्राथमिकताएँ',
+                    'save-and-continue'                       => 'सहेजें और जारी रखें',
+                    'strictly-necessary'                      => 'सख्ती से आवश्यक',
+                    'basic-interactions'                      => 'मूल इंटरैक्शन और कार्यक्षमताएँ',
+                    'experience-enhancement'                  => 'अनुभव वृद्धि',
+                    'measurements'                            => 'मापन',
+                    'targeting-and-advertising'               => 'लक्ष्यीकरण और विज्ञापन',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'संदेश : ',
                     'request-status' => 'अनुरोध की स्थिति : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'यदि आपने पहले ही भुगतान कर दिया है, तो कृपया इस संदेश को अनदेखा करें।',
+                'invoice-overdue' => 'यह एक विनम्र अनुस्मारक है कि आपका चालान अब बकाया है। कृपया यथाशीघ्र भुगतान करें।',
+                'subject'         => 'चालान अनुस्मारक',
             ],
         ],
 

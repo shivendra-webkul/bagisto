@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => '您的 Cookie 同意偏好',
-                    'save-and-continue'                      => '保存并继续',
-                    'strictly-necessary'                     => '严格必要',
-                    'basic-interactions-and-functionalities' => '基本交互和功能',
-                    'experience-enhancement'                 => '体验增强',
-                    'measurement'                            => '测量',
-                    'targeting-and-advertising'              => '目标和广告',
+                    'your-cookie-consent-preferences'         => '您的 Cookie 同意偏好',
+                    'save-and-continue'                       => '保存并继续',
+                    'strictly-necessary'                      => '严格必要',
+                    'basic-interactions'                      => '基本交互和功能',
+                    'experience-enhancement'                  => '体验增强',
+                    'measurements'                            => '测量',
+                    'targeting-and-advertising'               => '目标和广告',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => '消息：',
                     'request-status' => '请求状态：',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => '如果您已经付款，请忽略此消息。',
+                'invoice-overdue' => '这是一个友好的提醒，您的发票已逾期。请尽快付款。',
+                'subject'         => '发票提醒',
             ],
         ],
 

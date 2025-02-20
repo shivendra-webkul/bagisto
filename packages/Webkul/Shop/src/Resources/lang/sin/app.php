@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'ඔබගේ කුකී එකඟතා ප්‍රියතමයන්',
-                    'save-and-continue'                      => 'සුරකින්න සහ දිගටම කරගෙන යන්න',
-                    'strictly-necessary'                     => 'අත්‍යවශ්‍ය',
-                    'basic-interactions-and-functionalities' => 'මූලික අන්තර්ක්‍රියා සහ කාර්යයන්',
-                    'experience-enhancement'                 => 'අත්දැකීම් වැඩිදියුණු කිරීම',
-                    'measurement'                            => 'මාන',
-                    'targeting-and-advertising'              => 'ඉලක්ක කිරීම සහ ප්‍රචාරණය',
+                    'your-cookie-consent-preferences'         => 'ඔබගේ කුකී එකඟතා ප්‍රියතමයන්',
+                    'save-and-continue'                       => 'සුරකින්න සහ දිගටම කරගෙන යන්න',
+                    'strictly-necessary'                      => 'අත්‍යවශ්‍ය',
+                    'basic-interactions'                      => 'මූලික අන්තර්ක්‍රියා සහ කාර්යයන්',
+                    'experience-enhancement'                  => 'අත්දැකීම් වැඩිදියුණු කිරීම',
+                    'measurements'                            => 'මාන',
+                    'targeting-and-advertising'               => 'ඉලක්ක කිරීම සහ ප්‍රචාරණය',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'පණිවිඩය : ',
                     'request-status' => 'ඉල්ලීමේ තත්ත්වය : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'ඔබ දැනටමත් ගෙවීම් කර ඇති නම්, කරුණාකර මෙම පණිවිඩය නොසලකා හරින්න.',
+                'invoice-overdue' => 'මෙය ඔබේ ඉන්වොයිසිය කල් ඉකුත් වී ඇති බවට සුහද සටහන්යකි. කරුණාකර හැකි ඉක්මනින් ගෙවීම් කරන්න.',
+                'subject'         => 'ඉන්වොයිසිය මතක් කිරීම',
             ],
         ],
 

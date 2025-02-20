@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'Le tue preferenze sui cookie',
-                    'save-and-continue'                      => 'Salva e continua',
-                    'strictly-necessary'                     => 'Strettamente necessari',
-                    'basic-interactions-and-functionalities' => 'Interazioni e funzionalità di base',
-                    'experience-enhancement'                 => 'Miglioramento dell\'esperienza',
-                    'measurement'                            => 'Misurazione',
-                    'targeting-and-advertising'              => 'Targeting e pubblicità',
+                    'your-cookie-consent-preferences'         => 'Le tue preferenze sui cookie',
+                    'save-and-continue'                       => 'Salva e continua',
+                    'strictly-necessary'                      => 'Strettamente necessari',
+                    'basic-interactions'                      => 'Interazioni e funzionalità di base',
+                    'experience-enhancement'                  => 'Miglioramento dell\'esperienza',
+                    'measurements'                            => 'Misurazione',
+                    'targeting-and-advertising'               => 'Targeting e pubblicità',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'Messaggio : ',
                     'request-status' => 'Stato della richiesta : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'Se hai già effettuato il pagamento, ignora questo messaggio.',
+                'invoice-overdue' => 'Questo è un gentile promemoria che la tua fattura è scaduta. Ti preghiamo di effettuare il pagamento al più presto.',
+                'subject'         => 'Promemoria fattura',
             ],
         ],
 

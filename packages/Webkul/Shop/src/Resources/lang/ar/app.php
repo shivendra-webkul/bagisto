@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'تفضيلات موافقتك على ملفات تعريف الارتباط',
-                    'save-and-continue'                      => 'حفظ ومتابعة',
-                    'strictly-necessary'                     => 'ضرورية للغاية',
-                    'basic-interactions-and-functionalities' => 'التفاعلات والوظائف الأساسية',
-                    'experience-enhancement'                 => 'تحسين التجربة',
-                    'measurement'                            => 'القياس',
-                    'targeting-and-advertising'              => 'الاستهداف والإعلانات',
+                    'your-cookie-consent-preferences'         => 'تفضيلات موافقتك على ملفات تعريف الارتباط',
+                    'save-and-continue'                       => 'حفظ ومتابعة',
+                    'strictly-necessary'                      => 'ضرورية للغاية',
+                    'basic-interactions'                      => 'التفاعلات والوظائف الأساسية',
+                    'experience-enhancement'                  => 'تحسين التجربة',
+                    'measurements'                            => 'القياس',
+                    'targeting-and-advertising'               => 'الاستهداف والإعلانات',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'الرسالة : ',
                     'request-status' => 'حالة الطلب : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'إذا كنت قد قمت بالدفع بالفعل، يرجى تجاهل هذه الرسالة.',
+                'invoice-overdue' => 'هذه تذكير ودي بأن فاتورتك متأخرة. نرجو منك إجراء الدفع في أقرب وقت ممكن.',
+                'subject'         => 'تذكير بالفاتورة',
             ],
         ],
 

@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'Ваши предпочтения в отношении файлов cookie',
-                    'save-and-continue'                      => 'Сохранить и продолжить',
-                    'strictly-necessary'                     => 'Строго необходимые',
-                    'basic-interactions-and-functionalities' => 'Основные взаимодействия и функциональности',
-                    'experience-enhancement'                 => 'Улучшение опыта',
-                    'measurement'                            => 'Измерение',
-                    'targeting-and-advertising'              => 'Таргетинг и реклама',
+                    'your-cookie-consent-preferences'         => 'Ваши предпочтения в отношении файлов cookie',
+                    'save-and-continue'                       => 'Сохранить и продолжить',
+                    'strictly-necessary'                      => 'Строго необходимые',
+                    'basic-interactions'                      => 'Основные взаимодействия и функциональности',
+                    'experience-enhancement'                  => 'Улучшение опыта',
+                    'measurements'                            => 'Измерение',
+                    'targeting-and-advertising'               => 'Таргетинг и реклама',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'Сообщение : ',
                     'request-status' => 'Статус запроса : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'Если вы уже произвели оплату, проигнорируйте это сообщение.',
+                'invoice-overdue' => 'Это дружеское напоминание о том, что ваш счет просрочен. Пожалуйста, произведите оплату при первой возможности.',
+                'subject'         => 'Напоминание о счете',
             ],
         ],
 

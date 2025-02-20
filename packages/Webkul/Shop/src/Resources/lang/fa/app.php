@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'ترجیحات رضایت کوکی شما',
-                    'save-and-continue'                      => 'ذخیره و ادامه',
-                    'strictly-necessary'                     => 'کاملاً ضروری',
-                    'basic-interactions-and-functionalities' => 'تعاملات و عملکردهای پایه',
-                    'experience-enhancement'                 => 'افزایش تجربه',
-                    'measurement'                            => 'اندازه‌گیری',
-                    'targeting-and-advertising'              => 'هدف‌گیری و تبلیغات',
+                    'your-cookie-consent-preferences'         => 'ترجیحات رضایت کوکی شما',
+                    'save-and-continue'                       => 'ذخیره و ادامه',
+                    'strictly-necessary'                      => 'کاملاً ضروری',
+                    'basic-interactions'                      => 'تعاملات و عملکردهای پایه',
+                    'experience-enhancement'                  => 'افزایش تجربه',
+                    'measurements'                            => 'اندازه‌گیری',
+                    'targeting-and-advertising'               => 'هدف‌گیری و تبلیغات',
                 ],
             ],
         ],
@@ -1113,6 +1113,12 @@ return [
                     'message'        => 'پیام : ',
                     'request-status' => 'وضعیت درخواست : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'اگر قبلاً پرداخت را انجام داده‌اید، لطفاً این پیام را نادیده بگیرید.',
+                'invoice-overdue' => 'این یک یادآوری دوستانه است که صورتحساب شما سررسید شده است. لطفاً در اولین فرصت پرداخت را انجام دهید.',
+                'subject'         => 'یادآوری فاکتور',
             ],
         ],
 

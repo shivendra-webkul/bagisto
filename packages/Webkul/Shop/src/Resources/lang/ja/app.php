@@ -535,13 +535,13 @@ return [
                 ],
 
                 'consent' => [
-                    'your-cookie-consent-preferences'        => 'クッキー同意の設定',
-                    'save-and-continue'                      => '保存して続行',
-                    'strictly-necessary'                     => '厳密に必要',
-                    'basic-interactions-and-functionalities' => '基本的な操作と機能',
-                    'experience-enhancement'                 => '体験の向上',
-                    'measurement'                            => '測定',
-                    'targeting-and-advertising'              => 'ターゲティングと広告',
+                    'your-cookie-consent-preferences'         => 'クッキー同意の設定',
+                    'save-and-continue'                       => '保存して続行',
+                    'strictly-necessary'                      => '厳密に必要',
+                    'basic-interactions'                      => '基本的な操作と機能',
+                    'experience-enhancement'                  => '体験の向上',
+                    'measurements'                            => '測定',
+                    'targeting-and-advertising'               => 'ターゲティングと広告',
                 ],
             ],
         ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'メッセージ : ',
                     'request-status' => 'リクエストステータス : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'お支払いがお済みの場合は、このメッセージを無視してください。',
+                'invoice-overdue' => 'これは、ご請求書の期限が過ぎていることをお知らせするための親切なリマインダーです。できるだけ早くお支払いください。',
+                'subject'         => '請求書のリマインダー',
             ],
         ],
 

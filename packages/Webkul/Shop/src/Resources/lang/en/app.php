@@ -538,9 +538,9 @@ return [
                     'your-cookie-consent-preferences'        => 'Your Cookie Consent Preferences',
                     'save-and-continue'                      => 'Save and Continue',
                     'strictly-necessary'                     => 'Strictly Necessary',
-                    'basic-interactions-and-functionalities' => 'Basic Interactions and Functionalities',
+                    'basic-interactions'                     => 'Basic Interactions and Functionalities',
                     'experience-enhancement'                 => 'Experience enhancement',
-                    'measurement'                            => 'Measurement',
+                    'measurements'                           => 'Measurements',
                     'targeting-and-advertising'              => 'Targeting and Advertising',
                 ],
             ],
@@ -1112,6 +1112,12 @@ return [
                     'message'        => 'Message : ',
                     'request-status' => 'Request Status : ',
                 ],
+            ],
+            
+            'reminder' => [
+                'already-paid'    => 'If you have already made the payment, please disregard this message.',
+                'invoice-overdue' => 'This is a gentle reminder that your invoice is now overdue. We kindly request you to make the payment at your earliest convenience.',
+                'subject'         => 'Invoice reminder',
             ],
         ],
 
