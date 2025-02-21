@@ -34,4 +34,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('gdpr_data_request');
     }
-}
+};
