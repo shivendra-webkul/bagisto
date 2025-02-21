@@ -2,20 +2,15 @@
 
 namespace Webkul\BookingProduct\Models;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Webkul\BookingProduct\Contracts\BookingProduct as BookingProductContract;
-use Webkul\BookingProduct\Database\Factories\BookingProductFactory;
 use Webkul\Product\Models\ProductProxy;
 
 class BookingProduct extends Model implements BookingProductContract
 {
-    use HasFactory;
-
     /**
      * The attributes that are mass assignable.
      */
@@ -87,14 +82,6 @@ class BookingProduct extends Model implements BookingProductContract
     public function table_slot(): HasOne
     {
         return $this->hasOne(BookingProductTableSlotProxy::modelClass());
-    }
-
-    /**
-     * Create a new factory instance for the model.
-     */
-    protected static function newFactory(): Factory
-    {
-        return BookingProductFactory::new();
     }
 
     /**
