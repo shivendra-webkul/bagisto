@@ -51,7 +51,7 @@
                                 :value="data.to"
                             />
 
-                            <!-- Pannel Detailes -->
+                            <!-- Panel Details -->
                             <p class="flex items-center rounded bg-gray-600 px-2 py-1 font-semibold text-white">
                                 @{{ data.from }} - @{{ data.to }}
     
@@ -101,7 +101,7 @@
                                     :value="item.to"
                                 />
 
-                                <!-- Panel Detailes -->
+                                <!-- Panel Details -->
                                 <p class="flex items-center rounded bg-gray-600 px-2 py-1 font-semibold text-white">
                                     @{{ item.from }} - @{{ item.to }}
 
@@ -156,6 +156,7 @@
                                     @lang('admin::app.catalog.products.edit.types.booking.slots.add')
                                 </div>
 
+                                <!-- Save Button -->
                                 <button
                                     type="submit"
                                     class="primary-button"
@@ -389,64 +390,37 @@
                     formData.forEach((value, key) => (formDataObj[key] = value));
 
                     this.slotData(formDataObj);
+                },
+
+                slotData(params) {
+                    const slotType = parseInt(this.sameSlotAllDays) ? 'same_for_week' : 'different_for_week';
+
+                    const slotCount = Object.keys(params).length / 3;
+
+                    for (let i = 0; i < slotCount; i++) {
+                        const fromKey = parseInt(this.sameSlotAllDays) ? `booking[slots][${i}][from]` : `booking[slots][${this.currentIndex}][${i}][from]`;
+                        const toKey = parseInt(this.sameSlotAllDays) ? `booking[slots][${i}][to]` : `booking[slots][${this.currentIndex}][${i}][to]`;
+
+                        this.insertTimeSlot(slotType, params[fromKey], params[toKey], i + 1);
+                    }
+
+                    this.slots[slotType].forEach((slot, index) => {
+                        slot.id = index + 1;
+                    });
 
                     this.toggle();
                 },
 
-                slotData(params) {
-                    if (parseInt(this.sameSlotAllDays)) {
-                        for (let i = 0; i < Object.keys(params).length / 3; i++) {
-                            const fromKey = `booking[slots][${i}][from]`;
-
-                            const toKey = `booking[slots][${i}][to]`;
-
-                            const fromValue = params[fromKey];
-
-                            const toValue = params[toKey];
-
-                            if (fromValue && toValue) {
-                                const slot = {
-                                    'id': i + 1,
-                                    'from': fromValue,
-                                    'to': toValue,
-                                };
-
-                                if (this.slots['same_for_week']?.length) {
-                                    this.slots['same_for_week'] = this.slots['same_for_week'].concat(slot);
-                                } else {
-                                    this.slots['same_for_week'].push(slot);
-                                }
-                            }
+                insertTimeSlot(key, fromValue, toValue, id) {
+                    if (fromValue && toValue) {
+                        if (! this.slots[key][this.currentIndex]) {
+                            this.slots[key][this.currentIndex] = [];
                         }
 
-                        this.slots['same_for_week'].forEach((slot, index) => {
-                            slot.id = index + 1;
-                        });
-                    } else {
-                        for (let i = 0; i < Object.keys(params).length / 3; i++) {
-                            const fromKey = `booking[slots][${this.currentIndex}][${i}][from]`;
-                            const toKey = `booking[slots][${this.currentIndex}][${i}][to]`;
-
-                            const fromValue = params[fromKey];
-                            const toValue = params[toKey];
-
-                            if (fromValue && toValue) {
-                                const slot = {
-                                    'id': i + 1,
-                                    'from': fromValue,
-                                    'to': toValue,
-                                };
-
-                                if (this.slots['different_for_week'][this.currentIndex]?.length) {
-                                    this.slots['different_for_week'][this.currentIndex] = this.slots['different_for_week'][this.currentIndex].concat(slot);
-                                } else {
-                                    this.slots['different_for_week'][this.currentIndex].push(slot);
-                                }
-                            }
-                        }
-
-                        this.slots['different_for_week'][this.currentIndex].forEach((slot, index) => {
-                            slot.id = index + 1;
+                        this.slots[key][this.currentIndex].push({
+                            id: id,
+                            from: fromValue,
+                            to: toValue,
                         });
                     }
                 },

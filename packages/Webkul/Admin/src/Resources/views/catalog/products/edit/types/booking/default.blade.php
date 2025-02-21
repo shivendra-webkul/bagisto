@@ -89,7 +89,7 @@
             >
                 <div
                     class="secondary-button"
-                    @click="$refs.drawerform.toggle()"
+                    @click="$refs.drawerForm.toggle()"
                 >
                     @lang('admin::app.catalog.products.edit.types.booking.default.slot-add')
                 </div>
@@ -136,7 +136,7 @@
                                 :value="slot.to"
                             />
 
-                            <!-- Pannel detailes -->
+                            <!-- Panel details -->
                             <p class="flex items-center rounded bg-gray-600 px-2 py-1 font-semibold text-white">
                                 @{{ convertIndexToDay(slot.from_day) }} @{{ slot.from }} - @{{ convertIndexToDay(slot.to_day) }} @{{ slot.to }}
 
@@ -258,7 +258,7 @@
                 @submit.prevent="handleSubmit($event, store)"
                 enctype="multipart/form-data"
             >
-                <x-admin::drawer ref="drawerform">
+                <x-admin::drawer ref="drawerForm">
                     <x-slot:header>
                         <div class="flex items-center justify-between">
                             <p
@@ -552,7 +552,7 @@
                         }
                     }
 
-                    this.$refs.drawerform.toggle();
+                    this.$refs.drawerForm.toggle();
                 },
 
                 convertIndexToDay(day) {
@@ -582,7 +582,7 @@
                         this.selectedStatus[this.currentIndex] = 0;
                     }
 
-                    this.$refs.drawerform.toggle();
+                    this.$refs.drawerForm.toggle();
                 },
 
                 slotType() {

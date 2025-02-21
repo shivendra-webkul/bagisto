@@ -21,6 +21,21 @@ use Webkul\Product\Repositories\ProductVideoRepository;
 class Booking extends AbstractType
 {
     /**
+     * Skip attribute for downloadable product type.
+     *
+     * @var array
+     */
+    protected $skipAttributes = [
+        'length',
+        'width',
+        'height',
+        'weight',
+        'depth',
+        'manage_stock',
+        'guest_checkout',
+    ];
+
+    /**
      * Is a composite product type.
      *
      * @var bool

@@ -138,7 +138,7 @@
                         <div class="flex place-content-start gap-x-5 text-right">
                             <p
                                 class="cursor-pointer text-blue-600 transition-all hover:underline"
-                                @click="edit(element)"
+                                @click="ticketItem=element;toggle()"
                             >
                                 @lang('admin::app.catalog.products.edit.types.booking.event.edit')
                             </p>
@@ -367,12 +367,6 @@
                         } else {
                             this.tickets.push(params);
                         }
-
-                    this.toggle();
-                },
-
-                edit(values) {
-                    this.ticketItem = values;
 
                     this.toggle();
                 },

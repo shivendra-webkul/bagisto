@@ -7,7 +7,10 @@
     <v-booking-products></v-booking-products>
 
     @pushOnce('scripts')
-        <script type="text/x-template" id="v-booking-products-template">
+        <script
+            type="text/x-template"
+            id="v-booking-products-template"
+        >
             <div class="flex items-center justify-between gap-[16px] max-sm:flex-wrap">
                 <p class="py-3 text-xl font-bold text-gray-800 dark:text-white">
                     @lang('admin::app.sales.booking.index.title')

@@ -74,6 +74,7 @@
                 <x-slot:content>
                     <div class="grid text-sm font-normal">
                         <div class="grid grid-cols-1 gap-2.5 border-b pb-4">
+                            <!-- Booking Date -->
                             <div class="grid grid-cols-[100px_auto] gap-2">
                                 <div
                                     class="text-gray-500"
@@ -88,6 +89,7 @@
                                 </div>
                             </div>
 
+                            <!-- Time Slot -->
                             <div class="grid grid-cols-[100px_auto] gap-2">
                                 <div
                                     class="text-gray-500"
@@ -102,6 +104,7 @@
                         </div>
 
                         <div class="grid grid-cols-[80px_80px_auto] gap-2.5 border-b py-4">
+                            <!-- Order Id -->
                             <div class="grid grid-cols-1 gap-2">
                                 <div
                                     class="text-gray-500"
@@ -114,6 +117,7 @@
                                 </div>
                             </div>
 
+                            <!-- Price -->
                             <div class="grid grid-cols-1 gap-2">
                                 <div
                                     class="text-gray-500"
@@ -128,6 +132,7 @@
                                 </div>
                             </div>
 
+                            <!-- Status -->
                             <div class="grid grid-cols-1 gap-2">
                                 <div
                                     class="text-gray-500"
