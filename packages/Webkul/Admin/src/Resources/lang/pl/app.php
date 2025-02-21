@@ -746,7 +746,7 @@ return [
                     'view'         => 'Zobacz',
                 ],
 
-                'title'    => 'Produkty rezerwacyjne',
+                'title'    => 'Rezerwacje',
             ],
 
             'calendar' => [
@@ -1146,7 +1146,7 @@ return [
                             'break-duration'   => 'Czas przerwy między slotami (minuty)',
                             'close'            => 'Zamknij',
                             'description'      => 'Informacje o rezerwacji',
-                            'description-info' => 'Zgodnie ze slotami czas trwania będzie tworzony i widoczny.',
+                            'description-info' => 'Czas trwania zostanie utworzony i wyświetlony zgodnie ze slotami. Będzie unikalny dla wszystkich slotów i widoczny na witrynie sklepowej',
                             'edit'             => 'Edytuj',
                             'many'             => 'Wiele rezerwacji na jeden dzień',
                             'one'              => 'Jedna rezerwacja na wiele dni',
@@ -1235,7 +1235,7 @@ return [
 
                         'slots' => [
                             'add'              => 'Dodaj sloty',
-                            'description-info' => 'Zgodnie ze slotami czas trwania będzie tworzony i widoczny.',
+                            'description-info' => 'Czas trwania zostanie utworzony i wyświetlony zgodnie ze slotami. Będzie unikalny dla wszystkich slotów i widoczny na witrynie sklepowej',
                             'save'             => 'Zapisz',
                             'title'            => 'Czas trwania slotów',
                             'unavailable'      => 'Niedostępne',

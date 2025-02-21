@@ -734,7 +734,7 @@ return [
                     'view'         => 'Veure',
                 ],
 
-                'title'    => 'Producte de Reserves',
+                'title'    => 'Reserves',
             ],
 
             'calendar' => [
@@ -1047,7 +1047,7 @@ return [
                             'break-duration'   => 'Temps de Descans entre Franges (Mins)',
                             'close'            => 'Tancar',
                             'description'      => 'Informació de la Reserva',
-                            'description-info' => 'Segons les franges, es crearà i es mostrarà la durada del temps.',
+                            'description-info' => 'Segons les franges horàries, es crearà i es mostrarà la durada del temps. Serà única a totes les franges i es mostrarà a la botiga en línia.',
                             'edit'             => 'Editar',
                             'many'             => 'Moltes Reserves per a Un Dia',
                             'one'              => 'Una Reserva per a Molts Dies',
@@ -1136,7 +1136,7 @@ return [
 
                         'slots' => [
                             'add'              => 'Afegir Franges',
-                            'description-info' => 'Segons les franges, es crearà i es mostrarà la durada del temps.',
+                            'description-info' => 'Segons les franges horàries, es crearà i es mostrarà la durada del temps. Serà única a totes les franges i es mostrarà a la botiga en línia.',
                             'save'             => 'Desar',
                             'title'            => 'Durada de les Franges',
                             'unavailable'      => 'No Disponible',

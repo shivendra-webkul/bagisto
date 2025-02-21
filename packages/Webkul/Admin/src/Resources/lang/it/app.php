@@ -746,7 +746,7 @@ return [
                     'view'         => 'Visualizza',
                 ],
 
-                'title'    => 'Prodotti Prenotati',
+                'title'    => 'Prenotazioni',
             ],
 
             'calendar' => [
@@ -1146,7 +1146,7 @@ return [
                             'break-duration'   => 'Durata della Pausa tra gli Slot (Minuti)',
                             'close'            => 'Chiudi',
                             'description'      => 'Informazioni sulla Prenotazione',
-                            'description-info' => 'Secondo gli slot, la durata del tempo sarà creata e visibile.',
+                            'description-info' => 'La durata verrà creata e visualizzata in base agli slot. Sarà unica per tutti gli slot e visibile nella vetrina del negozio.',
                             'edit'             => 'Modifica',
                             'many'             => 'Molte Prenotazioni per un Giorno',
                             'one'              => 'Una Prenotazione per Molti Giorni',
@@ -1235,7 +1235,7 @@ return [
 
                         'slots' => [
                             'add'              => 'Aggiungi Slot',
-                            'description-info' => 'Secondo gli slot, la durata del tempo sarà creata e visibile.',
+                            'description-info' => 'La durata verrà creata e visualizzata in base agli slot. Sarà unica per tutti gli slot e visibile nella vetrina del negozio.',
                             'save'             => 'Salva',
                             'title'            => 'Durata del Tempo degli Slot',
                             'unavailable'      => 'Non Disponibile',

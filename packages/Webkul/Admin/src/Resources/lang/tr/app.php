@@ -746,7 +746,7 @@ return [
                     'view'         => 'Görüntüle',
                 ],
 
-                'title'    => 'Rezervasyon Ürünü',
+                'title'    => 'Rezervasyonlar',
             ],
 
             'calendar' => [
@@ -1146,7 +1146,7 @@ return [
                             'break-duration'   => 'Slotlar Arası Mola Süresi (Dakika)',
                             'close'            => 'Kapat',
                             'description'      => 'Rezervasyon Bilgisi',
-                            'description-info' => 'Slotlara göre zaman süresi oluşturulacak ve görünür olacaktır.',
+                            'description-info' => 'Süre, slotlara göre oluşturulacak ve görüntülenecektir. Tüm slotlar arasında benzersiz olacak ve mağaza vitrinde görünecektir',
                             'edit'             => 'Düzenle',
                             'many'             => 'Bir Gün İçin Birden Fazla Rezervasyon',
                             'one'              => 'Birden Fazla Gün İçin Bir Rezervasyon',
@@ -1235,7 +1235,7 @@ return [
 
                         'slots' => [
                             'add'              => 'Slot Ekle',
-                            'description-info' => 'Slotlara göre zaman süresi oluşturulacak ve görünür olacaktır.',
+                            'description-info' => 'Süre, slotlara göre oluşturulacak ve görüntülenecektir. Tüm slotlar arasında benzersiz olacak ve mağaza vitrinde görünecektir',
                             'save'             => 'Kaydet',
                             'title'            => 'Slot Zaman Süresi',
                             'unavailable'      => 'Mevcut Değil',

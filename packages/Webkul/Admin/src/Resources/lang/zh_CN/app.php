@@ -746,7 +746,7 @@ return [
                     'view'         => '查看',
                 ],
 
-                'title'    => '预订产品',
+                'title'    => '预订',
             ],
 
             'calendar' => [
@@ -1146,7 +1146,7 @@ return [
                             'break-duration'   => '每个时段之间的休息时间（分钟）',
                             'close'            => '关闭',
                             'description'      => '预订信息',
-                            'description-info' => '根据时段创建的时间持续时间将可见。',
+                            'description-info' => '时间持续时间将根据时段创建并显示。它将在所有时段中是唯一的，并在商店前台可见。',
                             'edit'             => '编辑',
                             'many'             => '一天多次预订',
                             'one'              => '多天一次预订',
@@ -1235,7 +1235,7 @@ return [
 
                         'slots' => [
                             'add'              => '添加时段',
-                            'description-info' => '根据时段创建的时间持续时间将可见。',
+                            'description-info' => '时间持续时间将根据时段创建并显示。它将在所有时段中是唯一的，并在商店前台可见。',
                             'save'             => '保存',
                             'title'            => '时段时间持续时间',
                             'unavailable'      => '不可用',

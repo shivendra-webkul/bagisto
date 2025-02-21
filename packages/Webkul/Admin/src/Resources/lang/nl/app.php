@@ -746,7 +746,7 @@ return [
                     'view'         => 'Bekijken',
                 ],
 
-                'title'    => 'Boekingsproducten',
+                'title'    => 'Boekingen',
             ],
 
             'calendar' => [
@@ -1146,7 +1146,7 @@ return [
                             'break-duration'   => 'Pauzeduur tussen Tijden (Minuten)',
                             'close'            => 'Sluiten',
                             'description'      => 'Boekingsinformatie',
-                            'description-info' => 'Volgens de tijden wordt de tijdsduur gecreëerd en zichtbaar.',
+                            'description-info' => 'De tijdsduur wordt aangemaakt en weergegeven volgens de slots. Deze zal uniek zijn voor alle slots en zichtbaar zijn in de etalage.',
                             'edit'             => 'Bewerken',
                             'many'             => 'Meerdere Boekingen Voor Eén Dag',
                             'one'              => 'Eén Boeking Voor Meerdere Dagen',
@@ -1235,7 +1235,7 @@ return [
 
                         'slots' => [
                             'add'              => 'Tijden Toevoegen',
-                            'description-info' => 'Volgens de tijden wordt de tijdsduur gecreëerd en zichtbaar.',
+                            'description-info' => 'De tijdsduur wordt aangemaakt en weergegeven volgens de slots. Deze zal uniek zijn voor alle slots en zichtbaar zijn in de etalage.',
                             'save'             => 'Opslaan',
                             'title'            => 'Tijden Tijdsduur',
                             'unavailable'      => 'Niet Beschikbaar',

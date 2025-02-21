@@ -746,7 +746,7 @@ return [
                     'view'         => 'Ansehen',
                 ],
 
-                'title'    => 'Buchungsprodukte',
+                'title'    => 'Buchungen',
             ],
 
             'calendar' => [
@@ -1146,7 +1146,7 @@ return [
                             'break-duration'   => 'Pausenzeit zwischen Slots (Minuten)',
                             'close'            => 'Schließen',
                             'description'      => 'Buchungsinformationen',
-                            'description-info' => 'Je nach Slots wird die Zeitdauer erstellt und sichtbar.',
+                            'description-info' => 'Die Zeitdauer wird gemäß den Slots erstellt und angezeigt. Sie wird über alle Slots hinweg einzigartig sein und im Storefront sichtbar sein.',
                             'edit'             => 'Bearbeiten',
                             'many'             => 'Viele Buchungen für einen Tag',
                             'one'              => 'Eine Buchung für viele Tage',
@@ -1235,7 +1235,7 @@ return [
 
                         'slots' => [
                             'add'              => 'Slots hinzufügen',
-                            'description-info' => 'Je nach Slots wird die Zeitdauer erstellt und sichtbar.',
+                            'description-info' => 'Die Zeitdauer wird gemäß den Slots erstellt und angezeigt. Sie wird über alle Slots hinweg einzigartig sein und im Storefront sichtbar sein.',
                             'save'             => 'Speichern',
                             'title'            => 'Slots Zeitdauer',
                             'unavailable'      => 'Nicht verfügbar',

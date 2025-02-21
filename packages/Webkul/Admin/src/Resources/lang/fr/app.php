@@ -746,7 +746,7 @@ return [
                     'view'         => 'Voir',
                 ],
 
-                'title'    => 'Produits réservés',
+                'title'    => 'Réservations',
             ],
 
             'calendar' => [
@@ -1146,7 +1146,7 @@ return [
                             'break-duration'   => 'Temps de pause entre les créneaux (minutes)',
                             'close'            => 'Fermer',
                             'description'      => 'Informations sur la réservation',
-                            'description-info' => 'Selon les créneaux, la durée sera créée et visible.',
+                            'description-info' => 'La durée sera créée et affichée en fonction des créneaux. Elle sera unique à travers tous les créneaux et visible sur la vitrine du magasin',
                             'edit'             => 'Modifier',
                             'many'             => 'Plusieurs réservations pour un jour',
                             'one'              => 'Une réservation pour plusieurs jours',
@@ -1235,7 +1235,7 @@ return [
 
                         'slots' => [
                             'add'              => 'Ajouter des créneaux',
-                            'description-info' => 'Selon les créneaux, la durée sera créée et visible.',
+                            'description-info' => 'La durée sera créée et affichée en fonction des créneaux. Elle sera unique à travers tous les créneaux et visible sur la vitrine du magasin',
                             'save'             => 'Enregistrer',
                             'title'            => 'Durée des créneaux',
                             'unavailable'      => 'Indisponible',

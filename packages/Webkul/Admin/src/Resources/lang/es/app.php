@@ -746,7 +746,7 @@ return [
                     'view'         => 'Ver',
                 ],
 
-                'title'    => 'Producto de Reservas',
+                'title'    => 'Reservas',
             ],
 
             'calendar' => [
@@ -1146,7 +1146,7 @@ return [
                             'break-duration'   => 'Tiempo de Descanso entre Slots (Minutos)',
                             'close'            => 'Cerrar',
                             'description'      => 'Información de la Reserva',
-                            'description-info' => 'Según los slots, se creará y se mostrará la duración del tiempo.',
+                            'description-info' => 'De acuerdo con las franjas horarias, se creará y se mostrará la duración del tiempo. Será única en todos los slots y será visible en la tienda en línea',
                             'edit'             => 'Editar',
                             'many'             => 'Muchas Reservas Para Un Día',
                             'one'              => 'Una Reserva Para Muchos Días',
@@ -1235,7 +1235,7 @@ return [
 
                         'slots' => [
                             'add'              => 'Agregar Slots',
-                            'description-info' => 'Según los slots, se creará y se mostrará la duración del tiempo.',
+                            'description-info' => 'De acuerdo con las franjas horarias, se creará y se mostrará la duración del tiempo. Será única en todos los slots y será visible en la tienda en línea',
                             'save'             => 'Guardar',
                             'title'            => 'Duración del Tiempo de los Slots',
                             'unavailable'      => 'No Disponible',

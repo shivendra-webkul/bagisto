@@ -746,7 +746,7 @@ return [
                     'view'         => 'View',
                 ],
 
-                'title'    => 'Bookings Product',
+                'title'    => 'Bookings',
             ],
 
             'calendar' => [
@@ -1146,7 +1146,7 @@ return [
                             'break-duration'   => 'Break Time b/w Slots (Mins)',
                             'close'            => 'Close',
                             'description'      => 'Booking Information',
-                            'description-info' => 'According to slots the time duration will be created and visible.',
+                            'description-info' => 'According to slots the time duration will be created and visible. And The time duration will be created and displayed according to the slots. It will be unique across all slots and visible on the storefront.',
                             'edit'             => 'Edit',
                             'many'             => 'Many Bookings For One Days',
                             'one'              => 'One Booking For Many Days',
@@ -1235,7 +1235,7 @@ return [
 
                         'slots' => [
                             'add'              => 'Add Slots',
-                            'description-info' => 'According to slots the time duration will be created and visible.',
+                            'description-info' => 'According to slots the time duration will be created and visible. And The time duration will be created and displayed according to the slots. It will be unique across all slots and visible on the storefront.',
                             'save'             => 'Save',
                             'title'            => 'Slots Time Duration',
                             'unavailable'      => 'Unavailable',
