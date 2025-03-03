@@ -502,8 +502,7 @@ return [
                 'mobile' => [
                     'currencies' => 'Para Birimleri',
                     'locales'    => 'Yerel Ayarlar',
-                    'login'      => 'Kaydol veya Giriş yap
-',
+                    'login'      => 'Kaydol veya Giriş yap',
                 ],
             ],
 
@@ -1201,6 +1200,12 @@ return [
                     'message'        => 'Mesaj : ',
                     'request-status' => 'Talep Durumu : ',
                 ],
+            ],
+
+            'reminder' => [
+                'already-paid'    => 'Eğer ödemeyi zaten yaptıysanız, lütfen bu mesajı dikkate almayın.',
+                'invoice-overdue' => 'Bu, faturanızın vadesinin geçtiğine dair nazik bir hatırlatmadır. Lütfen ödemeyi en kısa sürede yapınız.',
+                'subject'         => 'Fatura hatırlatma',
             ],
         ],
 

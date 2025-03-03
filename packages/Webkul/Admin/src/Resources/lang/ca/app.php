@@ -3,32 +3,35 @@
 return [
     'users' => [
         'sessions' => [
-            'email'                => 'Adreça de correu electrònic',
-            'forget-password-link' => 'Has oblidat la contrasenya?',
-            'password'             => 'Contrasenya',
-            'submit-btn'           => 'Iniciar sessió',
-            'title'                => 'Iniciar sessió',
+            'email'                  => 'Adreça de correu electrònic',
+            'forget-password-link'   => 'Has oblidat la contrasenya?',
+            'password'               => 'Contrasenya',
+            'powered-by-description' => 'Impulsat per :bagisto, un projecte de codi obert de :webkul.',
+            'submit-btn'             => 'Iniciar sessió',
+            'title'                  => 'Iniciar sessió',
         ],
 
         'forget-password' => [
             'create'    => [
-                'email'           => 'Correu electrònic registrat',
-                'email-not-exist' => 'El correu electrònic no existeix',
-                'page-title'      => 'Oblidar contrasenya',
-                'reset-link-sent' => 'Enllaç per restablir la contrasenya enviat',
-                'sign-in-link'    => 'Tornar a iniciar sessió?',
-                'submit-btn'      => 'Restablir',
-                'title'           => 'Recuperar contrasenya',
+                'email'                  => 'Correu electrònic registrat',
+                'email-not-exist'        => 'El correu electrònic no existeix',
+                'page-title'             => 'Oblidar contrasenya',
+                'powered-by-description' => 'Impulsat per :bagisto, un projecte de codi obert de :webkul.',
+                'reset-link-sent'        => 'Enllaç per restablir la contrasenya enviat',
+                'sign-in-link'           => 'Tornar a iniciar sessió?',
+                'submit-btn'             => 'Restablir',
+                'title'                  => 'Recuperar contrasenya',
             ],
         ],
 
         'reset-password' => [
-            'back-link-title'  => 'Tornar a iniciar sessió?',
-            'confirm-password' => 'Confirmar contrasenya',
-            'email'            => 'Correu electrònic registrat',
-            'password'         => 'Contrasenya',
-            'submit-btn'       => 'Restablir contrasenya',
-            'title'            => 'Restablir contrasenya',
+            'back-link-title'        => 'Tornar a iniciar sessió?',
+            'confirm-password'       => 'Confirmar contrasenya',
+            'email'                  => 'Correu electrònic registrat',
+            'password'               => 'Contrasenya',
+            'powered-by-description' => 'Impulsat per :bagisto, un projecte de codi obert de :webkul.',
+            'submit-btn'             => 'Restablir contrasenya',
+            'title'                  => 'Restablir contrasenya',
         ],
     ],
 
@@ -187,8 +190,13 @@ return [
                 'title'                   => 'Crear comanda per a :name',
 
                 'types' => [
+                    'simple' => [
+                        'none'         => 'Cap',
+                        'total-amount' => 'Suma total',
+                    ],
+
                     'configurable' => [
-                        'select-options' => 'Si us plau, sel·lecciona una opció',
+                        'select-options' => 'Si us plau, selecciona una opció',
                     ],
 
                     'bundle' => [
@@ -202,6 +210,11 @@ return [
 
                     'downloadable' => [
                         'title' => 'Enllaços',
+                    ],
+
+                    'virtual' => [
+                        'none'         => 'Cap',
+                        'total-amount' => 'Suma total',
                     ],
                 ],
 
@@ -716,7 +729,6 @@ return [
                     'payment-method'   => 'Mètode de Pagament',
                     'status'           => 'Estat',
                     'title'            => 'Detalls de la Transacció',
-                    'transaction-data' => 'Dades de la Transacció',
                     'transaction-id'   => 'ID de Transacció',
                 ],
             ],
@@ -888,6 +900,93 @@ return [
                 ],
 
                 'types' => [
+                    'simple' => [
+                        'customizable-options' => [
+                            'add-btn'           => 'Afegir Opció',
+                            'empty-info'        => 'Per crear opcions personalitzables sobre la marxa.',
+                            'empty-title'       => 'Afegir Opció',
+                            'info'              => 'Això personalitzarà el producte simple.',
+                            'title'             => 'Element Personalitzable',
+
+                            'update-create' => [
+                                'is-required'               => 'És Obligatori',
+                                'max-characters'            => 'Màxim de Caràcters',
+                                'name'                      => 'Títol',
+                                'no'                        => 'No',
+                                'price'                     => 'Preu',
+                                'save-btn'                  => 'Desar',
+                                'supported-file-extensions' => 'Extensions de Fitxer Suportades',
+                                'title'                     => 'Opció',
+                                'type'                      => 'Tipus',
+                                'yes'                       => 'Sí',
+                            ],
+
+                            'option' => [
+                                'add-btn'     => 'Afegir Opció',
+                                'delete'      => 'Eliminar',
+                                'delete-btn'  => 'Eliminar',
+                                'edit-btn'    => 'Editar',
+                                'empty-info'  => 'Per crear diverses combinacions de productes sobre la marxa.',
+                                'empty-title' => 'Afegir Opció',
+
+                                'types' => [
+                                    'text' => [
+                                        'title' => 'Text',
+                                    ],
+
+                                    'textarea' => [
+                                        'title' => 'Àrea de Text',
+                                    ],
+
+                                    'checkbox' => [
+                                        'title' => 'Casella de Verificació',
+                                    ],
+
+                                    'radio' => [
+                                        'title' => 'Ràdio',
+                                    ],
+
+                                    'select' => [
+                                        'title' => 'Seleccionar',
+                                    ],
+
+                                    'multiselect' => [
+                                        'title' => 'Selecció Múltiple',
+                                    ],
+
+                                    'date' => [
+                                        'title' => 'Data',
+                                    ],
+
+                                    'datetime' => [
+                                        'title' => 'Data i Hora',
+                                    ],
+
+                                    'time' => [
+                                        'title' => 'Hora',
+                                    ],
+
+                                    'file' => [
+                                        'title' => 'Fitxer',
+                                    ],
+                                ],
+
+                                'items' => [
+                                    'update-create' => [
+                                        'label'    => 'Etiqueta',
+                                        'price'    => 'Preu',
+                                        'save-btn' => 'Desar',
+                                        'title'    => 'Opció',
+                                    ],
+                                ],
+                            ],
+
+                            'validations' => [
+                                'associated-product' => 'El producte ja està associat amb un producte configurable, agrupat o de paquet.',
+                            ],
+                        ],
+                    ],
+
                     'configurable' => [
                         'add-btn'           => 'Afegir variant',
                         'delete-btn'        => 'Eliminar',
@@ -1340,6 +1439,7 @@ return [
                 'validations'           => 'Validacions',
                 'value-per-channel'     => 'Valor per Canal',
                 'value-per-locale'      => 'Valor per',
+                'yes'                   => 'Sí',
 
                 'option' => [
                     'color'    => 'Mostra de Color',
@@ -1838,7 +1938,6 @@ return [
             'delete-success' => 'Client eliminat amb éxit',
             'order-pending'  => 'Hi ha comandes pendents',
             'update-success' => 'Client actualitzat amb éxit',
-
         ],
 
         'groups' => [
@@ -1922,6 +2021,44 @@ return [
                     'title'                  => 'Títol',
                     'update-status'          => 'Actualitzar estat',
                 ],
+            ],
+        ],
+
+        'gdpr' => [
+            'index' => [
+                'title' => 'Sol·licitud GDPR',
+
+                'datagrid' => [
+                    'completed'     => 'Completat',
+                    'created-at'    => 'Creat el',
+                    'customer-name' => 'Nom del Client',
+                    'declined'      => 'Rebutjat',
+                    'delete'        => 'Eliminar',
+                    'edit'          => 'Editar',
+                    'id'            => 'ID',
+                    'message'       => 'Missatge',
+                    'pending'       => 'Pendent',
+                    'processing'    => 'Processant',
+                    'status'        => 'Estat',
+                    'type'          => 'Tipus',
+                ],
+
+                'modal' => [
+                    'completed'  => 'Completat',
+                    'declined'   => 'Rebutjat',
+                    'pending'    => 'Pendent',
+                    'processing' => 'Processant',
+                    'status'     => 'Estat',
+                    'title'      => 'Editar Sol·licitud de Dades GDPR',
+                    'type'       => 'Tipus',
+                    'message'    => 'Missatge',
+                    'save-btn'   => 'Desar',
+                ],
+
+                'update-success'              => 'Sol·licitud de Dades actualitzada amb èxit i correu electrònic enviat al client.',
+                'delete-success'              => 'Sol·licitud de Dades eliminada amb èxit.',
+                'attribute-reason-error'      => 'No es pot eliminar.',
+                'update-success-unsent-email' => 'Sol·licitud de Dades actualitzada amb èxit però correu electrònic no enviat al client.',
             ],
         ],
     ],
@@ -2725,18 +2862,20 @@ return [
                 ],
 
                 'create' => [
-                    'code'              => 'Codi',
-                    'create-btn'        => 'Crear Moneda',
-                    'currency-position' => 'Posició de la Moneda',
-                    'decimal'           => 'Decimal',
-                    'decimal-separator' => 'Separador Decimal',
-                    'delete-warning'    => 'Estàs segur que vols realitzar aquesta acció?',
-                    'general'           => 'General',
-                    'group-separator'   => 'Separador de Grups',
-                    'name'              => 'Nom',
-                    'save-btn'          => 'Desa la Moneda',
-                    'symbol'            => 'Símbol',
-                    'title'             => 'Crear Nova Moneda',
+                    'code'                   => 'Codi',
+                    'create-btn'             => 'Crear Moneda',
+                    'currency-position'      => 'Posició de la Moneda',
+                    'decimal'                => 'Decimal',
+                    'decimal-separator'      => 'Separador Decimal',
+                    'decimal-separator-note' => 'El camp :attribute només pot acceptar els caràcters coma (,) i punt (.)',
+                    'delete-warning'         => 'Estàs segur que vols realitzar aquesta acció?',
+                    'general'                => 'General',
+                    'group-separator'        => 'Separador de Grups',
+                    'group-separator-note'   => 'El camp :attribute només pot acceptar els caràcters coma (,), punt (.), apòstrof (\') i espai ( )',
+                    'name'                   => 'Nom',
+                    'save-btn'               => 'Desa la Moneda',
+                    'symbol'                 => 'Símbol',
+                    'title'                  => 'Crear Nova Moneda',
                 ],
 
                 'edit' => [
@@ -2782,6 +2921,7 @@ return [
                     'allowed-errors'      => 'Errors Permesos',
                     'back-btn'            => 'Enrere',
                     'create-update'       => 'Crear/Actualitzar',
+                    'current-file'        => 'Arxiu Pujat Actual',
                     'delete'              => 'Eliminar',
                     'download-sample'     => 'Descarregar Mostra',
                     'field-separator'     => 'Separador de Camps',
@@ -3009,6 +3149,7 @@ return [
                         'title' => 'Editar Categories d\'Impostos',
                     ],
 
+                    'can-not-delete' => 'No es poden eliminar les categories assignades a les taxes d\'impostos.',
                     'create-success' => 'Nova Categoria d\'Impostos Creat',
                     'delete-failed'  => 'Error en Eliminar la Categoria d\'Impostos',
                     'delete-success' => 'Categoria d\'Impostos Eliminada Correctament',
@@ -3287,17 +3428,18 @@ return [
                 'title'      => 'Temes',
 
                 'datagrid' => [
-                    'active'       => 'Actiu',
-                    'channel_name' => 'Nom del Canal',
-                    'delete'       => 'Eliminar',
-                    'id'           => 'ID',
-                    'inactive'     => 'Inactiu',
-                    'name'         => 'Nom',
-                    'sort-order'   => 'Ordre de Classificació',
-                    'status'       => 'Estat',
-                    'theme'        => 'Tema',
-                    'type'         => 'Tipus',
-                    'view'         => 'Veure',
+                    'active'        => 'Actiu',
+                    'channel_name'  => 'Nom del Canal',
+                    'change-status' => 'Canviar estat',
+                    'delete'        => 'Eliminar',
+                    'id'            => 'ID',
+                    'inactive'      => 'Inactiu',
+                    'name'          => 'Nom',
+                    'sort-order'    => 'Ordre de Classificació',
+                    'status'        => 'Estat',
+                    'theme'         => 'Tema',
+                    'type'          => 'Tipus',
+                    'view'          => 'Veure',
                 ],
             ],
 
@@ -3633,42 +3775,205 @@ return [
                     ],
 
                     'review-translation' => [
-                        'dolphin-phi'       => 'Dolphin Phi',
-                        'enabled'           => 'Habilitat',
-                        'gpt-3-5-turbo'     => 'OpenAI gpt-3.5-turbo',
-                        'llama2'            => 'Llama 2',
-                        'llama2-uncensored' => 'Llama 2 Sense Censura',
-                        'llama2:13b'        => 'Llama 2 13B',
-                        'llama2:70b'        => 'Llama 2 70B',
-                        'llava'             => 'LLaVA',
-                        'mistral'           => 'Mistral',
-                        'model'             => 'Model',
-                        'orca-mini'         => 'Orca Mini',
-                        'phi'               => 'Phi-2',
-                        'starling-lm'       => 'Starling',
-                        'title'             => 'Traducció de Ressenyes',
-                        'title-info'        => 'Proporciona l\'opció al client o visitant de traduir la ressenya del client a l\'anglès.<br/><br/>Quan està habilitat, ves a les ressenyes i trobaràs el botó "Tradueix a l\'anglès" si la ressenya no està en anglès.',
-                        'vicuna'            => 'Vicuna',
+                        'deepseek-r1-8b'      => 'DeepSeek R1 (8b)',
+                        'enabled'             => 'Habilitat',
+                        'gemini-2-0-flash'    => 'Gemini 2.0 Flash',
+                        'gpt-4-turbo'         => 'OpenAI gpt-4 Turbo',
+                        'gpt-4o'              => 'OpenAI gpt-4o',
+                        'gpt-4o-mini'         => 'OpenAI gpt-4o mini',
+                        'llama-groq'          => 'Llama 3.3 (Groq)',
+                        'llama3-1-8b'         => 'Llama 3.1 (8B)',
+                        'llama3-2-1b'         => 'Llama 3.2 (1B)',
+                        'llama3-2-3b'         => 'Llama 3.2 (3B)',
+                        'llama3-8b'           => 'Llama 3 (8B)',
+                        'llava-7b'            => 'Llava (7b)',
+                        'mistral-7b'          => 'Mistral (7b)',
+                        'model'               => 'Model',
+                        'orca-mini'           => 'Orca Mini',
+                        'phi3-5'              => 'Phi 3.5',
+                        'qwen2-5-0-5b'        => 'Qwen 2.5 (0.5b)',
+                        'qwen2-5-1-5b'        => 'Qwen 2.5 (1.5b)',
+                        'qwen2-5-14b'         => 'Qwen 2.5 (14b)',
+                        'qwen2-5-3b'          => 'Qwen 2.5 (3b)',
+                        'qwen2-5-7b'          => 'Qwen 2.5 (7b)',
+                        'starling-lm-7b'      => 'Starling-lm (7b)',
+                        'title'               => 'Traducció de ressenyes',
+                        'title-info'          => 'Proporciona l\'opció al client o visitant de traduir la ressenya del client a l\'anglès.<br/><br/>Quan estigui habilitat, ves a la ressenya i trobaràs el botó "Traduir a l\'anglès" si la ressenya és en un altre idioma que no sigui l\'anglès.',
+                        'vicuna-13b'          => 'Vicuna (13b)',
+                        'vicuna-7b'           => 'Vicuna (7b)',
                     ],
 
                     'checkout-message' => [
-                        'dolphin-phi'       => 'Dolphin Phi',
-                        'enabled'           => 'Habilitat',
-                        'gpt-3-5-turbo'     => 'OpenAI gpt-3.5-turbo',
-                        'llama2'            => 'Llama 2',
-                        'llama2-uncensored' => 'Llama 2 Sense Censura',
-                        'llama2:13b'        => 'Llama 2 13B',
-                        'llama2:70b'        => 'Llama 2 70B',
-                        'llava'             => 'LLaVA',
-                        'mistral'           => 'Mistral',
-                        'model'             => 'Model',
-                        'orca-mini'         => 'Orca Mini',
-                        'phi'               => 'Phi-2',
-                        'prompt'            => 'Indicación',
-                        'starling-lm'       => 'Starling',
-                        'title'             => 'Missatge Personalitzat de Pagament',
-                        'title-info'        => 'Crea un missatge de pagament personalitzat per als clients a la pàgina d\'agraïment, adaptant el contingut perquè ressoni amb les preferències individuals i millori l\'experiència general després de la compra.',
-                        'vicuna'            => 'Vicuna',
+                        'deepseek-r1-8b'      => 'DeepSeek R1 (8b)',
+                        'enabled'             => 'Habilitat',
+                        'gemini-2-0-flash'    => 'Gemini 2.0 Flash',
+                        'gpt-4-turbo'         => 'OpenAI gpt 4 Turbo',
+                        'gpt-4o'              => 'OpenAI gpt-4o',
+                        'gpt-4o-mini'         => 'OpenAI gpt-4o mini',
+                        'llama-groq'          => 'Llama 3.3 (Groq)',
+                        'llama3-1-8b'         => 'Llama 3.1 (8B)',
+                        'llama3-2-1b'         => 'Llama 3.2 (1B)',
+                        'llama3-2-3b'         => 'Llama 3.2 (3B)',
+                        'llama3-8b'           => 'Llama 3 (8B)',
+                        'llava-7b'            => 'Llava (7b)',
+                        'mistral-7b'          => 'Mistral (7b)',
+                        'model'               => 'Model',
+                        'orca-mini'           => 'Orca Mini',
+                        'phi3-5'              => 'Phi 3.5',
+                        'prompt'              => 'Indicació',
+                        'qwen2-5-0-5b'        => 'Qwen 2.5 (0.5b)',
+                        'qwen2-5-1-5b'        => 'Qwen 2.5 (1.5b)',
+                        'qwen2-5-14b'         => 'Qwen 2.5 (14b)',
+                        'qwen2-5-3b'          => 'Qwen 2.5 (3b)',
+                        'qwen2-5-7b'          => 'Qwen 2.5 (7b)',
+                        'starling-lm-7b'      => 'Starling-lm (7b)',
+                        'title'               => 'Missatge Personalitzat de Finalització de Compra',
+                        'title-info'          => 'Crea un missatge personalitzat de finalització de compra per als clients a la pàgina de gràcies, adaptant el contingut per ressonar amb les preferències individuals i millorant l\'experiència post-compra.',
+                        'vicuna'              => 'Vicuna',
+                        'vicuna-13b'          => 'Vicuna (13b)',
+                        'vicuna-7b'           => 'Vicuna (7b)',
+                    ],
+                ],
+
+                'gdpr' => [
+                    'title' => 'GDPR',
+                    'info'  => 'GDPR',
+
+                    'settings' => [
+                        'title'   => 'Configuració GDPR',
+                        'info'    => 'Configuració GDPR',
+                        'enabled' => 'Habilitat',
+                    ],
+
+                    'agreement' => [
+                        'title'          => 'Acord GDPR',
+                        'info'           => 'Acord GDPR',
+                        'enable'         => 'Habilitar Acord del Client',
+                        'checkbox-label' => 'Etiqueta de la Casella d\'Acord',
+                        'content'        => 'Contingut de l\'Acord',
+                    ],
+
+                    'cookie' => [
+                        'title'        => 'Configuració del Missatge de Cookies',
+                        'info'         => 'Configuració del Missatge de Cookies',
+                        'enable'       => 'Habilitar Avís de Cookies',
+                        'position'     => 'Posició de Visualització del Bloc de Cookies',
+                        'bottom-left'  => 'Inferior Esquerra',
+                        'bottom-right' => 'Inferior Dreta',
+                        'identifier'   => 'Identificador del Bloc Estàtic',
+                        'description'  => 'Descripció',
+                    ],
+
+                    'cookie-consent' => [
+                        'title'                  => 'La teva Preferència de Consentiment de Cookies',
+                        'info'                   => 'La teva Preferència de Consentiment de Cookies',
+                        'strictly-necessary'     => 'Estricament Necessàries',
+                        'basic-interaction'      => 'Interaccions Bàsiques i Funcionalitats',
+                        'experience-enhancement' => 'Millores d\'Experiència',
+                        'measurement'            => 'Mesures',
+                        'targeting-advertising'  => 'Orientació i Publicitat',
+                    ],
+                ],
+
+                'sitemap' => [
+                    'info'  => 'Estableix les opcions del mapa del lloc.',
+                    'title' => 'Mapa del lloc',
+
+                    'settings' => [
+                        'enabled' => 'Habilitat',
+                        'info'    => 'Habilita o deshabilita el mapa del lloc per al teu lloc web per millorar l\'optimització dels motors de cerca i millorar l\'experiència de l\'usuari.',
+                        'title'   => 'Configuració',
+                    ],
+
+                    'file-limits' => [
+                        'info'             => 'Estableix les opcions de límits d\'arxius.',
+                        'max-file-size'    => 'Mida màxima de l\'arxiu',
+                        'max-url-per-file' => 'Nombre màxim d\'URL per arxiu',
+                        'title'            => 'Límits d\'arxius',
+                    ],
+
+                    'store-url' => [
+                        'info'  => 'Estableix la freqüència i la prioritat per a la URL de la botiga.',
+
+                        'frequency' => [
+                            'title' => 'Freqüència',
+
+                            'options' => [
+                                'always'  => 'Sempre',
+                                'daily'   => 'Diàriament',
+                                'hourly'  => 'Cada hora',
+                                'monthly' => 'Mensualment',
+                                'never'   => 'Mai',
+                                'weekly'  => 'Setmanalment',
+                                'yearly'  => 'Anualment',
+                            ],
+                        ],
+
+                        'title'    => 'URL de la botiga',
+                        'priority' => 'Prioritat',
+                    ],
+
+                    'categories' => [
+                        'info'  => 'Estableix la freqüència i la prioritat per a les categories.',
+
+                        'frequency' => [
+                            'title' => 'Freqüència',
+
+                            'options' => [
+                                'always'  => 'Sempre',
+                                'daily'   => 'Diàriament',
+                                'hourly'  => 'Cada hora',
+                                'monthly' => 'Mensualment',
+                                'never'   => 'Mai',
+                                'weekly'  => 'Setmanalment',
+                                'yearly'  => 'Anualment',
+                            ],
+                        ],
+
+                        'title'    => 'Categories',
+                        'priority' => 'Prioritat',
+                    ],
+
+                    'products' => [
+                        'info'  => 'Estableix la freqüència i la prioritat per als productes.',
+
+                        'frequency' => [
+                            'title' => 'Freqüència',
+
+                            'options' => [
+                                'always'  => 'Sempre',
+                                'daily'   => 'Diàriament',
+                                'hourly'  => 'Cada hora',
+                                'monthly' => 'Mensualment',
+                                'never'   => 'Mai',
+                                'weekly'  => 'Setmanalment',
+                                'yearly'  => 'Anualment',
+                            ],
+                        ],
+
+                        'title'    => 'Productes',
+                        'priority' => 'Prioritat',
+                    ],
+
+                    'cms' => [
+                        'info'  => 'Estableix la freqüència i la prioritat per a les pàgines CMS.',
+
+                        'frequency' => [
+                            'title' => 'Freqüència',
+
+                            'options' => [
+                                'always'  => 'Sempre',
+                                'daily'   => 'Diàriament',
+                                'hourly'  => 'Cada hora',
+                                'monthly' => 'Mensualment',
+                                'never'   => 'Mai',
+                                'weekly'  => 'Setmanalment',
+                                'yearly'  => 'Anualment',
+                            ],
+                        ],
+
+                        'title'    => 'Pàgines CMS',
+                        'priority' => 'Prioritat',
                     ],
                 ],
             ],
@@ -3768,13 +4073,14 @@ return [
                     ],
 
                     'review' => [
-                        'allow-customer-review' => 'Permetre ressenyes de clients',
-                        'allow-guest-review'    => 'Permetre ressenyes d\'invitats',
-                        'display-review-count'  => 'Mostra el recompte de ressenyes per a les valoracions.',
-                        'display-star-count'    => 'Mostra el recompte d\'estrelles en les valoracions.',
-                        'summary'               => 'Resum',
-                        'title'                 => 'Ressenya',
-                        'title-info'            => 'Avaluació o valoració d\'alguna cosa, sovint implicant opinions i comentaris.',
+                        'allow-customer-review'   => 'Permetre ressenyes de clients',
+                        'allow-guest-review'      => 'Permetre ressenyes d\'invitats',
+                        'censoring-reviewer-name' => 'Censura del Nom del Ressenyaire',
+                        'display-review-count'    => 'Mostra el recompte de ressenyes per a les valoracions.',
+                        'display-star-count'      => 'Mostra el recompte d\'estrelles en les valoracions.',
+                        'summary'                 => 'Resum',
+                        'title'                   => 'Ressenya',
+                        'title-info'              => 'Avaluació o valoració d\'alguna cosa, sovint implicant opinions i comentaris.',
                     ],
 
                     'attribute' => [
@@ -3969,15 +4275,19 @@ return [
 
                 'notifications' => [
                     'cancel-order'                                     => 'Envia una notificació després de cancel·lar una comanda',
+                    'cancel-order-mail-to-admin'                       => 'Envia un correu electrònic de notificació a l\'administrador després de cancel·lar una comanda',
                     'customer'                                         => 'Envia les credencials del compte del client després del registre',
                     'customer-registration-confirmation-mail-to-admin' => 'Envia un correu electrònic de confirmació a l\'administrador després del registre del client',
                     'info'                                             => 'Configura les opcions d\'estoc del producte per permetre comandes pendents, establir quantitats mínimes i màximes al carret de la compra i definir llindars de falta d\'estoc.',
-                    'new-admin'                                        => 'Envia un correu electrònic de confirmació a l\'administrador després de realitzar una nova comanda',
                     'new-inventory-source'                             => 'Envia un correu electrònic de notificació a la font d\'estoc després de crear un enviament',
                     'new-invoice'                                      => 'Envia un correu electrònic de notificació al client després de crear una nova factura',
+                    'new-invoice-mail-to-admin'                        => 'Envia un correu electrònic de notificació a l\'administrador després de crear una nova factura',
                     'new-order'                                        => 'Envia un correu electrònic de confirmació al client després de realitzar una nova comanda',
+                    'new-order-mail-to-admin'                          => 'Envia un correu electrònic de confirmació a l\'administrador després de realitzar una nova comanda',
                     'new-refund'                                       => 'Envia un correu electrònic de notificació al client després de crear un reemborsament',
+                    'new-refund-mail-to-admin'                         => 'Envia un correu electrònic de notificació a l\'administrador després de crear un nou reemborsament',
                     'new-shipment'                                     => 'Envia un correu electrònic de notificació al client després de crear un enviament',
+                    'new-shipment-mail-to-admin'                       => 'Envia un correu electrònic de notificació a l\'administrador després de crear un nou enviament',
                     'registration'                                     => 'Envia un correu electrònic de confirmació després del registre del client',
                     'title'                                            => 'Notificacions',
                     'verification'                                     => 'Envia un correu electrònic de verificació després del registre del client',
@@ -4123,27 +4433,121 @@ return [
                         'title'      => 'Configuració del número de factura',
                     ],
 
-                    'invoice-date' => [
-                        'info'  => 'Configuració de les dates de creació i venciment de les factures.',
-                        'title' => 'Data de factura',
-                    ],
-
                     'payment-terms' => [
-                        'info'  => 'Configuració dels terminis de pagament especificant el període de temps permès per pagar una factura després de la seva emissió.',
-                        'title' => 'Terminis de pagament',
+                        'due-duration'      => 'Durada del venciment',
+                        'due-duration-day'  => ':due-duration Dia',
+                        'due-duration-days' => ':due-duration Dies',
+                        'info'              => 'Condicions acordades que dicten quan i com s\'ha de fer el pagament dels béns o serveis per part del comprador al venedor.',
+                        'title'             => 'Termes de Pagament',
                     ],
 
-                    'reminder' => [
-                        'info'  => 'Configuració de la freqüència i les condicions per enviar recordatoris als clients sobre pagaments pendents.',
-                        'title' => 'Recordatori de factura',
+                    'pdf-print-outs' => [
+                        'footer-text'      => 'Text del peu de pàgina',
+                        'footer-text-info' => 'Introdueix el text que apareixerà al peu de pàgina del PDF.',
+                        'info'             => 'Configura les impressions en PDF per mostrar l\'ID de la factura, l\'ID de la comanda a la capçalera i incloure el logotip de la factura.',
+                        'invoice-id-info'  => 'Configura la visualització de l\'ID de la factura a la capçalera de la factura.',
+                        'invoice-id-title' => 'Mostrar l\'ID de la factura a la capçalera',
+                        'logo'             => 'Logotip',
+                        'logo-info'        => 'La resolució de la imatge hauria de ser de 131px X 30px.',
+                        'order-id-info'    => 'Configura la visualització de l\'ID de la comanda a la capçalera de la factura.',
+                        'order-id-title'   => 'Mostrar l\'ID de la comanda a la capçalera',
+                        'title'            => 'Impressions en PDF',
                     ],
 
-                    'design' => [
-                        'header'    => 'Capçalera',
-                        'footer'    => 'Peu de pàgina',
-                        'logo'      => 'Logotip',
-                        'info'      => 'Configuració de l\'aspecte visual del document de la factura.',
-                        'title'     => 'Disseny de la factura',
+                    'invoice-reminders' => [
+                        'info'                       => 'Notificacions o comunicacions automàtiques enviades als clients per recordar-los els pagaments pendents o propers a les factures.',
+                        'interval-between-reminders' => 'Interval entre recordatoris',
+                        'maximum-limit-of-reminders' => 'Límit màxim de recordatoris',
+                        'title'                      => 'Recordatoris de Factura',
+                    ],
+                ],
+
+                'taxes' => [
+                    'title'      => 'Impostos',
+                    'title-info' => 'Els impostos són taxes obligatòries imposades pels governs sobre béns, serveis o transaccions, recaptades pels venedors i remeses a les autoritats.',
+
+                    'categories' => [
+                        'title'      => 'Categories d\'Impostos',
+                        'title-info' => 'Les categories d\'impostos són classificacions per a diferents tipus d\'impostos, com ara l\'impost sobre les vendes, l\'impost sobre el valor afegit o l\'impost especial, utilitzades per categoritzar i aplicar tipus d\'impostos a productes o serveis.',
+                        'product'    => 'Categoria d\'Impost per Defecte del Producte',
+                        'shipping'   => 'Categoria d\'Impost d\'Enviament',
+                        'none'       => 'Cap',
+                    ],
+
+                    'calculation' => [
+                        'title'            => 'Configuració de Càlcul',
+                        'title-info'       => 'Detalls sobre el cost dels béns o serveis, incloent el preu base, descomptes, impostos i càrrecs addicionals.',
+                        'based-on'         => 'Càlcul Basat en',
+                        'shipping-address' => 'Adreça d\'Enviament',
+                        'billing-address'  => 'Adreça de Facturació',
+                        'shipping-origin'  => 'Origen de l\'Enviament',
+                        'product-prices'   => 'Preus dels Productes',
+                        'shipping-prices'  => 'Preus d\'Enviament',
+                        'excluding-tax'    => 'Excloent Impost',
+                        'including-tax'    => 'Incloent Impost',
+                    ],
+
+                    'default-destination-calculation' => [
+                        'default-country'   => 'País per Defecte',
+                        'default-post-code' => 'Codi Postal per Defecte',
+                        'default-state'     => 'Estat per Defecte',
+                        'title'             => 'Càlcul de Destinació per Defecte',
+                        'title-info'        => 'Determinació automàtica d\'una destinació estàndard o inicial basada en factors o configuracions predefinides.',
+                    ],
+
+                    'shopping-cart' => [
+                        'title'                   => 'Configuració de Visualització del Carret de la Compra',
+                        'title-info'              => 'Configura la visualització dels impostos al carret de la compra',
+                        'display-prices'          => 'Mostrar Preus',
+                        'display-subtotal'        => 'Mostrar Subtotal',
+                        'display-shipping-amount' => 'Mostrar Import d\'Enviament',
+                        'excluding-tax'           => 'Excloent Impost',
+                        'including-tax'           => 'Incloent Impost',
+                        'both'                    => 'Excloent i Incloent Ambdós',
+                    ],
+
+                    'sales' => [
+                        'title'                   => 'Configuració de Visualització de Comandes, Factures, Reemborsaments',
+                        'title-info'              => 'Configura la visualització dels impostos a les comandes, factures i reemborsaments',
+                        'display-prices'          => 'Mostrar Preus',
+                        'display-subtotal'        => 'Mostrar Subtotal',
+                        'display-shipping-amount' => 'Mostrar Import d\'Enviament',
+                        'excluding-tax'           => 'Excloent Impost',
+                        'including-tax'           => 'Incloent Impost',
+                        'both'                    => 'Excloent i Incloent Ambdós',
+                    ],
+                ],
+
+                'checkout' => [
+                    'title' => 'Pagament',
+                    'info'  => 'Configura el pagament per a convidats, habilita o deshabilita el Mini Carret, resum del carret.',
+
+                    'shopping-cart' => [
+                        'cart-page'              => 'Pàgina del Carret',
+                        'cart-page-info'         => 'Controla la visibilitat de la pàgina del carret per millorar l\'experiència de compra de l\'usuari.',
+                        'cross-sell'             => 'Productes de venda creuada',
+                        'cross-sell-info'        => 'Habilita els productes de venda creuada per augmentar les oportunitats de vendes addicionals.',
+                        'estimate-shipping'      => 'Enviament estimat',
+                        'estimate-shipping-info' => 'Habilita l\'enviament estimat per proporcionar costos d\'enviament anticipats.',
+                        'guest-checkout'         => 'Permetre el pagament per a convidats',
+                        'guest-checkout-info'    => 'Habilita el pagament per a convidats per a un procés de compra més ràpid i sense complicacions.',
+                        'info'                   => 'Habilita el pagament per a convidats, la pàgina del carret, els productes de venda creuada i l\'enviament estimat per millorar la comoditat de l\'usuari i agilitzar el procés de compra per augmentar les vendes.',
+                        'title'                  => 'Carret de la compra',
+                    ],
+
+                    'my-cart' => [
+                        'display-item-quantities' => 'Mostrar quantitats d\'articles',
+                        'display-number-in-cart'  => 'Mostrar el nombre d\'articles al carret',
+                        'info'                    => 'Habilita la configuració del Meu Carret per mostrar un resum de les quantitats d\'articles i mostrar el nombre total d\'articles al carret per a un seguiment fàcil.',
+                        'summary'                 => 'Resum',
+                        'title'                   => 'El meu carret',
+                    ],
+
+                    'mini-cart' => [
+                        'display-mini-cart'    => 'Mostrar Mini Carret',
+                        'info'                 => 'Habilita la configuració del Mini Carret per mostrar el mini carret i mostrar la informació de l\'oferta del Mini Carret per a un accés ràpid als detalls del carret i promocions.',
+                        'mini-cart-offer-info' => 'Informació de l\'oferta del Mini Carret',
+                        'title'                => 'Mini Carret',
                     ],
                 ],
             ],
@@ -4226,6 +4630,11 @@ return [
                 'transactions'             => 'Transaccions',
                 'url-rewrites'             => 'Reescriptures d\'URL',
                 'users'                    => 'Usuaris',
+                'gdpr-data-requests'       => 'Sol·licituds de dades GDPR',
+            ],
+
+            'powered-by' => [
+                'description' => 'Desenvolupat per :bagisto, un projecte de codi obert per :webkul.',
             ],
         ],
 
@@ -4384,26 +4793,37 @@ return [
             'ai-btn-tile' => 'Màgia IA',
 
             'ai-generation' => [
-                'apply'                  => 'Aplicar',
-                'generate'               => 'Generar',
-                'generated-content'      => 'Contingut generat',
-                'generated-content-info' => 'El contingut generat per IA pot ser enganyós. Si us plau, reviseu el contingut generat abans d\'aplicar-lo.',
-                'generating'             => 'Generant...',
-                'prompt'                 => 'Indicació',
-                'title'                  => 'Assistència IA',
-                'model'                  => 'Model',
-                'gpt-3-5-turbo'          => 'OpenAI GPT-3.5 Turbo',
-                'llama2'                 => 'Llama 2',
-                'mistral'                => 'Mistral',
-                'dolphin-phi'            => 'Dolphin Phi',
-                'phi'                    => 'Phi-2',
-                'starling-lm'            => 'Starling',
-                'llama2-uncensored'      => 'Llama 2 Sense Censura',
-                'llama2:13b'             => 'Llama 2 13B',
-                'llama2:70b'             => 'Llama 2 70B',
-                'orca-mini'              => 'Orca Mini',
-                'vicuna'                 => 'Vicuña',
-                'llava'                  => 'LLaVA',
+                'apply'                    => 'Aplicar',
+                'deepseek-r1-8b'           => 'DeepSeek R1 (8b)',
+                'enabled'                  => 'Habilitat',
+                'gemini-2-0-flash'         => 'Gemini 2.0 Flash',
+                'generate'                 => 'Generar',
+                'generated-content'        => 'Contingut Generat',
+                'generated-content-info'   => 'El contingut generat per IA pot ser enganyós. Si us plau, revisa el contingut generat abans d\'aplicar-lo.',
+                'generating'               => 'Generant...',
+                'gpt-4-turbo'              => 'OpenAI gpt-4 Turbo',
+                'gpt-4o'                   => 'OpenAI gpt-4o',
+                'gpt-4o-mini'              => 'OpenAI gpt-4o mini',
+                'llama-groq'               => 'Llama 3.3 (Groq)',
+                'llama3-1-8b'              => 'Llama 3.1 (8B)',
+                'llama3-2-1b'              => 'Llama 3.2 (1B)',
+                'llama3-2-3b'              => 'Llama 3.2 (3B)',
+                'llama3-8b'                => 'Llama 3 (8B)',
+                'llava-7b'                 => 'Llava (7b)',
+                'mistral-7b'               => 'Mistral (7b)',
+                'model'                    => 'Model',
+                'orca-mini'                => 'Orca Mini',
+                'phi3-5'                   => 'Phi 3.5',
+                'prompt'                   => 'Indicació',
+                'qwen2-5-0-5b'             => 'Qwen 2.5 (0.5b)',
+                'qwen2-5-1-5b'             => 'Qwen 2.5 (1.5b)',
+                'qwen2-5-14b'              => 'Qwen 2.5 (14b)',
+                'qwen2-5-3b'               => 'Qwen 2.5 (3b)',
+                'qwen2-5-7b'               => 'Qwen 2.5 (7b)',
+                'starling-lm-7b'           => 'Starling-lm (7b)',
+                'title'                    => 'Assistència IA',
+                'vicuna-13b'               => 'Vicuna (13b)',
+                'vicuna-7b'                => 'Vicuna (7b)',
             ],
         ],
     ],
@@ -4535,6 +4955,10 @@ return [
                 'greeting'    => 'Donem una càlida benvinguda al nou client, :customer_name que s\'ha registrat amb nosaltres!',
                 'subject'     => 'Registre de nou client',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'Estat de la teva sol·licitud GDPR',
         ],
 
         'orders' => [
