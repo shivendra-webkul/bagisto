@@ -10,6 +10,7 @@ const usedEmails = new Set();
 const usedNumbers = new Set();
 const usedSlugs = new Set();
 const usedCurrencies = new Set();
+const usedLocales = new Set();
 
 export function generateName() {
     const adjectives = [
@@ -223,6 +224,49 @@ export function generateDescription(length = 255) {
     }
 
     return description.trim();
+}
+
+/**
+ * Generates a random numeric string with specified length or within a numeric range.
+ * 
+ * @param {number} [length=10] - The length of the random string (used only when min and max are undefined)
+ * @param {number|null|undefined} [min=undefined] - Minimum value (inclusive) when generating a number in range
+ * @param {number|null|undefined} [max=undefined] - Maximum value (inclusive) when generating a number in range
+ * @returns {string} - Random numeric string
+ */
+export function generateRandomNumericString(length: number = 10, min?: number | null, max?: number | null): string {
+    // Generate a number within range
+    if (min !== null && min !== undefined && max !== null && max !== undefined) {
+        // Input validation
+        if (!Number.isInteger(min) || !Number.isInteger(max)) {
+            throw new Error("Min and max must be integers when provided.");
+        }
+
+        if (min > max) {
+            throw new Error("Min value cannot be greater than max value.");
+        }
+
+        // Generate a random number within the range and convert to string
+        return Math.floor(Math.random() * (max - min + 1) + min).toString();
+    }
+
+    // Generate a random string of specified length
+    if (!Number.isInteger(length) || length <= 0) {
+        throw new Error("Length must be a positive integer.");
+    }
+
+    // More efficient method for generating random digits
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += Math.floor(Math.random() * 10);
+    }
+
+    // Ensure first character is not zero for a consistent length string
+    if (length > 1 && result[0] === '0') {
+        result = String(1 + Math.floor(Math.random() * 9)) + result.substring(1);
+    }
+
+    return result;
 }
 
 export function generateHostname() {
@@ -663,6 +707,91 @@ export function generateCurrency() {
     return currency;
 }
 
+export function generateLocale() {
+    const locales = [
+        {
+            name: "English",
+            code: "en",
+            direction: "LTR"
+        },
+        {
+            name: "French",
+            code: "fr",
+            direction: "LTR"
+        },
+        {
+            name: "Spanish",
+            code: "es",
+            direction: "LTR"
+        },
+        {
+            name: "Arabic",
+            code: "ar",
+            direction: "RTL"
+        },
+        {
+            name: "Hebrew",
+            code: "he",
+            direction: "RTL"
+        },
+        {
+            name: "Japanese",
+            code: "ja",
+            direction: "LTR"
+        },
+        {
+            name: "Chinese",
+            code: "zh_CN",
+            direction: "LTR"
+        },
+        {
+            name: "Hindi",
+            code: "hi_IN",
+            direction: "LTR"
+        },
+        {
+            name: "Bengali",
+            code: "bn",
+            direction: "LTR"
+        },
+        {
+            name: "German",
+            code: "de",
+            direction: "LTR"
+        },
+        {
+            name: "Persian",
+            code: "fa",
+            direction: "LTR"
+        },
+        {
+            name: "Italian",
+            code: "it",
+            direction: "LTR"
+        },
+        {
+            name: "Dutch",
+            code: "nl",
+            direction: "LTR"
+        },
+    ];
+
+    if (usedLocales.size >= locales.length) {
+        throw new Error("All locales have been used.");
+    }
+
+    let locale;
+
+    do {
+        const randomIndex = Math.floor(Math.random() * locales.length);
+        locale = locales[randomIndex];
+    } while (usedLocales.has(locale.code));
+
+    usedLocales.add(locale.code);
+
+    return locale;
+}
+
 export function randomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
@@ -686,4 +815,40 @@ export function getImageFile(
     const randomIndex = Math.floor(Math.random() * imageFiles.length);
 
     return path.join(directory, imageFiles[randomIndex]);
+}
+
+export function generateRandomDateTime(end = new Date(new Date().setFullYear(new Date().getFullYear() + 10))) {
+    const start = new Date();
+    const date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+}
+
+export function generateLocation() {
+    const location = [
+        "New York",
+        "Los Angeles",
+        "Chicago",
+        "Houston",
+        "Phoenix",
+        "Philadelphia",
+        "San Antonio",
+        "San Diego",
+        "Dallas",
+        "San Jose",
+        "Austin",
+        "Jacksonville",
+        "San Francisco",
+        "Indianapolis",
+        "Columbus",
+        "Fort Worth",
+    ];
+
+    return location[Math.floor(Math.random() * location.length)];
 }
