@@ -168,9 +168,9 @@
                 ];
             @endphp
 
-            @foreach ($bookingTypes as $bookingType)
-                <template v-if="booking.type === '{{ $bookingType }}'">
-                    @include('admin::catalog.products.edit.types.booking.' . $bookingType, ['bookingProduct' => $bookingProduct])
+            @foreach ($bookingTypes as $type)
+                <template v-if="booking.type === '{{ $type }}'">
+                    @include('admin::catalog.products.edit.types.booking.' . $type, ['bookingProduct' => $bookingProduct])
                 </template>
             @endforeach
         </div>

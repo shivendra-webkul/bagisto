@@ -1,7 +1,7 @@
 {!! view_render_event('bagisto.admin.catalog.product.edit.booking.appointment.before', ['product' => $product]) !!}
 
 <!-- Vue Component -->
-<v-appointment-booking :bookingProduct = "$bookingProduct ?? []"></v-appointment-booking>
+<v-appointment-booking :bookingProduct="$bookingProduct ?? []"></v-appointment-booking>
 
 {!! view_render_event('bagisto.admin.catalog.product.edit.booking.appointment.after', ['product' => $product]) !!}
 

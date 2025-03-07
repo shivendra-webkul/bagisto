@@ -11,7 +11,7 @@
 
                 <p class="text-xs font-medium text-gray-500 dark:text-gray-300">
                     @lang('admin::app.catalog.products.edit.types.booking.slots.description-info')
-                 </p>
+                </p>
             </div>
 
             <!-- Add Slots Button -->
@@ -54,7 +54,7 @@
                             <!-- Panel Details -->
                             <p class="flex items-center rounded bg-gray-600 px-2 py-1 font-semibold text-white">
                                 @{{ data.from }} - @{{ data.to }}
-    
+
                                 <span
                                     class="icon-cross cursor-pointer text-lg text-white ltr:ml-1.5 rtl:mr-1.5"
                                     @click="removeIndex(index)"
@@ -412,16 +412,16 @@
                 },
 
                 insertTimeSlot(key, fromValue, toValue, id) {
-                    if (fromValue && toValue) {
-                        if (! this.slots[key][this.currentIndex]) {
-                            this.slots[key][this.currentIndex] = [];
-                        }
+                    if (!fromValue || !toValue) return;
 
-                        this.slots[key][this.currentIndex].push({
-                            id: id,
-                            from: fromValue,
-                            to: toValue,
-                        });
+                    const slot = { id, from: fromValue, to: toValue };
+
+                    if (key === 'same_for_week') {
+                        this.slots[key].push(slot);
+                    } else {
+                        this.slots[key][this.currentIndex] = this.slots[key][this.currentIndex] || [];
+
+                        this.slots[key][this.currentIndex].push(slot);
                     }
                 },
 
