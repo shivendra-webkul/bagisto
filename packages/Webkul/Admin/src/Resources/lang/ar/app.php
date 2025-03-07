@@ -3661,6 +3661,7 @@ return [
 
         'view' => [
             'all-channels'  => 'جميع القنوات',
+            'back-btn'      => 'رجوع',
             'day'           => 'يوم',
             'end-date'      => 'تاريخ الانتهاء',
             'export-csv'    => 'تصدير كملف CSV',
