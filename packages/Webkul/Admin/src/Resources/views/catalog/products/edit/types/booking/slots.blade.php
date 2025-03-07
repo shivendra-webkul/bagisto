@@ -412,7 +412,7 @@
                 },
 
                 insertTimeSlot(key, fromValue, toValue, id) {
-                    if (!fromValue || !toValue) return;
+                    if (! fromValue || ! toValue) return;
 
                     const slot = { id, from: fromValue, to: toValue };
 
