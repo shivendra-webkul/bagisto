@@ -32,7 +32,7 @@
         <div class="overflow-x-auto">
             <!-- For Same Slot All Days -->
             <template v-if="parseInt(bookingProduct.same_slot_all_days)">
-                <template v-if="slots['same_for_week']?.length">
+                <template v-if="slots['same_for_week'].length || Object.keys(slots['same_for_week']).length">
                     <div class="flex flex-wrap gap-x-2.5">
                         <div
                             class="flex min-h-[38px] flex-wrap items-center gap-1 dark:border-gray-800"
@@ -404,8 +404,8 @@
                         this.insertTimeSlot(slotType, params[fromKey], params[toKey], i + 1);
                     }
 
-                    this.slots[slotType].forEach((slot, index) => {
-                        slot.id = index + 1;
+                    Object.keys(this.slots[slotType]).forEach((key, index) => {
+                        this.slots[slotType][key].id = index + 1;
                     });
 
                     this.toggle();
@@ -414,10 +414,16 @@
                 insertTimeSlot(key, fromValue, toValue, id) {
                     if (! fromValue || ! toValue) return;
 
-                    const slot = { id, from: fromValue, to: toValue };
+                    const slot = { id, to: toValue, from: fromValue };
 
                     if (key === 'same_for_week') {
-                        this.slots[key].push(slot);
+                        this.slots[key] = this.slots[key] || {};
+
+                        const nextIndex = Object.keys(this.slots[key]).length 
+                            ? Math.max(...Object.keys(this.slots[key]).map(Number)) + 1 
+                            : 0;
+
+                        this.slots[key][nextIndex] = slot;
                     } else {
                         this.slots[key][this.currentIndex] = this.slots[key][this.currentIndex] || [];
 
