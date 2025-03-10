@@ -344,7 +344,7 @@ class Booking
             [$availableFrom, $availableTo, $timeDurations] = $this->getDefaultSlotDetails($bookingProduct, $bookingProductSlot, $requestedDate);
 
             if (
-                ! count($timeDurations[0])
+                ! count($timeDurations)
                 || ! $timeDurations[0]['status']
             ) {
                 return [];
