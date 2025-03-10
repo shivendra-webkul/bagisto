@@ -75,6 +75,10 @@ class BookingProductRepository extends Repository
      */
     public function update(array $data, $id, $attribute = 'id')
     {
+        if (isset($data['slots'])) {
+            $data['slots'] = $this->skipOverLappingSlots($data['slots']);
+        }
+
         $bookingProduct = parent::update($data, $id, $attribute);
 
         foreach ($this->typeRepositories as $type => $repository) {

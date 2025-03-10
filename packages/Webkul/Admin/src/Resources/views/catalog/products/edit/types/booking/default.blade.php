@@ -531,9 +531,19 @@
                             params.id = this.optionRowCount++;
                         }
 
-                        const foundIndex = this.slots.one.findIndex(item => (item.from_day === params.from_day && item.from === params.from) && (item.to_day === params.to_day && item.to === params.to));
+                        const isOverlapping = this.slots.one.some(item => {
+                            return (
+                                item.from_day === params.from_day &&
+                                item.to_day === params.to_day &&
+                                (
+                                    (params.from >= item.from && params.from <= item.to) ||
+                                    (params.to >= item.from && params.to <= item.to) ||
+                                    (params.from <= item.from && params.to >= item.to)
+                                )
+                            );
+                        });
 
-                        if (foundIndex === -1) {
+                        if (! isOverlapping) {
                             this.slots.one.push(params);
                         }
                     } else {
