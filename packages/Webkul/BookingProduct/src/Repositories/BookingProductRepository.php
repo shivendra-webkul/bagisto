@@ -51,7 +51,9 @@ class BookingProductRepository extends Repository
      */
     public function create(array $data)
     {
-        $data['slots'] = $this->validateSlots($data);
+        if (isset($data['slots'])) {
+            $data['slots'] = $this->validateSlots($data);
+        }
 
         $bookingProduct = parent::create($data);
 
