@@ -1986,20 +1986,22 @@ return [
                     'message'       => 'Nachricht',
                     'pending'       => 'Ausstehend',
                     'processing'    => 'In Bearbeitung',
+                    'revoked'       => 'Widerrufen',
                     'status'        => 'Status',
                     'type'          => 'Typ',
                 ],
 
                 'modal' => [
-                    'completed'  => 'Abgeschlossen',
-                    'declined'   => 'Abgelehnt',
-                    'pending'    => 'Ausstehend',
-                    'processing' => 'In Bearbeitung',
-                    'status'     => 'Status',
-                    'title'      => 'DSGVO-Datenanfrage bearbeiten',
-                    'type'       => 'Typ',
-                    'message'    => 'Nachricht',
-                    'save-btn'   => 'Speichern',
+                    'completed'     => 'Abgeschlossen',
+                    'declined'      => 'Abgelehnt',
+                    'message'       => 'Nachricht',
+                    'pending'       => 'Ausstehend',
+                    'processing'    => 'In Bearbeitung',
+                    'revoked'       => 'Widerrufen',
+                    'save-btn'      => 'Speichern',
+                    'status'        => 'Status',
+                    'title'         => 'DSGVO-Datenanfrage bearbeiten',
+                    'type'          => 'Typ',
                 ],
 
                 'update-success'              => 'Datenanfrage erfolgreich aktualisiert und E-Mail an den Kunden gesendet.',
@@ -3852,130 +3854,49 @@ return [
                         'max-url-per-file' => 'Maximale Anzahl von URLs pro Datei',
                         'title'            => 'Dateibeschränkungen',
                     ],
-
-                    'store-url' => [
-                        'info'  => 'Häufigkeit und Prioritätsoption für die Store-URL festlegen.',
-
-                        'frequency' => [
-                            'title' => 'Häufigkeit',
-
-                            'options' => [
-                                'always'  => 'Immer',
-                                'daily'   => 'Täglich',
-                                'hourly'  => 'Stündlich',
-                                'monthly' => 'Monatlich',
-                                'never'   => 'Nie',
-                                'weekly'  => 'Wöchentlich',
-                                'yearly'  => 'Jährlich',
-                            ],
-                        ],
-
-                        'title'    => 'Store-URL',
-                        'priority' => 'Priorität',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'Häufigkeit und Prioritätsoption für die Kategorien festlegen.',
-
-                        'frequency' => [
-                            'title' => 'Häufigkeit',
-
-                            'options' => [
-                                'always'  => 'Immer',
-                                'daily'   => 'Täglich',
-                                'hourly'  => 'Stündlich',
-                                'monthly' => 'Monatlich',
-                                'never'   => 'Nie',
-                                'weekly'  => 'Wöchentlich',
-                                'yearly'  => 'Jährlich',
-                            ],
-                        ],
-
-                        'title'    => 'Kategorien',
-                        'priority' => 'Priorität',
-                    ],
-
-                    'products' => [
-                        'info'  => 'Häufigkeit und Prioritätsoption für die Produkte festlegen.',
-
-                        'frequency' => [
-                            'title' => 'Häufigkeit',
-
-                            'options' => [
-                                'always'  => 'Immer',
-                                'daily'   => 'Täglich',
-                                'hourly'  => 'Stündlich',
-                                'monthly' => 'Monatlich',
-                                'never'   => 'Nie',
-                                'weekly'  => 'Wöchentlich',
-                                'yearly'  => 'Jährlich',
-                            ],
-                        ],
-
-                        'title'    => 'Produkte',
-                        'priority' => 'Priorität',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'Häufigkeit und Prioritätsoption für die CMS-Seiten festlegen.',
-
-                        'frequency' => [
-                            'title' => 'Häufigkeit',
-
-                            'options' => [
-                                'always'  => 'Immer',
-                                'daily'   => 'Täglich',
-                                'hourly'  => 'Stündlich',
-                                'monthly' => 'Monatlich',
-                                'never'   => 'Nie',
-                                'weekly'  => 'Wöchentlich',
-                                'yearly'  => 'Jährlich',
-                            ],
-                        ],
-
-                        'title'    => 'CMS-Seiten',
-                        'priority' => 'Priorität',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'DSGVO',
-                'info'  => 'DSGVO',
+                'info'  => 'DSGVO-Konformitätseinstellungen',
 
                 'settings' => [
-                    'title'   => 'DSGVO-Einstellungen',
-                    'info'    => 'DSGVO-Einstellungen',
-                    'enabled' => 'Aktiviert',
+                    'title'   => 'DSGVO-Konformitätseinstellungen',
+                    'info'    => 'Verwalten Sie die DSGVO-Konformitätseinstellungen, einschließlich der Datenschutzvereinbarung. Aktivieren oder deaktivieren Sie die DSGVO-Funktionen nach Bedarf.',
+                    'enabled' => 'DSGVO aktivieren',
                 ],
 
                 'agreement' => [
                     'title'          => 'DSGVO-Vereinbarung',
-                    'info'           => 'DSGVO-Vereinbarung',
-                    'enable'         => 'Kundenvereinbarung aktivieren',
-                    'checkbox-label' => 'Beschriftung der Vereinbarungs-Checkbox',
-                    'content'        => 'Inhalt der Vereinbarung',
+                    'info'           => 'Verwalten Sie die Zustimmung der Kunden gemäß den DSGVO-Vorschriften. Aktivieren Sie die Zustimmungspflicht für die Datenerfassung und -verarbeitung.',
+                    'enable'         => 'Kundenzustimmung aktivieren',
+                    'checkbox-label' => 'Checkbox-Beschriftung für die Zustimmung',
+                    'content'        => 'Inhalt der Zustimmung',
                 ],
 
                 'cookie' => [
-                    'title'        => 'Cookie-Nachricht-Einstellungen',
-                    'info'         => 'Cookie-Nachricht-Einstellungen',
-                    'enable'       => 'Cookie-Hinweis aktivieren',
-                    'position'     => 'Anzeigeposition des Cookie-Blocks',
                     'bottom-left'  => 'Unten links',
                     'bottom-right' => 'Unten rechts',
-                    'identifier'   => 'Statischer Block-Identifier',
+                    'center'       => 'Mitte',
                     'description'  => 'Beschreibung',
+                    'enable'       => 'Cookie-Benachrichtigung aktivieren',
+                    'identifier'   => 'Statischer Block-Identifier',
+                    'info'         => 'Konfigurieren Sie die Cookie-Zustimmungseinstellungen, um Benutzer über die Datenerfassung zu informieren und die Datenschutzbestimmungen einzuhalten.',
+                    'position'     => 'Anzeigeposition des Cookie-Blocks',
+                    'title'        => 'Cookie-Benachrichtigungseinstellungen',
+                    'top-left'     => 'Oben links',
+                    'top-right'    => 'Oben rechts',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => 'Ihre Cookie-Einwilligungspräferenz',
-                    'info'                   => 'Ihre Cookie-Einwilligungspräferenz',
+                    'title'                  => 'Verwalten Sie Ihre Cookie-Einstellungen',
+                    'info'                   => 'Kontrollieren Sie, wie Ihre Daten verwendet werden, indem Sie die bevorzugten Cookie-Einstellungen auswählen. Passen Sie die Berechtigungen für verschiedene Arten von Cookies an.',
                     'strictly-necessary'     => 'Unbedingt erforderlich',
-                    'basic-interaction'      => 'Grundlegende Interaktionen & Funktionen',
-                    'experience-enhancement' => 'Erlebnisverbesserungen',
-                    'measurement'            => 'Messungen',
-                    'targeting-advertising'  => 'Targeting & Werbung',
+                    'basic-interaction'      => 'Grundlegende Interaktion und Funktionalität',
+                    'experience-enhancement' => 'Erlebnisverbesserung',
+                    'measurement'            => 'Messung',
+                    'targeting-advertising'  => 'Targeting und Werbung',
                 ],
             ],
 
@@ -4956,10 +4877,29 @@ return [
                 'greeting'    => 'Wir heißen den neuen Kunden :customer_name, der sich gerade bei uns registriert hat, herzlich willkommen!',
                 'subject'     => 'Neukundenregistrierung',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'Ihr GDPR-Anfragestatus',
+            'gdpr' => [
+                'new-delete-request' => 'Neue Anfrage zum Löschen von Daten',
+                'new-update-request' => 'Neue Anfrage zur Aktualisierung von Daten',
+
+                'new-request' => [
+                    'customer-name'  => 'Kundenname : ',
+                    'delete-summary' => 'Zusammenfassung der Löschanforderung',
+                    'message'        => 'Nachricht : ',
+                    'request-status' => 'Anfragestatus : ',
+                    'request-type'   => 'Anfragetyp : ',
+                    'summary'        => 'Zusammenfassung der Anfrage',
+                    'update-summary' => 'Zusammenfassung der Aktualisierungsanforderung',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'GDPR-Anfrage wurde aktualisiert',
+                    'summary'        => 'Der Status der GDPR-Anfrage wurde aktualisiert',
+                    'request-status' => 'Anfragestatus:',
+                    'request-type'   => 'Anfragetyp:',
+                    'message'        => 'Nachricht:',
+                ],
+            ],
         ],
 
         'orders' => [

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('status');
             $table->string('type');
             $table->string('message', 500);
+            $table->timestamp('revoked_at')->nullable();
             $table->timestamps();
         });
     }

@@ -377,17 +377,10 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'Completed',
-                'date'                        => 'Date',
-                'declined'                    => 'Declined',
-                'id'                          => 'Id',
-                'message'                     => 'Message',
-                'pending'                     => 'Pending',
-                'processing'                  => 'Processing',
-                'status'                      => 'Status',
+                'create-success'              => 'Request created successfully',
+                'revoked-successfully'        => 'Request revoked successfully',
                 'success-verify'              => 'Success! Verification email has been sent.',
                 'success-verify-email-unsent' => 'Success! Verification email has not been sent.',
-                'type'                        => 'Type',
                 'unable-to-sent'              => 'Unable to sent email.',
 
                 'index'   => [
@@ -407,6 +400,22 @@ return [
                             'title'  => 'Type',
                             'update' => 'Update',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'Completed',
+                        'date'       => 'Date',
+                        'declined'   => 'Declined',
+                        'delete'     => 'Delete',
+                        'id'         => 'ID',
+                        'message'    => 'Message',
+                        'pending'    => 'Pending',
+                        'processing' => 'Processing',
+                        'revoke-btn' => 'Revoke',
+                        'revoked'    => 'Revoked',
+                        'status'     => 'Status',
+                        'type'       => 'Type',
+                        'update'     => 'Update',
                     ],
                 ],
 
@@ -1183,22 +1192,19 @@ return [
                 'new-update-request' => 'New Request For Data Update',
 
                 'new-request' => [
+                    'delete-summary' => 'Summary of Delete Request',
                     'message'        => 'Message : ',
                     'request-status' => 'Request Status : ',
                     'request-type'   => 'Request Type : ',
-                    'summary'        => 'Summary of Request',
+                    'update-summary' => 'Summary of Update Request',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'Message : ',
-                    'request-status' => 'Request Status : ',
-                    'request-type'   => 'Request Type : ',
-                    'summary'        => 'Summary of Delete Request',
-                ],
-
-                'update-request' => [
-                    'message'        => 'Message : ',
-                    'request-status' => 'Request Status : ',
+                'status-update' => [
+                    'subject'        => 'Your GDPR Request Has Been Updated',
+                    'summary'        => 'Your GDPR Request Status has been Updated',
+                    'request-status' => 'Request Status:',
+                    'request-type'   => 'Request Type:',
+                    'message'        => 'Message:',
                 ],
             ],
 

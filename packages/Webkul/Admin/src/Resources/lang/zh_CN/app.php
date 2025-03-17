@@ -1986,20 +1986,22 @@ return [
                     'message'       => '消息',
                     'pending'       => '待处理',
                     'processing'    => '处理中',
+                    'revoked'       => '已撤销',
                     'status'        => '状态',
                     'type'          => '类型',
                 ],
 
                 'modal' => [
-                    'completed'  => '已完成',
-                    'declined'   => '已拒绝',
-                    'pending'    => '待处理',
-                    'processing' => '处理中',
-                    'status'     => '状态',
-                    'title'      => '编辑 GDPR 数据请求',
-                    'type'       => '类型',
-                    'message'    => '消息',
-                    'save-btn'   => '保存',
+                    'completed'     => '已完成',
+                    'declined'      => '已拒绝',
+                    'message'       => '消息',
+                    'pending'       => '待处理',
+                    'processing'    => '处理中',
+                    'revoked'       => '已撤销',
+                    'save-btn'      => '保存',
+                    'status'        => '状态',
+                    'title'         => '编辑 GDPR 数据请求',
+                    'type'          => '类型',
                 ],
 
                 'update-success'              => '数据请求更新成功并已发送邮件给客户。',
@@ -3852,125 +3854,44 @@ return [
                         'max-url-per-file' => '每个文件的最大 URL 数量',
                         'title'            => '文件限制',
                     ],
-
-                    'store-url' => [
-                        'info'  => '设置商店 URL 的频率和优先级选项。',
-
-                        'frequency' => [
-                            'title' => '频率',
-
-                            'options' => [
-                                'always'  => '始终',
-                                'daily'   => '每天',
-                                'hourly'  => '每小时',
-                                'monthly' => '每月',
-                                'never'   => '从不',
-                                'weekly'  => '每周',
-                                'yearly'  => '每年',
-                            ],
-                        ],
-
-                        'title'    => '商店 URL',
-                        'priority' => '优先级',
-                    ],
-
-                    'categories' => [
-                        'info'  => '设置类别的频率和优先级选项。',
-
-                        'frequency' => [
-                            'title' => '频率',
-
-                            'options' => [
-                                'always'  => '始终',
-                                'daily'   => '每天',
-                                'hourly'  => '每小时',
-                                'monthly' => '每月',
-                                'never'   => '从不',
-                                'weekly'  => '每周',
-                                'yearly'  => '每年',
-                            ],
-                        ],
-
-                        'title'    => '类别',
-                        'priority' => '优先级',
-                    ],
-
-                    'products' => [
-                        'info'  => '设置产品的频率和优先级选项。',
-
-                        'frequency' => [
-                            'title' => '频率',
-
-                            'options' => [
-                                'always'  => '始终',
-                                'daily'   => '每天',
-                                'hourly'  => '每小时',
-                                'monthly' => '每月',
-                                'never'   => '从不',
-                                'weekly'  => '每周',
-                                'yearly'  => '每年',
-                            ],
-                        ],
-
-                        'title'    => '产品',
-                        'priority' => '优先级',
-                    ],
-
-                    'cms' => [
-                        'info'  => '设置 CMS 页面的频率和优先级选项。',
-
-                        'frequency' => [
-                            'title' => '频率',
-
-                            'options' => [
-                                'always'  => '始终',
-                                'daily'   => '每天',
-                                'hourly'  => '每小时',
-                                'monthly' => '每月',
-                                'never'   => '从不',
-                                'weekly'  => '每周',
-                                'yearly'  => '每年',
-                            ],
-                        ],
-
-                        'title'    => 'CMS 页面',
-                        'priority' => '优先级',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'GDPR',
-                'info'  => 'GDPR',
+                'info'  => 'GDPR 合规设置',
 
                 'settings' => [
-                    'title'   => 'GDPR 设置',
-                    'info'    => 'GDPR 设置',
-                    'enabled' => '启用',
+                    'title'   => 'GDPR 合规设置',
+                    'info'    => '管理 GDPR 合规设置，包括隐私政策。根据要求启用或禁用 GDPR 功能。',
+                    'enabled' => '启用 GDPR',
                 ],
 
                 'agreement' => [
                     'title'          => 'GDPR 协议',
-                    'info'           => 'GDPR 协议',
-                    'enable'         => '启用客户协议',
-                    'checkbox-label' => '协议复选框标签',
-                    'content'        => '协议内容',
+                    'info'           => '根据 GDPR 规定管理客户同意。启用必要的数据收集和处理同意。',
+                    'enable'         => '启用客户同意',
+                    'checkbox-label' => '同意标签',
+                    'content'        => '同意内容',
                 ],
 
                 'cookie' => [
-                    'title'        => 'Cookie 消息设置',
-                    'info'         => 'Cookie 消息设置',
-                    'enable'       => '启用 Cookie 通知',
-                    'position'     => 'Cookie 块显示位置',
                     'bottom-left'  => '左下角',
                     'bottom-right' => '右下角',
-                    'identifier'   => '静态块标识符',
+                    'center'       => '中心',
                     'description'  => '描述',
+                    'enable'       => '启用 Cookie 通知',
+                    'identifier'   => '静态块 ID',
+                    'info'         => '配置 Cookie 同意设置，以通知用户数据收集和隐私政策。',
+                    'position'     => 'Cookie 块位置',
+                    'title'        => 'Cookie 通知设置',
+                    'top-left'     => '左上角',
+                    'top-right'    => '右上角',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => '您的 Cookie 同意偏好',
-                    'info'                   => '您的 Cookie 同意偏好',
+                    'title'                  => '管理 Cookie 设置',
+                    'info'                   => '选择首选的 Cookie 设置以管理数据使用。为不同类型的 Cookie 配置同意选项。',
                     'strictly-necessary'     => '严格必要',
                     'basic-interaction'      => '基本交互和功能',
                     'experience-enhancement' => '体验增强',
@@ -4956,10 +4877,29 @@ return [
                 'greeting'    => '我们热烈欢迎刚刚在我们这里注册的新客户：customer_name！',
                 'subject'     => '新客户注册',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => '您的 GDPR 请求状态',
+            'gdpr' => [
+                'new-delete-request' => '新的数据删除请求',
+                'new-update-request' => '新的数据更新请求',
+
+                'new-request' => [
+                    'customer-name'  => '客户名称 : ',
+                    'delete-summary' => '删除请求摘要',
+                    'message'        => '消息：',
+                    'request-status' => '请求状态：',
+                    'request-type'   => '请求类型：',
+                    'summary'        => '请求摘要',
+                    'update-summary' => '更新请求摘要',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'GDPR请求已更新',
+                    'summary'        => 'GDPR请求状态已更新',
+                    'request-status' => '请求状态:',
+                    'request-type'   => '请求类型:',
+                    'message'        => '信息:',
+                ],
+            ],
         ],
 
         'orders' => [

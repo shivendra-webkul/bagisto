@@ -1986,20 +1986,22 @@ return [
                     'message'       => 'メッセージ',
                     'pending'       => '保留中',
                     'processing'    => '処理中',
+                    'revoked'       => '取消された',
                     'status'        => 'ステータス',
                     'type'          => 'タイプ',
                 ],
 
                 'modal' => [
-                    'completed'  => '完了',
-                    'declined'   => '拒否',
-                    'pending'    => '保留中',
-                    'processing' => '処理中',
-                    'status'     => 'ステータス',
-                    'title'      => 'GDPRデータリクエストを編集',
-                    'type'       => 'タイプ',
-                    'message'    => 'メッセージ',
-                    'save-btn'   => '保存',
+                    'completed'     => '完了',
+                    'declined'      => '拒否',
+                    'message'       => 'メッセージ',
+                    'pending'       => '保留中',
+                    'processing'    => '処理中',
+                    'revoked'       => '取消された',
+                    'save-btn'      => '保存',
+                    'status'        => 'ステータス',
+                    'title'         => 'GDPRデータリクエストを編集',
+                    'type'          => 'タイプ',
                 ],
 
                 'update-success'              => 'データリクエストが正常に更新され、顧客にメールが送信されました。',
@@ -3852,125 +3854,44 @@ return [
                         'max-url-per-file' => 'ファイルあたりの最大URL数',
                         'title'            => 'ファイル制限',
                     ],
-
-                    'store-url' => [
-                        'info'  => 'ストアURLの頻度と優先順位のオプションを設定します。',
-
-                        'frequency' => [
-                            'title' => '頻度',
-
-                            'options' => [
-                                'always'  => '常に',
-                                'daily'   => '毎日',
-                                'hourly'  => '毎時',
-                                'monthly' => '毎月',
-                                'never'   => '決してない',
-                                'weekly'  => '毎週',
-                                'yearly'  => '毎年',
-                            ],
-                        ],
-
-                        'title'    => 'ストアURL',
-                        'priority' => '優先順位',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'カテゴリーの頻度と優先順位のオプションを設定します。',
-
-                        'frequency' => [
-                            'title' => '頻度',
-
-                            'options' => [
-                                'always'  => '常に',
-                                'daily'   => '毎日',
-                                'hourly'  => '毎時',
-                                'monthly' => '毎月',
-                                'never'   => '決してない',
-                                'weekly'  => '毎週',
-                                'yearly'  => '毎年',
-                            ],
-                        ],
-
-                        'title'    => 'カテゴリー',
-                        'priority' => '優先順位',
-                    ],
-
-                    'products' => [
-                        'info'  => '製品の頻度と優先順位のオプションを設定します。',
-
-                        'frequency' => [
-                            'title' => '頻度',
-
-                            'options' => [
-                                'always'  => '常に',
-                                'daily'   => '毎日',
-                                'hourly'  => '毎時',
-                                'monthly' => '毎月',
-                                'never'   => '決してない',
-                                'weekly'  => '毎週',
-                                'yearly'  => '毎年',
-                            ],
-                        ],
-
-                        'title'    => '製品',
-                        'priority' => '優先順位',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'CMSページの頻度と優先順位のオプションを設定します。',
-
-                        'frequency' => [
-                            'title' => '頻度',
-
-                            'options' => [
-                                'always'  => '常に',
-                                'daily'   => '毎日',
-                                'hourly'  => '毎時',
-                                'monthly' => '毎月',
-                                'never'   => '決してない',
-                                'weekly'  => '毎週',
-                                'yearly'  => '毎年',
-                            ],
-                        ],
-
-                        'title'    => 'CMSページ',
-                        'priority' => '優先順位',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'GDPR',
-                'info'  => 'GDPR',
+                'info'  => 'GDPRコンプライアンス設定',
 
                 'settings' => [
-                    'title'   => 'GDPR設定',
-                    'info'    => 'GDPR設定',
-                    'enabled' => '有効',
+                    'title'   => 'GDPRコンプライアンス設定',
+                    'info'    => 'プライバシーポリシーを含むGDPRコンプライアンス設定を管理します。必要に応じてGDPR機能を有効または無効にします。',
+                    'enabled' => 'GDPRを有効にする',
                 ],
 
                 'agreement' => [
                     'title'          => 'GDPR同意',
-                    'info'           => 'GDPR同意',
-                    'enable'         => '顧客同意を有効にする',
-                    'checkbox-label' => '同意チェックボックスラベル',
-                    'content'        => '同意内容',
+                    'info'           => 'GDPR規制に準拠して顧客の同意を管理します。データの収集と処理のために必須の同意を有効にします。',
+                    'enable'         => '顧客の同意を有効にする',
+                    'checkbox-label' => '同意のチェックボックスラベル',
+                    'content'        => '同意の内容',
                 ],
 
                 'cookie' => [
-                    'title'        => 'クッキーメッセージ設定',
-                    'info'         => 'クッキーメッセージ設定',
-                    'enable'       => 'クッキー通知を有効にする',
-                    'position'     => 'クッキーブロック表示位置',
                     'bottom-left'  => '左下',
                     'bottom-right' => '右下',
-                    'identifier'   => '静的ブロック識別子',
+                    'center'       => '中央',
                     'description'  => '説明',
+                    'enable'       => 'クッキー通知を有効にする',
+                    'identifier'   => '静的ブロック識別子',
+                    'info'         => 'データ収集についてユーザーに通知し、プライバシーポリシーを遵守するためのクッキー同意設定を行います。',
+                    'position'     => 'クッキーブロックの表示位置',
+                    'title'        => 'クッキー通知設定',
+                    'top-left'     => '左上',
+                    'top-right'    => '右上',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => 'クッキー同意の設定',
-                    'info'                   => 'クッキー同意の設定',
+                    'title'                  => 'クッキー設定を管理する',
+                    'info'                   => '希望するクッキー設定を選択してデータの使用を制御します。さまざまな種類のクッキーに対する許可を設定します。',
                     'strictly-necessary'     => '厳密に必要',
                     'basic-interaction'      => '基本的な相互作用と機能',
                     'experience-enhancement' => '体験の向上',
@@ -4956,10 +4877,29 @@ return [
                 'greeting'    => '私たちに登録したばかりの新しい顧客、:customer_name を温かく歓迎します。',
                 'subject'     => '新規顧客登録',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'あなたのGDPRリクエストのステータス',
+            'gdpr' => [
+                'new-delete-request' => 'データ削除の新規リクエスト',
+                'new-update-request' => 'データ更新の新規リクエスト',
+
+                'new-request' => [
+                    'customer-name'  => '顧客名 : ',
+                    'delete-summary' => '削除リクエストの概要',
+                    'message'        => 'メッセージ : ',
+                    'request-status' => 'リクエスト状況 : ',
+                    'request-type'   => 'リクエストタイプ : ',
+                    'summary'        => 'リクエストの概要',
+                    'update-summary' => '更新リクエストの概要',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'GDPRリクエストが更新されました',
+                    'summary'        => 'GDPRリクエストの状況が更新されました',
+                    'request-status' => 'リクエスト状況:',
+                    'request-type'   => 'リクエストタイプ:',
+                    'message'        => 'メッセージ:',
+                ],
+            ],
         ],
 
         'orders' => [

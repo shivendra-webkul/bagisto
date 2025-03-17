@@ -377,24 +377,17 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'Abgeschlossen',
-                'date'                        => 'Datum',
-                'declined'                    => 'Abgelehnt',
-                'id'                          => 'ID',
-                'message'                     => 'Nachricht',
-                'pending'                     => 'Ausstehend',
-                'processing'                  => 'Verarbeitung',
-                'status'                      => 'Status',
-                'success-verify'              => 'Erfolg! Verifizierungs-E-Mail wurde gesendet.',
-                'success-verify-email-unsent' => 'Erfolg! Verifizierungs-E-Mail wurde nicht gesendet.',
-                'type'                        => 'Typ',
+                'create-success'              => 'Anfrage erfolgreich erstellt',
+                'revoked-successfully'        => 'Anfrage erfolgreich widerrufen',
+                'success-verify'              => 'Erfolg! Bestätigungs-E-Mail wurde gesendet.',
+                'success-verify-email-unsent' => 'Erfolg! Bestätigungs-E-Mail wurde nicht gesendet.',
                 'unable-to-sent'              => 'E-Mail konnte nicht gesendet werden.',
 
                 'index'   => [
                     'create-btn' => 'Anfrage erstellen',
                     'html'       => 'HTML',
                     'pdf'        => 'PDF',
-                    'title'      => 'GDPR-Datenanfragen',
+                    'title'      => 'DSGVO-Datenanfragen',
 
                     'modal' => [
                         'message' => 'Nachricht',
@@ -407,6 +400,22 @@ return [
                             'title'  => 'Typ',
                             'update' => 'Aktualisieren',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'Abgeschlossen',
+                        'date'       => 'Datum',
+                        'declined'   => 'Abgelehnt',
+                        'delete'     => 'Löschen',
+                        'id'         => 'ID',
+                        'message'    => 'Nachricht',
+                        'pending'    => 'Ausstehend',
+                        'processing' => 'In Bearbeitung',
+                        'revoke-btn' => 'Widerrufen',
+                        'revoked'    => 'Widerrufen',
+                        'status'     => 'Status',
+                        'type'       => 'Typ',
+                        'update'     => 'Aktualisieren',
                     ],
                 ],
 
@@ -441,11 +450,11 @@ return [
 
                     'order-info' => [
                         'amount'       => 'Betrag',
-                        'order-id'     => 'Bestell-ID',
+                        'order-id'     => 'Bestellnummer',
                         'product-name' => 'Produktname',
                         'qty'          => 'Menge',
                         'shipping'     => 'Versand',
-                        'sku'          => 'Artikelnummer',
+                        'sku'          => 'SKU',
                         'status'       => 'Status',
                         'title'        => 'Bestellinformationen',
                         'type'         => 'Typ',
@@ -1179,26 +1188,24 @@ return [
             ],
 
             'gdpr' => [
-                'new-delete-request' => 'Neue Anfrage zur Datenlöschung',
-                'new-update-request' => 'Neue Anfrage zur Datenaktualisierung',
+                'new-delete-request' => 'Neue Anfrage zum Löschen von Daten',
+                'new-update-request' => 'Neue Anfrage zur Aktualisierung von Daten',
 
                 'new-request' => [
+                    'delete-summary' => 'Resumen de la solicitud de eliminación',
                     'message'        => 'Nachricht : ',
                     'request-status' => 'Anfragestatus : ',
                     'request-type'   => 'Anfragetyp : ',
                     'summary'        => 'Zusammenfassung der Anfrage',
+                    'update-summary' => 'Resumen de la solicitud de actualización',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'Nachricht : ',
-                    'request-status' => 'Anfragestatus : ',
-                    'request-type'   => 'Anfragetyp : ',
-                    'summary'        => 'Zusammenfassung der Löschanfrage',
-                ],
-
-                'update-request' => [
-                    'message'        => 'Nachricht : ',
-                    'request-status' => 'Anfragestatus : ',
+                'status-update' => [
+                    'subject'        => 'Ihre GDPR-Anfrage wurde aktualisiert',
+                    'summary'        => 'Der Status Ihrer GDPR-Anfrage wurde aktualisiert',
+                    'request-status' => 'Anfragestatus:',
+                    'request-type'   => 'Anfragetyp:',
+                    'message'        => 'Nachricht:',
                 ],
             ],
 

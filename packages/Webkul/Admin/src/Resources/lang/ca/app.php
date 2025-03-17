@@ -2039,20 +2039,22 @@ return [
                     'message'       => 'Missatge',
                     'pending'       => 'Pendent',
                     'processing'    => 'Processant',
+                    'revoked'       => 'Revoked',
                     'status'        => 'Estat',
                     'type'          => 'Tipus',
                 ],
 
                 'modal' => [
-                    'completed'  => 'Completat',
-                    'declined'   => 'Rebutjat',
-                    'pending'    => 'Pendent',
-                    'processing' => 'Processant',
-                    'status'     => 'Estat',
-                    'title'      => 'Editar Sol·licitud de Dades GDPR',
-                    'type'       => 'Tipus',
-                    'message'    => 'Missatge',
-                    'save-btn'   => 'Desar',
+                    'completed'     => 'Completat',
+                    'declined'      => 'Rebutjat',
+                    'message'       => 'Missatge',
+                    'pending'       => 'Pendent',
+                    'processing'    => 'Processant',
+                    'revoked'       => 'Revoked',
+                    'save-btn'      => 'Desar',
+                    'status'        => 'Estat',
+                    'title'         => 'Editar Sol·licitud de Dades GDPR',
+                    'type'          => 'Tipus',
                 ],
 
                 'update-success'              => 'Sol·licitud de Dades actualitzada amb èxit i correu electrònic enviat al client.',
@@ -3837,41 +3839,44 @@ return [
 
                 'gdpr' => [
                     'title' => 'GDPR',
-                    'info'  => 'GDPR',
+                    'info'  => 'Configuració de compliment de GDPR',
 
                     'settings' => [
-                        'title'   => 'Configuració GDPR',
-                        'info'    => 'Configuració GDPR',
-                        'enabled' => 'Habilitat',
+                        'title'   => 'Configuració de compliment de GDPR',
+                        'info'    => 'Gestiona la configuració de compliment de GDPR, incloent l\'acord de privadesa de dades. Habilita o deshabilita les funcions de GDPR segons sigui necessari',
+                        'enabled' => 'Habilitar GDPR',
                     ],
 
                     'agreement' => [
-                        'title'          => 'Acord GDPR',
-                        'info'           => 'Acord GDPR',
-                        'enable'         => 'Habilitar Acord del Client',
-                        'checkbox-label' => 'Etiqueta de la Casella d\'Acord',
-                        'content'        => 'Contingut de l\'Acord',
+                        'title'          => 'Acord de GDPR',
+                        'info'           => 'Gestiona el consentiment del client segons les regulacions de GDPR. Habilita els requisits d\'acord per a la recopilació i processament de dades.',
+                        'enable'         => 'Habilitar l\'acord del client',
+                        'checkbox-label' => 'Etiqueta del checkbox per a l\'acord',
+                        'content'        => 'Contingut de l\'acord',
                     ],
 
                     'cookie' => [
-                        'title'        => 'Configuració del Missatge de Cookies',
-                        'info'         => 'Configuració del Missatge de Cookies',
-                        'enable'       => 'Habilitar Avís de Cookies',
-                        'position'     => 'Posició de Visualització del Bloc de Cookies',
-                        'bottom-left'  => 'Inferior Esquerra',
-                        'bottom-right' => 'Inferior Dreta',
-                        'identifier'   => 'Identificador del Bloc Estàtic',
+                        'bottom-left'  => 'Inferior esquerra',
+                        'bottom-right' => 'Inferior dreta',
+                        'center'       => 'Centre',
                         'description'  => 'Descripció',
+                        'enable'       => 'Habilitar notificació de cookies',
+                        'identifier'   => 'Identificador de bloc estàtic',
+                        'info'         => 'Configura la configuració de consentiment de cookies per informar els usuaris sobre la recopilació de dades i complir amb les regulacions de privadesa.',
+                        'position'     => 'Posició de visualització del bloc de cookies',
+                        'title'        => 'Configuració de notificació de cookies',
+                        'top-left'     => 'Superior esquerra',
+                        'top-right'    => 'Superior dreta',
                     ],
 
                     'cookie-consent' => [
-                        'title'                  => 'La teva Preferència de Consentiment de Cookies',
-                        'info'                   => 'La teva Preferència de Consentiment de Cookies',
-                        'strictly-necessary'     => 'Estricament Necessàries',
-                        'basic-interaction'      => 'Interaccions Bàsiques i Funcionalitats',
-                        'experience-enhancement' => 'Millores d\'Experiència',
-                        'measurement'            => 'Mesures',
-                        'targeting-advertising'  => 'Orientació i Publicitat',
+                        'title'                  => 'Gestiona les teves preferències de cookies',
+                        'info'                   => 'Controla com es farà servir les teves dades seleccionant la configuració de cookies preferida. Ajusta els permisos per a diferents tipus de cookies.',
+                        'strictly-necessary'     => 'Estricament necessàries',
+                        'basic-interaction'      => 'Interacció bàsica i funcionalitat',
+                        'experience-enhancement' => 'Millora de l\'experiència',
+                        'measurement'            => 'Mesura',
+                        'targeting-advertising'  => 'Orientació i publicitat',
                     ],
                 ],
 
@@ -3890,90 +3895,6 @@ return [
                         'max-file-size'    => 'Mida màxima de l\'arxiu',
                         'max-url-per-file' => 'Nombre màxim d\'URL per arxiu',
                         'title'            => 'Límits d\'arxius',
-                    ],
-
-                    'store-url' => [
-                        'info'  => 'Estableix la freqüència i la prioritat per a la URL de la botiga.',
-
-                        'frequency' => [
-                            'title' => 'Freqüència',
-
-                            'options' => [
-                                'always'  => 'Sempre',
-                                'daily'   => 'Diàriament',
-                                'hourly'  => 'Cada hora',
-                                'monthly' => 'Mensualment',
-                                'never'   => 'Mai',
-                                'weekly'  => 'Setmanalment',
-                                'yearly'  => 'Anualment',
-                            ],
-                        ],
-
-                        'title'    => 'URL de la botiga',
-                        'priority' => 'Prioritat',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'Estableix la freqüència i la prioritat per a les categories.',
-
-                        'frequency' => [
-                            'title' => 'Freqüència',
-
-                            'options' => [
-                                'always'  => 'Sempre',
-                                'daily'   => 'Diàriament',
-                                'hourly'  => 'Cada hora',
-                                'monthly' => 'Mensualment',
-                                'never'   => 'Mai',
-                                'weekly'  => 'Setmanalment',
-                                'yearly'  => 'Anualment',
-                            ],
-                        ],
-
-                        'title'    => 'Categories',
-                        'priority' => 'Prioritat',
-                    ],
-
-                    'products' => [
-                        'info'  => 'Estableix la freqüència i la prioritat per als productes.',
-
-                        'frequency' => [
-                            'title' => 'Freqüència',
-
-                            'options' => [
-                                'always'  => 'Sempre',
-                                'daily'   => 'Diàriament',
-                                'hourly'  => 'Cada hora',
-                                'monthly' => 'Mensualment',
-                                'never'   => 'Mai',
-                                'weekly'  => 'Setmanalment',
-                                'yearly'  => 'Anualment',
-                            ],
-                        ],
-
-                        'title'    => 'Productes',
-                        'priority' => 'Prioritat',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'Estableix la freqüència i la prioritat per a les pàgines CMS.',
-
-                        'frequency' => [
-                            'title' => 'Freqüència',
-
-                            'options' => [
-                                'always'  => 'Sempre',
-                                'daily'   => 'Diàriament',
-                                'hourly'  => 'Cada hora',
-                                'monthly' => 'Mensualment',
-                                'never'   => 'Mai',
-                                'weekly'  => 'Setmanalment',
-                                'yearly'  => 'Anualment',
-                            ],
-                        ],
-
-                        'title'    => 'Pàgines CMS',
-                        'priority' => 'Prioritat',
                     ],
                 ],
             ],
@@ -4955,10 +4876,29 @@ return [
                 'greeting'    => 'Donem una càlida benvinguda al nou client, :customer_name que s\'ha registrat amb nosaltres!',
                 'subject'     => 'Registre de nou client',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'Estat de la teva sol·licitud GDPR',
+            'gdpr' => [
+                'new-delete-request' => 'New Request For Data Delete',
+                'new-update-request' => 'New Request For Data Update',
+
+                'new-request' => [
+                    'customer-name'  => 'Nom du client : ',
+                    'delete-summary' => 'Zusammenfassung der Löschanforderung',
+                    'message'        => 'Message : ',
+                    'request-status' => 'Request Status : ',
+                    'request-type'   => 'Request Type : ',
+                    'summary'        => 'Summary of Request',
+                    'update-summary' => 'Zusammenfassung der Aktualisierungsanforderung',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'GDPR Request Has Been Updated',
+                    'summary'        => 'The GDPR Request Status Has Been Updated',
+                    'request-status' => 'Request Status:',
+                    'request-type'   => 'Request Type:',
+                    'message'        => 'Message:',
+                ],
+            ],
         ],
 
         'orders' => [

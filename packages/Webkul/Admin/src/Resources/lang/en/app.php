@@ -1986,6 +1986,7 @@ return [
                     'message'       => 'Message',
                     'pending'       => 'Pending',
                     'processing'    => 'Processing',
+                    'revoked'       => 'Revoked',
                     'status'        => 'Status',
                     'type'          => 'Type',
                 ],
@@ -2000,6 +2001,7 @@ return [
                     'type'       => 'Type',
                     'message'    => 'Message',
                     'save-btn'   => 'Save',
+                    'revoked'    => 'Revoked',
                 ],
 
                 'update-success'              => 'Data Request updated successfully and Email Sent to Customer.',
@@ -3838,36 +3840,39 @@ return [
 
                 'gdpr' => [
                     'title' => 'GDPR',
-                    'info'  => 'GDPR',
+                    'info'  => 'GDPR Compliance Settings',
 
                     'settings' => [
-                        'title'   => 'GDPR Settings',
-                        'info'    => 'GDPR Settings',
-                        'enabled' => 'Enabled',
+                        'title'   => 'GDPR Compliance Settings',
+                        'info'    => 'Manage GDPR compliance settings, including data privacy agreement. Enable or disable GDPR features as required',
+                        'enabled' => 'Enable GDPR',
                     ],
 
                     'agreement' => [
                         'title'          => 'GDPR Agreement',
-                        'info'           => 'GDPR Agreement',
+                        'info'           => 'Manage customer consent under GDPR regulations. Enable agreement requirements for data collection and processing.',
                         'enable'         => 'Enable Customer Agreement',
                         'checkbox-label' => 'Agreement Checkbox Label',
                         'content'        => 'Agreement Content',
                     ],
 
                     'cookie' => [
-                        'title'        => 'Cookie Message Settings',
-                        'info'         => 'Cookie Message Settings',
-                        'enable'       => 'Enable Cookie Notice',
-                        'position'     => 'Cookie Block Display Position',
-                        'bottom-left'  => ' Bottom Left',
-                        'bottom-right' => ' Bottom Right',
-                        'identifier'   => 'Static Block Identifier',
+                        'bottom-left'  => 'Bottom Left',
+                        'bottom-right' => 'Bottom Right',
+                        'center'       => 'Center',
                         'description'  => 'Description',
+                        'enable'       => 'Enable Cookie Notice',
+                        'identifier'   => 'Static Block Identifier',
+                        'info'         => 'Configure cookie consent settings to inform users about data collection and ensure compliance with privacy regulations.',
+                        'position'     => 'Cookie Block Display Position',
+                        'title'        => 'Cookie Notice Settings',
+                        'top-left'     => 'Top Left',
+                        'top-right'    => 'Top Right',
                     ],
 
                     'cookie-consent' => [
-                        'title'                  => 'Your Cookie Consent Preference',
-                        'info'                   => ' Your Cookie Consent Preference',
+                        'title'                  => 'Manage Your Cookie Preferences',
+                        'info'                   => 'Control how your data is used by selecting your preferred cookie settings. Adjust permissions for different types of cookies.',
                         'strictly-necessary'     => 'Strictly Necessary',
                         'basic-interaction'      => 'Basic Interactions & Functionalities',
                         'experience-enhancement' => 'Experience Enhancements',
@@ -3891,90 +3896,6 @@ return [
                         'max-file-size'    => 'Maximum file size',
                         'max-url-per-file' => 'Maximum no. of URLs per file',
                         'title'            => 'File Limits',
-                    ],
-
-                    'store-url' => [
-                        'info'  => 'Set frequency and priority option for the store URL.',
-
-                        'frequency' => [
-                            'title' => 'Frequency',
-
-                            'options' => [
-                                'always'  => 'Always',
-                                'daily'   => 'Daily',
-                                'hourly'  => 'Hourly',
-                                'monthly' => 'Monthly',
-                                'never'   => 'Never',
-                                'weekly'  => 'Weekly',
-                                'yearly'  => 'Yearly',
-                            ],
-                        ],
-
-                        'title'    => 'Store URL',
-                        'priority' => 'Priority',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'Set frequency and priority option for the categories.',
-
-                        'frequency' => [
-                            'title' => 'Frequency',
-
-                            'options' => [
-                                'always'  => 'Always',
-                                'daily'   => 'Daily',
-                                'hourly'  => 'Hourly',
-                                'monthly' => 'Monthly',
-                                'never'   => 'Never',
-                                'weekly'  => 'Weekly',
-                                'yearly'  => 'Yearly',
-                            ],
-                        ],
-
-                        'title'    => 'Categories',
-                        'priority' => 'Priority',
-                    ],
-
-                    'products' => [
-                        'info'  => 'Set frequency and priority option for the products.',
-
-                        'frequency' => [
-                            'title' => 'Frequency',
-
-                            'options' => [
-                                'always'  => 'Always',
-                                'daily'   => 'Daily',
-                                'hourly'  => 'Hourly',
-                                'monthly' => 'Monthly',
-                                'never'   => 'Never',
-                                'weekly'  => 'Weekly',
-                                'yearly'  => 'Yearly',
-                            ],
-                        ],
-
-                        'title'    => 'Products',
-                        'priority' => 'Priority',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'Set frequency and priority option for the CMS pages.',
-
-                        'frequency' => [
-                            'title' => 'Frequency',
-
-                            'options' => [
-                                'always'  => 'Always',
-                                'daily'   => 'Daily',
-                                'hourly'  => 'Hourly',
-                                'monthly' => 'Monthly',
-                                'never'   => 'Never',
-                                'weekly'  => 'Weekly',
-                                'yearly'  => 'Yearly',
-                            ],
-                        ],
-
-                        'title'    => 'CMS Pages',
-                        'priority' => 'Priority',
                     ],
                 ],
             ],
@@ -4957,10 +4878,28 @@ return [
                 'greeting'    => 'We extend a warm welcome to the new customer, :customer_name who has just registered with us!',
                 'subject'     => 'New Customer Registration',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'Your GDPR Request Status',
+            'gdpr' => [
+                'new-delete-request' => 'New Request For Data Delete',
+                'new-update-request' => 'New Request For Data Update',
+
+                'new-request' => [
+                    'customer-name'  => 'Customer Name : ',
+                    'delete-summary' => 'Summary of Delete Request',
+                    'message'        => 'Message : ',
+                    'request-status' => 'Request Status : ',
+                    'request-type'   => 'Request Type : ',
+                    'update-summary' => 'Summary of Update Request',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'GDPR Request Has Been Updated',
+                    'summary'        => 'The GDPR Request Status Has Been Updated',
+                    'request-status' => 'Request Status:',
+                    'request-type'   => 'Request Type:',
+                    'message'        => 'Message:',
+                ],
+            ],
         ],
 
         'orders' => [

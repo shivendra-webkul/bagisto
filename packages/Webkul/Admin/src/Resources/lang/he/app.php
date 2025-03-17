@@ -1986,20 +1986,22 @@ return [
                     'message'       => 'הודעה',
                     'pending'       => 'ממתין',
                     'processing'    => 'מעבד',
+                    'revoked'       => 'בוטל',
                     'status'        => 'סטטוס',
                     'type'          => 'סוג',
                 ],
 
                 'modal' => [
-                    'completed'  => 'הושלם',
-                    'declined'   => 'נדחה',
-                    'pending'    => 'ממתין',
-                    'processing' => 'מעבד',
-                    'status'     => 'סטטוס',
-                    'title'      => 'ערוך בקשת נתוני GDPR',
-                    'type'       => 'סוג',
-                    'message'    => 'הודעה',
-                    'save-btn'   => 'שמור',
+                    'completed'     => 'הושלם',
+                    'declined'      => 'נדחה',
+                    'message'       => 'הודעה',
+                    'pending'       => 'ממתין',
+                    'processing'    => 'מעבד',
+                    'revoked'       => 'בוטל',
+                    'save-btn'      => 'שמור',
+                    'status'        => 'סטטוס',
+                    'title'         => 'ערוך בקשת נתוני GDPR',
+                    'type'          => 'סוג',
                 ],
 
                 'update-success'              => 'בקשת הנתונים עודכנה בהצלחה ואימייל נשלח ללקוח.',
@@ -3852,129 +3854,48 @@ return [
                         'max-url-per-file' => 'מספר מרבי של כתובות URL לכל קובץ',
                         'title'            => 'גבולות קובץ',
                     ],
-
-                    'store-url' => [
-                        'info'  => 'הגדר אפשרויות תדירות ועדיפות לכתובת ה-URL של החנות.',
-
-                        'frequency' => [
-                            'title' => 'תדירות',
-
-                            'options' => [
-                                'always'  => 'תמיד',
-                                'daily'   => 'יומי',
-                                'hourly'  => 'כל שעה',
-                                'monthly' => 'חודשי',
-                                'never'   => 'אף פעם',
-                                'weekly'  => 'שבועי',
-                                'yearly'  => 'שנתי',
-                            ],
-                        ],
-
-                        'title'    => 'כתובת ה-URL של החנות',
-                        'priority' => 'עדיפות',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'הגדר אפשרויות תדירות ועדיפות לקטגוריות.',
-
-                        'frequency' => [
-                            'title' => 'תדירות',
-
-                            'options' => [
-                                'always'  => 'תמיד',
-                                'daily'   => 'יומי',
-                                'hourly'  => 'כל שעה',
-                                'monthly' => 'חודשי',
-                                'never'   => 'אף פעם',
-                                'weekly'  => 'שבועי',
-                                'yearly'  => 'שנתי',
-                            ],
-                        ],
-
-                        'title'    => 'קטגוריות',
-                        'priority' => 'עדיפות',
-                    ],
-
-                    'products' => [
-                        'info'  => 'הגדר אפשרויות תדירות ועדיפות למוצרים.',
-
-                        'frequency' => [
-                            'title' => 'תדירות',
-
-                            'options' => [
-                                'always'  => 'תמיד',
-                                'daily'   => 'יומי',
-                                'hourly'  => 'כל שעה',
-                                'monthly' => 'חודשי',
-                                'never'   => 'אף פעם',
-                                'weekly'  => 'שבועי',
-                                'yearly'  => 'שנתי',
-                            ],
-                        ],
-
-                        'title'    => 'מוצרים',
-                        'priority' => 'עדיפות',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'הגדר אפשרויות תדירות ועדיפות לעמודי CMS.',
-
-                        'frequency' => [
-                            'title' => 'תדירות',
-
-                            'options' => [
-                                'always'  => 'תמיד',
-                                'daily'   => 'יומי',
-                                'hourly'  => 'כל שעה',
-                                'monthly' => 'חודשי',
-                                'never'   => 'אף פעם',
-                                'weekly'  => 'שבועי',
-                                'yearly'  => 'שנתי',
-                            ],
-                        ],
-
-                        'title'    => 'עמודי CMS',
-                        'priority' => 'עדיפות',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'GDPR',
-                'info'  => 'GDPR',
+                'info'  => 'הגדרות תאימות ל-GDPR',
 
                 'settings' => [
-                    'title'   => 'הגדרות GDPR',
-                    'info'    => 'הגדרות GDPR',
-                    'enabled' => 'מופעל',
+                    'title'   => 'הגדרות תאימות ל-GDPR',
+                    'info'    => 'ניהול הגדרות תאימות ל-GDPR, כולל מדיניות פרטיות. הפעל או השבת תכונות GDPR לפי הצורך.',
+                    'enabled' => 'הפעל GDPR',
                 ],
 
                 'agreement' => [
                     'title'          => 'הסכם GDPR',
-                    'info'           => 'הסכם GDPR',
-                    'enable'         => 'אפשר הסכם לקוח',
-                    'checkbox-label' => 'תווית תיבת הסימון להסכם',
-                    'content'        => 'תוכן ההסכם',
+                    'info'           => 'ניהול הסכמת הלקוחות בהתאם לתקנות GDPR. הפעל הסכמה חובה לאיסוף ועיבוד נתונים.',
+                    'enable'         => 'הפעל הסכמת לקוחות',
+                    'checkbox-label' => 'תווית תיבת הסימון להסכמה',
+                    'content'        => 'תוכן ההסכמה',
                 ],
 
                 'cookie' => [
-                    'title'        => 'הגדרות הודעת עוגיות',
-                    'info'         => 'הגדרות הודעת עוגיות',
-                    'enable'       => 'אפשר הודעת עוגיות',
-                    'position'     => 'מיקום תצוגת בלוק העוגיות',
-                    'bottom-left'  => 'תחתון שמאלי',
-                    'bottom-right' => 'תחתון ימני',
-                    'identifier'   => 'מזהה בלוק סטטי',
+                    'bottom-left'  => 'למטה משמאל',
+                    'bottom-right' => 'למטה מימין',
+                    'center'       => 'מרכז',
                     'description'  => 'תיאור',
+                    'enable'       => 'הפעל הודעת עוגיות',
+                    'identifier'   => 'מזהה בלוק סטטי',
+                    'info'         => 'הגדרת הגדרות הסכמת עוגיות כדי ליידע את המשתמשים על איסוף נתונים ולהתאים למדיניות פרטיות.',
+                    'position'     => 'מיקום תצוגת בלוק העוגיות',
+                    'title'        => 'הגדרות הודעת עוגיות',
+                    'top-left'     => 'למעלה משמאל',
+                    'top-right'    => 'למעלה מימין',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => 'העדפת הסכמת העוגיות שלך',
-                    'info'                   => 'העדפת הסכמת העוגיות שלך',
+                    'title'                  => 'ניהול הגדרות העוגיות שלך',
+                    'info'                   => 'שלוט כיצד נעשה שימוש בנתונים שלך על ידי בחירת הגדרות העוגיות הרצויות. הגדר הרשאות לסוגים שונים של עוגיות.',
                     'strictly-necessary'     => 'הכרחי בהחלט',
-                    'basic-interaction'      => 'אינטראקציות בסיסיות ופונקציות',
-                    'experience-enhancement' => 'שיפורי חוויה',
-                    'measurement'            => 'מדידות',
+                    'basic-interaction'      => 'אינטראקציה ופונקציונליות בסיסית',
+                    'experience-enhancement' => 'שיפור חווית המשתמש',
+                    'measurement'            => 'מדידה',
                     'targeting-advertising'  => 'מיקוד ופרסום',
                 ],
             ],
@@ -4956,10 +4877,29 @@ return [
                 'greeting'    => 'אנו מקבלים בברכה את הלקוח החדש, :customer_name שזה עתה נרשם אלינו!',
                 'subject'     => 'רישום לקוח חדש',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'מצב בקשת ה-GDPR שלך',
+            'gdpr' => [
+                'new-delete-request' => 'בקשה חדשה למחיקת נתונים',
+                'new-update-request' => 'בקשה חדשה לעדכון נתונים',
+
+                'new-request' => [
+                    'customer-name'  => 'שם הלקוח : ',
+                    'delete-summary' => 'סיכום בקשת המחיקה',
+                    'message'        => 'הודעה : ',
+                    'request-status' => 'סטטוס הבקשה : ',
+                    'request-type'   => 'סוג הבקשה : ',
+                    'summary'        => 'סיכום הבקשה',
+                    'update-summary' => 'סיכום בקשת העדכון',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'בקשת ה-GDPR עודכנה',
+                    'summary'        => 'סטטוס בקשת ה-GDPR עודכן',
+                    'request-status' => 'סטטוס הבקשה:',
+                    'request-type'   => 'סוג הבקשה:',
+                    'message'        => 'הודעה:',
+                ],
+            ],
         ],
 
         'orders' => [

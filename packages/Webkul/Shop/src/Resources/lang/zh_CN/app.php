@@ -377,27 +377,20 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => '已完成',
-                'date'                        => '日期',
-                'declined'                    => '已拒绝',
-                'id'                          => '编号',
-                'message'                     => '消息',
-                'pending'                     => '待处理',
-                'processing'                  => '处理中',
-                'status'                      => '状态',
+                'create-success'              => '请求创建成功',
+                'revoked-successfully'        => '请求撤销成功',
                 'success-verify'              => '成功！验证邮件已发送。',
                 'success-verify-email-unsent' => '成功！验证邮件未发送。',
-                'type'                        => '类型',
                 'unable-to-sent'              => '无法发送邮件。',
 
                 'index'   => [
                     'create-btn' => '创建请求',
                     'html'       => 'HTML',
                     'pdf'        => 'PDF',
-                    'title'      => 'GDPR 数据请求',
+                    'title'      => 'GDPR数据请求',
 
                     'modal' => [
-                        'message' => '消息',
+                        'message' => '信息',
                         'save'    => '保存',
                         'title'   => '创建新请求',
 
@@ -407,6 +400,22 @@ return [
                             'title'  => '类型',
                             'update' => '更新',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => '已完成',
+                        'date'       => '日期',
+                        'declined'   => '已拒绝',
+                        'delete'     => '删除',
+                        'id'         => 'ID',
+                        'message'    => '消息',
+                        'pending'    => '待处理',
+                        'processing' => '处理中',
+                        'revoke-btn' => '撤销',
+                        'revoked'    => '已撤销',
+                        'status'     => '状态',
+                        'type'       => '类型',
+                        'update'     => '更新',
                     ],
                 ],
 
@@ -433,18 +442,18 @@ return [
                         'first-name' => '名字',
                         'last-name'  => '姓氏',
                         'phone'      => '电话',
-                        'postcode'   => '邮政编码',
-                        'state'      => '省份',
+                        'postcode'   => '邮编',
+                        'state'      => '州',
                         'title'      => '地址信息',
                         'vat-id'     => '增值税号',
                     ],
 
                     'order-info' => [
                         'amount'       => '金额',
-                        'order-id'     => '订单编号',
+                        'order-id'     => '订单号',
                         'product-name' => '产品名称',
                         'qty'          => '数量',
-                        'shipping'     => '运输',
+                        'shipping'     => '运费',
                         'sku'          => 'SKU',
                         'status'       => '状态',
                         'title'        => '订单信息',
@@ -1183,22 +1192,20 @@ return [
                 'new-update-request' => '新的数据更新请求',
 
                 'new-request' => [
-                    'message'        => '消息：',
-                    'request-status' => '请求状态：',
-                    'request-type'   => '请求类型：',
+                    'delete-summary' => '删除请求摘要',
+                    'message'        => '信息 : ',
+                    'request-status' => '请求状态 : ',
+                    'request-type'   => '请求类型 : ',
                     'summary'        => '请求摘要',
+                    'update-summary' => '更新请求摘要',
                 ],
 
-                'delete-request' => [
-                    'message'        => '消息：',
-                    'request-status' => '请求状态：',
-                    'request-type'   => '请求类型：',
-                    'summary'        => '删除请求摘要',
-                ],
-
-                'update-request' => [
-                    'message'        => '消息：',
-                    'request-status' => '请求状态：',
+                'status-update' => [
+                    'subject'        => '您的GDPR请求已更新',
+                    'summary'        => '您的GDPR请求状态已更新',
+                    'request-status' => '请求状态:',
+                    'request-type'   => '请求类型:',
+                    'message'        => '信息:',
                 ],
             ],
 

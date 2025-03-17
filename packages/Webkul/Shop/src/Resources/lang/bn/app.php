@@ -377,23 +377,16 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'সম্পন্ন',
-                'date'                        => 'তারিখ',
-                'declined'                    => 'প্রত্যাখ্যাত',
-                'id'                          => 'আইডি',
-                'message'                     => 'বার্তা',
-                'pending'                     => 'বিচারাধীন',
-                'processing'                  => 'প্রক্রিয়াধীন',
-                'status'                      => 'অবস্থা',
-                'success-verify'              => 'সফল! যাচাইকরণ ইমেইল পাঠানো হয়েছে।',
-                'success-verify-email-unsent' => 'সফল! যাচাইকরণ ইমেইল পাঠানো হয়নি।',
-                'type'                        => 'ধরন',
-                'unable-to-sent'              => 'ইমেইল পাঠানো সম্ভব নয়।',
+                'create-success'              => 'অনুরোধ সফলভাবে তৈরি হয়েছে',
+                'revoked-successfully'        => 'অনুরোধ সফলভাবে বাতিল হয়েছে',
+                'success-verify'              => 'সফলতা! যাচাইকরণ ইমেল পাঠানো হয়েছে।',
+                'success-verify-email-unsent' => 'সফলতা! যাচাইকরণ ইমেল পাঠানো হয়নি।',
+                'unable-to-sent'              => 'ইমেল পাঠাতে অক্ষম।',
 
                 'index'   => [
                     'create-btn' => 'অনুরোধ তৈরি করুন',
-                    'html'       => 'এইচটিএমএল',
-                    'pdf'        => 'পিডিএফ',
+                    'html'       => 'HTML',
+                    'pdf'        => 'PDF',
                     'title'      => 'জিডিপিআর ডেটা অনুরোধ',
 
                     'modal' => [
@@ -405,8 +398,24 @@ return [
                             'choose' => 'নির্বাচন করুন',
                             'delete' => 'মুছুন',
                             'title'  => 'ধরন',
-                            'update' => 'আপডেট করুন',
+                            'update' => 'আপডেট',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'সম্পন্ন',
+                        'date'       => 'তারিখ',
+                        'declined'   => 'প্রত্যাখ্যাত',
+                        'delete'     => 'মুছে ফেলা',
+                        'id'         => 'আইডি',
+                        'message'    => 'বার্তা',
+                        'pending'    => 'মুলতুবি',
+                        'processing' => 'প্রক্রিয়াধীন',
+                        'revoke-btn' => 'বাতিল করুন',
+                        'revoked'    => 'বাতিল',
+                        'status'     => 'অবস্থা',
+                        'type'       => 'ধরন',
+                        'update'     => 'আপডেট',
                     ],
                 ],
 
@@ -415,7 +424,7 @@ return [
 
                     'account-info' => [
                         'dob'          => 'জন্ম তারিখ',
-                        'email'        => 'ইমেইল',
+                        'email'        => 'ইমেল',
                         'first-name'   => 'প্রথম নাম',
                         'gender'       => 'লিঙ্গ',
                         'last-name'    => 'শেষ নাম',
@@ -434,7 +443,7 @@ return [
                         'last-name'  => 'শেষ নাম',
                         'phone'      => 'ফোন',
                         'postcode'   => 'পোস্টকোড',
-                        'state'      => 'রাষ্ট্র',
+                        'state'      => 'অবস্থা',
                         'title'      => 'ঠিকানা তথ্য',
                         'vat-id'     => 'ভ্যাট আইডি',
                     ],
@@ -445,7 +454,7 @@ return [
                         'product-name' => 'পণ্যের নাম',
                         'qty'          => 'পরিমাণ',
                         'shipping'     => 'শিপিং',
-                        'sku'          => 'এসকিউ',
+                        'sku'          => 'এসকেইউ',
                         'status'       => 'অবস্থা',
                         'title'        => 'অর্ডার তথ্য',
                         'type'         => 'ধরন',
@@ -1181,25 +1190,23 @@ return [
 
             'gdpr' => [
                 'new-delete-request' => 'ডেটা মুছে ফেলার জন্য নতুন অনুরোধ',
-                'new-update-request' => 'ডেটা আপডেটের জন্য নতুন অনুরোধ',
+                'new-update-request' => 'ডেটা আপডেট করার জন্য নতুন অনুরোধ',
 
                 'new-request' => [
+                    'delete-summary' => 'মুছে ফেলার অনুরোধের সংক্ষিপ্তসার',
                     'message'        => 'বার্তা : ',
                     'request-status' => 'অনুরোধের অবস্থা : ',
                     'request-type'   => 'অনুরোধের ধরন : ',
-                    'summary'        => 'অনুরোধের সংক্ষেপ',
+                    'summary'        => 'অনুরোধের সারাংশ',
+                    'update-summary' => 'আপডেট অনুরোধের সংক্ষিপ্তসার',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'বার্তা : ',
-                    'request-status' => 'অনুরোধের অবস্থা : ',
-                    'request-type'   => 'অনুরোধের ধরন : ',
-                    'summary'        => 'মুছে ফেলার অনুরোধের সংক্ষেপ',
-                ],
-
-                'update-request' => [
-                    'message'        => 'বার্তা : ',
-                    'request-status' => 'অনুরোধের অবস্থা : ',
+                'status-update' => [
+                    'subject'        => 'আপনার GDPR অনুরোধ আপডেট হয়েছে',
+                    'summary'        => 'আপনার GDPR অনুরোধের অবস্থা আপডেট হয়েছে',
+                    'request-status' => 'অনুরোধের অবস্থা:',
+                    'request-type'   => 'অনুরোধের ধরন:',
+                    'message'        => 'বার্তা:',
                 ],
             ],
 

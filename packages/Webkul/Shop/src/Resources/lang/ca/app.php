@@ -377,41 +377,50 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'Completat',
-                'date'                        => 'Data',
-                'declined'                    => 'Rebutjat',
-                'id'                          => 'Id',
-                'message'                     => 'Missatge',
-                'pending'                     => 'Pendent',
-                'processing'                  => 'Processant',
-                'status'                      => 'Estat',
+                'create-success'              => 'Request created successfully',
+                'revoked-successfully'        => 'Request revoked successfully',
                 'success-verify'              => 'Èxit! S\'ha enviat el correu electrònic de verificació.',
-                'success-verify-email-unsent' => 'Èxit! No s\'ha enviat el correu electrònic de verificació.',
-                'type'                        => 'Tipus',
+                'success-verify-email-unsent' => 'Èxit! El correu electrònic de verificació no s\'ha enviat.',
                 'unable-to-sent'              => 'No s\'ha pogut enviar el correu electrònic.',
 
                 'index'   => [
-                    'create-btn' => 'Crear Sol·licitud',
+                    'create-btn' => 'Crea sol·licitud',
                     'html'       => 'HTML',
                     'pdf'        => 'PDF',
-                    'title'      => 'Sol·licituds de Dades GDPR',
+                    'title'      => 'Sol·licituds de dades GDPR',
 
                     'modal' => [
                         'message' => 'Missatge',
-                        'save'    => 'Desar',
-                        'title'   => 'Crear Nova Sol·licitud',
+                        'save'    => 'Desa',
+                        'title'   => 'Crea una nova sol·licitud',
 
                         'type'    => [
                             'choose' => 'Tria',
-                            'delete' => 'Eliminar',
+                            'delete' => 'Elimina',
                             'title'  => 'Tipus',
-                            'update' => 'Actualitzar',
+                            'update' => 'Actualitza',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'Completed',
+                        'date'       => 'Date',
+                        'declined'   => 'Declined',
+                        'delete'     => 'Delete',
+                        'id'         => 'ID',
+                        'message'    => 'Message',
+                        'pending'    => 'Pending',
+                        'processing' => 'Processing',
+                        'revoke-btn' => 'Revoke',
+                        'revoked'    => 'Revoked',
+                        'status'     => 'Status',
+                        'type'       => 'Type',
+                        'update'     => 'Update',
                     ],
                 ],
 
                 'pdf' => [
-                    'title' => 'Vista de la botiga per defecte',
+                    'title' => 'Vista per defecte de la botiga',
 
                     'account-info' => [
                         'dob'          => 'Data de naixement',
@@ -435,13 +444,13 @@ return [
                         'phone'      => 'Telèfon',
                         'postcode'   => 'Codi postal',
                         'state'      => 'Estat',
-                        'title'      => 'Informació de l\'adreça',
-                        'vat-id'     => 'ID de l\'IVA',
+                        'title'      => 'Informació d\'adreça',
+                        'vat-id'     => 'ID d\'IVA',
                     ],
 
                     'order-info' => [
-                        'amount'       => 'Quantitat',
-                        'order-id'     => 'ID de la comanda',
+                        'amount'       => 'Import',
+                        'order-id'     => 'ID de comanda',
                         'product-name' => 'Nom del producte',
                         'qty'          => 'Quantitat',
                         'shipping'     => 'Enviament',
@@ -1179,26 +1188,24 @@ return [
             ],
 
             'gdpr' => [
-                'new-delete-request' => 'Nova sol·licitud per eliminar dades',
-                'new-update-request' => 'Nova sol·licitud per actualitzar dades',
+                'new-delete-request' => 'New Request For Data Delete',
+                'new-update-request' => 'New Request For Data Update',
 
                 'new-request' => [
-                    'message'        => 'Missatge : ',
-                    'request-status' => 'Estat de la sol·licitud : ',
-                    'request-type'   => 'Tipus de sol·licitud : ',
-                    'summary'        => 'Resum de la sol·licitud',
+                    'delete-summary' => 'Zusammenfassung der Löschanforderung',
+                    'message'        => 'Message : ',
+                    'request-status' => 'Request Status : ',
+                    'request-type'   => 'Request Type : ',
+                    'summary'        => 'Summary of Request',
+                    'update-summary' => 'Zusammenfassung der Aktualisierungsanforderung',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'Missatge : ',
-                    'request-status' => 'Estat de la sol·licitud : ',
-                    'request-type'   => 'Tipus de sol·licitud : ',
-                    'summary'        => 'Resum de la sol·licitud d\'eliminació',
-                ],
-
-                'update-request' => [
-                    'message'        => 'Missatge : ',
-                    'request-status' => 'Estat de la sol·licitud : ',
+                'status-update' => [
+                    'subject'        => 'Your GDPR Request Has Been Updated',
+                    'summary'        => 'Your GDPR Request Status has been Updated',
+                    'request-status' => 'Request Status:',
+                    'request-type'   => 'Request Type:',
+                    'message'        => 'Message:',
                 ],
             ],
 

@@ -1986,20 +1986,22 @@ return [
                     'message'       => 'Wiadomość',
                     'pending'       => 'Oczekujące',
                     'processing'    => 'Przetwarzanie',
+                    'revoked'       => 'Cofnięty',
                     'status'        => 'Status',
                     'type'          => 'Typ',
                 ],
 
                 'modal' => [
-                    'completed'  => 'Zakończone',
-                    'declined'   => 'Odrzucone',
-                    'pending'    => 'Oczekujące',
-                    'processing' => 'Przetwarzanie',
-                    'status'     => 'Status',
-                    'title'      => 'Edytuj żądanie danych GDPR',
-                    'type'       => 'Typ',
-                    'message'    => 'Wiadomość',
-                    'save-btn'   => 'Zapisz',
+                    'completed'     => 'Zakończone',
+                    'declined'      => 'Odrzucone',
+                    'message'       => 'Wiadomość',
+                    'pending'       => 'Oczekujące',
+                    'processing'    => 'Przetwarzanie',
+                    'revoked'       => 'Cofnięty',
+                    'save-btn'      => 'Zapisz',
+                    'status'        => 'Status',
+                    'title'         => 'Edytuj żądanie danych GDPR',
+                    'type'          => 'Typ',
                 ],
 
                 'update-success'              => 'Żądanie danych zostało pomyślnie zaktualizowane i wysłano e-mail do klienta.',
@@ -3852,130 +3854,49 @@ return [
                         'max-url-per-file' => 'Maksymalna liczba URL na plik',
                         'title'            => 'Limity plików',
                     ],
-
-                    'store-url' => [
-                        'info'  => 'Ustaw opcje częstotliwości i priorytetu dla adresu URL sklepu.',
-
-                        'frequency' => [
-                            'title' => 'Częstotliwość',
-
-                            'options' => [
-                                'always'  => 'Zawsze',
-                                'daily'   => 'Codziennie',
-                                'hourly'  => 'Co godzinę',
-                                'monthly' => 'Miesięcznie',
-                                'never'   => 'Nigdy',
-                                'weekly'  => 'Cotygodniowo',
-                                'yearly'  => 'Co roku',
-                            ],
-                        ],
-
-                        'title'    => 'Adres URL sklepu',
-                        'priority' => 'Priorytet',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'Ustaw opcje częstotliwości i priorytetu dla kategorii.',
-
-                        'frequency' => [
-                            'title' => 'Częstotliwość',
-
-                            'options' => [
-                                'always'  => 'Zawsze',
-                                'daily'   => 'Codziennie',
-                                'hourly'  => 'Co godzinę',
-                                'monthly' => 'Miesięcznie',
-                                'never'   => 'Nigdy',
-                                'weekly'  => 'Cotygodniowo',
-                                'yearly'  => 'Co roku',
-                            ],
-                        ],
-
-                        'title'    => 'Kategorie',
-                        'priority' => 'Priorytet',
-                    ],
-
-                    'products' => [
-                        'info'  => 'Ustaw opcje częstotliwości i priorytetu dla produktów.',
-
-                        'frequency' => [
-                            'title' => 'Częstotliwość',
-
-                            'options' => [
-                                'always'  => 'Zawsze',
-                                'daily'   => 'Codziennie',
-                                'hourly'  => 'Co godzinę',
-                                'monthly' => 'Miesięcznie',
-                                'never'   => 'Nigdy',
-                                'weekly'  => 'Cotygodniowo',
-                                'yearly'  => 'Co roku',
-                            ],
-                        ],
-
-                        'title'    => 'Produkty',
-                        'priority' => 'Priorytet',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'Ustaw opcje częstotliwości i priorytetu dla stron CMS.',
-
-                        'frequency' => [
-                            'title' => 'Częstotliwość',
-
-                            'options' => [
-                                'always'  => 'Zawsze',
-                                'daily'   => 'Codziennie',
-                                'hourly'  => 'Co godzinę',
-                                'monthly' => 'Miesięcznie',
-                                'never'   => 'Nigdy',
-                                'weekly'  => 'Cotygodniowo',
-                                'yearly'  => 'Co roku',
-                            ],
-                        ],
-
-                        'title'    => 'Strony CMS',
-                        'priority' => 'Priorytet',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'GDPR',
-                'info'  => 'GDPR',
+                'info'  => 'Ustawienia zgodności z GDPR',
 
                 'settings' => [
-                    'title'   => 'Ustawienia GDPR',
-                    'info'    => 'Ustawienia GDPR',
-                    'enabled' => 'Włączone',
+                    'title'   => 'Ustawienia zgodności z GDPR',
+                    'info'    => 'Zarządzaj ustawieniami zgodności z GDPR, w tym polityką prywatności. Włącz lub wyłącz funkcje GDPR w razie potrzeby.',
+                    'enabled' => 'Włącz GDPR',
                 ],
 
                 'agreement' => [
                     'title'          => 'Zgoda GDPR',
-                    'info'           => 'Zgoda GDPR',
+                    'info'           => 'Zarządzaj zgodą klientów zgodnie z przepisami GDPR. Włącz obowiązkową zgodę na zbieranie i przetwarzanie danych.',
                     'enable'         => 'Włącz zgodę klienta',
-                    'checkbox-label' => 'Etykieta pola wyboru zgody',
+                    'checkbox-label' => 'Etykieta pola zgody',
                     'content'        => 'Treść zgody',
                 ],
 
                 'cookie' => [
-                    'title'        => 'Ustawienia komunikatu o plikach cookie',
-                    'info'         => 'Ustawienia komunikatu o plikach cookie',
-                    'enable'       => 'Włącz powiadomienie o plikach cookie',
-                    'position'     => 'Pozycja wyświetlania bloku plików cookie',
-                    'bottom-left'  => 'Dół lewo',
-                    'bottom-right' => 'Dół prawo',
-                    'identifier'   => 'Identyfikator bloku statycznego',
+                    'bottom-left'  => 'Lewy dolny róg',
+                    'bottom-right' => 'Prawy dolny róg',
+                    'center'       => 'Centrum',
                     'description'  => 'Opis',
+                    'enable'       => 'Włącz powiadomienie o plikach cookie',
+                    'identifier'   => 'ID bloku statycznego',
+                    'info'         => 'Skonfiguruj ustawienia zgody na pliki cookie, aby informować użytkowników o zbieraniu danych i zgodności z polityką prywatności.',
+                    'position'     => 'Pozycja bloku cookie',
+                    'title'        => 'Ustawienia powiadomień o plikach cookie',
+                    'top-left'     => 'Lewy górny róg',
+                    'top-right'    => 'Prawy górny róg',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => 'Twoje preferencje dotyczące zgody na pliki cookie',
-                    'info'                   => 'Twoje preferencje dotyczące zgody na pliki cookie',
+                    'title'                  => 'Zarządzaj ustawieniami plików cookie',
+                    'info'                   => 'Wybierz preferowane ustawienia plików cookie, aby zarządzać wykorzystaniem danych. Skonfiguruj zgody na różne rodzaje plików cookie.',
                     'strictly-necessary'     => 'Ściśle niezbędne',
-                    'basic-interaction'      => 'Podstawowe interakcje i funkcjonalności',
-                    'experience-enhancement' => 'Ulepszenia doświadczenia',
+                    'basic-interaction'      => 'Podstawowa interakcja i funkcjonalność',
+                    'experience-enhancement' => 'Poprawa doświadczenia',
                     'measurement'            => 'Pomiar',
-                    'targeting-advertising'  => 'Targetowanie i reklama',
+                    'targeting-advertising'  => 'Targetowanie i reklamy',
                 ],
             ],
 
@@ -4956,10 +4877,29 @@ return [
                 'greeting'    => 'Serdecznie witamy nowego klienta, :customer_name, który właśnie się u nas zarejestrował!',
                 'subject'     => 'Rejestracja nowego klienta',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'Status twojego żądania GDPR',
+            'gdpr' => [
+                'new-delete-request' => 'Nowe żądanie usunięcia danych',
+                'new-update-request' => 'Nowe żądanie aktualizacji danych',
+
+                'new-request' => [
+                    'customer-name'  => 'Nazwa klienta : ',
+                    'delete-summary' => 'Podsumowanie żądania usunięcia',
+                    'message'        => 'Wiadomość : ',
+                    'request-status' => 'Status żądania : ',
+                    'request-type'   => 'Typ żądania : ',
+                    'summary'        => 'Podsumowanie żądania',
+                    'update-summary' => 'Podsumowanie żądania aktualizacji',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'Żądanie GDPR zostało zaktualizowane',
+                    'summary'        => 'Status żądania GDPR został zaktualizowany',
+                    'request-status' => 'Status żądania:',
+                    'request-type'   => 'Typ żądania:',
+                    'message'        => 'Wiadomość:',
+                ],
+            ],
         ],
 
         'orders' => [

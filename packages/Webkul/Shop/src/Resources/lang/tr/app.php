@@ -377,17 +377,10 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'Tamamlandı',
-                'date'                        => 'Tarih',
-                'declined'                    => 'Reddedildi',
-                'id'                          => 'Id',
-                'message'                     => 'Mesaj',
-                'pending'                     => 'Beklemede',
-                'processing'                  => 'İşleniyor',
-                'status'                      => 'Durum',
+                'create-success'              => 'Talep başarıyla oluşturuldu',
+                'revoked-successfully'        => 'Talep başarıyla iptal edildi',
                 'success-verify'              => 'Başarılı! Doğrulama e-postası gönderildi.',
-                'success-verify-email-unsent' => 'Başarılı! Doğrulama e-postası gönderilemedi.',
-                'type'                        => 'Tür',
+                'success-verify-email-unsent' => 'Başarılı! Doğrulama e-postası gönderilmedi.',
                 'unable-to-sent'              => 'E-posta gönderilemedi.',
 
                 'index'   => [
@@ -402,11 +395,27 @@ return [
                         'title'   => 'Yeni Talep Oluştur',
 
                         'type'    => [
-                            'choose' => 'Seç',
+                            'choose' => 'Seçiniz',
                             'delete' => 'Sil',
                             'title'  => 'Tür',
                             'update' => 'Güncelle',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'Tamamlandı',
+                        'date'       => 'Tarih',
+                        'declined'   => 'Reddedildi',
+                        'delete'     => 'Sil',
+                        'id'         => 'ID',
+                        'message'    => 'Mesaj',
+                        'pending'    => 'Beklemede',
+                        'processing' => 'İşleniyor',
+                        'revoke-btn' => 'İptal Et',
+                        'revoked'    => 'İptal Edildi',
+                        'status'     => 'Durum',
+                        'type'       => 'Tür',
+                        'update'     => 'Güncelle',
                     ],
                 ],
 
@@ -418,7 +427,7 @@ return [
                         'email'        => 'E-posta',
                         'first-name'   => 'Ad',
                         'gender'       => 'Cinsiyet',
-                        'last-name'    => 'Soyadı',
+                        'last-name'    => 'Soyad',
                         'phone'        => 'Telefon',
                         'title'        => 'Hesap Bilgileri',
                     ],
@@ -431,19 +440,19 @@ return [
                         'company'    => 'Şirket',
                         'country'    => 'Ülke',
                         'first-name' => 'Ad',
-                        'last-name'  => 'Soyadı',
+                        'last-name'  => 'Soyad',
                         'phone'      => 'Telefon',
                         'postcode'   => 'Posta Kodu',
                         'state'      => 'Eyalet',
                         'title'      => 'Adres Bilgileri',
-                        'vat-id'     => 'KDV Numarası',
+                        'vat-id'     => 'KDV Kimlik No',
                     ],
 
                     'order-info' => [
                         'amount'       => 'Tutar',
                         'order-id'     => 'Sipariş ID',
                         'product-name' => 'Ürün Adı',
-                        'qty'          => 'Miktar',
+                        'qty'          => 'Adet',
                         'shipping'     => 'Kargo',
                         'sku'          => 'SKU',
                         'status'       => 'Durum',
@@ -1179,26 +1188,24 @@ return [
             ],
 
             'gdpr' => [
-                'new-delete-request' => 'Yeni Veri Silme Talebi',
-                'new-update-request' => 'Yeni Veri Güncelleme Talebi',
+                'new-delete-request' => 'Veri Silme için Yeni Talep',
+                'new-update-request' => 'Veri Güncelleme için Yeni Talep',
 
                 'new-request' => [
+                    'delete-summary' => 'Silme isteğinin özeti',
                     'message'        => 'Mesaj : ',
                     'request-status' => 'Talep Durumu : ',
                     'request-type'   => 'Talep Türü : ',
                     'summary'        => 'Talep Özeti',
+                    'update-summary' => 'Güncelleme isteğinin özeti',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'Mesaj : ',
-                    'request-status' => 'Talep Durumu : ',
-                    'request-type'   => 'Talep Türü : ',
-                    'summary'        => 'Silme Talebi Özeti',
-                ],
-
-                'update-request' => [
-                    'message'        => 'Mesaj : ',
-                    'request-status' => 'Talep Durumu : ',
+                'status-update' => [
+                    'subject'        => 'GDPR Talebiniz Güncellendi',
+                    'summary'        => 'GDPR Talebinizin Durumu Güncellendi',
+                    'request-status' => 'Talep Durumu:',
+                    'request-type'   => 'Talep Türü:',
+                    'message'        => 'Mesaj:',
                 ],
             ],
 

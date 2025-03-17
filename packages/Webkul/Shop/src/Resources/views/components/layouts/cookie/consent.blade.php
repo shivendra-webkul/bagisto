@@ -125,7 +125,7 @@
                                     class="cursor-pointer select-none max-sm:text-sm"
                                     for="strictly_necessary"
                                 >
-                                    {{ core()->getConfigData('general.gdpr.cookie_consent.strictly_necessary') }}
+                                    {!! core()->getConfigData('general.gdpr.cookie_consent.strictly_necessary') !!}
                                 </label>
                             </div>
                         </x-shop::form.control-group> 
@@ -155,7 +155,7 @@
                                         class="cursor-pointer select-none max-sm:text-sm"
                                         for="{{ $key }}"
                                     >
-                                        {{ core()->getConfigData('general.gdpr.cookie_consent.' . $key) }}
+                                        {!! core()->getConfigData('general.gdpr.cookie_consent.' . $key) !!}
                                     </label>
                                 </div>
                             </x-shop::form.control-group>
@@ -213,7 +213,7 @@
                             this.setCookie(id, isChecked, 365 * 20);
                         });
 
-                        window.location.reload();
+                        window.location.href = '{{ route('shop.home.index') }}';
                     },
 
                     setCookie(name, value, expirationInDays) {

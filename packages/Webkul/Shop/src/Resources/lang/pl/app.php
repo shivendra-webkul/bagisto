@@ -377,24 +377,17 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'Zakończone',
-                'date'                        => 'Data',
-                'declined'                    => 'Odrzucone',
-                'id'                          => 'Identyfikator',
-                'message'                     => 'Wiadomość',
-                'pending'                     => 'Oczekujące',
-                'processing'                  => 'Przetwarzanie',
-                'status'                      => 'Status',
+                'create-success'              => 'Żądanie zostało pomyślnie utworzone',
+                'revoked-successfully'        => 'Żądanie zostało pomyślnie cofnięte',
                 'success-verify'              => 'Sukces! E-mail weryfikacyjny został wysłany.',
                 'success-verify-email-unsent' => 'Sukces! E-mail weryfikacyjny nie został wysłany.',
-                'type'                        => 'Typ',
                 'unable-to-sent'              => 'Nie można wysłać e-maila.',
 
                 'index'   => [
                     'create-btn' => 'Utwórz żądanie',
                     'html'       => 'HTML',
                     'pdf'        => 'PDF',
-                    'title'      => 'Żądania danych GDPR',
+                    'title'      => 'Wnioski o dane RODO',
 
                     'modal' => [
                         'message' => 'Wiadomość',
@@ -407,6 +400,22 @@ return [
                             'title'  => 'Typ',
                             'update' => 'Aktualizuj',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'Zakończone',
+                        'date'       => 'Data',
+                        'declined'   => 'Odrzucone',
+                        'delete'     => 'Usuń',
+                        'id'         => 'ID',
+                        'message'    => 'Wiadomość',
+                        'pending'    => 'Oczekujące',
+                        'processing' => 'Przetwarzanie',
+                        'revoke-btn' => 'Odwołaj',
+                        'revoked'    => 'Cofnięty',
+                        'status'     => 'Status',
+                        'type'       => 'Typ',
+                        'update'     => 'Aktualizuj',
                     ],
                 ],
 
@@ -436,12 +445,12 @@ return [
                         'postcode'   => 'Kod pocztowy',
                         'state'      => 'Województwo',
                         'title'      => 'Informacje adresowe',
-                        'vat-id'     => 'Numer VAT',
+                        'vat-id'     => 'NIP',
                     ],
 
                     'order-info' => [
                         'amount'       => 'Kwota',
-                        'order-id'     => 'Identyfikator zamówienia',
+                        'order-id'     => 'ID zamówienia',
                         'product-name' => 'Nazwa produktu',
                         'qty'          => 'Ilość',
                         'shipping'     => 'Wysyłka',
@@ -1183,22 +1192,20 @@ return [
                 'new-update-request' => 'Nowe żądanie aktualizacji danych',
 
                 'new-request' => [
+                    'delete-summary' => 'Podsumowanie żądania usunięcia',
                     'message'        => 'Wiadomość : ',
                     'request-status' => 'Status żądania : ',
                     'request-type'   => 'Typ żądania : ',
                     'summary'        => 'Podsumowanie żądania',
+                    'update-summary' => 'Podsumowanie żądania aktualizacji',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'Wiadomość : ',
-                    'request-status' => 'Status żądania : ',
-                    'request-type'   => 'Typ żądania : ',
-                    'summary'        => 'Podsumowanie żądania usunięcia',
-                ],
-
-                'update-request' => [
-                    'message'        => 'Wiadomość : ',
-                    'request-status' => 'Status żądania : ',
+                'status-update' => [
+                    'subject'        => 'Twój wniosek GDPR został zaktualizowany',
+                    'summary'        => 'Status twojego wniosku GDPR został zaktualizowany',
+                    'request-status' => 'Status żądania:',
+                    'request-type'   => 'Typ żądania:',
+                    'message'        => 'Wiadomość:',
                 ],
             ],
 

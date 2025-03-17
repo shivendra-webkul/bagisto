@@ -7,6 +7,8 @@
         <p class="py-3 text-xl font-bold text-gray-800 dark:text-white">
             @lang('admin::app.customers.gdpr.index.title')
         </p>
+
+        <x-admin::datagrid.export src="{{ route('admin.customers.gdpr.index') }}" />
     </div>
 
     {!! view_render_event('bagisto.admin.customers.gdpr.list.before') !!}
@@ -142,6 +144,10 @@
 
                                         <option value="completed">
                                             @lang('admin::app.customers.gdpr.index.modal.completed')
+                                        </option>
+
+                                        <option value="revoked">
+                                            @lang('admin::app.customers.gdpr.index.modal.revoked')
                                         </option>
                                     </x-admin::form.control-group.control>
 

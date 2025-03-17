@@ -424,190 +424,6 @@ return [
             ],
         ],
     ], [
-        'key'    => 'general.sitemap.store_url',
-        'name'   => 'admin::app.configuration.index.general.sitemap.store-url.title',
-        'info'   => 'admin::app.configuration.index.general.sitemap.store-url.info',
-        'sort'   => 1,
-        'fields' => [
-            [
-                'name'          => 'frequency',
-                'title'         => 'admin::app.configuration.index.general.sitemap.store-url.frequency.title',
-                'type'          => 'select',
-                'options'       => [
-                    [
-                        'title' => 'admin::app.configuration.index.general.sitemap.store-url.frequency.options.never',
-                        'value' => 'never',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.store-url.frequency.options.yearly',
-                        'value' => 'yearly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.store-url.frequency.options.monthly',
-                        'value' => 'monthly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.store-url.frequency.options.weekly',
-                        'value' => 'weekly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.store-url.frequency.options.daily',
-                        'value' => 'daily',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.store-url.frequency.options.hourly',
-                        'value' => 'hourly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.store-url.frequency.options.always',
-                        'value' => 'always',
-                    ],
-                ],
-                'default'       => 'daily',
-                'channel_based' => true,
-            ],
-            [
-                'name'          => 'priority',
-                'title'         => 'admin::app.configuration.index.general.sitemap.store-url.priority',
-                'type'          => 'text',
-                'validation'    => 'decimal:1|min:0|max:1',
-                'default'       => '0.8',
-                'channel_based' => true,
-            ],
-        ],
-    ], [
-        'key'    => 'general.sitemap.categories',
-        'name'   => 'admin::app.configuration.index.general.sitemap.categories.title',
-        'info'   => 'admin::app.configuration.index.general.sitemap.categories.info',
-        'sort'   => 1,
-        'fields' => [
-            [
-                'name'          => 'frequency',
-                'title'         => 'admin::app.configuration.index.general.sitemap.categories.frequency.title',
-                'type'          => 'select',
-                'options'       => [
-                    [
-                        'title' => 'admin::app.configuration.index.general.sitemap.categories.frequency.options.never',
-                        'value' => 'never',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.categories.frequency.options.yearly',
-                        'value' => 'yearly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.categories.frequency.options.monthly',
-                        'value' => 'monthly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.categories.frequency.options.weekly',
-                        'value' => 'weekly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.categories.frequency.options.daily',
-                        'value' => 'daily',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.categories.frequency.options.hourly',
-                        'value' => 'hourly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.categories.frequency.options.always',
-                        'value' => 'always',
-                    ],
-                ],
-                'default'       => 'daily',
-                'channel_based' => true,
-            ],
-            [
-                'name'          => 'priority',
-                'title'         => 'admin::app.configuration.index.general.sitemap.categories.priority',
-                'type'          => 'text',
-                'validation'    => 'decimal:1|min:0|max:1',
-                'default'       => '0.8',
-                'channel_based' => true,
-            ],
-        ],
-    ], [
-        'key'    => 'general.sitemap.products',
-        'name'   => 'admin::app.configuration.index.general.sitemap.products.title',
-        'info'   => 'admin::app.configuration.index.general.sitemap.products.info',
-        'sort'   => 1,
-        'fields' => [
-            [
-                'name'          => 'frequency',
-                'title'         => 'admin::app.configuration.index.general.sitemap.products.frequency.title',
-                'type'          => 'select',
-                'options'       => [
-                    [
-                        'title' => 'admin::app.configuration.index.general.sitemap.products.frequency.options.never',
-                        'value' => 'never',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.products.frequency.options.yearly',
-                        'value' => 'yearly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.products.frequency.options.monthly',
-                        'value' => 'monthly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.products.frequency.options.weekly',
-                        'value' => 'weekly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.products.frequency.options.daily',
-                        'value' => 'daily',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.products.frequency.options.hourly',
-                        'value' => 'hourly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.products.frequency.options.always',
-                        'value' => 'always',
-                    ],
-                ],
-                'default'       => 'daily',
-                'channel_based' => true,
-            ],
-            [
-                'name'          => 'priority',
-                'title'         => 'admin::app.configuration.index.general.sitemap.products.priority',
-                'type'          => 'text',
-                'validation'    => 'decimal:1|min:0|max:1',
-                'default'       => '0.8',
-                'channel_based' => true,
-            ],
-        ],
-    ], [
-        'key'    => 'general.sitemap.cms',
-        'name'   => 'admin::app.configuration.index.general.sitemap.cms.title',
-        'info'   => 'admin::app.configuration.index.general.sitemap.cms.info',
-        'sort'   => 1,
-        'fields' => [
-            [
-                'name'          => 'frequency',
-                'title'         => 'admin::app.configuration.index.general.sitemap.cms.frequency.title',
-                'type'          => 'select',
-                'options'       => [
-                    [
-                        'title' => 'admin::app.configuration.index.general.sitemap.cms.frequency.options.never',
-                        'value' => 'never',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.cms.frequency.options.yearly',
-                        'value' => 'yearly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.cms.frequency.options.monthly',
-                        'value' => 'monthly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.cms.frequency.options.weekly',
-                        'value' => 'weekly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.cms.frequency.options.daily',
-                        'value' => 'daily',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.cms.frequency.options.hourly',
-                        'value' => 'hourly',
-                    ], [
-                        'title' => 'admin::app.configuration.index.general.sitemap.cms.frequency.options.always',
-                        'value' => 'always',
-                    ],
-                ],
-                'default'       => 'daily',
-                'channel_based' => true,
-            ],
-            [
-                'name'          => 'priority',
-                'title'         => 'admin::app.configuration.index.general.sitemap.cms.priority',
-                'type'          => 'text',
-                'validation'    => 'decimal:1|min:0|max:1',
-                'default'       => '0.8',
-                'channel_based' => true,
-            ],
-        ],
-    ], [
         'key'  => 'general.gdpr',
         'name' => 'admin::app.configuration.index.general.gdpr.title',
         'info' => 'admin::app.configuration.index.general.gdpr.info',
@@ -623,7 +439,8 @@ return [
                 'name'          => 'enabled',
                 'title'         => 'admin::app.configuration.index.general.gdpr.settings.enabled',
                 'type'          => 'boolean',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ],
         ],
     ], [
@@ -636,7 +453,8 @@ return [
                 'name'          => 'enabled',
                 'title'         => 'admin::app.configuration.index.general.gdpr.agreement.enable',
                 'type'          => 'boolean',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ], [
                 'name'          => 'agreement_label',
                 'title'         => 'admin::app.configuration.index.general.gdpr.agreement.checkbox-label',
@@ -644,13 +462,15 @@ return [
                 'default'       => 'I agree with the terms and conditions.',
                 'validation'    => 'max:255',
                 'depends'       => 'enabled:true',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ], [
                 'name'          => 'agreement_content',
                 'title'         => 'admin::app.configuration.index.general.gdpr.agreement.content',
                 'type'          => 'editor',
                 'depends'       => 'enabled:true',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ],
         ],
     ], [
@@ -663,23 +483,34 @@ return [
                 'name'          => 'enabled',
                 'title'         => 'admin::app.configuration.index.general.gdpr.cookie.enable',
                 'type'          => 'boolean',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ], [
                 'name'          => 'position',
                 'title'         => 'admin::app.configuration.index.general.gdpr.cookie.position',
                 'type'          => 'select',
-                'default'       => 'bottom_left',
+                'default'       => 'bottom-left',
                 'depends'       => 'enabled:true',
                 'options'       => [
                     [
                         'title' => 'admin::app.configuration.index.general.gdpr.cookie.bottom-left',
-                        'value' => 'bottom_left',
+                        'value' => 'bottom-left',
                     ], [
                         'title' => 'admin::app.configuration.index.general.gdpr.cookie.bottom-right',
-                        'value' => 'bottom_right',
+                        'value' => 'bottom-right',
+                    ], [
+                        'title' => 'admin::app.configuration.index.general.gdpr.cookie.top-left',
+                        'value' => 'top-left',
+                    ], [
+                        'title' => 'admin::app.configuration.index.general.gdpr.cookie.top-right',
+                        'value' => 'top-right',
+                    ], [
+                        'title' => 'admin::app.configuration.index.general.gdpr.cookie.center',
+                        'value' => 'center',
                     ],
                 ],
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ], [
                 'name'          => 'static_block_identifier',
                 'title'         => 'admin::app.configuration.index.general.gdpr.cookie.identifier',
@@ -687,7 +518,8 @@ return [
                 'default'       => 'Cookie Block',
                 'validation'    => 'max:255',
                 'depends'       => 'enabled:true',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ], [
                 'name'          => 'description',
                 'title'         => 'admin::app.configuration.index.general.gdpr.cookie.description',
@@ -695,7 +527,8 @@ return [
                 'default'       => 'This website uses cookies to ensure you get the best experience on our website.',
                 'validation'    => 'max:500',
                 'depends'       => 'enabled:true',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ],
         ],
     ], [
@@ -709,31 +542,36 @@ return [
                 'title'         => 'admin::app.configuration.index.general.gdpr.cookie-consent.strictly-necessary',
                 'type'          => 'editor',
                 'default'       => 'I agree with the terms and conditions.',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ], [
                 'name'          => 'basic_interaction',
                 'title'         => 'admin::app.configuration.index.general.gdpr.cookie-consent.basic-interaction',
                 'type'          => 'editor',
                 'default'       => 'These trackers enable basic interactions and functionalities that allow you to access selected features of our service and facilitate your communication with us.',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ], [
                 'name'          => 'experience_enhancement',
                 'title'         => 'admin::app.configuration.index.general.gdpr.cookie-consent.experience-enhancement',
                 'type'          => 'editor',
                 'default'       => 'These trackers help us to provide a personalized user experience by improving the quality of your preference management options, and by enabling the interaction with external networks and platforms.',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ], [
                 'name'          => 'measurements',
                 'title'         => 'admin::app.configuration.index.general.gdpr.cookie-consent.measurement',
                 'type'          => 'editor',
                 'default'       => 'These trackers help us to measure traffic and analyze your behavior with the goal of improving our service.',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ], [
                 'name'          => 'targeting_advertising',
                 'title'         => 'admin::app.configuration.index.general.gdpr.cookie-consent.targeting-advertising',
                 'type'          => 'editor',
                 'default'       => 'These trackers help us to deliver personalized marketing content to you based on your behavior and to operate, serve and track ads.',
-                'channel_based' => false,
+                'channel_based' => true,
+                'locale_based'  => true,
             ],
         ],
     ],
@@ -1368,11 +1206,11 @@ return [
         'sort'   => 5,
         'fields' => [
             [
-                'name'         => 'subscription',
-                'title'        => 'admin::app.configuration.index.customer.settings.newsletter.subscription',
-                'info'         => 'Enable subscription option for users in the footer section.',
-                'type'         => 'boolean',
-                'default'      => 1,
+                'name'    => 'subscription',
+                'title'   => 'admin::app.configuration.index.customer.settings.newsletter.subscription',
+                'info'    => 'Enable subscription option for users in the footer section.',
+                'type'    => 'boolean',
+                'default' => 1,
             ],
         ],
     ], [
@@ -2064,6 +1902,7 @@ return [
                 'validation'    => 'required_if:active,1',
                 'channel_based' => true,
                 'locale_based'  => false,
+                'default'       => 'CLIENT_SECRET',
             ], [
                 'name'          => 'accepted_currencies',
                 'title'         => 'admin::app.configuration.index.sales.payment-methods.accepted-currencies',
@@ -2073,6 +1912,7 @@ return [
                 'validation'    => 'required_if:active,1',
                 'channel_based' => true,
                 'locale_based'  => false,
+                'default'       => 'USD',
             ], [
                 'name'          => 'active',
                 'title'         => 'admin::app.configuration.index.sales.payment-methods.status',

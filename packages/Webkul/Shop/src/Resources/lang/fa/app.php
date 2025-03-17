@@ -377,17 +377,10 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'تکمیل شده',
-                'date'                        => 'تاریخ',
-                'declined'                    => 'رد شده',
-                'id'                          => 'شناسه',
-                'message'                     => 'پیام',
-                'pending'                     => 'در انتظار',
-                'processing'                  => 'در حال پردازش',
-                'status'                      => 'وضعیت',
+                'create-success'              => 'درخواست با موفقیت ایجاد شد',
+                'revoked-successfully'        => 'درخواست با موفقیت لغو شد',
                 'success-verify'              => 'موفقیت! ایمیل تأیید ارسال شد.',
-                'success-verify-email-unsent' => 'موفقیت! ایمیل تأیید ارسال نشد.',
-                'type'                        => 'نوع',
+                'success-verify-email-unsent' => 'موفقیت! ایمیل تأیید ارسال نشده است.',
                 'unable-to-sent'              => 'امکان ارسال ایمیل وجود ندارد.',
 
                 'index'   => [
@@ -408,10 +401,26 @@ return [
                             'update' => 'به‌روزرسانی',
                         ],
                     ],
+
+                    'datagrid' => [
+                        'completed'  => 'تکمیل شده',
+                        'date'       => 'تاریخ',
+                        'declined'   => 'رد شده',
+                        'delete'     => 'حذف',
+                        'id'         => 'شناسه',
+                        'message'    => 'پیام',
+                        'pending'    => 'در انتظار',
+                        'processing' => 'در حال پردازش',
+                        'revoke-btn' => 'ابطال',
+                        'revoked'    => 'ابطال شده',
+                        'status'     => 'وضعیت',
+                        'type'       => 'نوع',
+                        'update'     => 'به‌روزرسانی',
+                    ],
                 ],
 
                 'pdf' => [
-                    'title' => 'نمای پیش‌فرض فروشگاه',
+                    'title' => 'نمای فروشگاه پیش‌فرض',
 
                     'account-info' => [
                         'dob'          => 'تاریخ تولد',
@@ -425,8 +434,8 @@ return [
 
                     'address-info' => [
                         'address'    => 'آدرس',
-                        'address1'   => 'آدرس 1',
-                        'address2'   => 'آدرس 2',
+                        'address1'   => 'آدرس ۱',
+                        'address2'   => 'آدرس ۲',
                         'city'       => 'شهر',
                         'company'    => 'شرکت',
                         'country'    => 'کشور',
@@ -436,7 +445,7 @@ return [
                         'postcode'   => 'کد پستی',
                         'state'      => 'استان',
                         'title'      => 'اطلاعات آدرس',
-                        'vat-id'     => 'شناسه مالیاتی',
+                        'vat-id'     => 'شناسه مالیات بر ارزش افزوده',
                     ],
 
                     'order-info' => [
@@ -1180,26 +1189,24 @@ return [
             ],
 
             'gdpr' => [
-                'new-delete-request' => 'درخواست جدید برای حذف داده‌ها',
-                'new-update-request' => 'درخواست جدید برای به‌روزرسانی داده‌ها',
+                'new-delete-request' => 'درخواست جدید برای حذف داده',
+                'new-update-request' => 'درخواست جدید برای به‌روزرسانی داده',
 
                 'new-request' => [
+                    'delete-summary' => 'خلاصه درخواست حذف',
                     'message'        => 'پیام : ',
                     'request-status' => 'وضعیت درخواست : ',
                     'request-type'   => 'نوع درخواست : ',
                     'summary'        => 'خلاصه درخواست',
+                    'update-summary' => 'خلاصه درخواست به‌روزرسانی',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'پیام : ',
-                    'request-status' => 'وضعیت درخواست : ',
-                    'request-type'   => 'نوع درخواست : ',
-                    'summary'        => 'خلاصه درخواست حذف',
-                ],
-
-                'update-request' => [
-                    'message'        => 'پیام : ',
-                    'request-status' => 'وضعیت درخواست : ',
+                'status-update' => [
+                    'subject'        => 'درخواست GDPR شما به‌روزرسانی شد',
+                    'summary'        => 'وضعیت درخواست GDPR شما به‌روزرسانی شد',
+                    'request-status' => 'وضعیت درخواست:',
+                    'request-type'   => 'نوع درخواست:',
+                    'message'        => 'پیام:',
                 ],
             ],
 

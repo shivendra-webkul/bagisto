@@ -385,9 +385,10 @@ return [
                 'pending'                     => 'En attente',
                 'processing'                  => 'En cours de traitement',
                 'status'                      => 'Statut',
+                'create-success'              => 'Demande créée avec succès',
+                'revoked-successfully'        => 'Demande révoquée avec succès',
                 'success-verify'              => 'Succès ! L\'e-mail de vérification a été envoyé.',
                 'success-verify-email-unsent' => 'Succès ! L\'e-mail de vérification n\'a pas été envoyé.',
-                'type'                        => 'Type',
                 'unable-to-sent'              => 'Impossible d\'envoyer l\'e-mail.',
 
                 'index'   => [
@@ -408,10 +409,26 @@ return [
                             'update' => 'Mettre à jour',
                         ],
                     ],
+
+                    'datagrid' => [
+                        'completed'  => 'Terminé',
+                        'date'       => 'Date',
+                        'declined'   => 'Refusé',
+                        'delete'     => 'Supprimer',
+                        'id'         => 'ID',
+                        'message'    => 'Message',
+                        'pending'    => 'En attente',
+                        'processing' => 'En traitement',
+                        'revoke-btn' => 'Révoquer',
+                        'revoked'    => 'Révoqué',
+                        'status'     => 'Statut',
+                        'type'       => 'Type',
+                        'update'     => 'Mettre à jour',
+                    ],
                 ],
 
                 'pdf' => [
-                    'title' => 'Vue de la boutique par défaut',
+                    'title' => 'Vue par défaut du magasin',
 
                     'account-info' => [
                         'dob'          => 'Date de naissance',
@@ -420,7 +437,7 @@ return [
                         'gender'       => 'Genre',
                         'last-name'    => 'Nom de famille',
                         'phone'        => 'Téléphone',
-                        'title'        => 'Informations sur le compte',
+                        'title'        => 'Informations du compte',
                     ],
 
                     'address-info' => [
@@ -435,8 +452,8 @@ return [
                         'phone'      => 'Téléphone',
                         'postcode'   => 'Code postal',
                         'state'      => 'État',
-                        'title'      => 'Informations sur l\'adresse',
-                        'vat-id'     => 'Numéro de TVA',
+                        'title'      => 'Informations de l\'adresse',
+                        'vat-id'     => 'ID TVA',
                     ],
 
                     'order-info' => [
@@ -444,10 +461,10 @@ return [
                         'order-id'     => 'ID de commande',
                         'product-name' => 'Nom du produit',
                         'qty'          => 'Quantité',
-                        'shipping'     => 'Expédition',
+                        'shipping'     => 'Livraison',
                         'sku'          => 'SKU',
                         'status'       => 'Statut',
-                        'title'        => 'Informations sur la commande',
+                        'title'        => 'Informations de commande',
                         'type'         => 'Type',
                     ],
                 ],
@@ -1179,26 +1196,24 @@ return [
             ],
 
             'gdpr' => [
-                'nouvelle-demande-suppression' => 'Nouvelle demande de suppression de données',
-                'nouvelle-demande-mise-a-jour' => 'Nouvelle demande de mise à jour de données',
+                'new-delete-request' => 'Nouvelle demande de suppression de données',
+                'new-update-request' => 'Nouvelle demande de mise à jour des données',
 
-                'nouvelle-demande' => [
+                'new-request' => [
+                    'delete-summary' => 'Résumé de la demande de suppression',
                     'message'        => 'Message : ',
-                    'statut-demande' => 'Statut de la demande : ',
-                    'type-demande'   => 'Type de demande : ',
-                    'résumé'         => 'Résumé de la demande',
+                    'request-status' => 'Statut de la demande : ',
+                    'request-type'   => 'Type de demande : ',
+                    'summary'        => 'Résumé de la demande',
+                    'update-summary' => 'Résumé de la demande de mise à jour',
                 ],
 
-                'demande-suppression' => [
-                    'message'        => 'Message : ',
-                    'statut-demande' => 'Statut de la demande : ',
-                    'type-demande'   => 'Type de demande : ',
-                    'résumé'         => 'Résumé de la demande de suppression',
-                ],
-
-                'update-request' => [
-                    'message'        => 'Message : ',
-                    'statut-demande' => 'Statut de la demande : ',
+                'status-update' => [
+                    'subject'        => 'Votre demande GDPR a été mise à jour',
+                    'summary'        => 'Le statut de votre demande GDPR a été mis à jour',
+                    'request-status' => 'Statut de la demande:',
+                    'request-type'   => 'Type de demande:',
+                    'message'        => 'Message:',
                 ],
             ],
 

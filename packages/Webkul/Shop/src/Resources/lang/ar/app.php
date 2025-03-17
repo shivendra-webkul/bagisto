@@ -377,27 +377,20 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'مكتمل',
-                'date'                        => 'التاريخ',
-                'declined'                    => 'مرفوض',
-                'id'                          => 'المعرف',
-                'message'                     => 'الرسالة',
-                'pending'                     => 'قيد الانتظار',
-                'processing'                  => 'قيد المعالجة',
-                'status'                      => 'الحالة',
-                'success-verify'              => 'نجاح! تم إرسال بريد التحقق.',
-                'success-verify-email-unsent' => 'نجاح! لم يتم إرسال بريد التحقق.',
-                'type'                        => 'النوع',
-                'unable-to-sent'              => 'غير قادر على إرسال البريد.',
+                'create-success'              => 'تم إنشاء الطلب بنجاح',
+                'revoked-successfully'        => 'تم إلغاء الطلب بنجاح',
+                'success-verify'              => 'نجاح! تم إرسال بريد التحقق الإلكتروني.',
+                'success-verify-email-unsent' => 'نجاح! لم يتم إرسال بريد التحقق الإلكتروني.',
+                'unable-to-sent'              => 'تعذر إرسال البريد الإلكتروني.',
 
                 'index'   => [
                     'create-btn' => 'إنشاء طلب',
                     'html'       => 'HTML',
                     'pdf'        => 'PDF',
-                    'title'      => 'طلبات بيانات GDPR',
+                    'title'      => 'طلبات بيانات اللائحة العامة لحماية البيانات',
 
                     'modal' => [
-                        'message' => 'الرسالة',
+                        'message' => 'رسالة',
                         'save'    => 'حفظ',
                         'title'   => 'إنشاء طلب جديد',
 
@@ -407,6 +400,22 @@ return [
                             'title'  => 'النوع',
                             'update' => 'تحديث',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'مكتمل',
+                        'date'       => 'التاريخ',
+                        'declined'   => 'مرفوض',
+                        'delete'     => 'حذف',
+                        'id'         => 'معرّف',
+                        'message'    => 'رسالة',
+                        'pending'    => 'قيد الانتظار',
+                        'processing' => 'قيد المعالجة',
+                        'revoke-btn' => 'إلغاء',
+                        'revoked'    => 'ملغى',
+                        'status'     => 'الحالة',
+                        'type'       => 'النوع',
+                        'update'     => 'تحديث',
                     ],
                 ],
 
@@ -436,12 +445,12 @@ return [
                         'postcode'   => 'الرمز البريدي',
                         'state'      => 'الولاية',
                         'title'      => 'معلومات العنوان',
-                        'vat-id'     => 'رقم الضريبة',
+                        'vat-id'     => 'معرف ضريبة القيمة المضافة',
                     ],
 
                     'order-info' => [
                         'amount'       => 'المبلغ',
-                        'order-id'     => 'معرف الطلب',
+                        'order-id'     => 'رقم الطلب',
                         'product-name' => 'اسم المنتج',
                         'qty'          => 'الكمية',
                         'shipping'     => 'الشحن',
@@ -1183,22 +1192,20 @@ return [
                 'new-update-request' => 'طلب جديد لتحديث البيانات',
 
                 'new-request' => [
-                    'message'        => 'الرسالة : ',
+                    'delete-summary' => 'ملخص طلب الحذف',
+                    'message'        => 'رسالة : ',
                     'request-status' => 'حالة الطلب : ',
                     'request-type'   => 'نوع الطلب : ',
                     'summary'        => 'ملخص الطلب',
+                    'update-summary' => 'ملخص طلب التحديث',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'الرسالة : ',
-                    'request-status' => 'حالة الطلب : ',
-                    'request-type'   => 'نوع الطلب : ',
-                    'summary'        => 'ملخص طلب الحذف',
-                ],
-
-                'update-request' => [
-                    'message'        => 'الرسالة : ',
-                    'request-status' => 'حالة الطلب : ',
+                'status-update' => [
+                    'subject'        => 'تم تحديث طلب GDPR الخاص بك',
+                    'summary'        => 'تم تحديث حالة طلب GDPR الخاص بك',
+                    'request-status' => 'حالة الطلب:',
+                    'request-type'   => 'نوع الطلب:',
+                    'message'        => 'رسالة:',
                 ],
             ],
 

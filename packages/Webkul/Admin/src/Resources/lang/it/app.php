@@ -1986,20 +1986,22 @@ return [
                     'message'       => 'Messaggio',
                     'pending'       => 'In Attesa',
                     'processing'    => 'In Elaborazione',
+                    'revoked'       => 'Revocato',
                     'status'        => 'Stato',
                     'type'          => 'Tipo',
                 ],
 
                 'modal' => [
-                    'completed'  => 'Completato',
-                    'declined'   => 'Rifiutato',
-                    'pending'    => 'In Attesa',
-                    'processing' => 'In Elaborazione',
-                    'status'     => 'Stato',
-                    'title'      => 'Modifica Richiesta Dati GDPR',
-                    'type'       => 'Tipo',
-                    'message'    => 'Messaggio',
-                    'save-btn'   => 'Salva',
+                    'completed'     => 'Completato',
+                    'declined'      => 'Rifiutato',
+                    'message'       => 'Messaggio',
+                    'pending'       => 'In Attesa',
+                    'processing'    => 'In Elaborazione',
+                    'revoked'       => 'Revocato',
+                    'save-btn'      => 'Salva',
+                    'status'        => 'Stato',
+                    'title'         => 'Modifica Richiesta Dati GDPR',
+                    'type'          => 'Tipo',
                 ],
 
                 'update-success'              => 'Richiesta Dati aggiornata con successo e Email inviata al Cliente.',
@@ -3852,130 +3854,49 @@ return [
                         'max-url-per-file' => 'Numero massimo di URL per file',
                         'title'            => 'Limiti dei File',
                     ],
-
-                    'store-url' => [
-                        'info'  => 'Impostare l\'opzione di frequenza e priorità per l\'URL del negozio.',
-
-                        'frequency' => [
-                            'title' => 'Frequenza',
-
-                            'options' => [
-                                'always'  => 'Sempre',
-                                'daily'   => 'Giornaliero',
-                                'hourly'  => 'Ogni ora',
-                                'monthly' => 'Mensile',
-                                'never'   => 'Mai',
-                                'weekly'  => 'Settimanale',
-                                'yearly'  => 'Annuale',
-                            ],
-                        ],
-
-                        'title'    => 'URL del Negozio',
-                        'priority' => 'Priorità',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'Impostare l\'opzione di frequenza e priorità per le categorie.',
-
-                        'frequency' => [
-                            'title' => 'Frequenza',
-
-                            'options' => [
-                                'always'  => 'Sempre',
-                                'daily'   => 'Giornaliero',
-                                'hourly'  => 'Ogni ora',
-                                'monthly' => 'Mensile',
-                                'never'   => 'Mai',
-                                'weekly'  => 'Settimanale',
-                                'yearly'  => 'Annuale',
-                            ],
-                        ],
-
-                        'title'    => 'Categorie',
-                        'priority' => 'Priorità',
-                    ],
-
-                    'products' => [
-                        'info'  => 'Impostare l\'opzione di frequenza e priorità per i prodotti.',
-
-                        'frequency' => [
-                            'title' => 'Frequenza',
-
-                            'options' => [
-                                'always'  => 'Sempre',
-                                'daily'   => 'Giornaliero',
-                                'hourly'  => 'Ogni ora',
-                                'monthly' => 'Mensile',
-                                'never'   => 'Mai',
-                                'weekly'  => 'Settimanale',
-                                'yearly'  => 'Annuale',
-                            ],
-                        ],
-
-                        'title'    => 'Prodotti',
-                        'priority' => 'Priorità',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'Impostare l\'opzione di frequenza e priorità per le pagine CMS.',
-
-                        'frequency' => [
-                            'title' => 'Frequenza',
-
-                            'options' => [
-                                'always'  => 'Sempre',
-                                'daily'   => 'Giornaliero',
-                                'hourly'  => 'Ogni ora',
-                                'monthly' => 'Mensile',
-                                'never'   => 'Mai',
-                                'weekly'  => 'Settimanale',
-                                'yearly'  => 'Annuale',
-                            ],
-                        ],
-
-                        'title'    => 'Pagine CMS',
-                        'priority' => 'Priorità',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'GDPR',
-                'info'  => 'GDPR',
+                'info'  => 'Impostazioni di conformità GDPR',
 
                 'settings' => [
-                    'title'   => 'Impostazioni GDPR',
-                    'info'    => 'Impostazioni GDPR',
-                    'enabled' => 'Abilitato',
+                    'title'   => 'Impostazioni di conformità GDPR',
+                    'info'    => 'Gestisci le impostazioni di conformità GDPR, inclusa la politica sulla privacy. Abilita o disabilita le funzionalità GDPR secondo necessità.',
+                    'enabled' => 'Abilita GDPR',
                 ],
 
                 'agreement' => [
                     'title'          => 'Accordo GDPR',
-                    'info'           => 'Accordo GDPR',
-                    'enable'         => 'Abilita Accordo Cliente',
-                    'checkbox-label' => 'Etichetta Casella di Controllo Accordo',
-                    'content'        => 'Contenuto dell\'Accordo',
+                    'info'           => 'Gestisci il consenso dei clienti in conformità con i regolamenti GDPR. Abilita il consenso obbligatorio per la raccolta e l\'elaborazione dei dati.',
+                    'enable'         => 'Abilita il consenso del cliente',
+                    'checkbox-label' => 'Etichetta della casella di controllo per il consenso',
+                    'content'        => 'Contenuto del consenso',
                 ],
 
                 'cookie' => [
-                    'title'        => 'Impostazioni Messaggio Cookie',
-                    'info'         => 'Impostazioni Messaggio Cookie',
-                    'enable'       => 'Abilita Avviso Cookie',
-                    'position'     => 'Posizione di Visualizzazione del Blocco Cookie',
-                    'bottom-left'  => 'In Basso a Sinistra',
-                    'bottom-right' => 'In Basso a Destra',
-                    'identifier'   => 'Identificatore Blocco Statico',
+                    'bottom-left'  => 'In basso a sinistra',
+                    'bottom-right' => 'In basso a destra',
+                    'center'       => 'Centro',
                     'description'  => 'Descrizione',
+                    'enable'       => 'Abilita notifica sui cookie',
+                    'identifier'   => 'Identificatore del blocco statico',
+                    'info'         => 'Imposta le impostazioni di consenso sui cookie per informare gli utenti sulla raccolta dei dati e rispettare la politica sulla privacy.',
+                    'position'     => 'Posizione di visualizzazione del blocco dei cookie',
+                    'title'        => 'Impostazioni di notifica sui cookie',
+                    'top-left'     => 'In alto a sinistra',
+                    'top-right'    => 'In alto a destra',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => 'La tua Preferenza di Consenso ai Cookie',
-                    'info'                   => 'La tua Preferenza di Consenso ai Cookie',
-                    'strictly-necessary'     => 'Strettamente Necessari',
-                    'basic-interaction'      => 'Interazioni di Base e Funzionalità',
-                    'experience-enhancement' => 'Miglioramenti dell\'Esperienza',
-                    'measurement'            => 'Misurazioni',
-                    'targeting-advertising'  => 'Targeting e Pubblicità',
+                    'title'                  => 'Gestisci le tue impostazioni sui cookie',
+                    'info'                   => 'Controlla l\'uso dei dati selezionando le impostazioni dei cookie desiderate. Imposta le autorizzazioni per diversi tipi di cookie.',
+                    'strictly-necessary'     => 'Strettamente necessari',
+                    'basic-interaction'      => 'Interazione e funzionalità di base',
+                    'experience-enhancement' => 'Miglioramento dell\'esperienza',
+                    'measurement'            => 'Misurazione',
+                    'targeting-advertising'  => 'Targeting e pubblicità',
                 ],
             ],
 
@@ -4956,10 +4877,29 @@ return [
                 'greeting'    => 'Diamo un caloroso benvenuto al nuovo cliente, :customer_name che si è appena registrato con noi!',
                 'subject'     => 'Nuova registrazione cliente',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'Lo stato della tua richiesta GDPR',
+            'gdpr' => [
+                'new-delete-request' => 'Nuova richiesta per eliminare dati',
+                'new-update-request' => 'Nuova richiesta per aggiornare dati',
+
+                'new-request' => [
+                    'customer-name'  => 'Nome del cliente : ',
+                    'update-summary' => 'Riepilogo della richiesta di aggiornamento',
+                    'delete-summary' => 'Riepilogo della richiesta di eliminazione',
+                    'message'        => 'Messaggio : ',
+                    'request-status' => 'Stato della richiesta : ',
+                    'request-type'   => 'Tipo di richiesta : ',
+                    'summary'        => 'Riepilogo della richiesta',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'La richiesta GDPR è stata aggiornata',
+                    'summary'        => 'Lo stato della richiesta GDPR è stato aggiornato',
+                    'request-status' => 'Stato della richiesta:',
+                    'request-type'   => 'Tipo di richiesta:',
+                    'message'        => 'Messaggio:',
+                ],
+            ],
         ],
 
         'orders' => [

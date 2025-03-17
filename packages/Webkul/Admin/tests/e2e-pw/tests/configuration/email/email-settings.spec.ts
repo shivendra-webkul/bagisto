@@ -2,18 +2,10 @@ import { test, expect } from '../../../setup';
 import { generateName, generateEmail } from '../../../utils/faker';
 
 
-test.describe('Email Settings Configuration', () => {
-    /**
-     * Navigate to the configuration page.
-     */
-    test.beforeEach(async ({ adminPage }) => {
-        await adminPage.goto('admin/configuration/emails/general');
-    });
-
-    /**
-     * Update the Google Captcha Configuration.
-     */
+test.describe('email settings configuration', () => {
     test('should configure the email settings', async ({ adminPage }) => {
+        await adminPage.goto('admin/configuration/emails/configure');
+
         await adminPage.locator('input[name="emails[configure][email_settings][sender_name]"]').fill(generateName());
         await adminPage.locator('input[name="emails[configure][email_settings][shop_email_from]"]').fill(generateEmail());
         await adminPage.locator('input[name="emails[configure][email_settings][admin_name]"]').fill(generateName());

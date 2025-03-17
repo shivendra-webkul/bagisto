@@ -1987,20 +1987,22 @@ return [
                     'message'       => 'Bericht',
                     'pending'       => 'In Afwachting',
                     'processing'    => 'Verwerken',
+                    'revoked'       => 'Herroepen',
                     'status'        => 'Status',
                     'type'          => 'Type',
                 ],
 
                 'modal' => [
-                    'completed'  => 'Voltooid',
-                    'declined'   => 'Afgewezen',
-                    'pending'    => 'In Afwachting',
-                    'processing' => 'Verwerken',
-                    'status'     => 'Status',
-                    'title'      => 'Bewerk GDPR Gegevensverzoek',
-                    'type'       => 'Type',
-                    'message'    => 'Bericht',
-                    'save-btn'   => 'Opslaan',
+                    'completed'     => 'Voltooid',
+                    'declined'      => 'Afgewezen',
+                    'message'       => 'Bericht',
+                    'pending'       => 'In Afwachting',
+                    'processing'    => 'Verwerken',
+                    'revoked'       => 'Herroepen',
+                    'save-btn'      => 'Opslaan',
+                    'status'        => 'Status',
+                    'title'         => 'Bewerk GDPR Gegevensverzoek',
+                    'type'          => 'Type',
                 ],
 
                 'update-success'              => 'Gegevensverzoek succesvol bijgewerkt en e-mail verzonden naar klant.',
@@ -3853,130 +3855,49 @@ return [
                         'max-url-per-file' => 'Maximaal aantal URL\'s per bestand',
                         'title'            => 'Bestandslimieten',
                     ],
-
-                    'store-url' => [
-                        'info'  => 'Stel frequentie- en prioriteitsopties in voor de winkel-URL.',
-
-                        'frequency' => [
-                            'title' => 'Frequentie',
-
-                            'options' => [
-                                'always'  => 'Altijd',
-                                'daily'   => 'Dagelijks',
-                                'hourly'  => 'Elk uur',
-                                'monthly' => 'Maandelijks',
-                                'never'   => 'Nooit',
-                                'weekly'  => 'Wekelijks',
-                                'yearly'  => 'Jaarlijks',
-                            ],
-                        ],
-
-                        'title'    => 'Winkel URL',
-                        'priority' => 'Prioriteit',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'Stel frequentie- en prioriteitsopties in voor de categorieën.',
-
-                        'frequency' => [
-                            'title' => 'Frequentie',
-
-                            'options' => [
-                                'always'  => 'Altijd',
-                                'daily'   => 'Dagelijks',
-                                'hourly'  => 'Elk uur',
-                                'monthly' => 'Maandelijks',
-                                'never'   => 'Nooit',
-                                'weekly'  => 'Wekelijks',
-                                'yearly'  => 'Jaarlijks',
-                            ],
-                        ],
-
-                        'title'    => 'Categorieën',
-                        'priority' => 'Prioriteit',
-                    ],
-
-                    'products' => [
-                        'info'  => 'Stel frequentie- en prioriteitsopties in voor de producten.',
-
-                        'frequency' => [
-                            'title' => 'Frequentie',
-
-                            'options' => [
-                                'always'  => 'Altijd',
-                                'daily'   => 'Dagelijks',
-                                'hourly'  => 'Elk uur',
-                                'monthly' => 'Maandelijks',
-                                'never'   => 'Nooit',
-                                'weekly'  => 'Wekelijks',
-                                'yearly'  => 'Jaarlijks',
-                            ],
-                        ],
-
-                        'title'    => 'Producten',
-                        'priority' => 'Prioriteit',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'Stel frequentie- en prioriteitsopties in voor de CMS-pagina\'s.',
-
-                        'frequency' => [
-                            'title' => 'Frequentie',
-
-                            'options' => [
-                                'always'  => 'Altijd',
-                                'daily'   => 'Dagelijks',
-                                'hourly'  => 'Elk uur',
-                                'monthly' => 'Maandelijks',
-                                'never'   => 'Nooit',
-                                'weekly'  => 'Wekelijks',
-                                'yearly'  => 'Jaarlijks',
-                            ],
-                        ],
-
-                        'title'    => 'CMS Pagina\'s',
-                        'priority' => 'Prioriteit',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'GDPR',
-                'info'  => 'GDPR',
+                'info'  => 'GDPR-nalevingsinstellingen',
 
                 'settings' => [
-                    'title'   => 'GDPR Instellingen',
-                    'info'    => 'GDPR Instellingen',
-                    'enabled' => 'Ingeschakeld',
+                    'title'   => 'GDPR-nalevingsinstellingen',
+                    'info'    => 'Beheer GDPR-nalevingsinstellingen, inclusief het privacybeleid. Schakel GDPR-functies in of uit indien nodig.',
+                    'enabled' => 'GDPR inschakelen',
                 ],
 
                 'agreement' => [
-                    'title'          => 'GDPR Overeenkomst',
-                    'info'           => 'GDPR Overeenkomst',
-                    'enable'         => 'Klantovereenkomst Inschakelen',
-                    'checkbox-label' => 'Overeenkomst Checkbox Label',
-                    'content'        => 'Overeenkomst Inhoud',
+                    'title'          => 'GDPR-toestemming',
+                    'info'           => 'Beheer klanttoestemming in overeenstemming met GDPR-regelgeving. Schakel verplichte toestemming in voor gegevensverzameling en -verwerking.',
+                    'enable'         => 'Klanttoestemming inschakelen',
+                    'checkbox-label' => 'Label van toestemmingsvakje',
+                    'content'        => 'Inhoud van toestemming',
                 ],
 
                 'cookie' => [
-                    'title'        => 'Cookie Bericht Instellingen',
-                    'info'         => 'Cookie Bericht Instellingen',
-                    'enable'       => 'Cookie Kennisgeving Inschakelen',
-                    'position'     => 'Cookie Blok Weergavepositie',
                     'bottom-left'  => 'Linksonder',
                     'bottom-right' => 'Rechtsonder',
-                    'identifier'   => 'Statisch Blok Identificatie',
+                    'center'       => 'Centrum',
                     'description'  => 'Beschrijving',
+                    'enable'       => 'Cookie-melding inschakelen',
+                    'identifier'   => 'Statische blok-ID',
+                    'info'         => 'Stel cookie-toestemmingsinstellingen in om gebruikers te informeren over gegevensverzameling en naleving van het privacybeleid.',
+                    'position'     => 'Positie van cookieblok',
+                    'title'        => 'Cookie-meldingsinstellingen',
+                    'top-left'     => 'Linksboven',
+                    'top-right'    => 'Rechtsboven',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => 'Uw Cookie Toestemming Voorkeur',
-                    'info'                   => 'Uw Cookie Toestemming Voorkeur',
-                    'strictly-necessary'     => 'Strikt Noodzakelijk',
-                    'basic-interaction'      => 'Basis Interacties & Functionaliteiten',
-                    'experience-enhancement' => 'Ervaring Verbeteringen',
-                    'measurement'            => 'Metingen',
-                    'targeting-advertising'  => 'Targeting & Adverteren',
+                    'title'                  => 'Beheer cookie-instellingen',
+                    'info'                   => 'Selecteer de gewenste cookie-instellingen om het gebruik van gegevens te beheren. Stel toestemmingen in voor verschillende soorten cookies.',
+                    'strictly-necessary'     => 'Strikt noodzakelijk',
+                    'basic-interaction'      => 'Basisinteractie en functionaliteit',
+                    'experience-enhancement' => 'Ervaringsverbetering',
+                    'measurement'            => 'Meting',
+                    'targeting-advertising'  => 'Targeting en advertenties',
                 ],
             ],
 
@@ -4957,10 +4878,29 @@ return [
                 'greeting'    => 'Wij heten de nieuwe klant, :customer_name, die zich zojuist bij ons heeft geregistreerd, van harte welkom!',
                 'subject'     => 'Nieuwe klantregistratie',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'Uw GDPR-verzoekstatus',
+            'gdpr' => [
+                'new-delete-request' => 'Nieuwe aanvraag voor gegevensverwijdering',
+                'new-update-request' => 'Nieuwe aanvraag voor gegevensupdate',
+
+                'new-request' => [
+                    'customer-name'  => 'Klantnaam : ',
+                    'delete-summary' => 'Samenvatting van verwijderingsverzoek',
+                    'message'        => 'Bericht : ',
+                    'request-status' => 'Aanvraagstatus : ',
+                    'request-type'   => 'Aanvraagtype : ',
+                    'summary'        => 'Overzicht van de aanvraag',
+                    'update-summary' => 'Samenvatting van updateverzoek',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'GDPR-aanvraag is bijgewerkt',
+                    'summary'        => 'De status van de GDPR-aanvraag is bijgewerkt',
+                    'request-status' => 'Aanvraagstatus:',
+                    'request-type'   => 'Aanvraagtype:',
+                    'message'        => 'Bericht:',
+                ],
+            ],
         ],
 
         'orders' => [

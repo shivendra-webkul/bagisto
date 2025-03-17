@@ -1986,20 +1986,22 @@ return [
                     'message'       => 'Mesaj',
                     'pending'       => 'Beklemede',
                     'processing'    => 'İşleniyor',
+                    'revoked'       => 'İptal edildi',
                     'status'        => 'Durum',
                     'type'          => 'Tür',
                 ],
 
                 'modal' => [
-                    'completed'  => 'Tamamlandı',
-                    'declined'   => 'Reddedildi',
-                    'pending'    => 'Beklemede',
-                    'processing' => 'İşleniyor',
-                    'status'     => 'Durum',
-                    'title'      => 'GDPR Veri Talebini Düzenle',
-                    'type'       => 'Tür',
-                    'message'    => 'Mesaj',
-                    'save-btn'   => 'Kaydet',
+                    'completed'     => 'Tamamlandı',
+                    'declined'      => 'Reddedildi',
+                    'message'       => 'Mesaj',
+                    'pending'       => 'Beklemede',
+                    'processing'    => 'İşleniyor',
+                    'revoked'       => 'İptal edildi',
+                    'save-btn'      => 'Kaydet',
+                    'status'        => 'Durum',
+                    'title'         => 'GDPR Veri Talebini Düzenle',
+                    'type'          => 'Tür',
                 ],
 
                 'update-success'              => 'Veri Talebi başarıyla güncellendi ve Müşteriye E-posta Gönderildi.',
@@ -3852,129 +3854,48 @@ return [
                         'max-url-per-file' => 'Dosya başına maksimum URL sayısı',
                         'title'            => 'Dosya Limitleri',
                     ],
-
-                    'store-url' => [
-                        'info'  => 'Mağaza URL\'si için frekans ve öncelik seçeneklerini ayarlayın.',
-
-                        'frequency' => [
-                            'title' => 'Frekans',
-
-                            'options' => [
-                                'always'  => 'Her zaman',
-                                'daily'   => 'Günlük',
-                                'hourly'  => 'Saatlik',
-                                'monthly' => 'Aylık',
-                                'never'   => 'Asla',
-                                'weekly'  => 'Haftalık',
-                                'yearly'  => 'Yıllık',
-                            ],
-                        ],
-
-                        'title'    => 'Mağaza URL\'si',
-                        'priority' => 'Öncelik',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'Kategoriler için frekans ve öncelik seçeneklerini ayarlayın.',
-
-                        'frequency' => [
-                            'title' => 'Frekans',
-
-                            'options' => [
-                                'always'  => 'Her zaman',
-                                'daily'   => 'Günlük',
-                                'hourly'  => 'Saatlik',
-                                'monthly' => 'Aylık',
-                                'never'   => 'Asla',
-                                'weekly'  => 'Haftalık',
-                                'yearly'  => 'Yıllık',
-                            ],
-                        ],
-
-                        'title'    => 'Kategoriler',
-                        'priority' => 'Öncelik',
-                    ],
-
-                    'products' => [
-                        'info'  => 'Ürünler için frekans ve öncelik seçeneklerini ayarlayın.',
-
-                        'frequency' => [
-                            'title' => 'Frekans',
-
-                            'options' => [
-                                'always'  => 'Her zaman',
-                                'daily'   => 'Günlük',
-                                'hourly'  => 'Saatlik',
-                                'monthly' => 'Aylık',
-                                'never'   => 'Asla',
-                                'weekly'  => 'Haftalık',
-                                'yearly'  => 'Yıllık',
-                            ],
-                        ],
-
-                        'title'    => 'Ürünler',
-                        'priority' => 'Öncelik',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'CMS sayfaları için frekans ve öncelik seçeneklerini ayarlayın.',
-
-                        'frequency' => [
-                            'title' => 'Frekans',
-
-                            'options' => [
-                                'always'  => 'Her zaman',
-                                'daily'   => 'Günlük',
-                                'hourly'  => 'Saatlik',
-                                'monthly' => 'Aylık',
-                                'never'   => 'Asla',
-                                'weekly'  => 'Haftalık',
-                                'yearly'  => 'Yıllık',
-                            ],
-                        ],
-
-                        'title'    => 'CMS Sayfaları',
-                        'priority' => 'Öncelik',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'GDPR',
-                'info'  => 'GDPR',
+                'info'  => 'GDPR Uyumluluk Ayarları',
 
                 'settings' => [
-                    'title'   => 'GDPR Ayarları',
-                    'info'    => 'GDPR Ayarları',
-                    'enabled' => 'Etkin',
+                    'title'   => 'GDPR Uyumluluk Ayarları',
+                    'info'    => 'Gizlilik politikası dahil olmak üzere GDPR uyumluluk ayarlarını yönetin. Gereksinimlere göre GDPR özelliklerini etkinleştirin veya devre dışı bırakın.',
+                    'enabled' => 'GDPR\'yi Etkinleştir',
                 ],
 
                 'agreement' => [
                     'title'          => 'GDPR Anlaşması',
-                    'info'           => 'GDPR Anlaşması',
-                    'enable'         => 'Müşteri Anlaşmasını Etkinleştir',
-                    'checkbox-label' => 'Anlaşma Onay Kutusu Etiketi',
-                    'content'        => 'Anlaşma İçeriği',
+                    'info'           => 'GDPR düzenlemelerine uygun olarak müşteri onayını yönetin. Veri toplama ve işleme için gerekli onayı etkinleştirin.',
+                    'enable'         => 'Müşteri Onayını Etkinleştir',
+                    'checkbox-label' => 'Onay için Etiket',
+                    'content'        => 'Onay İçeriği',
                 ],
 
                 'cookie' => [
-                    'title'        => 'Çerez Mesajı Ayarları',
-                    'info'         => 'Çerez Mesajı Ayarları',
-                    'enable'       => 'Çerez Bildirimini Etkinleştir',
-                    'position'     => 'Çerez Bloğu Görüntüleme Konumu',
-                    'bottom-left'  => 'Sol Alt',
-                    'bottom-right' => 'Sağ Alt',
-                    'identifier'   => 'Statik Blok Tanımlayıcısı',
+                    'bottom-left'  => 'Alt Sol',
+                    'bottom-right' => 'Alt Sağ',
+                    'center'       => 'Merkez',
                     'description'  => 'Açıklama',
+                    'enable'       => 'Çerez Bildirimini Etkinleştir',
+                    'identifier'   => 'Statik Blok ID',
+                    'info'         => 'Kullanıcıları veri toplama ve gizlilik politikası hakkında bilgilendirmek için çerez onay ayarlarını yapılandırın.',
+                    'position'     => 'Çerez Blok Konumu',
+                    'title'        => 'Çerez Bildirim Ayarları',
+                    'top-left'     => 'Üst Sol',
+                    'top-right'    => 'Üst Sağ',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => 'Çerez İzni Tercihiniz',
-                    'info'                   => 'Çerez İzni Tercihiniz',
+                    'title'                  => 'Çerez Ayarlarını Yönet',
+                    'info'                   => 'Veri kullanımı yönetimi için tercih edilen çerez ayarlarını seçin. Farklı çerez türleri için onay ayarlarını yapılandırın.',
                     'strictly-necessary'     => 'Kesinlikle Gerekli',
-                    'basic-interaction'      => 'Temel Etkileşimler ve İşlevsellikler',
-                    'experience-enhancement' => 'Deneyim Geliştirmeleri',
-                    'measurement'            => 'Ölçümler',
+                    'basic-interaction'      => 'Temel Etkileşim ve İşlevsellik',
+                    'experience-enhancement' => 'Deneyim Geliştirme',
+                    'measurement'            => 'Ölçüm',
                     'targeting-advertising'  => 'Hedefleme ve Reklam',
                 ],
             ],
@@ -4956,10 +4877,29 @@ return [
                 'greeting'    => 'Aramıza yeni kaydolan yeni müşterimiz :customer_name `e sıcak bir karşılama dileriz!',
                 'subject'     => 'Yeni Müşteri Kaydı',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'GDPR talebinizin durumu',
+            'gdpr' => [
+                'new-delete-request' => 'Veri Silme için Yeni Talep',
+                'new-update-request' => 'Veri Güncelleme için Yeni Talep',
+
+                'new-request' => [
+                    'customer-name'  => 'Müşteri Adı : ',
+                    'delete-summary' => 'Silme isteğinin özeti',
+                    'message'        => 'Mesaj : ',
+                    'request-status' => 'Talep Durumu : ',
+                    'request-type'   => 'Talep Türü : ',
+                    'summary'        => 'Talep Özeti',
+                    'update-summary' => 'Güncelleme isteğinin özeti',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'GDPR Talebi Güncellendi',
+                    'summary'        => 'GDPR Talebinin Durumu Güncellendi',
+                    'request-status' => 'Talep Durumu:',
+                    'request-type'   => 'Talep Türü:',
+                    'message'        => 'Mesaj:',
+                ],
+            ],
         ],
 
         'orders' => [
