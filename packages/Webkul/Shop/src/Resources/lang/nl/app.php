@@ -377,29 +377,22 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'Voltooid',
-                'date'                        => 'Datum',
-                'declined'                    => 'Afgewezen',
-                'id'                          => 'Id',
-                'message'                     => 'Bericht',
-                'pending'                     => 'In afwachting',
-                'processing'                  => 'Verwerken',
-                'status'                      => 'Status',
+                'create-success'              => 'Verzoek succesvol aangemaakt',
+                'revoked-successfully'        => 'Verzoek succesvol ingetrokken',
                 'success-verify'              => 'Succes! Verificatie-e-mail is verzonden.',
                 'success-verify-email-unsent' => 'Succes! Verificatie-e-mail is niet verzonden.',
-                'type'                        => 'Type',
-                'unable-to-sent'              => 'Kan e-mail niet verzenden.',
+                'unable-to-sent'              => 'E-mail kon niet worden verzonden.',
 
                 'index'   => [
-                    'create-btn' => 'Verzoek Aanmaken',
+                    'create-btn' => 'Verzoek aanmaken',
                     'html'       => 'HTML',
                     'pdf'        => 'PDF',
-                    'title'      => 'GDPR Gegevensverzoeken',
+                    'title'      => 'GDPR-gegevensverzoeken',
 
                     'modal' => [
                         'message' => 'Bericht',
                         'save'    => 'Opslaan',
-                        'title'   => 'Nieuw Verzoek Aanmaken',
+                        'title'   => 'Nieuw verzoek aanmaken',
 
                         'type'    => [
                             'choose' => 'Kiezen',
@@ -407,6 +400,22 @@ return [
                             'title'  => 'Type',
                             'update' => 'Bijwerken',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'Voltooid',
+                        'date'       => 'Datum',
+                        'declined'   => 'Geweigerd',
+                        'delete'     => 'Verwijderen',
+                        'id'         => 'ID',
+                        'message'    => 'Bericht',
+                        'pending'    => 'In afwachting',
+                        'processing' => 'In verwerking',
+                        'revoke-btn' => 'Intrekken',
+                        'revoked'    => 'Ingetrokken',
+                        'status'     => 'Status',
+                        'type'       => 'Type',
+                        'update'     => 'Bijwerken',
                     ],
                 ],
 
@@ -434,18 +443,18 @@ return [
                         'last-name'  => 'Achternaam',
                         'phone'      => 'Telefoon',
                         'postcode'   => 'Postcode',
-                        'state'      => 'Provincie',
-                        'title'      => 'Adresinformatie',
-                        'vat-id'     => 'BTW-nummer',
+                        'state'      => 'Staat',
+                        'title'      => 'Adresgegevens',
+                        'vat-id'     => 'BTW-ID',
                     ],
 
                     'order-info' => [
                         'amount'       => 'Bedrag',
                         'order-id'     => 'Bestel-ID',
                         'product-name' => 'Productnaam',
-                        'qty'          => 'Hoeveelheid',
+                        'qty'          => 'Aantal',
                         'shipping'     => 'Verzending',
-                        'sku'          => 'Artikelnummer',
+                        'sku'          => 'SKU',
                         'status'       => 'Status',
                         'title'        => 'Bestelinformatie',
                         'type'         => 'Type',
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => 'Naam',
                 ],
+
+                'booking' => [
+                    'location'    => 'Locatie',
+                    'view-on-map' => 'Bekijk op Kaart',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes Minuten',
+                        'slot-duration'            => 'Slotduur',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'Gesloten',
+                        'see-details'              => 'Bekijk Details',
+                        'slot-duration'            => 'Slotduur',
+                        'slot-duration-in-minutes' => ':minutes Minuten',
+                        'today-availability'       => 'Beschikbaarheid Vandaag',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'Boek Uw Ticket',
+                        'title'            => 'Evenement op :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'Kies Huur Optie',
+                        'daily-basis'        => 'Dagelijks',
+                        'from'               => 'Van',
+                        'hourly-basis'       => 'Per Uur',
+                        'rent-an-item'       => 'Huur een Item',
+                        'select-date'        => 'Selecteer Datum',
+                        'select-rent-time'   => 'Selecteer Huur Tijd',
+                        'select-slot'        => 'Selecteer Slot',
+                        'select-time-slot'   => 'Selecteer Tijdslot',
+                        'slot'               => 'Slot',
+                        'no-slots-available' => 'Geen slots beschikbaar',
+                        'to'                 => 'Tot',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'Reserveer een Tafel',
+                        'closed'                   => 'Gesloten',
+                        'slot-duration'            => 'Slotduur',
+                        'slot-duration-in-minutes' => ':minutes Minuten',
+                        'slots-for-all-days'       => 'Toon voor alle dagen',
+                        'special-notes'            => 'Speciale Verzoeken/Opmerkingen',
+                        'today-availability'       => 'Beschikbaarheid Vandaag',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'Maak een Afspraak',
+                        'date'                => 'Datum',
+                        'no-slots-available'  => 'Geen slots beschikbaar',
+                        'select-slot'         => 'Selecteer Slot',
+                        'title'               => 'Slot',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => 'Koop :qty voor :price per stuk en bespaar :discount',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'Gesloten',
+
+            'cart'             => [
+                'booking-from' => 'Boeking Van',
+                'booking-till' => 'Boeking Tot',
+                'daily'        => 'Dagelijks',
+                'event-from'   => 'Evenement Van',
+                'event-ticket' => 'Evenement Ticket',
+                'event-till'   => 'Evenement Tot',
+                'hourly'       => 'Per Uur',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'Dit evenement is verlopen.',
+                    ],
+
+                    'missing_options'        => 'Opties ontbreken voor dit product.',
+                    'inventory_warning'      => 'De gevraagde hoeveelheid is niet beschikbaar, probeer het later opnieuw.',
+                    'select_hourly_duration' => 'Selecteer een tijdsduur van één uur.',
+                ],
+
+                'rent-from'    => 'Huur Van',
+                'rent-till'    => 'Huur Tot',
+                'rent-type'    => 'Huur Type',
+                'renting_type' => 'Huur Type',
+                'special-note' => 'Speciale Verzoeken/Opmerkingen',
+            ],
+
+            'per-ticket-price' => ':price Per Ticket',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => 'Straatadres',
                 'telephone'              => 'Telefoon',
                 'title'                  => 'Adres',
+                'vat-id'                 => 'BTW-nummer',
             ],
 
             'index' => [
@@ -1091,26 +1189,23 @@ return [
             ],
 
             'gdpr' => [
-                'new-delete-request' => 'Nieuw Verzoek Voor Gegevensverwijdering',
-                'new-update-request' => 'Nieuw Verzoek Voor Gegevensbijwerking',
+                'new-delete-request' => 'Nieuwe aanvraag voor gegevensverwijdering',
+                'new-update-request' => 'Nieuwe aanvraag voor gegevensupdate',
 
                 'new-request' => [
+                    'delete-summary' => 'Samenvatting van verwijderingsverzoek',
                     'message'        => 'Bericht : ',
-                    'request-status' => 'Verzoekstatus : ',
-                    'request-type'   => 'Verzoektype : ',
-                    'summary'        => 'Samenvatting van Verzoek',
+                    'request-status' => 'Aanvraagstatus : ',
+                    'request-type'   => 'Aanvraagtype : ',
+                    'update-summary' => 'Samenvatting van updateverzoek',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'Bericht : ',
-                    'request-status' => 'Verzoekstatus : ',
-                    'request-type'   => 'Verzoektype : ',
-                    'summary'        => 'Samenvatting van Verwijderverzoek',
-                ],
-
-                'update-request' => [
-                    'message'        => 'Bericht : ',
-                    'request-status' => 'Verzoekstatus : ',
+                'status-update' => [
+                    'subject'        => 'Uw GDPR-aanvraag is bijgewerkt',
+                    'summary'        => 'De status van uw GDPR-aanvraag is bijgewerkt',
+                    'request-status' => 'Aanvraagstatus:',
+                    'request-type'   => 'Aanvraagtype:',
+                    'message'        => 'Bericht:',
                 ],
             ],
 

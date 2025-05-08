@@ -377,18 +377,11 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'සම්පූර්ණයි',
-                'date'                        => 'දිනය',
-                'declined'                    => 'ප්‍රතික්ෂේප කරන ලදි',
-                'id'                          => 'හැඳුනුම්පත',
-                'message'                     => 'පණිවිඩය',
-                'pending'                     => 'පොරොත්තු',
-                'processing'                  => 'සැකසුම',
-                'status'                      => 'තත්ත්වය',
-                'success-verify'              => 'සාර්ථකයි! තහවුරු කිරීමේ ඊමේල් එක යවා ඇත.',
-                'success-verify-email-unsent' => 'සාර්ථකයි! තහවුරු කිරීමේ ඊමේල් එක නොයවා ඇත.',
-                'type'                        => 'වර්ගය',
-                'unable-to-sent'              => 'ඊමේල් යැවීමට නොහැක.',
+                'create-success'              => 'ඉල්ලීම සාර්ථකව නිර්මාණය කරන ලදී',
+                'revoked-successfully'        => 'ඉල්ලීම සාර්ථකව අවලංගු කරන ලදී',
+                'success-verify'              => 'සාර්ථකයි! තහවුරු කිරීමේ විද්‍යුත් තැපෑල යවා ඇත.',
+                'success-verify-email-unsent' => 'සාර්ථකයි! තහවුරු කිරීමේ විද්‍යුත් තැපෑල යවා නොමැත.',
+                'unable-to-sent'              => 'විද්‍යුත් තැපෑල යැවිය නොහැක.',
 
                 'index'   => [
                     'create-btn' => 'ඉල්ලීමක් සාදන්න',
@@ -405,20 +398,36 @@ return [
                             'choose' => 'තෝරන්න',
                             'delete' => 'මකන්න',
                             'title'  => 'වර්ගය',
-                            'update' => 'යාවත්කාල කරන්න',
+                            'update' => 'යාවත්කාලීන කරන්න',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'සම්පූර්ණයි',
+                        'date'       => 'දිනය',
+                        'declined'   => 'ප්‍රතික්ෂේපිත',
+                        'delete'     => 'මකන්න',
+                        'id'         => 'හැඳුනුම් අංකය',
+                        'message'    => 'පණිවිඩය',
+                        'pending'    => 'බලා සිටී',
+                        'processing' => 'සකසමින්',
+                        'revoke-btn' => 'අවලංගු කරන්න',
+                        'revoked'    => 'අවලංගු කරන ලදී',
+                        'status'     => 'තත්වය',
+                        'type'       => 'වර්ගය',
+                        'update'     => 'යාවත්කාලීන කරන්න',
                     ],
                 ],
 
                 'pdf' => [
-                    'title' => 'පෙරනිමි ගබඩා දසුන',
+                    'title' => 'පෙරනිමි අලෙවි දැක්ම',
 
                     'account-info' => [
-                        'dob'          => 'උපන්දිනය',
-                        'email'        => 'ඊමේල්',
+                        'dob'          => 'උපන් දිනය',
+                        'email'        => 'විද්‍යුත් තැපෑල',
                         'first-name'   => 'මුල් නම',
-                        'gender'       => 'ස්ත්‍රී/පුරුෂ භාවය',
-                        'last-name'    => 'අවසාන නම',
+                        'gender'       => 'ස්ත්‍රී පුරුෂ භේදය',
+                        'last-name'    => 'අවසන් නම',
                         'phone'        => 'දුරකථන',
                         'title'        => 'ගිණුම් තොරතුරු',
                     ],
@@ -428,24 +437,24 @@ return [
                         'address1'   => 'ලිපිනය 1',
                         'address2'   => 'ලිපිනය 2',
                         'city'       => 'නගරය',
-                        'company'    => 'කර්මාන්තයේ නම',
-                        'country'    => 'රටේ',
+                        'company'    => 'සමාගම',
+                        'country'    => 'රට',
                         'first-name' => 'මුල් නම',
-                        'last-name'  => 'අවසාන නම',
+                        'last-name'  => 'අවසන් නම',
                         'phone'      => 'දුරකථන',
                         'postcode'   => 'තැපැල් කේතය',
-                        'state'      => 'පළාත',
-                        'title'      => 'ලිපින තොරතුරු',
-                        'vat-id'     => 'වැට් අංකය',
+                        'state'      => 'රාජ්‍යය',
+                        'title'      => 'ලිපිනයේ තොරතුරු',
+                        'vat-id'     => 'VAT හැඳුනුම් අංකය',
                     ],
 
                     'order-info' => [
                         'amount'       => 'මුදල',
-                        'order-id'     => 'ඇණවුම් අංකය',
-                        'product-name' => 'නිෂ්පාදන නම',
+                        'order-id'     => 'ඇණවුම් හැඳුනුම් අංකය',
+                        'product-name' => 'නිෂ්පාදනයේ නම',
                         'qty'          => 'ප්‍රමාණය',
-                        'shipping'     => 'නැවුම්',
-                        'sku'          => 'SKU අංකය',
+                        'shipping'     => 'බෙදාහැරීම',
+                        'sku'          => 'SKU',
                         'status'       => 'තත්ත්වය',
                         'title'        => 'ඇණවුම් තොරතුරු',
                         'type'         => 'වර්ගය',
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => 'නම',
                 ],
+
+                'booking' => [
+                    'location'    => 'ස්ථානය',
+                    'view-on-map' => 'සිතියම මත බලන්න',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes මිනිත්තු',
+                        'slot-duration'            => 'ස්ලොට් කාලය',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'වසන ලදි',
+                        'see-details'              => 'විස්තර බලන්න',
+                        'slot-duration'            => 'ස්ලොට් කාලය',
+                        'slot-duration-in-minutes' => ':minutes මිනිත්තු',
+                        'today-availability'       => 'අද දින ලබාගත හැකි බව',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'ඔබගේ ටිකට්පත වෙන්කරන්න',
+                        'title'            => 'සිදුවීම :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'කිරුනු විකල්පය තෝරන්න',
+                        'daily-basis'        => 'දිනපතා',
+                        'from'               => 'සිට',
+                        'hourly-basis'       => 'පැය පදනම',
+                        'rent-an-item'       => 'අයිතමයක් කුලියට ගන්න',
+                        'select-date'        => 'දිනය තෝරන්න',
+                        'select-rent-time'   => 'කිරුනු කාලය තෝරන්න',
+                        'select-slot'        => 'ස්ලොට් තෝරන්න',
+                        'select-time-slot'   => 'කාල ස්ලොට් තෝරන්න',
+                        'slot'               => 'ස්ලොට්',
+                        'no-slots-available' => 'ස්ලොට් නොමැත',
+                        'to'                 => 'දක්වා',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'මේසයක් වෙන්කරන්න',
+                        'closed'                   => 'වසන ලදි',
+                        'slot-duration'            => 'ස්ලොට් කාලය',
+                        'slot-duration-in-minutes' => ':minutes මිනිත්තු',
+                        'slots-for-all-days'       => 'සියලු දින සඳහා පෙන්වන්න',
+                        'special-notes'            => 'විශේෂ ඉල්ලීම්/සටහන්',
+                        'today-availability'       => 'අද දින ලබාගත හැකි බව',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'පත්වීමක් වෙන්කරන්න',
+                        'date'                => 'දිනය',
+                        'no-slots-available'  => 'ස්ලොට් නොමැත',
+                        'select-slot'         => 'ස්ලොට් තෝරන්න',
+                        'title'               => 'ස්ලොට්',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => ':qty සඳහා :price ටයිකල් කරන්න සහ :discount සුදුසු',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'වසන ලදි',
+
+            'cart'             => [
+                'booking-from' => 'වෙන්කිරීමේ සිට',
+                'booking-till' => 'වෙන්කිරීමේ දක්වා',
+                'daily'        => 'දිනපතා පදනම',
+                'event-from'   => 'සිදුවීමේ සිට',
+                'event-ticket' => 'සිදුවීම් ටිකට්පත',
+                'event-till'   => 'සිදුවීමේ දක්වා',
+                'hourly'       => 'පැය පදනම',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'මෙම සිදුවීම කල් ඉකුත් වී ඇත.',
+                    ],
+
+                    'missing_options'        => 'මෙම නිෂ්පාදනය සඳහා විකල්ප අතුරුදහන් වී ඇත.',
+                    'inventory_warning'      => 'අයදුම් කළ ප්‍රමාණය ලබාගත නොහැක, කරුණාකර පසුව නැවත උත්සාහ කරන්න.',
+                    'select_hourly_duration' => 'පැයක කාල පරාසයක් තෝරන්න.',
+                ],
+
+                'rent-from'    => 'කිරුනු සිට',
+                'rent-till'    => 'කිරුනු දක්වා',
+                'rent-type'    => 'කිරුනු වර්ගය',
+                'renting_type' => 'කිරුනු වර්ගය',
+                'special-note' => 'විශේෂ ඉල්ලීම්/සටහන්',
+            ],
+
+            'per-ticket-price' => ':price ටිකට්පතකට',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => 'වීදි ලිපිනය',
                 'telephone'              => 'දුරකථන අංකය',
                 'title'                  => 'ලිපිනය',
+                'vat-id'                 => 'වැට් අංකය',
             ],
 
             'index' => [
@@ -1091,26 +1189,23 @@ return [
             ],
 
             'gdpr' => [
-                'new-delete-request' => 'දත්ත මකා දැමීම සඳහා නව ඉල්ලීම',
+                'new-delete-request' => 'දත්ත මැකීම සඳහා නව ඉල්ලීම',
                 'new-update-request' => 'දත්ත යාවත්කාලීන කිරීම සඳහා නව ඉල්ලීම',
 
                 'new-request' => [
+                    'delete-summary' => 'මකාදැමීමේ ඉල්ලීම් සාරාංශය',
                     'message'        => 'පණිවිඩය : ',
-                    'request-status' => 'ඉල්ලීමේ තත්ත්වය : ',
-                    'request-type'   => 'ඉල්ලීමේ වර්ගය : ',
-                    'summary'        => 'ඉල්ලීමේ සාරාංශය',
+                    'request-status' => 'ඉල්ලීම් තත්වය : ',
+                    'request-type'   => 'ඉල්ලීම් වර්ගය : ',
+                    'update-summary' => 'යාවත්කාලීන ඉල්ලීම් සාරාංශය',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'පණිවිඩය : ',
-                    'request-status' => 'ඉල්ලීමේ තත්ත්වය : ',
-                    'request-type'   => 'ඉල්ලීමේ වර්ගය : ',
-                    'summary'        => 'මකා දැමීමේ ඉල්ලීමේ සාරාංශය',
-                ],
-
-                'update-request' => [
-                    'message'        => 'පණිවිඩය : ',
-                    'request-status' => 'ඉල්ලීමේ තත්ත්වය : ',
+                'status-update' => [
+                    'subject'        => 'ඔබගේ GDPR ඉල්ලීම යාවත්කාලීන කරන ලදී',
+                    'summary'        => 'ඔබගේ GDPR ඉල්ලීමේ තත්වය යාවත්කාලීන කරන ලදී',
+                    'request-status' => 'ඉල්ලීම් තත්වය:',
+                    'request-type'   => 'ඉල්ලීම් වර්ගය:',
+                    'message'        => 'පණිවිඩය:',
                 ],
             ],
 

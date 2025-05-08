@@ -377,17 +377,10 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'Tamamlandı',
-                'date'                        => 'Tarih',
-                'declined'                    => 'Reddedildi',
-                'id'                          => 'Id',
-                'message'                     => 'Mesaj',
-                'pending'                     => 'Beklemede',
-                'processing'                  => 'İşleniyor',
-                'status'                      => 'Durum',
+                'create-success'              => 'Talep başarıyla oluşturuldu',
+                'revoked-successfully'        => 'Talep başarıyla iptal edildi',
                 'success-verify'              => 'Başarılı! Doğrulama e-postası gönderildi.',
-                'success-verify-email-unsent' => 'Başarılı! Doğrulama e-postası gönderilemedi.',
-                'type'                        => 'Tür',
+                'success-verify-email-unsent' => 'Başarılı! Doğrulama e-postası gönderilmedi.',
                 'unable-to-sent'              => 'E-posta gönderilemedi.',
 
                 'index'   => [
@@ -402,11 +395,27 @@ return [
                         'title'   => 'Yeni Talep Oluştur',
 
                         'type'    => [
-                            'choose' => 'Seç',
+                            'choose' => 'Seçiniz',
                             'delete' => 'Sil',
                             'title'  => 'Tür',
                             'update' => 'Güncelle',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'Tamamlandı',
+                        'date'       => 'Tarih',
+                        'declined'   => 'Reddedildi',
+                        'delete'     => 'Sil',
+                        'id'         => 'ID',
+                        'message'    => 'Mesaj',
+                        'pending'    => 'Beklemede',
+                        'processing' => 'İşleniyor',
+                        'revoke-btn' => 'İptal Et',
+                        'revoked'    => 'İptal Edildi',
+                        'status'     => 'Durum',
+                        'type'       => 'Tür',
+                        'update'     => 'Güncelle',
                     ],
                 ],
 
@@ -418,7 +427,7 @@ return [
                         'email'        => 'E-posta',
                         'first-name'   => 'Ad',
                         'gender'       => 'Cinsiyet',
-                        'last-name'    => 'Soyadı',
+                        'last-name'    => 'Soyad',
                         'phone'        => 'Telefon',
                         'title'        => 'Hesap Bilgileri',
                     ],
@@ -431,19 +440,19 @@ return [
                         'company'    => 'Şirket',
                         'country'    => 'Ülke',
                         'first-name' => 'Ad',
-                        'last-name'  => 'Soyadı',
+                        'last-name'  => 'Soyad',
                         'phone'      => 'Telefon',
                         'postcode'   => 'Posta Kodu',
                         'state'      => 'Eyalet',
                         'title'      => 'Adres Bilgileri',
-                        'vat-id'     => 'KDV Numarası',
+                        'vat-id'     => 'KDV Kimlik No',
                     ],
 
                     'order-info' => [
                         'amount'       => 'Tutar',
                         'order-id'     => 'Sipariş ID',
                         'product-name' => 'Ürün Adı',
-                        'qty'          => 'Miktar',
+                        'qty'          => 'Adet',
                         'shipping'     => 'Kargo',
                         'sku'          => 'SKU',
                         'status'       => 'Durum',
@@ -502,8 +511,7 @@ return [
                 'mobile' => [
                     'currencies' => 'Para Birimleri',
                     'locales'    => 'Yerel Ayarlar',
-                    'login'      => 'Kaydol veya Giriş yap
-',
+                    'login'      => 'Kaydol veya Giriş yap',
                 ],
             ],
 
@@ -692,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => 'Ad',
                 ],
+
+                'booking' => [
+                    'location'    => 'Konum',
+                    'view-on-map' => 'Haritada Görüntüle',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes Dakika',
+                        'slot-duration'            => 'Zaman Aralığı',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'Kapalı',
+                        'see-details'              => 'Detayları Gör',
+                        'slot-duration'            => 'Zaman Aralığı',
+                        'slot-duration-in-minutes' => ':minutes Dakika',
+                        'today-availability'       => 'Bugünkü Uygunluk',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'Biletinizi Ayırtın',
+                        'title'            => 'Etkinlik :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'Kiralama Seçeneğini Seçin',
+                        'daily-basis'        => 'Günlük',
+                        'from'               => 'Başlangıç',
+                        'hourly-basis'       => 'Saatlik',
+                        'rent-an-item'       => 'Bir Ürün Kiralayın',
+                        'select-date'        => 'Tarih Seçin',
+                        'select-rent-time'   => 'Kiralama Zamanını Seçin',
+                        'select-slot'        => 'Zaman Aralığını Seçin',
+                        'select-time-slot'   => 'Zaman Dilimini Seçin',
+                        'slot'               => 'Zaman Aralığı',
+                        'no-slots-available' => 'Uygun zaman aralığı yok',
+                        'to'                 => 'Bitiş',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'Masa Ayırtın',
+                        'closed'                   => 'Kapalı',
+                        'slot-duration'            => 'Zaman Aralığı',
+                        'slot-duration-in-minutes' => ':minutes Dakika',
+                        'slots-for-all-days'       => 'Tüm günler için göster',
+                        'special-notes'            => 'Özel İstek/Notlar',
+                        'today-availability'       => 'Bugünkü Uygunluk',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'Randevu Ayırtın',
+                        'date'                => 'Tarih',
+                        'no-slots-available'  => 'Uygun zaman aralığı yok',
+                        'select-slot'         => 'Zaman Aralığını Seçin',
+                        'title'               => 'Zaman Aralığı',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -736,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => ':qty adet için :price her biri ve :discount tasarruf edin',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'Kapalı',
+
+            'cart'             => [
+                'booking-from' => 'Rezervasyon Başlangıcı',
+                'booking-till' => 'Rezervasyon Bitişi',
+                'daily'        => 'Günlük',
+                'event-from'   => 'Etkinlik Başlangıcı',
+                'event-ticket' => 'Etkinlik Bileti',
+                'event-till'   => 'Etkinlik Bitişi',
+                'hourly'       => 'Saatlik',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'Bu etkinliğin süresi doldu.',
+                    ],
+
+                    'missing_options'        => 'Bu ürün için seçenekler eksik.',
+                    'inventory_warning'      => 'İstenen miktar mevcut değil, lütfen daha sonra tekrar deneyin.',
+                    'select_hourly_duration' => 'Bir saatlik süre aralığı seçin.',
+                ],
+
+                'rent-from'    => 'Kiralama Başlangıcı',
+                'rent-till'    => 'Kiralama Bitişi',
+                'rent-type'    => 'Kiralama Türü',
+                'renting_type' => 'Kiralama Türü',
+                'special-note' => 'Özel İstek/Notlar',
+            ],
+
+            'per-ticket-price' => ':price Bilet Başına',
         ],
     ],
 
@@ -909,6 +1005,7 @@ return [
                 'street-address'         => 'Sokak Adresi',
                 'telephone'              => 'Telefon',
                 'title'                  => 'Adres',
+                'vat-id'                 => 'KDV Numarası',
             ],
 
             'index' => [
@@ -1092,26 +1189,23 @@ return [
             ],
 
             'gdpr' => [
-                'new-delete-request' => 'Yeni Veri Silme Talebi',
-                'new-update-request' => 'Yeni Veri Güncelleme Talebi',
+                'new-delete-request' => 'Veri Silme için Yeni Talep',
+                'new-update-request' => 'Veri Güncelleme için Yeni Talep',
 
                 'new-request' => [
+                    'delete-summary' => 'Silme isteğinin özeti',
                     'message'        => 'Mesaj : ',
                     'request-status' => 'Talep Durumu : ',
                     'request-type'   => 'Talep Türü : ',
-                    'summary'        => 'Talep Özeti',
+                    'update-summary' => 'Güncelleme isteğinin özeti',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'Mesaj : ',
-                    'request-status' => 'Talep Durumu : ',
-                    'request-type'   => 'Talep Türü : ',
-                    'summary'        => 'Silme Talebi Özeti',
-                ],
-
-                'update-request' => [
-                    'message'        => 'Mesaj : ',
-                    'request-status' => 'Talep Durumu : ',
+                'status-update' => [
+                    'subject'        => 'GDPR Talebiniz Güncellendi',
+                    'summary'        => 'GDPR Talebinizin Durumu Güncellendi',
+                    'request-status' => 'Talep Durumu:',
+                    'request-type'   => 'Talep Türü:',
+                    'message'        => 'Mesaj:',
                 ],
             ],
 

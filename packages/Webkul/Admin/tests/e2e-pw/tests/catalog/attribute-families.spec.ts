@@ -1,9 +1,9 @@
 import { test, expect } from "../../setup";
-import * as forms from "../../utils/form";
+import { generateName, generateSlug } from "../../utils/faker";
 
 test.describe("attribute family management", () => {
-    test("create attribute family", async ({ adminPage }) => {
-        await adminPage.goto('admin/catalog/families');
+    test("should be able to create attribute family", async ({ adminPage }) => {
+        await adminPage.goto("admin/catalog/families");
         await adminPage.waitForSelector("div.primary-button", {
             state: "visible",
         });
@@ -13,19 +13,8 @@ test.describe("attribute family management", () => {
             .waitForSelector("div#not_avaliable", { timeout: 1000 })
             .catch(() => null);
 
-        const concatenatedNames = Array(5)
-            .fill(null)
-            .map(() => forms.generateRandomProductName())
-            .join(" ")
-            .replaceAll(" ", "");
-
-        await adminPage.fill(
-            'input[name="name"]',
-            forms.generateRandomStringWithSpaces(
-                Math.floor(Math.random() * 200)
-            )
-        );
-        await adminPage.fill('input[name="code"]', concatenatedNames);
+        await adminPage.fill('input[name="name"]', generateName());
+        await adminPage.fill('input[name="code"]', generateSlug("_"));
 
         const attributes = await adminPage.$$("i.icon-drag");
         const targets = await adminPage.$$(
@@ -61,28 +50,18 @@ test.describe("attribute family management", () => {
         ).toBeVisible();
     });
 
-    test("edit attribute family", async ({ adminPage }) => {
-        await adminPage.goto('admin/catalog/families');
+    test("should be able to edit attribute family", async ({ adminPage }) => {
+        await adminPage.goto("admin/catalog/families");
         await adminPage.waitForSelector("div.primary-button", {
             state: "visible",
         });
 
-        await adminPage.waitForSelector(
-            'span[class="cursor-pointer rounded-md p-1.5 text-2xl transition-all hover:bg-gray-200 dark:hover:bg-gray-800 max-sm:place-self-center icon-edit"]'
-        );
-
-        const iconEdit = await adminPage.$$(
-            'span[class="cursor-pointer rounded-md p-1.5 text-2xl transition-all hover:bg-gray-200 dark:hover:bg-gray-800 max-sm:place-self-center icon-edit"]'
-        );
+        await adminPage.waitForSelector("span.cursor-pointer.icon-edit");
+        const iconEdit = await adminPage.$$("span.cursor-pointer.icon-edit");
         await iconEdit[0].click();
 
         await adminPage.waitForSelector('input[name="name"]');
-        await adminPage.fill(
-            'input[name="name"]',
-            forms.generateRandomStringWithSpaces(
-                Math.floor(Math.random() * 100)
-            )
-        );
+        await adminPage.fill('input[name="name"]', generateName());
 
         const attributes = await adminPage.$$("i.icon-drag");
         const targets = await adminPage.$$(
@@ -118,18 +97,15 @@ test.describe("attribute family management", () => {
         ).toBeVisible();
     });
 
-    test("delete attribute family", async ({ adminPage }) => {
-        await adminPage.goto('admin/catalog/families');
+    test("should be able to delete attribute family", async ({ adminPage }) => {
+        await adminPage.goto("admin/catalog/families");
         await adminPage.waitForSelector("div.primary-button", {
             state: "visible",
         });
 
-        await adminPage.waitForSelector(
-            'span[class="cursor-pointer rounded-md p-1.5 text-2xl transition-all hover:bg-gray-200 dark:hover:bg-gray-800 max-sm:place-self-center icon-delete"]'
-        );
-
+        await adminPage.waitForSelector("span.cursor-pointer.icon-delete");
         const iconDelete = await adminPage.$$(
-            'span[class="cursor-pointer rounded-md p-1.5 text-2xl transition-all hover:bg-gray-200 dark:hover:bg-gray-800 max-sm:place-self-center icon-delete"]'
+            "span.cursor-pointer.icon-delete"
         );
         await iconDelete[0].click();
 

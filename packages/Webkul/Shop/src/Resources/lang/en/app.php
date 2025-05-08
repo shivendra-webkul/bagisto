@@ -377,17 +377,10 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'Completed',
-                'date'                        => 'Date',
-                'declined'                    => 'Declined',
-                'id'                          => 'Id',
-                'message'                     => 'Message',
-                'pending'                     => 'Pending',
-                'processing'                  => 'Processing',
-                'status'                      => 'Status',
+                'create-success'              => 'Request created successfully',
+                'revoked-successfully'        => 'Request revoked successfully',
                 'success-verify'              => 'Success! Verification email has been sent.',
                 'success-verify-email-unsent' => 'Success! Verification email has not been sent.',
-                'type'                        => 'Type',
                 'unable-to-sent'              => 'Unable to sent email.',
 
                 'index'   => [
@@ -407,6 +400,22 @@ return [
                             'title'  => 'Type',
                             'update' => 'Update',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'Completed',
+                        'date'       => 'Date',
+                        'declined'   => 'Declined',
+                        'delete'     => 'Delete',
+                        'id'         => 'ID',
+                        'message'    => 'Message',
+                        'pending'    => 'Pending',
+                        'processing' => 'Processing',
+                        'revoke-btn' => 'Revoke',
+                        'revoked'    => 'Revoked',
+                        'status'     => 'Status',
+                        'type'       => 'Type',
+                        'update'     => 'Update',
                     ],
                 ],
 
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => 'Name',
                 ],
+
+                'booking' => [
+                    'location'    => 'Location',
+                    'view-on-map' => 'View on Map',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes Minutes',
+                        'slot-duration'            => 'Slot Duration',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'Closed',
+                        'see-details'              => 'See Details',
+                        'slot-duration'            => 'Slot Duration',
+                        'slot-duration-in-minutes' => ':minutes Minutes',
+                        'today-availability'       => 'Today Availability',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'Book Your Ticket',
+                        'title'            => 'Event on :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'Choose Rent Option',
+                        'daily-basis'        => 'Daily Basis',
+                        'from'               => 'From',
+                        'hourly-basis'       => 'Hourly Basis',
+                        'rent-an-item'       => 'Rent an Item',
+                        'select-date'        => 'Select date',
+                        'select-rent-time'   => 'Select Rent Time',
+                        'select-slot'        => 'Select Slot',
+                        'select-time-slot'   => 'Select Time Slot',
+                        'slot'               => 'Slot',
+                        'no-slots-available' => 'No slots available',
+                        'to'                 => 'To',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'Book a Table',
+                        'closed'                   => 'Closed',
+                        'slot-duration'            => 'Slot Duration',
+                        'slot-duration-in-minutes' => ':minutes Minutes',
+                        'slots-for-all-days'       => 'Show for all days',
+                        'special-notes'            => 'Special Request/Notes',
+                        'today-availability'       => 'Today Availability',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'Book an Appointment',
+                        'date'                => 'Date',
+                        'no-slots-available'  => 'No slots available',
+                        'select-slot'         => 'Select Slot',
+                        'title'               => 'Slot',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => 'Buy :qty for :price each and save :discount',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'Closed',
+
+            'cart'             => [
+                'booking-from' => 'Booking From',
+                'booking-till' => 'Booking Till',
+                'daily'        => 'Daily Basis',
+                'event-from'   => 'Event From',
+                'event-ticket' => 'Event Ticket',
+                'event-till'   => 'Event Till',
+                'hourly'       => 'Hourly Basis',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'This event has been expired.',
+                    ],
+
+                    'missing_options'        => 'Options are missing for this product.',
+                    'inventory_warning'      => 'The requested quantity is not available, please try again later.',
+                    'select_hourly_duration' => 'Select a slot duration of one hour.',
+                ],
+
+                'rent-from'    => 'Rent From',
+                'rent-till'    => 'Rent Till',
+                'rent-type'    => 'Rent Type',
+                'renting_type' => 'Rent Type',
+                'special-note' => 'Special Request/Notes',
+            ],
+
+            'per-ticket-price' => ':price Per Ticket',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => 'Street Address',
                 'telephone'              => 'Telephone',
                 'title'                  => 'Address',
+                'vat-id'                 => 'Vat ID',
             ],
 
             'index' => [
@@ -1095,22 +1193,19 @@ return [
                 'new-update-request' => 'New Request For Data Update',
 
                 'new-request' => [
+                    'delete-summary' => 'Summary of Delete Request',
                     'message'        => 'Message : ',
                     'request-status' => 'Request Status : ',
                     'request-type'   => 'Request Type : ',
-                    'summary'        => 'Summary of Request',
+                    'update-summary' => 'Summary of Update Request',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'Message : ',
-                    'request-status' => 'Request Status : ',
-                    'request-type'   => 'Request Type : ',
-                    'summary'        => 'Summary of Delete Request',
-                ],
-
-                'update-request' => [
-                    'message'        => 'Message : ',
-                    'request-status' => 'Request Status : ',
+                'status-update' => [
+                    'subject'        => 'Your GDPR Request Has Been Updated',
+                    'summary'        => 'Your GDPR Request Status has been Updated',
+                    'request-status' => 'Request Status:',
+                    'request-type'   => 'Request Type:',
+                    'message'        => 'Message:',
                 ],
             ],
 

@@ -377,18 +377,11 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => '完了',
-                'date'                        => '日付',
-                'declined'                    => '拒否されました',
-                'id'                          => 'ID',
-                'message'                     => 'メッセージ',
-                'pending'                     => '保留中',
-                'processing'                  => '処理中',
-                'status'                      => 'ステータス',
+                'create-success'              => 'リクエストが正常に作成されました。',
+                'revoked-successfully'        => 'リクエストが正常に取り消されました。',
                 'success-verify'              => '成功！確認メールが送信されました。',
-                'success-verify-email-unsent' => '成功！確認メールが送信されませんでした。',
-                'type'                        => 'タイプ',
-                'unable-to-sent'              => 'メールを送信できませんでした。',
+                'success-verify-email-unsent' => '成功！確認メールは送信されませんでした。',
+                'unable-to-sent'              => 'メールを送信できません。',
 
                 'index'   => [
                     'create-btn' => 'リクエストを作成',
@@ -399,7 +392,7 @@ return [
                     'modal' => [
                         'message' => 'メッセージ',
                         'save'    => '保存',
-                        'title'   => '新しいリクエストを作成',
+                        'title'   => '新規リクエスト作成',
 
                         'type'    => [
                             'choose' => '選択',
@@ -407,6 +400,22 @@ return [
                             'title'  => 'タイプ',
                             'update' => '更新',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => '完了',
+                        'date'       => '日付',
+                        'declined'   => '却下',
+                        'delete'     => '削除',
+                        'id'         => 'ID',
+                        'message'    => 'メッセージ',
+                        'pending'    => '保留中',
+                        'processing' => '処理中',
+                        'revoke-btn' => '取り消す',
+                        'revoked'    => '取り消し済み',
+                        'status'     => 'ステータス',
+                        'type'       => 'タイプ',
+                        'update'     => '更新',
                     ],
                 ],
 
@@ -425,18 +434,18 @@ return [
 
                     'address-info' => [
                         'address'    => '住所',
-                        'address1'   => '住所1',
-                        'address2'   => '住所2',
-                        'city'       => '市区町村',
+                        'address1'   => '住所 1',
+                        'address2'   => '住所 2',
+                        'city'       => '市',
                         'company'    => '会社',
                         'country'    => '国',
                         'first-name' => '名',
                         'last-name'  => '姓',
                         'phone'      => '電話',
                         'postcode'   => '郵便番号',
-                        'state'      => '都道府県',
+                        'state'      => '州',
                         'title'      => '住所情報',
-                        'vat-id'     => 'VAT番号',
+                        'vat-id'     => 'VAT ID',
                     ],
 
                     'order-info' => [
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => '名前',
                 ],
+
+                'booking' => [
+                    'location'    => '場所',
+                    'view-on-map' => '地図で見る',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes 分',
+                        'slot-duration'            => 'スロットの期間',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => '閉店',
+                        'see-details'              => '詳細を見る',
+                        'slot-duration'            => 'スロットの期間',
+                        'slot-duration-in-minutes' => ':minutes 分',
+                        'today-availability'       => '今日の空き状況',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'チケットを予約する',
+                        'title'            => 'イベント：',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'レンタルオプションを選択',
+                        'daily-basis'        => '日単位',
+                        'from'               => 'から',
+                        'hourly-basis'       => '時間単位',
+                        'rent-an-item'       => 'アイテムをレンタル',
+                        'select-date'        => '日付を選択',
+                        'select-rent-time'   => 'レンタル時間を選択',
+                        'select-slot'        => 'スロットを選択',
+                        'select-time-slot'   => '時間スロットを選択',
+                        'slot'               => 'スロット',
+                        'no-slots-available' => '利用可能なスロットがありません',
+                        'to'                 => 'まで',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'テーブルを予約する',
+                        'closed'                   => '閉店',
+                        'slot-duration'            => 'スロットの期間',
+                        'slot-duration-in-minutes' => ':minutes 分',
+                        'slots-for-all-days'       => 'すべての日のスロットを表示',
+                        'special-notes'            => '特別なリクエスト/メモ',
+                        'today-availability'       => '今日の空き状況',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => '予約をする',
+                        'date'                => '日付',
+                        'no-slots-available'  => '利用可能なスロットがありません',
+                        'select-slot'         => 'スロットを選択',
+                        'title'               => 'スロット',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => ':qty 個を :price で購入し、:discount 節約',
             ],
+        ],
+
+        'booking' => [
+            'closed' => '閉店',
+
+            'cart'             => [
+                'booking-from' => '予約開始',
+                'booking-till' => '予約終了',
+                'daily'        => '日単位',
+                'event-from'   => 'イベント開始',
+                'event-ticket' => 'イベントチケット',
+                'event-till'   => 'イベント終了',
+                'hourly'       => '時間単位',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'このイベントは終了しました。',
+                    ],
+
+                    'missing_options'        => 'この製品にはオプションがありません。',
+                    'inventory_warning'      => '要求された数量は利用できません。後でやり直してください。',
+                    'select_hourly_duration' => '1時間のスロット期間を選択してください。',
+                ],
+
+                'rent-from'    => 'レンタル開始',
+                'rent-till'    => 'レンタル終了',
+                'rent-type'    => 'レンタルタイプ',
+                'renting_type' => 'レンタルタイプ',
+                'special-note' => '特別なリクエスト/メモ',
+            ],
+
+            'per-ticket-price' => 'チケット1枚あたり :price',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => '住所',
                 'telephone'              => '電話番号',
                 'title'                  => '住所',
+                'vat-id'                 => 'VAT番号',
             ],
 
             'index' => [
@@ -1091,26 +1189,23 @@ return [
             ],
 
             'gdpr' => [
-                'new-delete-request' => 'データ削除の新しいリクエスト',
-                'new-update-request' => 'データ更新の新しいリクエスト',
+                'new-delete-request' => 'データ削除の新規リクエスト',
+                'new-update-request' => 'データ更新の新規リクエスト',
 
                 'new-request' => [
+                    'delete-summary' => '削除リクエストの概要',
                     'message'        => 'メッセージ : ',
-                    'request-status' => 'リクエストステータス : ',
+                    'request-status' => 'リクエスト状況 : ',
                     'request-type'   => 'リクエストタイプ : ',
-                    'summary'        => 'リクエストの概要',
+                    'update-summary' => '更新リクエストの概要',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'メッセージ : ',
-                    'request-status' => 'リクエストステータス : ',
-                    'request-type'   => 'リクエストタイプ : ',
-                    'summary'        => '削除リクエストの概要',
-                ],
-
-                'update-request' => [
-                    'message'        => 'メッセージ : ',
-                    'request-status' => 'リクエストステータス : ',
+                'status-update' => [
+                    'subject'        => 'あなたのGDPRリクエストが更新されました',
+                    'summary'        => 'あなたのGDPRリクエストの状況が更新されました',
+                    'request-status' => 'リクエスト状況:',
+                    'request-type'   => 'リクエストタイプ:',
+                    'message'        => 'メッセージ:',
                 ],
             ],
 

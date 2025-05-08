@@ -581,15 +581,20 @@ return [
                 'title' => 'Facturas',
 
                 'datagrid' => [
-                    'action'       => 'Acciones',
-                    'grand-total'  => 'Total General',
-                    'id'           => 'ID',
-                    'invoice-date' => 'Fecha de la Factura',
-                    'order-id'     => 'ID de Pedido',
-                    'overdue'      => 'Vencido',
-                    'paid'         => 'Pagado',
-                    'pending'      => 'Pendiente',
-                    'status'       => 'Estado',
+                    'action'              => 'Acciones',
+                    'days-left'           => 'Quedan :count día(s)',
+                    'days-overdue'        => ':count día(s) de retraso',
+                    'grand-total'         => 'Total General',
+                    'id'                  => 'ID',
+                    'invoice-date'        => 'Fecha de la Factura',
+                    'mass-update-success' => 'Factura(s) seleccionada(s) actualizada(s) correctamente.',
+                    'order-id'            => 'ID de Pedido',
+                    'overdue'             => 'Vencido',
+                    'overdue-by'          => 'Atrasado por :count día(s)',
+                    'paid'                => 'Pagado',
+                    'pending'             => 'Pendiente',
+                    'status'              => 'Estado',
+                    'update-status'       => 'Actualizar estado',
                 ],
             ],
 
@@ -732,6 +737,38 @@ return [
                     'transaction-id'   => 'ID de Transacción',
                 ],
             ],
+        ],
+
+        'booking' => [
+            'index' => [
+                'datagrid' => [
+                    'created-date' => 'Fecha de Creación',
+                    'from'         => 'Desde',
+                    'id'           => 'ID',
+                    'order-id'     => 'ID de Pedido',
+                    'qty'          => 'Cantidad',
+                    'to'           => 'Hasta',
+                    'view'         => 'Ver',
+                ],
+
+                'title'    => 'Reservas',
+            ],
+
+            'calendar' => [
+                'booking-date'     => 'Fecha de Reserva',
+                'booking-details'  => 'Detalles de la Reserva',
+                'canceled'         => 'Cancelado',
+                'closed'           => 'Cerrado',
+                'done'             => 'Hecho',
+                'order-id'         => 'ID de Pedido',
+                'pending'          => 'Pendiente',
+                'price'            => 'Precio',
+                'status'           => 'Estado',
+                'time-slot'        => 'Franja Horaria:',
+                'view-details'     => 'Ver Detalles',
+            ],
+
+            'title' => 'Producto de Reservas',
         ],
     ],
 
@@ -1082,6 +1119,180 @@ return [
                                     'title' => 'Seleccionar',
                                 ],
                             ],
+                        ],
+                    ],
+
+                    'booking' => [
+                        'available-from' => 'Disponible Desde',
+                        'available-to'   => 'Disponible Hasta',
+                        'location'       => 'Ubicación',
+                        'qty'            => 'Cantidad',
+                        'title'          => 'Tipo de Reserva',
+
+                        'available-every-week' => [
+                            'no'    => 'No',
+                            'title' => 'Disponible Cada Semana',
+                            'yes'   => 'Sí',
+                        ],
+
+                        'appointment' => [
+                            'break-duration'         => 'Tiempo de Descanso entre Slots (Minutos)',
+                            'slot-duration'          => 'Duración del Slot (Minutos)',
+
+                            'same-slot-for-all-days' => [
+                                'no'    => 'No',
+                                'title' => 'Mismo Slot Para Todos los Días',
+                                'yes'   => 'Sí',
+                            ],
+                        ],
+
+                        'default' => [
+                            'add'              => 'Agregar',
+                            'break-duration'   => 'Tiempo de Descanso entre Slots (Minutos)',
+                            'close'            => 'Cerrar',
+                            'description'      => 'Información de la Reserva',
+                            'description-info' => 'De acuerdo con las franjas horarias, se creará y se mostrará la duración del tiempo. Será única en todos los slots y será visible en la tienda en línea',
+                            'edit'             => 'Editar',
+                            'many'             => 'Muchas Reservas Para Un Día',
+                            'one'              => 'Una Reserva Para Muchos Días',
+                            'open'             => 'Abrir',
+                            'slot-add'         => 'Agregar Slots',
+                            'slot-duration'    => 'Duración del Slot (Minutos)',
+                            'slot-title'       => 'Duración del Tiempo de los Slots',
+                            'title'            => 'Predeterminado',
+                            'unavailable'      => 'No Disponible',
+
+                            'modal'            => [
+                                'slot' => [
+                                    'add-title'  => 'Agregar Slots',
+                                    'close'      => 'Cerrar',
+                                    'day'        => 'Día',
+                                    'edit-title' => 'Editar Slots',
+                                    'friday'     => 'Viernes',
+                                    'from'       => 'Desde',
+                                    'from-day'   => 'Desde el Día',
+                                    'from-time'  => 'Desde la Hora',
+                                    'monday'     => 'Lunes',
+                                    'open'       => 'Abrir',
+                                    'saturday'   => 'Sábado',
+                                    'save'       => 'Guardar',
+                                    'select'     => 'Seleccionar',
+                                    'status'     => 'Estado',
+                                    'sunday'     => 'Domingo',
+                                    'thursday'   => 'Jueves',
+                                    'to'         => 'Hasta',
+                                    'to-day'     => 'Hasta el Día',
+                                    'to-time'    => 'Hasta la Hora',
+                                    'tuesday'    => 'Martes',
+                                    'wednesday'  => 'Miércoles',
+                                    'week'       => ':día',
+                                ],
+                            ],
+                        ],
+
+                        'event' => [
+                            'add'                => 'Agregar Entradas',
+                            'delete'             => 'Eliminar',
+                            'description'        => 'Descripción',
+                            'description-info'   => 'No hay entradas disponibles.',
+                            'edit'               => 'Editar',
+                            'name'               => 'Nombre',
+                            'price'              => 'Precio',
+                            'qty'                => 'Cantidad',
+                            'special-price'      => 'Precio Especial',
+                            'special-price-from' => 'Precio Especial Desde',
+                            'special-price-to'   => 'Precio Especial Hasta',
+                            'title'              => 'Entradas',
+                            'valid-from'         => 'Válido Desde',
+                            'valid-until'        => 'Válido Hasta',
+
+                            'modal'              => [
+                                'edit' => 'Editar Entradas',
+                                'save' => 'Guardar',
+                            ],
+                        ],
+
+                        'empty-info' => [
+                            'tickets' => [
+                                'add' => 'Agregar Entradas',
+                            ],
+
+                            'slots'   => [
+                                'add'         => 'Agregar Slots',
+                                'description' => 'Slots Disponibles con Duración de Tiempo.',
+                            ],
+                        ],
+
+                        'rental' => [
+                            'daily'                  => 'Base Diaria',
+                            'daily-hourly'           => 'Ambos (Base Diaria y por Hora)',
+                            'daily-price'            => 'Precio Diario',
+                            'hourly'                 => 'Base por Hora',
+                            'hourly-price'           => 'Precio por Hora',
+                            'title'                  => 'Tipo de Alquiler',
+
+                            'same-slot-for-all-days' => [
+                                'no'    => 'No',
+                                'title' => 'Mismo Slot Para Todos los Días',
+                                'yes'   => 'Sí',
+                            ],
+                        ],
+
+                        'slots' => [
+                            'add'              => 'Agregar Slots',
+                            'description-info' => 'De acuerdo con las franjas horarias, se creará y se mostrará la duración del tiempo. Será única en todos los slots y será visible en la tienda en línea',
+                            'save'             => 'Guardar',
+                            'title'            => 'Duración del Tiempo de los Slots',
+                            'unavailable'      => 'No Disponible',
+
+                            'action' => [
+                                'add' => 'Agregar',
+                            ],
+
+                            'modal' => [
+                                'slot' => [
+                                    'friday'     => 'Viernes',
+                                    'from'       => 'Desde',
+                                    'monday'     => 'Lunes',
+                                    'saturday'   => 'Sábado',
+                                    'sunday'     => 'Domingo',
+                                    'thursday'   => 'Jueves',
+                                    'to'         => 'Hasta',
+                                    'tuesday'    => 'Martes',
+                                    'wednesday'  => 'Miércoles',
+                                ],
+                            ],
+                        ],
+
+                        'table' => [
+                            'break-duration'            => 'Tiempo de Descanso entre Slots (Minutos)',
+                            'guest-capacity'            => 'Capacidad de Huéspedes',
+                            'guest-limit'               => 'Límite de Huéspedes por Mesa',
+                            'prevent-scheduling-before' => 'Prevenir Programación Antes de',
+                            'slot-duration'             => 'Duración del Slot (Minutos)',
+
+                            'charged-per' => [
+                                'guest'  => 'Huésped',
+                                'table'  => 'Mesa',
+                                'title'  => 'Cobrado Por',
+                            ],
+
+                            'same-slot-for-all-days' => [
+                                'no'    => 'No',
+                                'title' => 'Mismo Slot Para Todos los Días',
+                                'yes'   => 'Sí',
+                            ],
+                        ],
+
+                        'type' => [
+                            'appointment' => 'Reserva de Cita',
+                            'default'     => 'Reserva Predeterminada',
+                            'event'       => 'Reserva de Evento',
+                            'many'        => 'Muchas',
+                            'one'         => 'Una',
+                            'rental'      => 'Reserva de Alquiler',
+                            'table'       => 'Reserva de Mesa',
+                            'title'       => 'Tipo',
                         ],
                     ],
 
@@ -1780,20 +1991,22 @@ return [
                     'message'       => 'Mensaje',
                     'pending'       => 'Pendiente',
                     'processing'    => 'Procesando',
+                    'revoked'       => 'Widerrufen',
                     'status'        => 'Estado',
                     'type'          => 'Tipo',
                 ],
 
                 'modal' => [
-                    'completed'  => 'Completado',
-                    'declined'   => 'Rechazado',
-                    'pending'    => 'Pendiente',
-                    'processing' => 'Procesando',
-                    'status'     => 'Estado',
-                    'title'      => 'Editar Solicitud de Datos GDPR',
-                    'type'       => 'Tipo',
-                    'message'    => 'Mensaje',
-                    'save-btn'   => 'Guardar',
+                    'completed'     => 'Completado',
+                    'declined'      => 'Rechazado',
+                    'message'       => 'Mensaje',
+                    'pending'       => 'Pendiente',
+                    'processing'    => 'Procesando',
+                    'revoked'       => 'Widerrufen',
+                    'save-btn'      => 'Guardar',
+                    'status'        => 'Estado',
+                    'title'         => 'Editar Solicitud de Datos GDPR',
+                    'type'          => 'Tipo',
                 ],
 
                 'update-success'              => 'Solicitud de Datos actualizada con éxito y correo electrónico enviado al cliente.',
@@ -3294,6 +3507,7 @@ return [
                 'new'                           => 'Nuevo',
                 'no'                            => 'No',
                 'parent-id'                     => 'ID del Padre',
+                'parent-id-hint'                => 'Puedes introducir múltiples IDs de padres como valores separados por comas (por ejemplo: 12,15,34)',
                 'category-id'                   => 'ID de categoría',
                 'preview'                       => 'Vista Previa',
                 'product-carousel'              => 'Carrusel de Productos',
@@ -3455,6 +3669,7 @@ return [
 
         'view' => [
             'all-channels'  => 'Todos los Canales',
+            'back-btn'      => 'Atrás',
             'day'           => 'Día',
             'end-date'      => 'Fecha de Finalización',
             'export-csv'    => 'Exportar CSV',
@@ -3569,42 +3784,63 @@ return [
                     ],
 
                     'review-translation' => [
-                        'dolphin-phi'       => 'Dolphin Phi',
-                        'enabled'           => 'Habilitado',
-                        'gpt-3-5-turbo'     => 'OpenAI gpt-3.5-turbo',
-                        'llama2'            => 'Llama 2',
-                        'llama2-uncensored' => 'Llama 2 Sin Censura',
-                        'llama2:13b'        => 'Llama 2 13B',
-                        'llama2:70b'        => 'Llama 2 70B',
-                        'llava'             => 'LLaVA',
-                        'mistral'           => 'Mistral',
-                        'model'             => 'Modelo',
-                        'orca-mini'         => 'Orca Mini',
-                        'phi'               => 'Phi-2',
-                        'starling-lm'       => 'Starling',
-                        'title'             => 'Traducción de Reseñas',
-                        'title-info'        => 'Proporciona la opción al cliente o visitante de traducir la reseña del cliente al inglés.<br/><br/>Cuando está habilitado, ve a las reseñas y encontrarás el botón "Traducir al inglés" si la reseña no está en inglés.',
-                        'vicuna'            => 'Vicuña',
+                        'deepseek-r1-8b'      => 'DeepSeek R1 (8b)',
+                        'enabled'             => 'Habilitado',
+                        'gemini-2-0-flash'    => 'Gemini 2.0 Flash',
+                        'gpt-4-turbo'         => 'OpenAI gpt-4 Turbo',
+                        'gpt-4o'              => 'OpenAI gpt-4o',
+                        'gpt-4o-mini'         => 'OpenAI gpt-4o mini',
+                        'llama-groq'          => 'Llama 3.3 (Groq)',
+                        'llama3-1-8b'         => 'Llama 3.1 (8B)',
+                        'llama3-2-1b'         => 'Llama 3.2 (1B)',
+                        'llama3-2-3b'         => 'Llama 3.2 (3B)',
+                        'llama3-8b'           => 'Llama 3 (8B)',
+                        'llava-7b'            => 'Llava (7b)',
+                        'mistral-7b'          => 'Mistral (7b)',
+                        'model'               => 'Modelo',
+                        'orca-mini'           => 'Orca Mini',
+                        'phi3-5'              => 'Phi 3.5',
+                        'qwen2-5-0-5b'        => 'Qwen 2.5 (0.5b)',
+                        'qwen2-5-1-5b'        => 'Qwen 2.5 (1.5b)',
+                        'qwen2-5-14b'         => 'Qwen 2.5 (14b)',
+                        'qwen2-5-3b'          => 'Qwen 2.5 (3b)',
+                        'qwen2-5-7b'          => 'Qwen 2.5 (7b)',
+                        'starling-lm-7b'      => 'Starling-lm (7b)',
+                        'title'               => 'Traducción de Reseñas',
+                        'title-info'          => 'Proporcionar opción al cliente o visitante para traducir la reseña del cliente al inglés.<br/><br/>Cuando esté habilitado, ve a la reseña y encontrarás el botón "Traducir al inglés" si la reseña está en otro idioma que no sea inglés.',
+                        'vicuna-13b'          => 'Vicuna (13b)',
+                        'vicuna-7b'           => 'Vicuna (7b)',
                     ],
 
                     'checkout-message' => [
-                        'dolphin-phi'       => 'Dolphin Phi',
-                        'enabled'           => 'Habilitado',
-                        'gpt-3-5-turbo'     => 'OpenAI gpt-3.5-turbo',
-                        'llama2'            => 'Llama 2',
-                        'llama2-uncensored' => 'Llama 2 Sin Censura',
-                        'llama2:13b'        => 'Llama 2 13B',
-                        'llama2:70b'        => 'Llama 2 70B',
-                        'llava'             => 'LLaVA',
-                        'mistral'           => 'Mistral',
-                        'model'             => 'Modelo',
-                        'orca-mini'         => 'Orca Mini',
-                        'phi'               => 'Phi-2',
-                        'prompt'            => 'Indicación',
-                        'starling-lm'       => 'Starling',
-                        'title'             => 'Mensaje Personalizado de Pago',
-                        'title-info'        => 'Crea un mensaje de pago personalizado para los clientes en la página de agradecimiento, adaptando el contenido para que resuene con las preferencias individuales y mejore la experiencia general después de la compra.',
-                        'vicuna'            => 'Vicuña',
+                        'deepseek-r1-8b'      => 'DeepSeek R1 (8b)',
+                        'enabled'             => 'Habilitado',
+                        'gemini-2-0-flash'    => 'Gemini 2.0 Flash',
+                        'gpt-4-turbo'         => 'OpenAI gpt 4 Turbo',
+                        'gpt-4o'              => 'OpenAI gpt-4o',
+                        'gpt-4o-mini'         => 'OpenAI gpt-4o mini',
+                        'llama-groq'          => 'Llama 3.3 (Groq)',
+                        'llama3-1-8b'         => 'Llama 3.1 (8B)',
+                        'llama3-2-1b'         => 'Llama 3.2 (1B)',
+                        'llama3-2-3b'         => 'Llama 3.2 (3B)',
+                        'llama3-8b'           => 'Llama 3 (8B)',
+                        'llava-7b'            => 'Llava (7b)',
+                        'mistral-7b'          => 'Mistral (7b)',
+                        'model'               => 'Modelo',
+                        'orca-mini'           => 'Orca Mini',
+                        'phi3-5'              => 'Phi 3.5',
+                        'prompt'              => 'Indicación',
+                        'qwen2-5-0-5b'        => 'Qwen 2.5 (0.5b)',
+                        'qwen2-5-1-5b'        => 'Qwen 2.5 (1.5b)',
+                        'qwen2-5-14b'         => 'Qwen 2.5 (14b)',
+                        'qwen2-5-3b'          => 'Qwen 2.5 (3b)',
+                        'qwen2-5-7b'          => 'Qwen 2.5 (7b)',
+                        'starling-lm-7b'      => 'Starling-lm (7b)',
+                        'title'               => 'Mensaje Personalizado de Pago',
+                        'title-info'          => 'Crea un mensaje de pago personalizado para los clientes en la página de agradecimiento, adaptando el contenido para resonar con las preferencias individuales y mejorando la experiencia post-compra en general.',
+                        'vicuna'              => 'Vicuna',
+                        'vicuna-13b'          => 'Vicuna (13b)',
+                        'vicuna-7b'           => 'Vicuna (7b)',
                     ],
                 ],
 
@@ -3624,130 +3860,49 @@ return [
                         'max-url-per-file' => 'Número máximo de URLs por archivo',
                         'title'            => 'Límites de Archivo',
                     ],
-
-                    'store-url' => [
-                        'info'  => 'Configurar opción de frecuencia y prioridad para la URL de la tienda.',
-
-                        'frequency' => [
-                            'title' => 'Frecuencia',
-
-                            'options' => [
-                                'always'  => 'Siempre',
-                                'daily'   => 'Diariamente',
-                                'hourly'  => 'Cada hora',
-                                'monthly' => 'Mensualmente',
-                                'never'   => 'Nunca',
-                                'weekly'  => 'Semanalmente',
-                                'yearly'  => 'Anualmente',
-                            ],
-                        ],
-
-                        'title'    => 'URL de la Tienda',
-                        'priority' => 'Prioridad',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'Configurar opción de frecuencia y prioridad para las categorías.',
-
-                        'frequency' => [
-                            'title' => 'Frecuencia',
-
-                            'options' => [
-                                'always'  => 'Siempre',
-                                'daily'   => 'Diariamente',
-                                'hourly'  => 'Cada hora',
-                                'monthly' => 'Mensualmente',
-                                'never'   => 'Nunca',
-                                'weekly'  => 'Semanalmente',
-                                'yearly'  => 'Anualmente',
-                            ],
-                        ],
-
-                        'title'    => 'Categorías',
-                        'priority' => 'Prioridad',
-                    ],
-
-                    'products' => [
-                        'info'  => 'Configurar opción de frecuencia y prioridad para los productos.',
-
-                        'frequency' => [
-                            'title' => 'Frecuencia',
-
-                            'options' => [
-                                'always'  => 'Siempre',
-                                'daily'   => 'Diariamente',
-                                'hourly'  => 'Cada hora',
-                                'monthly' => 'Mensualmente',
-                                'never'   => 'Nunca',
-                                'weekly'  => 'Semanalmente',
-                                'yearly'  => 'Anualmente',
-                            ],
-                        ],
-
-                        'title'    => 'Productos',
-                        'priority' => 'Prioridad',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'Configurar opción de frecuencia y prioridad para las páginas CMS.',
-
-                        'frequency' => [
-                            'title' => 'Frecuencia',
-
-                            'options' => [
-                                'always'  => 'Siempre',
-                                'daily'   => 'Diariamente',
-                                'hourly'  => 'Cada hora',
-                                'monthly' => 'Mensualmente',
-                                'never'   => 'Nunca',
-                                'weekly'  => 'Semanalmente',
-                                'yearly'  => 'Anualmente',
-                            ],
-                        ],
-
-                        'title'    => 'Páginas CMS',
-                        'priority' => 'Prioridad',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'GDPR',
-                'info'  => 'GDPR',
+                'info'  => 'Configuraciones de cumplimiento de GDPR',
 
                 'settings' => [
-                    'title'   => 'Configuración de GDPR',
-                    'info'    => 'Configuración de GDPR',
-                    'enabled' => 'Habilitado',
+                    'title'   => 'Configuraciones de cumplimiento de GDPR',
+                    'info'    => 'Administre las configuraciones de cumplimiento de GDPR, incluida la política de privacidad. Habilite o deshabilite las funciones de GDPR según sea necesario.',
+                    'enabled' => 'Habilitar GDPR',
                 ],
 
                 'agreement' => [
                     'title'          => 'Acuerdo de GDPR',
-                    'info'           => 'Acuerdo de GDPR',
-                    'enable'         => 'Habilitar Acuerdo del Cliente',
-                    'checkbox-label' => 'Etiqueta de Casilla de Verificación del Acuerdo',
-                    'content'        => 'Contenido del Acuerdo',
+                    'info'           => 'Administre el consentimiento de los clientes de acuerdo con las regulaciones de GDPR. Habilite el consentimiento obligatorio para la recopilación y el procesamiento de datos.',
+                    'enable'         => 'Habilitar consentimiento del cliente',
+                    'checkbox-label' => 'Etiqueta de la casilla de verificación para el consentimiento',
+                    'content'        => 'Contenido del consentimiento',
                 ],
 
                 'cookie' => [
-                    'title'        => 'Configuración del Mensaje de Cookies',
-                    'info'         => 'Configuración del Mensaje de Cookies',
-                    'enable'       => 'Habilitar Aviso de Cookies',
-                    'position'     => 'Posición de Visualización del Bloque de Cookies',
-                    'bottom-left'  => 'Inferior Izquierda',
-                    'bottom-right' => 'Inferior Derecha',
-                    'identifier'   => 'Identificador de Bloque Estático',
+                    'bottom-left'  => 'Abajo a la izquierda',
+                    'bottom-right' => 'Abajo a la derecha',
+                    'center'       => 'Centro',
                     'description'  => 'Descripción',
+                    'enable'       => 'Habilitar notificación de cookies',
+                    'identifier'   => 'Identificador de bloque estático',
+                    'info'         => 'Configure las configuraciones de consentimiento de cookies para informar a los usuarios sobre la recopilación de datos y cumplir con las políticas de privacidad.',
+                    'position'     => 'Posición de visualización del bloque de cookies',
+                    'title'        => 'Configuraciones de notificación de cookies',
+                    'top-left'     => 'Arriba a la izquierda',
+                    'top-right'    => 'Arriba a la derecha',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => 'Tu Preferencia de Consentimiento de Cookies',
-                    'info'                   => 'Tu Preferencia de Consentimiento de Cookies',
-                    'strictly-necessary'     => 'Estrictamente Necesarias',
-                    'basic-interaction'      => 'Interacciones Básicas y Funcionalidades',
-                    'experience-enhancement' => 'Mejoras de Experiencia',
-                    'measurement'            => 'Mediciones',
-                    'targeting-advertising'  => 'Segmentación y Publicidad',
+                    'title'                  => 'Administre sus configuraciones de cookies',
+                    'info'                   => 'Controle cómo se utilizan sus datos seleccionando las configuraciones de cookies preferidas. Ajuste los permisos para diferentes tipos de cookies.',
+                    'strictly-necessary'     => 'Estrictamente necesario',
+                    'basic-interaction'      => 'Interacción y funcionalidad básica',
+                    'experience-enhancement' => 'Mejora de la experiencia',
+                    'measurement'            => 'Medición',
+                    'targeting-advertising'  => 'Segmentación y publicidad',
                 ],
             ],
 
@@ -4013,13 +4168,103 @@ return [
                     ],
 
                     'social-login' => [
-                        'enable-facebook'   => 'Habilitar Facebook',
-                        'enable-github'     => 'Habilitar Github',
-                        'enable-google'     => 'Habilitar Google',
-                        'enable-linkedin'   => 'Habilitar LinkedIn',
-                        'enable-twitter'    => 'Habilitar Twitter',
-                        'social-login'      => 'Inicio de sesión social',
-                        'social-login-info' => '"Inicio de sesión social" permite a los usuarios acceder a sitios web utilizando sus cuentas de redes sociales, simplificando los procesos de registro e inicio de sesión para mayor comodidad.',
+                        'title' => 'Inicio de sesión social',
+                        'info'  => '"El inicio de sesión social" permite a los usuarios acceder a un sitio web utilizando sus cuentas de redes sociales, simplificando los procesos de registro e inicio de sesión.',
+
+                        'google' => [
+                            'enable-google' => 'Habilitar Google',
+
+                            'client-id' => [
+                                'title'      => 'ID de cliente',
+                                'title-info' => 'Identificador único proporcionado por Google al crear tu aplicación OAuth.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Secreto de cliente',
+                                'title-info' => 'Clave secreta asociada a tu cliente OAuth de Google. Mantenla confidencial.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'Redirección',
+                                'title-info' => 'URL de retorno donde los usuarios son redirigidos después de autenticarse con Google. Debe coincidir con la URL configurada en tu consola de Google.',
+                            ],
+                        ],
+
+                        'facebook' => [
+                            'enable-facebook' => 'Habilitar Facebook',
+
+                            'client-id' => [
+                                'title'      => 'ID de cliente',
+                                'title-info' => 'ID de la aplicación proporcionado por Facebook al crear una aplicación en la consola de desarrolladores.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Secreto de cliente',
+                                'title-info' => 'Secreto de la aplicación asociado a tu aplicación de Facebook. Mantenlo seguro y privado.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'URL de redirección',
+                                'title-info' => 'URL de retorno donde los usuarios son redirigidos después de autenticarse con Facebook. Debe coincidir con la URL configurada en la configuración de tu aplicación de Facebook.',
+                            ],
+                        ],
+
+                        'github' => [
+                            'enable-github' => 'Habilitar GitHub',
+
+                            'client-id' => [
+                                'title'      => 'ID de cliente',
+                                'title-info' => 'Identificador único proporcionado por GitHub al crear tu aplicación OAuth.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Secreto de cliente',
+                                'title-info' => 'Clave secreta asociada a tu cliente OAuth de GitHub. Mantenla confidencial.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'URL de redirección',
+                                'title-info' => 'URL de retorno donde los usuarios son redirigidos después de autenticarse con GitHub. Debe coincidir con la URL configurada en tu consola de GitHub.',
+                            ],
+                        ],
+
+                        'linkedin' => [
+                            'enable-linkedin' => 'Habilitar LinkedIn',
+
+                            'client-id' => [
+                                'title'      => 'ID de cliente',
+                                'title-info' => 'Identificador único proporcionado por LinkedIn al crear tu aplicación OAuth.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Secreto de cliente',
+                                'title-info' => 'Clave secreta asociada a tu cliente OAuth de LinkedIn. Mantenla confidencial.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'URL de redirección',
+                                'title-info' => 'URL de retorno donde los usuarios son redirigidos después de autenticarse con LinkedIn. Debe coincidir con la URL configurada en tu consola de LinkedIn.',
+                            ],
+                        ],
+
+                        'twitter' => [
+                            'enable-twitter' => 'Habilitar Twitter',
+
+                            'client-id' => [
+                                'title'      => 'ID de cliente',
+                                'title-info' => 'Identificador único proporcionado por Twitter al crear tu aplicación OAuth.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Secreto de cliente',
+                                'title-info' => 'Clave secreta asociada a tu cliente OAuth de Twitter. Mantenla confidencial.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'URL de redirección',
+                                'title-info' => 'URL de retorno donde los usuarios son redirigidos después de autenticarse con Twitter. Debe coincidir con la URL configurada en tu consola de Twitter.',
+                            ],
+                        ],
                     ],
                 ],
             ],
@@ -4356,54 +4601,55 @@ return [
             ],
 
             'sidebar' => [
-                'familias-de-atributos'     => 'Familias de Atributos',
                 'atributos'                 => 'Atributos',
+                'booking-product'           => 'Reservas',
+                'búsqueda-y-seo'            => 'Búsqueda y SEO',
                 'campañas'                  => 'Campañas',
-                'catálogo'                  => 'Catálogo',
-                'categorías'                => 'Categorías',
                 'canales'                   => 'Canales',
+                'categorías'                => 'Categorías',
+                'categorías-de-impuestos'   => 'Categorías de Impuestos',
+                'catálogo'                  => 'Catálogo',
+                'clientes'                  => 'Clientes',
                 'cms'                       => 'CMS',
                 'colapsar'                  => 'Colapsar',
                 'comunicaciones'            => 'Comunicaciones',
+                'configuración'             => 'Configuración',
                 'configurar'                => 'Configurar',
-                'monedas'                   => 'Monedas',
-                'clientes'                  => 'Clientes',
-                'panel-de-control'          => 'Panel de Control',
-                'transferencia-de-datos'    => 'Transferencia de datos',
                 'descuento'                 => 'Descuento',
-                'plantillas-de-correo'      => 'Plantillas de Correo Electrónico',
+                'envíos'                    => 'Envíos',
                 'eventos'                   => 'Eventos',
-                'tasas-de-cambio'           => 'Tasas de Cambio',
+                'facturas'                  => 'Facturas',
+                'familias-de-atributos'     => 'Familias de Atributos',
+                'fuentes-de-inventario'     => 'Fuentes de Inventario',
                 'grupos'                    => 'Grupos',
                 'importaciones'             => 'Importaciones',
-                'fuentes-de-inventario'     => 'Fuentes de Inventario',
-                'facturas'                  => 'Facturas',
+                'impuestos'                 => 'Impuestos',
+                'informe'                   => 'Informe',
                 'localizaciones'            => 'Localizaciones',
+                'mapas-del-sitio'           => 'Mapas del Sitio',
                 'marketing'                 => 'Marketing',
                 'modo-oscuro'               => 'Modo Oscuro',
-                'suscripciones-al-boletín'  => 'Suscripciones al Boletín de Noticias',
+                'monedas'                   => 'Monedas',
+                'panel-de-control'          => 'Panel de Control',
                 'pedidos'                   => 'Pedidos',
+                'plantillas-de-correo'      => 'Plantillas de Correo Electrónico',
                 'productos'                 => 'Productos',
                 'promociones'               => 'Promociones',
                 'reembolsos'                => 'Reembolsos',
-                'informe'                   => 'Informe',
+                'reescrituras-de-url'       => 'Reescrituras de URL',
                 'reseñas'                   => 'Reseñas',
                 'roles'                     => 'Roles',
-                'ventas'                    => 'Ventas',
-                'búsqueda-y-seo'            => 'Búsqueda y SEO',
                 'sinónimos-de-búsqueda'     => 'Sinónimos de Búsqueda',
-                'términos-de-búsqueda'      => 'Términos de búsqueda',
-                'configuración'             => 'Configuración',
-                'envíos'                    => 'Envíos',
-                'mapas-del-sitio'           => 'Mapas del Sitio',
-                'categorías-de-impuestos'   => 'Categorías de Impuestos',
+                'solicitudes-de-datos-gdpr' => 'Solicitudes de Datos GDPR',
+                'suscripciones-al-boletín'  => 'Suscripciones al Boletín de Noticias',
+                'tasas-de-cambio'           => 'Tasas de Cambio',
                 'tasas-de-impuestos'        => 'Tasas de Impuestos',
-                'impuestos'                 => 'Impuestos',
                 'temas'                     => 'Temas',
                 'transacciones'             => 'Transacciones',
-                'reescrituras-de-url'       => 'Reescrituras de URL',
+                'transferencia-de-datos'    => 'Transferencia de datos',
+                'términos-de-búsqueda'      => 'Términos de búsqueda',
                 'usuarios'                  => 'Usuarios',
-                'solicitudes-de-datos-gdpr' => 'Solicitudes de Datos GDPR',
+                'ventas'                    => 'Ventas',
             ],
 
             'powered-by' => [
@@ -4566,26 +4812,37 @@ return [
             'ai-btn-tile' => 'Magia IA',
 
             'ai-generation' => [
-                'apply'                  => 'Aplicar',
-                'generate'               => 'Generar',
-                'generated-content'      => 'Contenido Generado',
-                'generated-content-info' => 'El contenido generado por IA puede ser engañoso. Por favor, revise el contenido generado antes de aplicarlo.',
-                'generating'             => 'Generando...',
-                'prompt'                 => 'Indicación',
-                'title'                  => 'Asistencia de IA',
-                'model'                  => 'Modelo',
-                'gpt-3-5-turbo'          => 'OpenAI GPT-3.5 Turbo',
-                'llama2'                 => 'Llama 2',
-                'mistral'                => 'Mistral',
-                'dolphin-phi'            => 'Dolphin Phi',
-                'phi'                    => 'Phi-2',
-                'starling-lm'            => 'Starling',
-                'llama2-uncensored'      => 'Llama 2 Sin Censura',
-                'llama2:13b'             => 'Llama 2 13B',
-                'llama2:70b'             => 'Llama 2 70B',
-                'orca-mini'              => 'Orca Mini',
-                'vicuna'                 => 'Vicuña',
-                'llava'                  => 'LLaVA',
+                'apply'                    => 'Aplicar',
+                'deepseek-r1-8b'           => 'DeepSeek R1 (8b)',
+                'enabled'                  => 'Habilitado',
+                'gemini-2-0-flash'         => 'Gemini 2.0 Flash',
+                'generate'                 => 'Generar',
+                'generated-content'        => 'Contenido Generado',
+                'generated-content-info'   => 'El contenido generado por IA puede ser engañoso. Por favor, revise el contenido generado antes de aplicarlo.',
+                'generating'               => 'Generando...',
+                'gpt-4-turbo'              => 'OpenAI gpt-4 Turbo',
+                'gpt-4o'                   => 'OpenAI gpt-4o',
+                'gpt-4o-mini'              => 'OpenAI gpt-4o mini',
+                'llama-groq'               => 'Llama 3.3 (Groq)',
+                'llama3-1-8b'              => 'Llama 3.1 (8B)',
+                'llama3-2-1b'              => 'Llama 3.2 (1B)',
+                'llama3-2-3b'              => 'Llama 3.2 (3B)',
+                'llama3-8b'                => 'Llama 3 (8B)',
+                'llava-7b'                 => 'Llava (7b)',
+                'mistral-7b'               => 'Mistral (7b)',
+                'model'                    => 'Modelo',
+                'orca-mini'                => 'Orca Mini',
+                'phi3-5'                   => 'Phi 3.5',
+                'prompt'                   => 'Indicación',
+                'qwen2-5-0-5b'             => 'Qwen 2.5 (0.5b)',
+                'qwen2-5-1-5b'             => 'Qwen 2.5 (1.5b)',
+                'qwen2-5-14b'              => 'Qwen 2.5 (14b)',
+                'qwen2-5-3b'               => 'Qwen 2.5 (3b)',
+                'qwen2-5-7b'               => 'Qwen 2.5 (7b)',
+                'starling-lm-7b'           => 'Starling-lm (7b)',
+                'title'                    => 'Asistencia de IA',
+                'vicuna-13b'               => 'Vicuna (13b)',
+                'vicuna-7b'                => 'Vicuna (7b)',
             ],
         ],
     ],
@@ -4615,6 +4872,7 @@ return [
         'email-templates'          => 'Plantillas de Correo Electrónico',
         'events'                   => 'Eventos',
         'exchange-rates'           => 'Tasas de Cambio',
+        'gdpr'                     => 'RGPD',
         'groups'                   => 'Grupos',
         'import'                   => 'Importar',
         'imports'                  => 'Importaciones',
@@ -4717,10 +4975,28 @@ return [
                 'greeting'    => '¡Damos una cálida bienvenida al nuevo cliente, :customer_name que acaba de registrarse con nosotros!',
                 'subject'     => 'Registro de nuevo cliente',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'El estado de su solicitud de GDPR',
+            'gdpr' => [
+                'new-delete-request' => 'Nueva solicitud para eliminar datos',
+                'new-update-request' => 'Nueva solicitud para actualizar datos',
+
+                'new-request' => [
+                    'customer-name'  => 'Nombre del cliente : ',
+                    'delete-summary' => 'Resumen de la solicitud de eliminación',
+                    'message'        => 'Mensaje : ',
+                    'request-status' => 'Estado de la solicitud : ',
+                    'request-type'   => 'Tipo de solicitud : ',
+                    'update-summary' => 'Resumen de la solicitud de actualización',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'La solicitud GDPR ha sido actualizada',
+                    'summary'        => 'El estado de la solicitud GDPR ha sido actualizado',
+                    'request-status' => 'Estado de la solicitud:',
+                    'request-type'   => 'Tipo de solicitud:',
+                    'message'        => 'Mensaje:',
+                ],
+            ],
         ],
 
         'orders' => [

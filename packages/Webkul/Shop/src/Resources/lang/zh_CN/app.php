@@ -377,27 +377,20 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => '已完成',
-                'date'                        => '日期',
-                'declined'                    => '已拒绝',
-                'id'                          => '编号',
-                'message'                     => '消息',
-                'pending'                     => '待处理',
-                'processing'                  => '处理中',
-                'status'                      => '状态',
+                'create-success'              => '请求创建成功',
+                'revoked-successfully'        => '请求撤销成功',
                 'success-verify'              => '成功！验证邮件已发送。',
                 'success-verify-email-unsent' => '成功！验证邮件未发送。',
-                'type'                        => '类型',
                 'unable-to-sent'              => '无法发送邮件。',
 
                 'index'   => [
                     'create-btn' => '创建请求',
                     'html'       => 'HTML',
                     'pdf'        => 'PDF',
-                    'title'      => 'GDPR 数据请求',
+                    'title'      => 'GDPR数据请求',
 
                     'modal' => [
-                        'message' => '消息',
+                        'message' => '信息',
                         'save'    => '保存',
                         'title'   => '创建新请求',
 
@@ -407,6 +400,22 @@ return [
                             'title'  => '类型',
                             'update' => '更新',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => '已完成',
+                        'date'       => '日期',
+                        'declined'   => '已拒绝',
+                        'delete'     => '删除',
+                        'id'         => 'ID',
+                        'message'    => '消息',
+                        'pending'    => '待处理',
+                        'processing' => '处理中',
+                        'revoke-btn' => '撤销',
+                        'revoked'    => '已撤销',
+                        'status'     => '状态',
+                        'type'       => '类型',
+                        'update'     => '更新',
                     ],
                 ],
 
@@ -433,18 +442,18 @@ return [
                         'first-name' => '名字',
                         'last-name'  => '姓氏',
                         'phone'      => '电话',
-                        'postcode'   => '邮政编码',
-                        'state'      => '省份',
+                        'postcode'   => '邮编',
+                        'state'      => '州',
                         'title'      => '地址信息',
                         'vat-id'     => '增值税号',
                     ],
 
                     'order-info' => [
                         'amount'       => '金额',
-                        'order-id'     => '订单编号',
+                        'order-id'     => '订单号',
                         'product-name' => '产品名称',
                         'qty'          => '数量',
-                        'shipping'     => '运输',
+                        'shipping'     => '运费',
                         'sku'          => 'SKU',
                         'status'       => '状态',
                         'title'        => '订单信息',
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => '名称',
                 ],
+
+                'booking' => [
+                    'location'    => '位置',
+                    'view-on-map' => '在地图上查看',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes 分钟',
+                        'slot-duration'            => '时段持续时间',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => '关闭',
+                        'see-details'              => '查看详情',
+                        'slot-duration'            => '时段持续时间',
+                        'slot-duration-in-minutes' => ':minutes 分钟',
+                        'today-availability'       => '今日可用性',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => '预订您的票',
+                        'title'            => '活动于 :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => '选择租赁选项',
+                        'daily-basis'        => '按天计算',
+                        'from'               => '从',
+                        'hourly-basis'       => '按小时计算',
+                        'rent-an-item'       => '租一个物品',
+                        'select-date'        => '选择日期',
+                        'select-rent-time'   => '选择租赁时间',
+                        'select-slot'        => '选择时段',
+                        'select-time-slot'   => '选择时间段',
+                        'slot'               => '时段',
+                        'no-slots-available' => '没有可用时段',
+                        'to'                 => '到',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => '预订桌位',
+                        'closed'                   => '关闭',
+                        'slot-duration'            => '时段持续时间',
+                        'slot-duration-in-minutes' => ':minutes 分钟',
+                        'slots-for-all-days'       => '显示所有天的时段',
+                        'special-notes'            => '特别请求/备注',
+                        'today-availability'       => '今日可用性',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => '预约',
+                        'date'                => '日期',
+                        'no-slots-available'  => '没有可用时段',
+                        'select-slot'         => '选择时段',
+                        'title'               => '时段',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => '购买 :qty 件，每件 :price，节省 :discount',
             ],
+        ],
+
+        'booking' => [
+            'closed' => '关闭',
+
+            'cart'             => [
+                'booking-from' => '预订从',
+                'booking-till' => '预订到',
+                'daily'        => '按天计算',
+                'event-from'   => '活动从',
+                'event-ticket' => '活动票',
+                'event-till'   => '活动到',
+                'hourly'       => '按小时计算',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => '此活动已过期。',
+                    ],
+
+                    'missing_options'        => '此产品缺少选项。',
+                    'inventory_warning'      => '请求的数量不可用，请稍后再试。',
+                    'select_hourly_duration' => '选择一小时的时段。',
+                ],
+
+                'rent-from'    => '租赁从',
+                'rent-till'    => '租赁到',
+                'rent-type'    => '租赁类型',
+                'renting_type' => '租赁类型',
+                'special-note' => '特别请求/备注',
+            ],
+
+            'per-ticket-price' => ':price 每张票',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => '街道地址',
                 'telephone'              => '电话',
                 'title'                  => '地址',
+                'vat-id'                 => 'VAT号码',
             ],
 
             'index' => [
@@ -1095,22 +1193,19 @@ return [
                 'new-update-request' => '新的数据更新请求',
 
                 'new-request' => [
-                    'message'        => '消息：',
-                    'request-status' => '请求状态：',
-                    'request-type'   => '请求类型：',
-                    'summary'        => '请求摘要',
+                    'delete-summary' => '删除请求摘要',
+                    'message'        => '信息 : ',
+                    'request-status' => '请求状态 : ',
+                    'request-type'   => '请求类型 : ',
+                    'update-summary' => '更新请求摘要',
                 ],
 
-                'delete-request' => [
-                    'message'        => '消息：',
-                    'request-status' => '请求状态：',
-                    'request-type'   => '请求类型：',
-                    'summary'        => '删除请求摘要',
-                ],
-
-                'update-request' => [
-                    'message'        => '消息：',
-                    'request-status' => '请求状态：',
+                'status-update' => [
+                    'subject'        => '您的GDPR请求已更新',
+                    'summary'        => '您的GDPR请求状态已更新',
+                    'request-status' => '请求状态:',
+                    'request-type'   => '请求类型:',
+                    'message'        => '信息:',
                 ],
             ],
 

@@ -377,17 +377,10 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'تکمیل شده',
-                'date'                        => 'تاریخ',
-                'declined'                    => 'رد شده',
-                'id'                          => 'شناسه',
-                'message'                     => 'پیام',
-                'pending'                     => 'در انتظار',
-                'processing'                  => 'در حال پردازش',
-                'status'                      => 'وضعیت',
+                'create-success'              => 'درخواست با موفقیت ایجاد شد',
+                'revoked-successfully'        => 'درخواست با موفقیت لغو شد',
                 'success-verify'              => 'موفقیت! ایمیل تأیید ارسال شد.',
-                'success-verify-email-unsent' => 'موفقیت! ایمیل تأیید ارسال نشد.',
-                'type'                        => 'نوع',
+                'success-verify-email-unsent' => 'موفقیت! ایمیل تأیید ارسال نشده است.',
                 'unable-to-sent'              => 'امکان ارسال ایمیل وجود ندارد.',
 
                 'index'   => [
@@ -408,10 +401,26 @@ return [
                             'update' => 'به‌روزرسانی',
                         ],
                     ],
+
+                    'datagrid' => [
+                        'completed'  => 'تکمیل شده',
+                        'date'       => 'تاریخ',
+                        'declined'   => 'رد شده',
+                        'delete'     => 'حذف',
+                        'id'         => 'شناسه',
+                        'message'    => 'پیام',
+                        'pending'    => 'در انتظار',
+                        'processing' => 'در حال پردازش',
+                        'revoke-btn' => 'ابطال',
+                        'revoked'    => 'ابطال شده',
+                        'status'     => 'وضعیت',
+                        'type'       => 'نوع',
+                        'update'     => 'به‌روزرسانی',
+                    ],
                 ],
 
                 'pdf' => [
-                    'title' => 'نمای پیش‌فرض فروشگاه',
+                    'title' => 'نمای فروشگاه پیش‌فرض',
 
                     'account-info' => [
                         'dob'          => 'تاریخ تولد',
@@ -425,8 +434,8 @@ return [
 
                     'address-info' => [
                         'address'    => 'آدرس',
-                        'address1'   => 'آدرس 1',
-                        'address2'   => 'آدرس 2',
+                        'address1'   => 'آدرس ۱',
+                        'address2'   => 'آدرس ۲',
                         'city'       => 'شهر',
                         'company'    => 'شرکت',
                         'country'    => 'کشور',
@@ -436,7 +445,7 @@ return [
                         'postcode'   => 'کد پستی',
                         'state'      => 'استان',
                         'title'      => 'اطلاعات آدرس',
-                        'vat-id'     => 'شناسه مالیاتی',
+                        'vat-id'     => 'شناسه مالیات بر ارزش افزوده',
                     ],
 
                     'order-info' => [
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => 'نام',
                 ],
+
+                'booking' => [
+                    'location'    => 'مکان',
+                    'view-on-map' => 'مشاهده روی نقشه',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes دقیقه',
+                        'slot-duration'            => 'مدت زمان اسلات',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'بسته',
+                        'see-details'              => 'مشاهده جزئیات',
+                        'slot-duration'            => 'مدت زمان اسلات',
+                        'slot-duration-in-minutes' => ':minutes دقیقه',
+                        'today-availability'       => 'دسترسی امروز',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'رزرو بلیط شما',
+                        'title'            => 'رویداد در :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'گزینه اجاره را انتخاب کنید',
+                        'daily-basis'        => 'به صورت روزانه',
+                        'from'               => 'از',
+                        'hourly-basis'       => 'به صورت ساعتی',
+                        'rent-an-item'       => 'اجاره یک مورد',
+                        'select-date'        => 'تاریخ را انتخاب کنید',
+                        'select-rent-time'   => 'زمان اجاره را انتخاب کنید',
+                        'select-slot'        => 'اسلات را انتخاب کنید',
+                        'select-time-slot'   => 'زمان اسلات را انتخاب کنید',
+                        'slot'               => 'اسلات',
+                        'no-slots-available' => 'هیچ اسلاتی موجود نیست',
+                        'to'                 => 'تا',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'رزرو میز',
+                        'closed'                   => 'بسته',
+                        'slot-duration'            => 'مدت زمان اسلات',
+                        'slot-duration-in-minutes' => ':minutes دقیقه',
+                        'slots-for-all-days'       => 'نمایش برای همه روزها',
+                        'special-notes'            => 'درخواست/یادداشت ویژه',
+                        'today-availability'       => 'دسترسی امروز',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'رزرو وقت ملاقات',
+                        'date'                => 'تاریخ',
+                        'no-slots-available'  => 'هیچ اسلاتی موجود نیست',
+                        'select-slot'         => 'اسلات را انتخاب کنید',
+                        'title'               => 'اسلات',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => 'خرید کالاهای :qty به قیمت :price هر کدام و صرفه‌جویی :discount',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'بسته',
+
+            'cart'             => [
+                'booking-from' => 'رزرو از',
+                'booking-till' => 'رزرو تا',
+                'daily'        => 'به صورت روزانه',
+                'event-from'   => 'رویداد از',
+                'event-ticket' => 'بلیط رویداد',
+                'event-till'   => 'رویداد تا',
+                'hourly'       => 'به صورت ساعتی',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'این رویداد منقضی شده است.',
+                    ],
+
+                    'missing_options'        => 'گزینه‌ها برای این محصول وجود ندارند.',
+                    'inventory_warning'      => 'تعداد درخواستی موجود نیست، لطفاً بعداً دوباره امتحان کنید.',
+                    'select_hourly_duration' => 'یک مدت زمان ساعتی انتخاب کنید.',
+                ],
+
+                'rent-from'    => 'اجاره از',
+                'rent-till'    => 'اجاره تا',
+                'rent-type'    => 'نوع اجاره',
+                'renting_type' => 'نوع اجاره',
+                'special-note' => 'درخواست/یادداشت ویژه',
+            ],
+
+            'per-ticket-price' => ':price به ازای هر بلیط',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => 'آدرس خیابان',
                 'telephone'              => 'تلفن',
                 'title'                  => 'آدرس',
+                'vat-id'                 => 'شناسه مالیاتی',
             ],
 
             'index' => [
@@ -994,7 +1092,6 @@ return [
             'next-page'          => 'صفحه بعدی',
             'pagination-showing' => 'نمایش :firstItem تا :lastItem از مجموع :total مورد',
             'prev-page'          => 'صفحه قبلی',
-
         ],
     ],
 
@@ -1092,26 +1189,23 @@ return [
             ],
 
             'gdpr' => [
-                'new-delete-request' => 'درخواست جدید برای حذف داده‌ها',
-                'new-update-request' => 'درخواست جدید برای به‌روزرسانی داده‌ها',
+                'new-delete-request' => 'درخواست جدید برای حذف داده',
+                'new-update-request' => 'درخواست جدید برای به‌روزرسانی داده',
 
                 'new-request' => [
+                    'delete-summary' => 'خلاصه درخواست حذف',
                     'message'        => 'پیام : ',
                     'request-status' => 'وضعیت درخواست : ',
                     'request-type'   => 'نوع درخواست : ',
-                    'summary'        => 'خلاصه درخواست',
+                    'update-summary' => 'خلاصه درخواست به‌روزرسانی',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'پیام : ',
-                    'request-status' => 'وضعیت درخواست : ',
-                    'request-type'   => 'نوع درخواست : ',
-                    'summary'        => 'خلاصه درخواست حذف',
-                ],
-
-                'update-request' => [
-                    'message'        => 'پیام : ',
-                    'request-status' => 'وضعیت درخواست : ',
+                'status-update' => [
+                    'subject'        => 'درخواست GDPR شما به‌روزرسانی شد',
+                    'summary'        => 'وضعیت درخواست GDPR شما به‌روزرسانی شد',
+                    'request-status' => 'وضعیت درخواست:',
+                    'request-type'   => 'نوع درخواست:',
+                    'message'        => 'پیام:',
                 ],
             ],
 

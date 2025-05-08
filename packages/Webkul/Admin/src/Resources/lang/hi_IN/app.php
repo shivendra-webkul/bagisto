@@ -581,15 +581,20 @@ return [
                 'title' => 'चालान',
 
                 'datagrid' => [
-                    'action'       => 'क्रिया',
-                    'grand-total'  => 'कुल योग',
-                    'id'           => 'आईडी',
-                    'invoice-date' => 'चालान तिथि',
-                    'order-id'     => 'आदेश आईडी',
-                    'overdue'      => 'समय से पहले',
-                    'paid'         => 'भुगतान किया गया',
-                    'pending'      => 'लंबित',
-                    'status'       => 'स्थिति',
+                    'action'              => 'क्रिया',
+                    'days-left'           => ':count दिन शेष',
+                    'days-overdue'        => ':count दिन की देरी',
+                    'grand-total'         => 'कुल योग',
+                    'id'                  => 'आईडी',
+                    'invoice-date'        => 'चालान तिथि',
+                    'mass-update-success' => 'चयनित चालान सफलतापूर्वक अपडेट किए गए।',
+                    'order-id'            => 'आदेश आईडी',
+                    'overdue'             => 'समय से पहले',
+                    'overdue-by'          => ':count दिन की देरी',
+                    'paid'                => 'भुगतान किया गया',
+                    'pending'             => 'लंबित',
+                    'status'              => 'स्थिति',
+                    'update-status'       => 'स्थिति अपडेट करें',
                 ],
             ],
 
@@ -732,6 +737,38 @@ return [
                     'transaction-id'   => 'लेन-देन आईडी',
                 ],
             ],
+        ],
+
+        'booking' => [
+            'index' => [
+                'datagrid' => [
+                    'created-date' => 'निर्माण तिथि',
+                    'from'         => 'से',
+                    'id'           => 'आईडी',
+                    'order-id'     => 'आदेश आईडी',
+                    'qty'          => 'मात्रा',
+                    'to'           => 'तक',
+                    'view'         => 'देखें',
+                ],
+
+                'title'    => 'बुकिंग',
+            ],
+
+            'calendar' => [
+                'booking-date'     => 'बुकिंग तिथि',
+                'booking-details'  => 'बुकिंग विवरण',
+                'canceled'         => 'रद्द',
+                'closed'           => 'बंद',
+                'done'             => 'पूर्ण',
+                'order-id'         => 'आदेश आईडी',
+                'pending'          => 'लंबित',
+                'price'            => 'मूल्य',
+                'status'           => 'स्थिति',
+                'time-slot'        => 'समय स्लॉट:',
+                'view-details'     => 'विवरण देखें',
+            ],
+
+            'title' => 'बुकिंग उत्पाद',
         ],
     ],
 
@@ -1082,6 +1119,180 @@ return [
                                     'title' => 'सेलेक्ट',
                                 ],
                             ],
+                        ],
+                    ],
+
+                    'booking' => [
+                        'available-from' => 'उपलब्धता प्रारंभ',
+                        'available-to'   => 'उपलब्धता समाप्त',
+                        'location'       => 'स्थान',
+                        'qty'            => 'मात्रा',
+                        'title'          => 'बुकिंग प्रकार',
+
+                        'available-every-week' => [
+                            'no'    => 'नहीं',
+                            'title' => 'हर सप्ताह उपलब्ध',
+                            'yes'   => 'हाँ',
+                        ],
+
+                        'appointment' => [
+                            'break-duration'         => 'स्लॉट्स के बीच ब्रेक समय (मिनट)',
+                            'slot-duration'          => 'स्लॉट अवधि (मिनट)',
+
+                            'same-slot-for-all-days' => [
+                                'no'    => 'नहीं',
+                                'title' => 'सभी दिनों के लिए समान स्लॉट',
+                                'yes'   => 'हाँ',
+                            ],
+                        ],
+
+                        'default' => [
+                            'add'              => 'जोड़ें',
+                            'break-duration'   => 'स्लॉट्स के बीच ब्रेक समय (मिनट)',
+                            'close'            => 'बंद करें',
+                            'description'      => 'बुकिंग जानकारी',
+                            'description-info' => 'स्लॉट के अनुसार समय अवधि बनाई जाएगी और प्रदर्शित की जाएगी। यह सभी स्लॉट्स में अद्वितीय होगी और स्टोरफ्रंट पर दिखाई देगी।',
+                            'edit'             => 'संपादित करें',
+                            'many'             => 'एक दिन के लिए कई बुकिंग',
+                            'one'              => 'कई दिनों के लिए एक बुकिंग',
+                            'open'             => 'खोलें',
+                            'slot-add'         => 'स्लॉट्स जोड़ें',
+                            'slot-duration'    => 'स्लॉट अवधि (मिनट)',
+                            'slot-title'       => 'स्लॉट्स समय अवधि',
+                            'title'            => 'डिफ़ॉल्ट',
+                            'unavailable'      => 'अनुपलब्ध',
+
+                            'modal'            => [
+                                'slot' => [
+                                    'add-title'  => 'स्लॉट्स जोड़ें',
+                                    'close'      => 'बंद करें',
+                                    'day'        => 'दिन',
+                                    'edit-title' => 'स्लॉट्स संपादित करें',
+                                    'friday'     => 'शुक्रवार',
+                                    'from'       => 'से',
+                                    'from-day'   => 'दिन से',
+                                    'from-time'  => 'समय से',
+                                    'monday'     => 'सोमवार',
+                                    'open'       => 'खोलें',
+                                    'saturday'   => 'शनिवार',
+                                    'save'       => 'सहेजें',
+                                    'select'     => 'चुनें',
+                                    'status'     => 'स्थिति',
+                                    'sunday'     => 'रविवार',
+                                    'thursday'   => 'गुरुवार',
+                                    'to'         => 'तक',
+                                    'to-day'     => 'दिन तक',
+                                    'to-time'    => 'समय तक',
+                                    'tuesday'    => 'मंगलवार',
+                                    'wednesday'  => 'बुधवार',
+                                    'week'       => ':day',
+                                ],
+                            ],
+                        ],
+
+                        'event' => [
+                            'add'                => 'टिकट जोड़ें',
+                            'delete'             => 'हटाएं',
+                            'description'        => 'विवरण',
+                            'description-info'   => 'कोई टिकट उपलब्ध नहीं है।',
+                            'edit'               => 'संपादित करें',
+                            'name'               => 'नाम',
+                            'price'              => 'मूल्य',
+                            'qty'                => 'मात्रा',
+                            'special-price'      => 'विशेष मूल्य',
+                            'special-price-from' => 'विशेष मूल्य से',
+                            'special-price-to'   => 'विशेष मूल्य तक',
+                            'title'              => 'टिकट',
+                            'valid-from'         => 'से मान्य',
+                            'valid-until'        => 'तक मान्य',
+
+                            'modal'              => [
+                                'edit' => 'टिकट संपादित करें',
+                                'save' => 'सहेजें',
+                            ],
+                        ],
+
+                        'empty-info' => [
+                            'tickets' => [
+                                'add' => 'टिकट जोड़ें',
+                            ],
+
+                            'slots'   => [
+                                'add'         => 'स्लॉट्स जोड़ें',
+                                'description' => 'समय अवधि के साथ उपलब्ध स्लॉट्स।',
+                            ],
+                        ],
+
+                        'rental' => [
+                            'daily'        => 'दैनिक आधार',
+                            'daily-hourly' => 'दोनों (दैनिक और घंटा आधार)',
+                            'daily-price'  => 'दैनिक मूल्य',
+                            'hourly'       => 'घंटा आधार',
+                            'hourly-price' => 'घंटा मूल्य',
+                            'title'        => 'किराए का प्रकार',
+
+                            'same-slot-for-all-days' => [
+                                'no'    => 'नहीं',
+                                'title' => 'सभी दिनों के लिए समान स्लॉट',
+                                'yes'   => 'हाँ',
+                            ],
+                        ],
+
+                        'slots' => [
+                            'add'              => 'स्लॉट्स जोड़ें',
+                            'description-info' => 'स्लॉट के अनुसार समय अवधि बनाई जाएगी और प्रदर्शित की जाएगी। यह सभी स्लॉट्स में अद्वितीय होगी और स्टोरफ्रंट पर दिखाई देगी।',
+                            'save'             => 'सहेजें',
+                            'title'            => 'स्लॉट्स समय अवधि',
+                            'unavailable'      => 'अनुपलब्ध',
+
+                            'action'           => [
+                                'add' => 'जोड़ें',
+                            ],
+
+                            'modal'            => [
+                                'slot' => [
+                                    'friday'     => 'शुक्रवार',
+                                    'from'       => 'से',
+                                    'monday'     => 'सोमवार',
+                                    'saturday'   => 'शनिवार',
+                                    'sunday'     => 'रविवार',
+                                    'thursday'   => 'गुरुवार',
+                                    'to'         => 'तक',
+                                    'tuesday'    => 'मंगलवार',
+                                    'wednesday'  => 'बुधवार',
+                                ],
+                            ],
+                        ],
+
+                        'table' => [
+                            'break-duration'            => 'स्लॉट्स के बीच ब्रेक समय (मिनट)',
+                            'guest-capacity'            => 'अतिथि क्षमता',
+                            'guest-limit'               => 'प्रति टेबल अतिथि सीमा',
+                            'prevent-scheduling-before' => 'पहले से शेड्यूलिंग रोकें',
+                            'slot-duration'             => 'स्लॉट अवधि (मिनट)',
+
+                            'charged-per'               => [
+                                'guest'  => 'अतिथि',
+                                'table'  => 'टेबल',
+                                'title'  => 'प्रति चार्ज',
+                            ],
+
+                            'same-slot-for-all-days'    => [
+                                'no'    => 'नहीं',
+                                'title' => 'सभी दिनों के लिए समान स्लॉट',
+                                'yes'   => 'हाँ',
+                            ],
+                        ],
+
+                        'type' => [
+                            'appointment' => 'नियुक्ति बुकिंग',
+                            'default'     => 'डिफ़ॉल्ट बुकिंग',
+                            'event'       => 'इवेंट बुकिंग',
+                            'many'        => 'कई',
+                            'one'         => 'एक',
+                            'rental'      => 'किराए की बुकिंग',
+                            'table'       => 'टेबल बुकिंग',
+                            'title'       => 'प्रकार',
                         ],
                     ],
 
@@ -1780,20 +1991,22 @@ return [
                     'message'       => 'संदेश',
                     'pending'       => 'लंबित',
                     'processing'    => 'प्रसंस्करण',
+                    'revoked'       => 'रद्द किया गया',
                     'status'        => 'स्थिति',
                     'type'          => 'प्रकार',
                 ],
 
                 'modal' => [
-                    'completed'  => 'पूरा हुआ',
-                    'declined'   => 'अस्वीकृत',
-                    'pending'    => 'लंबित',
-                    'processing' => 'प्रसंस्करण',
-                    'status'     => 'स्थिति',
-                    'title'      => 'GDPR डेटा अनुरोध संपादित करें',
-                    'type'       => 'प्रकार',
-                    'message'    => 'संदेश',
-                    'save-btn'   => 'सहेजें',
+                    'completed'     => 'पूरा हुआ',
+                    'declined'      => 'अस्वीकृत',
+                    'message'       => 'संदेश',
+                    'pending'       => 'लंबित',
+                    'processing'    => 'प्रसंस्करण',
+                    'revoked'       => 'रद्द किया गया',
+                    'save-btn'      => 'सहेजें',
+                    'status'        => 'स्थिति',
+                    'title'         => 'GDPR डेटा अनुरोध संपादित करें',
+                    'type'          => 'प्रकार',
                 ],
 
                 'update-success'              => 'डेटा अनुरोध सफलतापूर्वक अपडेट किया गया और ग्राहक को ईमेल भेजा गया।',
@@ -3294,6 +3507,7 @@ return [
                 'new'                           => 'नया',
                 'no'                            => 'नहीं',
                 'parent-id'                     => 'मूल आईडी',
+                'parent-id-hint'                => 'आप कुछ मूल आईडी को अलग-अलग मानों के रूप में उपयोग कर सकते हैं (जैसे: 12,15,34)',
                 'category-id'                   => 'श्रेणी आईडी',
                 'preview'                       => 'पूर्वावलोकन',
                 'product-carousel'              => 'उत्पाद कैरोसल',
@@ -3455,6 +3669,7 @@ return [
 
         'view' => [
             'all-channels'  => 'सभी चैनल',
+            'back-btn'      => 'वापस',
             'day'           => 'दिन',
             'end-date'      => 'समापन तिथि',
             'export-csv'    => 'CSV पर्याप्त',
@@ -3569,42 +3784,63 @@ return [
                     ],
 
                     'review-translation' => [
-                        'dolphin-phi'       => 'डॉल्फिन फाई',
-                        'enabled'           => 'सक्षम',
-                        'gpt-3-5-turbo'     => 'OpenAI gpt-3.5-turbo',
-                        'llama2'            => 'लामा 2',
-                        'llama2-uncensored' => 'लामा 2 अनसेंसर्ड',
-                        'llama2:13b'        => 'लामा 2 13B',
-                        'llama2:70b'        => 'लामा 2 70B',
-                        'llava'             => 'एलएलवीए',
-                        'mistral'           => 'मिस्ट्रल',
-                        'model'             => 'मॉडल',
-                        'orca-mini'         => 'ओर्का मिनी',
-                        'phi'               => 'फाई-2',
-                        'starling-lm'       => 'स्टारलिंग',
-                        'title'             => 'समीक्षा अनुवाद',
-                        'title-info'        => 'ग्राहक या आगंतुक को अंग्रेजी में ग्राहक समीक्षा का अनुवाद करने का विकल्प प्रदान करें।<br/><br/>सक्षम करने पर, समीक्षा पर जाएं और आपको ‘अंग्रेजी में अनुवाद करें’ बटन मिलेगा अगर आपकी समीक्षा अंग्रेजी के अलावा है।',
-                        'vicuna'            => 'विकुना',
+                        'deepseek-r1-8b'      => 'DeepSeek R1 (8b)',
+                        'enabled'             => 'सक्षम',
+                        'gemini-2-0-flash'    => 'Gemini 2.0 Flash',
+                        'gpt-4-turbo'         => 'OpenAI gpt-4 Turbo',
+                        'gpt-4o'              => 'OpenAI gpt-4o',
+                        'gpt-4o-mini'         => 'OpenAI gpt-4o mini',
+                        'llama-groq'          => 'Llama 3.3 (Groq)',
+                        'llama3-1-8b'         => 'Llama 3.1 (8B)',
+                        'llama3-2-1b'         => 'Llama 3.2 (1B)',
+                        'llama3-2-3b'         => 'Llama 3.2 (3B)',
+                        'llama3-8b'           => 'Llama 3 (8B)',
+                        'llava-7b'            => 'Llava (7b)',
+                        'mistral-7b'          => 'Mistral (7b)',
+                        'model'               => 'मॉडल',
+                        'orca-mini'           => 'Orca Mini',
+                        'phi3-5'              => 'Phi 3.5',
+                        'qwen2-5-0-5b'        => 'Qwen 2.5 (0.5b)',
+                        'qwen2-5-1-5b'        => 'Qwen 2.5 (1.5b)',
+                        'qwen2-5-14b'         => 'Qwen 2.5 (14b)',
+                        'qwen2-5-3b'          => 'Qwen 2.5 (3b)',
+                        'qwen2-5-7b'          => 'Qwen 2.5 (7b)',
+                        'starling-lm-7b'      => 'Starling-lm (7b)',
+                        'title'               => 'समीक्षा अनुवाद',
+                        'title-info'          => 'ग्राहक या आगंतुक को ग्राहक समीक्षा को अंग्रेजी में अनुवाद करने का विकल्प प्रदान करें।<br/><br/>सक्षम होने पर, समीक्षा पर जाएं और यदि आप अंग्रेजी के अलावा अन्य समीक्षा करते हैं तो आपको "अंग्रेजी में अनुवाद करें" बटन मिलेगा।',
+                        'vicuna-13b'          => 'Vicuna (13b)',
+                        'vicuna-7b'           => 'Vicuna (7b)',
                     ],
 
                     'checkout-message' => [
-                        'dolphin-phi'       => 'डॉल्फिन फाई',
-                        'enabled'           => 'सक्षम',
-                        'gpt-3-5-turbo'     => 'OpenAI gpt-3.5-turbo',
-                        'llama2'            => 'लामा 2',
-                        'llama2-uncensored' => 'लामा 2 अनसेंसर्ड',
-                        'llama2:13b'        => 'लामा 2 13B',
-                        'llama2:70b'        => 'लामा 2 70B',
-                        'llava'             => 'एलएलवीए',
-                        'mistral'           => 'मिस्ट्रल',
-                        'model'             => 'मॉडल',
-                        'orca-mini'         => 'ओर्का मिनी',
-                        'phi'               => 'फाई-2',
-                        'prompt'            => 'प्रॉम्प्ट',
-                        'starling-lm'       => 'स्टारलिंग',
-                        'title'             => 'व्यक्तिगत चेकआउट संदेश',
-                        'title-info'        => 'ग्राहकों के लिए धन्यवाद पृष्ठ पर व्यक्तिगत चेकआउट संदेश तैयार करें, जो व्यक्तिगत पसंदों के साथ संबंधित सामग्री को रिसोनेट करने और आगे बढ़ाने के लिए सामग्री को अनुकूलित करेगा।',
-                        'vicuna'            => 'विकुना',
+                        'deepseek-r1-8b'      => 'DeepSeek R1 (8b)',
+                        'enabled'             => 'सक्षम',
+                        'gemini-2-0-flash'    => 'Gemini 2.0 Flash',
+                        'gpt-4-turbo'         => 'OpenAI gpt 4 Turbo',
+                        'gpt-4o'              => 'OpenAI gpt-4o',
+                        'gpt-4o-mini'         => 'OpenAI gpt-4o mini',
+                        'llama-groq'          => 'Llama 3.3 (Groq)',
+                        'llama3-1-8b'         => 'Llama 3.1 (8B)',
+                        'llama3-2-1b'         => 'Llama 3.2 (1B)',
+                        'llama3-2-3b'         => 'Llama 3.2 (3B)',
+                        'llama3-8b'           => 'Llama 3 (8B)',
+                        'llava-7b'            => 'Llava (7b)',
+                        'mistral-7b'          => 'Mistral (7b)',
+                        'model'               => 'मॉडल',
+                        'orca-mini'           => 'Orca Mini',
+                        'phi3-5'              => 'Phi 3.5',
+                        'prompt'              => 'प्रॉम्प्ट',
+                        'qwen2-5-0-5b'        => 'Qwen 2.5 (0.5b)',
+                        'qwen2-5-1-5b'        => 'Qwen 2.5 (1.5b)',
+                        'qwen2-5-14b'         => 'Qwen 2.5 (14b)',
+                        'qwen2-5-3b'          => 'Qwen 2.5 (3b)',
+                        'qwen2-5-7b'          => 'Qwen 2.5 (7b)',
+                        'starling-lm-7b'      => 'Starling-lm (7b)',
+                        'title'               => 'व्यक्तिगत चेकआउट संदेश',
+                        'title-info'          => 'ग्राहकों के लिए धन्यवाद पृष्ठ पर एक व्यक्तिगत चेकआउट संदेश तैयार करें, सामग्री को व्यक्तिगत प्राथमिकताओं के साथ मेल खाते हुए और समग्र खरीद के बाद के अनुभव को बढ़ाते हुए।',
+                        'vicuna'              => 'Vicuna',
+                        'vicuna-13b'          => 'Vicuna (13b)',
+                        'vicuna-7b'           => 'Vicuna (7b)',
                     ],
                 ],
 
@@ -3624,129 +3860,48 @@ return [
                         'max-url-per-file' => 'प्रति फ़ाइल अधिकतम URL की संख्या',
                         'title'            => 'फ़ाइल सीमाएं',
                     ],
-
-                    'store-url' => [
-                        'info'  => 'स्टोर URL के लिए आवृत्ति और प्राथमिकता विकल्प सेट करें।',
-
-                        'frequency' => [
-                            'title' => 'आवृत्ति',
-
-                            'options' => [
-                                'always'  => 'हमेशा',
-                                'daily'   => 'दैनिक',
-                                'hourly'  => 'प्रति घंटा',
-                                'monthly' => 'मासिक',
-                                'never'   => 'कभी नहीं',
-                                'weekly'  => 'साप्ताहिक',
-                                'yearly'  => 'वार्षिक',
-                            ],
-                        ],
-
-                        'title'    => 'स्टोर URL',
-                        'priority' => 'प्राथमिकता',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'श्रेणियों के लिए आवृत्ति और प्राथमिकता विकल्प सेट करें।',
-
-                        'frequency' => [
-                            'title' => 'आवृत्ति',
-
-                            'options' => [
-                                'always'  => 'हमेशा',
-                                'daily'   => 'दैनिक',
-                                'hourly'  => 'प्रति घंटा',
-                                'monthly' => 'मासिक',
-                                'never'   => 'कभी नहीं',
-                                'weekly'  => 'साप्ताहिक',
-                                'yearly'  => 'वार्षिक',
-                            ],
-                        ],
-
-                        'title'    => 'श्रेणियाँ',
-                        'priority' => 'प्राथमिकता',
-                    ],
-
-                    'products' => [
-                        'info'  => 'उत्पादों के लिए आवृत्ति और प्राथमिकता विकल्प सेट करें।',
-
-                        'frequency' => [
-                            'title' => 'आवृत्ति',
-
-                            'options' => [
-                                'always'  => 'हमेशा',
-                                'daily'   => 'दैनिक',
-                                'hourly'  => 'प्रति घंटा',
-                                'monthly' => 'मासिक',
-                                'never'   => 'कभी नहीं',
-                                'weekly'  => 'साप्ताहिक',
-                                'yearly'  => 'वार्षिक',
-                            ],
-                        ],
-
-                        'title'    => 'उत्पाद',
-                        'priority' => 'प्राथमिकता',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'CMS पृष्ठों के लिए आवृत्ति और प्राथमिकता विकल्प सेट करें।',
-
-                        'frequency' => [
-                            'title' => 'आवृत्ति',
-
-                            'options' => [
-                                'always'  => 'हमेशा',
-                                'daily'   => 'दैनिक',
-                                'hourly'  => 'प्रति घंटा',
-                                'monthly' => 'मासिक',
-                                'never'   => 'कभी नहीं',
-                                'weekly'  => 'साप्ताहिक',
-                                'yearly'  => 'वार्षिक',
-                            ],
-                        ],
-
-                        'title'    => 'CMS पृष्ठ',
-                        'priority' => 'प्राथमिकता',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'GDPR',
-                'info'  => 'GDPR',
+                'info'  => 'GDPR अनुपालन सेटिंग्स',
 
                 'settings' => [
-                    'title'   => 'GDPR सेटिंग्स',
-                    'info'    => 'GDPR सेटिंग्स',
-                    'enabled' => 'सक्षम',
+                    'title'   => 'GDPR अनुपालन सेटिंग्स',
+                    'info'    => 'GDPR अनुपालन सेटिंग्स का प्रबंधन करें, जिसमें गोपनीयता नीति शामिल है। आवश्यकता के अनुसार GDPR सुविधाओं को सक्षम या अक्षम करें।',
+                    'enabled' => 'GDPR सक्षम करें',
                 ],
 
                 'agreement' => [
                     'title'          => 'GDPR समझौता',
-                    'info'           => 'GDPR समझौता',
-                    'enable'         => 'ग्राहक समझौता सक्षम करें',
-                    'checkbox-label' => 'समझौता चेकबॉक्स लेबल',
-                    'content'        => 'समझौता सामग्री',
+                    'info'           => 'GDPR विनियमों के अनुसार ग्राहकों की सहमति का प्रबंधन करें। डेटा संग्रह और प्रसंस्करण के लिए अनिवार्य सहमति सक्षम करें।',
+                    'enable'         => 'ग्राहक सहमति सक्षम करें',
+                    'checkbox-label' => 'सहमति के लिए चेकबॉक्स लेबल',
+                    'content'        => 'सहमति सामग्री',
                 ],
 
                 'cookie' => [
-                    'title'        => 'कुकी संदेश सेटिंग्स',
-                    'info'         => 'कुकी संदेश सेटिंग्स',
-                    'enable'       => 'कुकी सूचना सक्षम करें',
-                    'position'     => 'कुकी ब्लॉक प्रदर्शन स्थिति',
-                    'bottom-left'  => 'नीचे बाईं ओर',
-                    'bottom-right' => 'नीचे दाईं ओर',
-                    'identifier'   => 'स्थिर ब्लॉक पहचानकर्ता',
+                    'bottom-left'  => 'नीचे बाएं',
+                    'bottom-right' => 'नीचे दाएं',
+                    'center'       => 'केंद्र',
                     'description'  => 'विवरण',
+                    'enable'       => 'कुकी सूचना सक्षम करें',
+                    'identifier'   => 'स्थिर ब्लॉक पहचानकर्ता',
+                    'info'         => 'डेटा संग्रह के बारे में उपयोगकर्ताओं को सूचित करने और गोपनीयता नीति का पालन करने के लिए कुकी सहमति सेटिंग्स सेट करें।',
+                    'position'     => 'कुकी ब्लॉक प्रदर्शन स्थिति',
+                    'title'        => 'कुकी सूचना सेटिंग्स',
+                    'top-left'     => 'ऊपर बाएं',
+                    'top-right'    => 'ऊपर दाएं',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => 'आपकी कुकी सहमति प्राथमिकता',
-                    'info'                   => 'आपकी कुकी सहमति प्राथमिकता',
+                    'title'                  => 'अपनी कुकी सेटिंग्स प्रबंधित करें',
+                    'info'                   => 'अपनी वांछित कुकी सेटिंग्स का चयन करके डेटा के उपयोग को नियंत्रित करें। विभिन्न प्रकार की कुकीज़ के लिए अनुमतियाँ सेट करें।',
                     'strictly-necessary'     => 'सख्ती से आवश्यक',
-                    'basic-interaction'      => 'मूल इंटरैक्शन और कार्यक्षमताएँ',
-                    'experience-enhancement' => 'अनुभव संवर्द्धन',
-                    'measurement'            => 'माप',
+                    'basic-interaction'      => 'मूलभूत इंटरैक्शन और कार्यक्षमता',
+                    'experience-enhancement' => 'अनुभव वृद्धि',
+                    'measurement'            => 'मापन',
                     'targeting-advertising'  => 'लक्ष्यीकरण और विज्ञापन',
                 ],
             ],
@@ -4013,13 +4168,103 @@ return [
                     ],
 
                     'social-login' => [
-                        'enable-facebook'   => 'फेसबुक सक्षम करें',
-                        'enable-github'     => 'गिटहब सक्षम करें',
-                        'enable-google'     => 'गूगल सक्षम करें',
-                        'enable-linkedin'   => 'लिंक्डइन सक्षम करें',
-                        'enable-twitter'    => 'ट्विटर सक्षम करें',
-                        'social-login'      => 'सामाजिक लॉगिन',
-                        'social-login-info' => '"सामाजिक लॉगिन" उपयोगकर्ताओं को उनके सामाजिक मीडिया खातों का उपयोग करके वेबसाइट तक पहुंचने की अनुमति देता है, सुविधा के लिए पंजीकरण और लॉगिन प्रक्रियाओं को संयोजित करता है।',
+                        'title' => 'सोशल लॉगिन',
+                        'info'  => '"सोशल लॉगिन" उपयोगकर्ताओं को अपनी सोशल मीडिया अकाउंट्स का उपयोग करके वेबसाइट पर लॉगिन करने की अनुमति देता है, जिससे रजिस्ट्रेशन और लॉगिन प्रक्रिया सरल हो जाती है।',
+
+                        'google' => [
+                            'enable-google' => 'Google सक्षम करें',
+
+                            'client-id' => [
+                                'title'      => 'क्लाइंट आईडी',
+                                'title-info' => 'OAuth एप्लिकेशन बनाते समय Google द्वारा प्रदान की गई एक विशिष्ट पहचानकर्ता।',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'क्लाइंट सीक्रेट',
+                                'title-info' => 'आपके Google OAuth क्लाइंट से जुड़ी गोपनीय कुंजी। इसे गोपनीय रखें।',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'रीडायरेक्ट URL',
+                                'title-info' => 'प्रमाणीकरण के बाद उपयोगकर्ताओं को Google से पुनः निर्देशित किए जाने वाला URL। यह Google कंसोल में कॉन्फ़िगर किए गए URL से मेल खाना चाहिए।',
+                            ],
+                        ],
+
+                        'facebook' => [
+                            'enable-facebook' => 'Facebook सक्षम करें',
+
+                            'client-id' => [
+                                'title'      => 'क्लाइंट आईडी',
+                                'title-info' => 'Facebook डेवलपर कंसोल में एप्लिकेशन बनाते समय दिया गया ऐप आईडी।',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'क्लाइंट सीक्रेट',
+                                'title-info' => 'आपके Facebook एप्लिकेशन से जुड़ा सीक्रेट कुंजी। इसे सुरक्षित और निजी रखें।',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'रीडायरेक्ट URL',
+                                'title-info' => 'प्रमाणीकरण के बाद उपयोगकर्ताओं को Facebook से पुनः निर्देशित किए जाने वाला URL। यह आपके Facebook ऐप सेटिंग्स में कॉन्फ़िगर किए गए URL से मेल खाना चाहिए।',
+                            ],
+                        ],
+
+                        'github' => [
+                            'enable-github' => 'GitHub सक्षम करें',
+
+                            'client-id' => [
+                                'title'      => 'क्लाइंट आईडी',
+                                'title-info' => 'OAuth एप्लिकेशन बनाते समय GitHub द्वारा प्रदान की गई एक विशिष्ट पहचानकर्ता।',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'क्लाइंट सीक्रेट',
+                                'title-info' => 'आपके GitHub OAuth क्लाइंट से जुड़ी गोपनीय कुंजी। इसे गोपनीय रखें।',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'रीडायरेक्ट URL',
+                                'title-info' => 'प्रमाणीकरण के बाद उपयोगकर्ताओं को GitHub से पुनः निर्देशित किए जाने वाला URL। यह GitHub कंसोल में कॉन्फ़िगर किए गए URL से मेल खाना चाहिए।',
+                            ],
+                        ],
+
+                        'linkedin' => [
+                            'enable-linkedin' => 'LinkedIn सक्षम करें',
+
+                            'client-id' => [
+                                'title'      => 'क्लाइंट आईडी',
+                                'title-info' => 'OAuth एप्लिकेशन बनाते समय LinkedIn द्वारा प्रदान की गई एक विशिष्ट पहचानकर्ता।',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'क्लाइंट सीक्रेट',
+                                'title-info' => 'आपके LinkedIn OAuth क्लाइंट से जुड़ी गोपनीय कुंजी। इसे गोपनीय रखें।',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'रीडायरेक्ट URL',
+                                'title-info' => 'प्रमाणीकरण के बाद उपयोगकर्ताओं को LinkedIn से पुनः निर्देशित किए जाने वाला URL। यह LinkedIn कंसोल में कॉन्फ़िगर किए गए URL से मेल खाना चाहिए।',
+                            ],
+                        ],
+
+                        'twitter' => [
+                            'enable-twitter' => 'Twitter सक्षम करें',
+
+                            'client-id' => [
+                                'title'      => 'क्लाइंट आईडी',
+                                'title-info' => 'OAuth एप्लिकेशन बनाते समय Twitter द्वारा प्रदान की गई एक विशिष्ट पहचानकर्ता।',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'क्लाइंट सीक्रेट',
+                                'title-info' => 'आपके Twitter OAuth क्लाइंट से जुड़ी गोपनीय कुंजी। इसे गोपनीय रखें।',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'रीडायरेक्ट URL',
+                                'title-info' => 'प्रमाणीकरण के बाद उपयोगकर्ताओं को Twitter से पुनः निर्देशित किए जाने वाला URL। यह Twitter कंसोल में कॉन्फ़िगर किए गए URL से मेल खाना चाहिए।',
+                            ],
+                        ],
                     ],
                 ],
             ],
@@ -4358,6 +4603,7 @@ return [
             'sidebar' => [
                 'attribute-families'       => 'गुण-परिवार',
                 'attributes'               => 'गुण',
+                'booking-product'          => 'बुकिंग',
                 'campaigns'                => 'कैंपेन',
                 'catalog'                  => 'कैटलॉग',
                 'categories'               => 'श्रेणियाँ',
@@ -4374,6 +4620,7 @@ return [
                 'email-templates'          => 'ईमेल टेम्पलेट्स',
                 'events'                   => 'इवेंट्स',
                 'exchange-rates'           => 'विनिमय दरें',
+                'gdpr-data-requests'       => 'GDPR डेटा अनुरोध',
                 'groups'                   => 'समूह',
                 'imports'                  => 'आयात',
                 'inventory-sources'        => 'सूची स्रोत',
@@ -4403,7 +4650,6 @@ return [
                 'transactions'             => 'लेन-देन',
                 'url-rewrites'             => 'URL पुनर्लेखन',
                 'users'                    => 'उपयोगकर्ता',
-                'gdpr-data-requests'       => 'GDPR डेटा अनुरोध',
             ],
 
             'powered-by' => [
@@ -4566,26 +4812,37 @@ return [
             'ai-btn-tile' => 'मैजिक ए.आई.',
 
             'ai-generation' => [
-                'apply'                  => 'लागू करें',
-                'dolphin-phi'            => 'डॉल्फिन फाई',
-                'generate'               => 'उत्पन्न करें',
-                'generated-content'      => 'उत्पन्न कंटेंट',
-                'generated-content-info' => 'ए.आई. सामग्री भ्रांतिपूर्ण हो सकती है। कृपया इसे लागू करने से पहले जाँचें।',
-                'generating'             => 'उत्पन्न हो रहा है...',
-                'gpt-3-5-turbo'          => 'ओपनएआई जीपीटी-3.5-टर्बो',
-                'llama2'                 => 'ल्लामा 2',
-                'llama2-uncensored'      => 'ल्लामा 2 अनसेंसर्ड',
-                'llama2:13b'             => 'ल्लामा 2 13B',
-                'llama2:70b'             => 'ल्लामा 2 70B',
-                'llava'                  => 'एल्लावा',
-                'mistral'                => 'मिस्ट्रल',
-                'model'                  => 'मॉडल',
-                'orca-mini'              => 'ओर्का मिनी',
-                'phi'                    => 'फाई-2',
-                'prompt'                 => 'प्रॉम्प्ट',
-                'starling-lm'            => 'स्टारलिंग',
-                'title'                  => 'ए.आई. सहायता',
-                'vicuna'                 => 'विकूना',
+                'apply'                    => 'लागू करें',
+                'deepseek-r1-8b'           => 'DeepSeek R1 (8b)',
+                'enabled'                  => 'सक्षम',
+                'gemini-2-0-flash'         => 'Gemini 2.0 Flash',
+                'generate'                 => 'उत्पन्न करें',
+                'generated-content'        => 'उत्पन्न सामग्री',
+                'generated-content-info'   => 'एआई सामग्री भ्रामक हो सकती है। कृपया उत्पन्न सामग्री को लागू करने से पहले उसकी समीक्षा करें।',
+                'generating'               => 'उत्पन्न हो रहा है...',
+                'gpt-4-turbo'              => 'OpenAI gpt-4 Turbo',
+                'gpt-4o'                   => 'OpenAI gpt-4o',
+                'gpt-4o-mini'              => 'OpenAI gpt-4o mini',
+                'llama-groq'               => 'Llama 3.3 (Groq)',
+                'llama3-1-8b'              => 'Llama 3.1 (8B)',
+                'llama3-2-1b'              => 'Llama 3.2 (1B)',
+                'llama3-2-3b'              => 'Llama 3.2 (3B)',
+                'llama3-8b'                => 'Llama 3 (8B)',
+                'llava-7b'                 => 'Llava (7b)',
+                'mistral-7b'               => 'Mistral (7b)',
+                'model'                    => 'मॉडल',
+                'orca-mini'                => 'Orca Mini',
+                'phi3-5'                   => 'Phi 3.5',
+                'prompt'                   => 'प्रॉम्प्ट',
+                'qwen2-5-0-5b'             => 'Qwen 2.5 (0.5b)',
+                'qwen2-5-1-5b'             => 'Qwen 2.5 (1.5b)',
+                'qwen2-5-14b'              => 'Qwen 2.5 (14b)',
+                'qwen2-5-3b'               => 'Qwen 2.5 (3b)',
+                'qwen2-5-7b'               => 'Qwen 2.5 (7b)',
+                'starling-lm-7b'           => 'Starling-lm (7b)',
+                'title'                    => 'एआई सहायता',
+                'vicuna-13b'               => 'Vicuna (13b)',
+                'vicuna-7b'                => 'Vicuna (7b)',
             ],
         ],
     ],
@@ -4615,6 +4872,7 @@ return [
         'email-templates'          => 'ईमेल टेम्पलेट्स',
         'events'                   => 'घटनाएँ',
         'exchange-rates'           => 'विनिमय दरें',
+        'gdpr'                     => 'जीडीपीआर',
         'groups'                   => 'समूह',
         'import'                   => 'आयात',
         'imports'                  => 'आयात',
@@ -4717,10 +4975,28 @@ return [
                 'greeting'    => 'हम नए ग्राहक का हार्दिक स्वागत करते हैं, :customer_name जिसने अभी-अभी हमारे साथ पंजीकरण कराया है!',
                 'subject'     => 'नया ग्राहक पंजीकरण',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'आपके GDPR अनुरोध की स्थिति',
+            'gdpr' => [
+                'new-delete-request' => 'डेटा हटाने के लिए नया अनुरोध',
+                'new-update-request' => 'डेटा अपडेट करने के लिए नया अनुरोध',
+
+                'new-request' => [
+                    'customer-name'  => 'ग्राहक का नाम : ',
+                    'delete-summary' => 'हटाने के अनुरोध का सारांश',
+                    'message'        => 'संदेश : ',
+                    'request-status' => 'अनुरोध स्थिति : ',
+                    'request-type'   => 'अनुरोध प्रकार : ',
+                    'update-summary' => 'अद्यतन अनुरोध का सारांश',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'GDPR अनुरोध अपडेट कर दिया गया है',
+                    'summary'        => 'GDPR अनुरोध की स्थिति अपडेट कर दी गई है',
+                    'request-status' => 'अनुरोध स्थिति:',
+                    'request-type'   => 'अनुरोध प्रकार:',
+                    'message'        => 'संदेश:',
+                ],
+            ],
         ],
 
         'orders' => [

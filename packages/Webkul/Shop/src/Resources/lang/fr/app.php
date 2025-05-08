@@ -376,25 +376,18 @@ return [
                 'title'              => 'Liste de souhaits',
             ],
 
-            'rgpd' => [
-                'completed'                   => 'Terminé',
-                'date'                        => 'Date',
-                'declined'                    => 'Refusé',
-                'id'                          => 'Id',
-                'message'                     => 'Message',
-                'pending'                     => 'En attente',
-                'processing'                  => 'En cours de traitement',
-                'status'                      => 'Statut',
+            'gdpr' => [
+                'create-success'              => 'Demande créée avec succès',
+                'revoked-successfully'        => 'Demande révoquée avec succès',
                 'success-verify'              => 'Succès ! L\'e-mail de vérification a été envoyé.',
                 'success-verify-email-unsent' => 'Succès ! L\'e-mail de vérification n\'a pas été envoyé.',
-                'type'                        => 'Type',
                 'unable-to-sent'              => 'Impossible d\'envoyer l\'e-mail.',
 
                 'index'   => [
                     'create-btn' => 'Créer une demande',
                     'html'       => 'HTML',
                     'pdf'        => 'PDF',
-                    'title'      => 'Demandes de données RGPD',
+                    'title'      => 'Demandes de données GDPR',
 
                     'modal' => [
                         'message' => 'Message',
@@ -408,10 +401,26 @@ return [
                             'update' => 'Mettre à jour',
                         ],
                     ],
+
+                    'datagrid' => [
+                        'completed'  => 'Terminé',
+                        'date'       => 'Date',
+                        'declined'   => 'Refusé',
+                        'delete'     => 'Supprimer',
+                        'id'         => 'ID',
+                        'message'    => 'Message',
+                        'pending'    => 'En attente',
+                        'processing' => 'En traitement',
+                        'revoke-btn' => 'Révoquer',
+                        'revoked'    => 'Révoqué',
+                        'status'     => 'Statut',
+                        'type'       => 'Type',
+                        'update'     => 'Mettre à jour',
+                    ],
                 ],
 
                 'pdf' => [
-                    'title' => 'Vue de la boutique par défaut',
+                    'title' => 'Vue par défaut du magasin',
 
                     'account-info' => [
                         'dob'          => 'Date de naissance',
@@ -420,7 +429,7 @@ return [
                         'gender'       => 'Genre',
                         'last-name'    => 'Nom de famille',
                         'phone'        => 'Téléphone',
-                        'title'        => 'Informations sur le compte',
+                        'title'        => 'Informations du compte',
                     ],
 
                     'address-info' => [
@@ -435,8 +444,8 @@ return [
                         'phone'      => 'Téléphone',
                         'postcode'   => 'Code postal',
                         'state'      => 'État',
-                        'title'      => 'Informations sur l\'adresse',
-                        'vat-id'     => 'Numéro de TVA',
+                        'title'      => 'Informations de l\'adresse',
+                        'vat-id'     => 'ID TVA',
                     ],
 
                     'order-info' => [
@@ -444,10 +453,10 @@ return [
                         'order-id'     => 'ID de commande',
                         'product-name' => 'Nom du produit',
                         'qty'          => 'Quantité',
-                        'shipping'     => 'Expédition',
+                        'shipping'     => 'Livraison',
                         'sku'          => 'SKU',
                         'status'       => 'Statut',
-                        'title'        => 'Informations sur la commande',
+                        'title'        => 'Informations de commande',
                         'type'         => 'Type',
                     ],
                 ],
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => 'Nom',
                 ],
+
+                'booking' => [
+                    'location'    => 'Emplacement',
+                    'view-on-map' => 'Voir sur la carte',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes Minutes',
+                        'slot-duration'            => 'Durée du créneau',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'Fermé',
+                        'see-details'              => 'Voir les détails',
+                        'slot-duration'            => 'Durée du créneau',
+                        'slot-duration-in-minutes' => ':minutes Minutes',
+                        'today-availability'       => 'Disponibilité aujourd\'hui',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'Réservez votre billet',
+                        'title'            => 'Événement le :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'Choisissez l\'option de location',
+                        'daily-basis'        => 'Base quotidienne',
+                        'from'               => 'De',
+                        'hourly-basis'       => 'Base horaire',
+                        'rent-an-item'       => 'Louer un article',
+                        'select-date'        => 'Sélectionner une date',
+                        'select-rent-time'   => 'Sélectionner l\'heure de location',
+                        'select-slot'        => 'Sélectionner un créneau',
+                        'select-time-slot'   => 'Sélectionner un créneau horaire',
+                        'slot'               => 'Créneau',
+                        'no-slots-available' => 'Aucun créneau disponible',
+                        'to'                 => 'À',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'Réserver une table',
+                        'closed'                   => 'Fermé',
+                        'slot-duration'            => 'Durée du créneau',
+                        'slot-duration-in-minutes' => ':minutes Minutes',
+                        'slots-for-all-days'       => 'Afficher pour tous les jours',
+                        'special-notes'            => 'Demande/Notes spéciales',
+                        'today-availability'       => 'Disponibilité aujourd\'hui',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'Prendre un rendez-vous',
+                        'date'                => 'Date',
+                        'no-slots-available'  => 'Aucun créneau disponible',
+                        'select-slot'         => 'Sélectionner un créneau',
+                        'title'               => 'Créneau',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => 'Achetez :qty pour :price chacun et économisez :discount',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'Fermé',
+
+            'cart'             => [
+                'booking-from' => 'Réservation de',
+                'booking-till' => 'Réservation jusqu\'à',
+                'daily'        => 'Base quotidienne',
+                'event-from'   => 'Événement de',
+                'event-ticket' => 'Billet d\'événement',
+                'event-till'   => 'Événement jusqu\'à',
+                'hourly'       => 'Base horaire',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'Cet événement a expiré.',
+                    ],
+
+                    'missing_options'        => 'Les options sont manquantes pour ce produit.',
+                    'inventory_warning'      => 'La quantité demandée n\'est pas disponible, veuillez réessayer plus tard.',
+                    'select_hourly_duration' => 'Sélectionnez une durée de créneau d\'une heure.',
+                ],
+
+                'rent-from'    => 'Louer de',
+                'rent-till'    => 'Louer jusqu\'à',
+                'rent-type'    => 'Type de location',
+                'renting_type' => 'Type de location',
+                'special-note' => 'Demande/Notes spéciales',
+            ],
+
+            'per-ticket-price' => ':price Par Billet',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => 'Adresse de rue',
                 'telephone'              => 'Téléphone',
                 'title'                  => 'Adresse',
+                'vat-id'                 => 'Numéro de TVA',
             ],
 
             'index' => [
@@ -1029,7 +1127,7 @@ return [
     'layouts' => [
         'address'               => 'Adresse',
         'downloadable-products' => 'Produits téléchargeables',
-        'gdpr-request'          => 'Demandes RGPD',
+        'gdpr-request'          => 'Demandes GDPR',
         'my-account'            => 'Mon compte',
         'orders'                => 'Commandes',
         'profile'               => 'Profil',
@@ -1090,27 +1188,24 @@ return [
                 'unsubscribe' => 'Se désabonner',
             ],
 
-            'rgpd' => [
-                'nouvelle-demande-suppression' => 'Nouvelle demande de suppression de données',
-                'nouvelle-demande-mise-a-jour' => 'Nouvelle demande de mise à jour de données',
+            'gdpr' => [
+                'new-delete-request' => 'Nouvelle demande de suppression de données',
+                'new-update-request' => 'Nouvelle demande de mise à jour des données',
 
-                'nouvelle-demande' => [
+                'new-request' => [
+                    'delete-summary' => 'Résumé de la demande de suppression',
                     'message'        => 'Message : ',
-                    'statut-demande' => 'Statut de la demande : ',
-                    'type-demande'   => 'Type de demande : ',
-                    'résumé'         => 'Résumé de la demande',
+                    'request-status' => 'Statut de la demande : ',
+                    'request-type'   => 'Type de demande : ',
+                    'update-summary' => 'Résumé de la demande de mise à jour',
                 ],
 
-                'demande-suppression' => [
-                    'message'        => 'Message : ',
-                    'statut-demande' => 'Statut de la demande : ',
-                    'type-demande'   => 'Type de demande : ',
-                    'résumé'         => 'Résumé de la demande de suppression',
-                ],
-
-                'update-request' => [
-                    'message'        => 'Message : ',
-                    'statut-demande' => 'Statut de la demande : ',
+                'status-update' => [
+                    'subject'        => 'Votre demande GDPR a été mise à jour',
+                    'summary'        => 'Le statut de votre demande GDPR a été mis à jour',
+                    'request-status' => 'Statut de la demande:',
+                    'request-type'   => 'Type de demande:',
+                    'message'        => 'Message:',
                 ],
             ],
 

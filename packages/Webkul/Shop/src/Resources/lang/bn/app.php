@@ -377,23 +377,16 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'সম্পন্ন',
-                'date'                        => 'তারিখ',
-                'declined'                    => 'প্রত্যাখ্যাত',
-                'id'                          => 'আইডি',
-                'message'                     => 'বার্তা',
-                'pending'                     => 'বিচারাধীন',
-                'processing'                  => 'প্রক্রিয়াধীন',
-                'status'                      => 'অবস্থা',
-                'success-verify'              => 'সফল! যাচাইকরণ ইমেইল পাঠানো হয়েছে।',
-                'success-verify-email-unsent' => 'সফল! যাচাইকরণ ইমেইল পাঠানো হয়নি।',
-                'type'                        => 'ধরন',
-                'unable-to-sent'              => 'ইমেইল পাঠানো সম্ভব নয়।',
+                'create-success'              => 'অনুরোধ সফলভাবে তৈরি হয়েছে',
+                'revoked-successfully'        => 'অনুরোধ সফলভাবে বাতিল হয়েছে',
+                'success-verify'              => 'সফলতা! যাচাইকরণ ইমেল পাঠানো হয়েছে।',
+                'success-verify-email-unsent' => 'সফলতা! যাচাইকরণ ইমেল পাঠানো হয়নি।',
+                'unable-to-sent'              => 'ইমেল পাঠাতে অক্ষম।',
 
                 'index'   => [
                     'create-btn' => 'অনুরোধ তৈরি করুন',
-                    'html'       => 'এইচটিএমএল',
-                    'pdf'        => 'পিডিএফ',
+                    'html'       => 'HTML',
+                    'pdf'        => 'PDF',
                     'title'      => 'জিডিপিআর ডেটা অনুরোধ',
 
                     'modal' => [
@@ -405,8 +398,24 @@ return [
                             'choose' => 'নির্বাচন করুন',
                             'delete' => 'মুছুন',
                             'title'  => 'ধরন',
-                            'update' => 'আপডেট করুন',
+                            'update' => 'আপডেট',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'সম্পন্ন',
+                        'date'       => 'তারিখ',
+                        'declined'   => 'প্রত্যাখ্যাত',
+                        'delete'     => 'মুছে ফেলা',
+                        'id'         => 'আইডি',
+                        'message'    => 'বার্তা',
+                        'pending'    => 'মুলতুবি',
+                        'processing' => 'প্রক্রিয়াধীন',
+                        'revoke-btn' => 'বাতিল করুন',
+                        'revoked'    => 'বাতিল',
+                        'status'     => 'অবস্থা',
+                        'type'       => 'ধরন',
+                        'update'     => 'আপডেট',
                     ],
                 ],
 
@@ -415,7 +424,7 @@ return [
 
                     'account-info' => [
                         'dob'          => 'জন্ম তারিখ',
-                        'email'        => 'ইমেইল',
+                        'email'        => 'ইমেল',
                         'first-name'   => 'প্রথম নাম',
                         'gender'       => 'লিঙ্গ',
                         'last-name'    => 'শেষ নাম',
@@ -434,7 +443,7 @@ return [
                         'last-name'  => 'শেষ নাম',
                         'phone'      => 'ফোন',
                         'postcode'   => 'পোস্টকোড',
-                        'state'      => 'রাষ্ট্র',
+                        'state'      => 'অবস্থা',
                         'title'      => 'ঠিকানা তথ্য',
                         'vat-id'     => 'ভ্যাট আইডি',
                     ],
@@ -445,7 +454,7 @@ return [
                         'product-name' => 'পণ্যের নাম',
                         'qty'          => 'পরিমাণ',
                         'shipping'     => 'শিপিং',
-                        'sku'          => 'এসকিউ',
+                        'sku'          => 'এসকেইউ',
                         'status'       => 'অবস্থা',
                         'title'        => 'অর্ডার তথ্য',
                         'type'         => 'ধরন',
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => 'নাম',
                 ],
+
+                'booking' => [
+                    'location'    => 'অবস্থান',
+                    'view-on-map' => 'মানচিত্রে দেখুন',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes মিনিট',
+                        'slot-duration'            => 'স্লট সময়কাল',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'বন্ধ',
+                        'see-details'              => 'বিস্তারিত দেখুন',
+                        'slot-duration'            => 'স্লট সময়কাল',
+                        'slot-duration-in-minutes' => ':minutes মিনিট',
+                        'today-availability'       => 'আজকের প্রাপ্যতা',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'আপনার টিকিট বুক করুন',
+                        'title'            => 'ইভেন্ট :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'ভাড়া বিকল্প নির্বাচন করুন',
+                        'daily-basis'        => 'দৈনিক ভিত্তিতে',
+                        'from'               => 'থেকে',
+                        'hourly-basis'       => 'ঘণ্টা ভিত্তিতে',
+                        'rent-an-item'       => 'একটি আইটেম ভাড়া করুন',
+                        'select-date'        => 'তারিখ নির্বাচন করুন',
+                        'select-rent-time'   => 'ভাড়া সময় নির্বাচন করুন',
+                        'select-slot'        => 'স্লট নির্বাচন করুন',
+                        'select-time-slot'   => 'সময় স্লট নির্বাচন করুন',
+                        'slot'               => 'স্লট',
+                        'no-slots-available' => 'কোন স্লট উপলব্ধ নেই',
+                        'to'                 => 'পর্যন্ত',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'একটি টেবিল বুক করুন',
+                        'closed'                   => 'বন্ধ',
+                        'slot-duration'            => 'স্লট সময়কাল',
+                        'slot-duration-in-minutes' => ':minutes মিনিট',
+                        'slots-for-all-days'       => 'সব দিনের জন্য দেখান',
+                        'special-notes'            => 'বিশেষ অনুরোধ/নোট',
+                        'today-availability'       => 'আজকের প্রাপ্যতা',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'একটি অ্যাপয়েন্টমেন্ট বুক করুন',
+                        'date'                => 'তারিখ',
+                        'no-slots-available'  => 'কোন স্লট উপলব্ধ নেই',
+                        'select-slot'         => 'স্লট নির্বাচন করুন',
+                        'title'               => 'স্লট',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => 'প্রতি একক মূল্যে কিনুন :qty এবং :discount সেভ করুন',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'বন্ধ',
+
+            'cart'             => [
+                'booking-from' => 'বুকিং থেকে',
+                'booking-till' => 'বুকিং পর্যন্ত',
+                'daily'        => 'দৈনিক ভিত্তিতে',
+                'event-from'   => 'ইভেন্ট থেকে',
+                'event-ticket' => 'ইভেন্ট টিকিট',
+                'event-till'   => 'ইভেন্ট পর্যন্ত',
+                'hourly'       => 'ঘণ্টা ভিত্তিতে',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'এই ইভেন্টটির মেয়াদ শেষ হয়ে গেছে।',
+                    ],
+
+                    'missing_options'        => 'এই পণ্যের জন্য বিকল্পগুলি অনুপস্থিত।',
+                    'inventory_warning'      => 'অনুরোধকৃত পরিমাণ উপলব্ধ নেই, দয়া করে পরে আবার চেষ্টা করুন।',
+                    'select_hourly_duration' => 'এক ঘণ্টার স্লট সময়কাল নির্বাচন করুন।',
+                ],
+
+                'rent-from'    => 'ভাড়া থেকে',
+                'rent-till'    => 'ভাড়া পর্যন্ত',
+                'rent-type'    => 'ভাড়া ধরন',
+                'renting_type' => 'ভাড়া ধরন',
+                'special-note' => 'বিশেষ অনুরোধ/নোট',
+            ],
+
+            'per-ticket-price' => ':price প্রতি টিকিট',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => 'রাস্তার ঠিকানা',
                 'telephone'              => 'টেলিফোন',
                 'title'                  => 'ঠিকানা',
+                'vat-id'                 => 'ভ্যাট আইডি',
             ],
 
             'index' => [
@@ -994,7 +1092,6 @@ return [
             'next-page'          => 'পরবর্তী পৃষ্ঠা',
             'pagination-showing' => ':firstItem থেকে :lastItem পর্যন্ত মোট :total নির্দেশিকা দেখানো হচ্ছে',
             'prev-page'          => 'পূর্ববর্তী পৃষ্ঠা',
-
         ],
     ],
 
@@ -1093,25 +1190,22 @@ return [
 
             'gdpr' => [
                 'new-delete-request' => 'ডেটা মুছে ফেলার জন্য নতুন অনুরোধ',
-                'new-update-request' => 'ডেটা আপডেটের জন্য নতুন অনুরোধ',
+                'new-update-request' => 'ডেটা আপডেট করার জন্য নতুন অনুরোধ',
 
                 'new-request' => [
+                    'delete-summary' => 'মুছে ফেলার অনুরোধের সংক্ষিপ্তসার',
                     'message'        => 'বার্তা : ',
                     'request-status' => 'অনুরোধের অবস্থা : ',
                     'request-type'   => 'অনুরোধের ধরন : ',
-                    'summary'        => 'অনুরোধের সংক্ষেপ',
+                    'update-summary' => 'আপডেট অনুরোধের সংক্ষিপ্তসার',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'বার্তা : ',
-                    'request-status' => 'অনুরোধের অবস্থা : ',
-                    'request-type'   => 'অনুরোধের ধরন : ',
-                    'summary'        => 'মুছে ফেলার অনুরোধের সংক্ষেপ',
-                ],
-
-                'update-request' => [
-                    'message'        => 'বার্তা : ',
-                    'request-status' => 'অনুরোধের অবস্থা : ',
+                'status-update' => [
+                    'subject'        => 'আপনার GDPR অনুরোধ আপডেট হয়েছে',
+                    'summary'        => 'আপনার GDPR অনুরোধের অবস্থা আপডেট হয়েছে',
+                    'request-status' => 'অনুরোধের অবস্থা:',
+                    'request-type'   => 'অনুরোধের ধরন:',
+                    'message'        => 'বার্তা:',
                 ],
             ],
 

@@ -377,78 +377,87 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'पूरा हुआ',
-                'date'                        => 'तारीख',
-                'declined'                    => 'अस्वीकृत',
-                'id'                          => 'आईडी',
-                'message'                     => 'संदेश',
-                'pending'                     => 'लंबित',
-                'processing'                  => 'प्रसंस्करण',
-                'status'                      => 'स्थिति',
-                'success-verify'              => 'सफलता! सत्यापन ईमेल भेजा गया है।',
-                'success-verify-email-unsent' => 'सफलता! सत्यापन ईमेल नहीं भेजा गया है।',
-                'type'                        => 'प्रकार',
-                'unable-to-sent'              => 'ईमेल भेजने में असमर्थ।',
+                'create-success'              => 'अनुरोध सफलतापूर्वक बनाया गया',
+                'revoked-successfully'        => 'अनुरोध सफलतापूर्वक रद्द किया गया',
+                'success-verify'              => 'Successo! L\'email di verifica è stata inviata.',
+                'success-verify-email-unsent' => 'Successo! L\'email di verifica non è stata inviata.',
+                'unable-to-sent'              => 'Impossibile inviare l\'email.',
 
                 'index'   => [
-                    'create-btn' => 'अनुरोध बनाएं',
-                    'html'       => 'एचटीएमएल',
-                    'pdf'        => 'पीडीएफ',
-                    'title'      => 'जीडीपीआर डेटा अनुरोध',
+                    'create-btn' => 'Crea richiesta',
+                    'html'       => 'HTML',
+                    'pdf'        => 'PDF',
+                    'title'      => 'Richieste dati GDPR',
 
                     'modal' => [
-                        'message' => 'संदेश',
-                        'save'    => 'सहेजें',
-                        'title'   => 'नया अनुरोध बनाएं',
+                        'message' => 'Messaggio',
+                        'save'    => 'Salva',
+                        'title'   => 'Crea nuova richiesta',
 
                         'type'    => [
-                            'choose' => 'चुनें',
-                            'delete' => 'हटाएं',
-                            'title'  => 'प्रकार',
-                            'update' => 'अपडेट करें',
+                            'choose' => 'Scegli',
+                            'delete' => 'Elimina',
+                            'title'  => 'Tipo',
+                            'update' => 'Aggiorna',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'पूरा हुआ',
+                        'date'       => 'तारीख',
+                        'declined'   => 'अस्वीकृत',
+                        'delete'     => 'हटाएं',
+                        'id'         => 'आईडी',
+                        'message'    => 'संदेश',
+                        'pending'    => 'लंबित',
+                        'processing' => 'प्रक्रियाधीन',
+                        'revoke-btn' => 'रद्द करें',
+                        'revoked'    => 'रद्द किया गया',
+                        'status'     => 'स्थिति',
+                        'type'       => 'प्रकार',
+                        'update'     => 'अद्यतन करें',
                     ],
                 ],
 
                 'pdf' => [
-                    'title' => 'डिफ़ॉल्ट स्टोर दृश्य',
+                    'title' => 'Vista predefinita del negozio',
 
                     'account-info' => [
-                        'dob'          => 'जन्म तिथि',
-                        'email'        => 'ईमेल',
-                        'first-name'   => 'पहला नाम',
-                        'gender'       => 'लिंग',
-                        'last-name'    => 'अंतिम नाम',
-                        'phone'        => 'फ़ोन',
-                        'title'        => 'खाता जानकारी',
+                        'dob'          => 'Data di nascita',
+                        'email'        => 'Email',
+                        'first-name'   => 'Nome',
+                        'gender'       => 'Genere',
+                        'last-name'    => 'Cognome',
+                        'phone'        => 'Telefono',
+                        'title'        => 'Informazioni account',
                     ],
 
                     'address-info' => [
-                        'address'    => 'पता',
-                        'address1'   => 'पता 1',
-                        'address2'   => 'पता 2',
-                        'city'       => 'शहर',
-                        'company'    => 'कंपनी',
-                        'country'    => 'देश',
-                        'first-name' => 'पहला नाम',
-                        'last-name'  => 'अंतिम नाम',
-                        'phone'      => 'फ़ोन',
-                        'postcode'   => 'पिन कोड',
-                        'state'      => 'राज्य',
-                        'title'      => 'पता जानकारी',
-                        'vat-id'     => 'वैट आईडी',
+                        'address'    => 'Indirizzo',
+                        'address1'   => 'Indirizzo 1',
+                        'address2'   => 'Indirizzo 2',
+                        'city'       => 'Città',
+                        'company'    => 'Azienda',
+                        'country'    => 'Paese',
+                        'first-name' => 'Nome',
+                        'last-name'  => 'Cognome',
+                        'phone'      => 'Telefono',
+                        'postcode'   => 'CAP',
+                        'state'      => 'Stato',
+                        'title'      => 'Informazioni sull\'indirizzo',
+                        'vat-id'     => 'Partita IVA',
                     ],
 
                     'order-info' => [
-                        'amount'       => 'राशि',
-                        'order-id'     => 'आदेश आईडी',
-                        'product-name' => 'उत्पाद का नाम',
-                        'qty'          => 'मात्रा',
-                        'shipping'     => 'शिपिंग',
-                        'sku'          => 'एसकेयू',
-                        'status'       => 'स्थिति',
-                        'title'        => 'आदेश जानकारी',
-                        'type'         => 'प्रकार',
+                        'amount'       => 'Importo',
+                        'order-id'     => 'ID ordine',
+                        'product-name' => 'Nome prodotto',
+                        'qty'          => 'Quantità',
+                        'shipping'     => 'Spedizione',
+                        'sku'          => 'SKU',
+                        'status'       => 'Stato',
+                        'title'        => 'Informazioni sull\'ordine',
+                        'type'         => 'Tipo',
                     ],
                 ],
             ],
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => 'नाम',
                 ],
+
+                'booking' => [
+                    'location'    => 'स्थान',
+                    'view-on-map' => 'नक्शे पर देखें',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes मिनट',
+                        'slot-duration'            => 'स्लॉट अवधि',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'बंद',
+                        'see-details'              => 'विवरण देखें',
+                        'slot-duration'            => 'स्लॉट अवधि',
+                        'slot-duration-in-minutes' => ':minutes मिनट',
+                        'today-availability'       => 'आज की उपलब्धता',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'अपना टिकट बुक करें',
+                        'title'            => 'कार्यक्रम :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'किराया विकल्प चुनें',
+                        'daily-basis'        => 'दैनिक आधार',
+                        'from'               => 'से',
+                        'hourly-basis'       => 'घंटे के आधार पर',
+                        'rent-an-item'       => 'एक आइटम किराए पर लें',
+                        'select-date'        => 'तारीख चुनें',
+                        'select-rent-time'   => 'किराया समय चुनें',
+                        'select-slot'        => 'स्लॉट चुनें',
+                        'select-time-slot'   => 'समय स्लॉट चुनें',
+                        'slot'               => 'स्लॉट',
+                        'no-slots-available' => 'कोई स्लॉट उपलब्ध नहीं है',
+                        'to'                 => 'तक',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'टेबल बुक करें',
+                        'closed'                   => 'बंद',
+                        'slot-duration'            => 'स्लॉट अवधि',
+                        'slot-duration-in-minutes' => ':minutes मिनट',
+                        'slots-for-all-days'       => 'सभी दिनों के लिए दिखाएं',
+                        'special-notes'            => 'विशेष अनुरोध/नोट्स',
+                        'today-availability'       => 'आज की उपलब्धता',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'अपॉइंटमेंट बुक करें',
+                        'date'                => 'तारीख',
+                        'no-slots-available'  => 'कोई स्लॉट उपलब्ध नहीं है',
+                        'select-slot'         => 'स्लॉट चुनें',
+                        'title'               => 'स्लॉट',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => ':qty के लिए :price प्रति प्रति खरीदें और :discount बचाएं',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'बंद',
+
+            'cart'             => [
+                'booking-from' => 'बुकिंग से',
+                'booking-till' => 'बुकिंग तक',
+                'daily'        => 'दैनिक आधार',
+                'event-from'   => 'कार्यक्रम से',
+                'event-ticket' => 'कार्यक्रम टिकट',
+                'event-till'   => 'कार्यक्रम तक',
+                'hourly'       => 'घंटे के आधार पर',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'यह कार्यक्रम समाप्त हो गया है।',
+                    ],
+
+                    'missing_options'        => 'इस उत्पाद के लिए विकल्प गायब हैं।',
+                    'inventory_warning'      => 'अनुरोधित मात्रा उपलब्ध नहीं है, कृपया बाद में पुनः प्रयास करें।',
+                    'select_hourly_duration' => 'एक घंटे की अवधि का चयन करें।',
+                ],
+
+                'rent-from'    => 'किराया से',
+                'rent-till'    => 'किराया तक',
+                'rent-type'    => 'किराया प्रकार',
+                'renting_type' => 'किराया प्रकार',
+                'special-note' => 'विशेष अनुरोध/नोट्स',
+            ],
+
+            'per-ticket-price' => ':price प्रति टिकट',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => 'स्ट्रीट पता',
                 'telephone'              => 'टेलीफोन',
                 'title'                  => 'पता',
+                'vat-id'                 => 'वैट आईडी',
             ],
 
             'index' => [
@@ -1092,25 +1190,22 @@ return [
 
             'gdpr' => [
                 'new-delete-request' => 'डेटा हटाने के लिए नया अनुरोध',
-                'new-update-request' => 'डेटा अपडेट के लिए नया अनुरोध',
+                'new-update-request' => 'डेटा अपडेट करने के लिए नया अनुरोध',
 
                 'new-request' => [
+                    'delete-summary' => 'हटाने के अनुरोध का सारांश',
                     'message'        => 'संदेश : ',
-                    'request-status' => 'अनुरोध की स्थिति : ',
+                    'request-status' => 'अनुरोध स्थिति : ',
                     'request-type'   => 'अनुरोध प्रकार : ',
-                    'summary'        => 'अनुरोध का सारांश',
+                    'update-summary' => 'अद्यतन अनुरोध का सारांश',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'संदेश : ',
-                    'request-status' => 'अनुरोध की स्थिति : ',
-                    'request-type'   => 'अनुरोध प्रकार : ',
-                    'summary'        => 'हटाने के अनुरोध का सारांश',
-                ],
-
-                'update-request' => [
-                    'message'        => 'संदेश : ',
-                    'request-status' => 'अनुरोध की स्थिति : ',
+                'status-update' => [
+                    'subject'        => 'आपका GDPR अनुरोध अपडेट किया गया है',
+                    'summary'        => 'आपके GDPR अनुरोध की स्थिति अपडेट की गई है',
+                    'request-status' => 'अनुरोध स्थिति:',
+                    'request-type'   => 'अनुरोध प्रकार:',
+                    'message'        => 'संदेश:',
                 ],
             ],
 

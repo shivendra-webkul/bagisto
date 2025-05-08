@@ -377,27 +377,20 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'مكتمل',
-                'date'                        => 'التاريخ',
-                'declined'                    => 'مرفوض',
-                'id'                          => 'المعرف',
-                'message'                     => 'الرسالة',
-                'pending'                     => 'قيد الانتظار',
-                'processing'                  => 'قيد المعالجة',
-                'status'                      => 'الحالة',
-                'success-verify'              => 'نجاح! تم إرسال بريد التحقق.',
-                'success-verify-email-unsent' => 'نجاح! لم يتم إرسال بريد التحقق.',
-                'type'                        => 'النوع',
-                'unable-to-sent'              => 'غير قادر على إرسال البريد.',
+                'create-success'              => 'تم إنشاء الطلب بنجاح',
+                'revoked-successfully'        => 'تم إلغاء الطلب بنجاح',
+                'success-verify'              => 'نجاح! تم إرسال بريد التحقق الإلكتروني.',
+                'success-verify-email-unsent' => 'نجاح! لم يتم إرسال بريد التحقق الإلكتروني.',
+                'unable-to-sent'              => 'تعذر إرسال البريد الإلكتروني.',
 
                 'index'   => [
                     'create-btn' => 'إنشاء طلب',
                     'html'       => 'HTML',
                     'pdf'        => 'PDF',
-                    'title'      => 'طلبات بيانات GDPR',
+                    'title'      => 'طلبات بيانات اللائحة العامة لحماية البيانات',
 
                     'modal' => [
-                        'message' => 'الرسالة',
+                        'message' => 'رسالة',
                         'save'    => 'حفظ',
                         'title'   => 'إنشاء طلب جديد',
 
@@ -407,6 +400,22 @@ return [
                             'title'  => 'النوع',
                             'update' => 'تحديث',
                         ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'مكتمل',
+                        'date'       => 'التاريخ',
+                        'declined'   => 'مرفوض',
+                        'delete'     => 'حذف',
+                        'id'         => 'معرّف',
+                        'message'    => 'رسالة',
+                        'pending'    => 'قيد الانتظار',
+                        'processing' => 'قيد المعالجة',
+                        'revoke-btn' => 'إلغاء',
+                        'revoked'    => 'ملغى',
+                        'status'     => 'الحالة',
+                        'type'       => 'النوع',
+                        'update'     => 'تحديث',
                     ],
                 ],
 
@@ -436,12 +445,12 @@ return [
                         'postcode'   => 'الرمز البريدي',
                         'state'      => 'الولاية',
                         'title'      => 'معلومات العنوان',
-                        'vat-id'     => 'رقم الضريبة',
+                        'vat-id'     => 'معرف ضريبة القيمة المضافة',
                     ],
 
                     'order-info' => [
                         'amount'       => 'المبلغ',
-                        'order-id'     => 'معرف الطلب',
+                        'order-id'     => 'رقم الطلب',
                         'product-name' => 'اسم المنتج',
                         'qty'          => 'الكمية',
                         'shipping'     => 'الشحن',
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => 'الاسم',
                 ],
+
+                'booking' => [
+                    'location'    => 'الموقع',
+                    'view-on-map' => 'عرض على الخريطة',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes دقائق',
+                        'slot-duration'            => 'مدة الفتحة',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'مغلق',
+                        'see-details'              => 'عرض التفاصيل',
+                        'slot-duration'            => 'مدة الفتحة',
+                        'slot-duration-in-minutes' => ':minutes دقائق',
+                        'today-availability'       => 'التوافر اليوم',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'احجز تذكرتك',
+                        'title'            => 'الحدث في :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'اختر خيار الإيجار',
+                        'daily-basis'        => 'على أساس يومي',
+                        'from'               => 'من',
+                        'hourly-basis'       => 'على أساس الساعة',
+                        'rent-an-item'       => 'استئجار عنصر',
+                        'select-date'        => 'اختر التاريخ',
+                        'select-rent-time'   => 'اختر وقت الإيجار',
+                        'select-slot'        => 'اختر الفتحة',
+                        'select-time-slot'   => 'اختر الفتحة الزمنية',
+                        'slot'               => 'الفتحة',
+                        'no-slots-available' => 'لا توجد فتحات متاحة',
+                        'to'                 => 'إلى',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'احجز طاولة',
+                        'closed'                   => 'مغلق',
+                        'slot-duration'            => 'مدة الفتحة',
+                        'slot-duration-in-minutes' => ':minutes دقائق',
+                        'slots-for-all-days'       => 'عرض لجميع الأيام',
+                        'special-notes'            => 'طلب خاص/ملاحظات',
+                        'today-availability'       => 'التوافر اليوم',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'احجز موعدًا',
+                        'date'                => 'التاريخ',
+                        'no-slots-available'  => 'لا توجد فتحات متاحة',
+                        'select-slot'         => 'اختر الفتحة',
+                        'title'               => 'الفتحة',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => 'اشترِ :qty بسعر :price للوحدة ووفّر :discount',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'مغلق',
+
+            'cart'             => [
+                'booking-from' => 'الحجز من',
+                'booking-till' => 'الحجز حتى',
+                'daily'        => 'على أساس يومي',
+                'event-from'   => 'الحدث من',
+                'event-ticket' => 'تذكرة الحدث',
+                'event-till'   => 'الحدث حتى',
+                'hourly'       => 'على أساس الساعة',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'لقد انتهت صلاحية هذا الحدث.',
+                    ],
+
+                    'missing_options'        => 'الخيارات مفقودة لهذا المنتج.',
+                    'inventory_warning'      => 'الكمية المطلوبة غير متوفرة، يرجى المحاولة مرة أخرى لاحقًا.',
+                    'select_hourly_duration' => 'اختر مدة الفتحة الزمنية بساعة واحدة.',
+                ],
+
+                'rent-from'    => 'الإيجار من',
+                'rent-till'    => 'الإيجار حتى',
+                'rent-type'    => 'نوع الإيجار',
+                'renting_type' => 'نوع الإيجار',
+                'special-note' => 'طلب خاص/ملاحظات',
+            ],
+
+            'per-ticket-price' => ':price لكل تذكرة',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => 'عنوان الشارع',
                 'telephone'              => 'الهاتف',
                 'title'                  => 'العنوان',
+                'vat-id'                 => 'رقم الضريبة',
             ],
 
             'index' => [
@@ -1095,22 +1193,19 @@ return [
                 'new-update-request' => 'طلب جديد لتحديث البيانات',
 
                 'new-request' => [
-                    'message'        => 'الرسالة : ',
+                    'delete-summary' => 'ملخص طلب الحذف',
+                    'message'        => 'رسالة : ',
                     'request-status' => 'حالة الطلب : ',
                     'request-type'   => 'نوع الطلب : ',
-                    'summary'        => 'ملخص الطلب',
+                    'update-summary' => 'ملخص طلب التحديث',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'الرسالة : ',
-                    'request-status' => 'حالة الطلب : ',
-                    'request-type'   => 'نوع الطلب : ',
-                    'summary'        => 'ملخص طلب الحذف',
-                ],
-
-                'update-request' => [
-                    'message'        => 'الرسالة : ',
-                    'request-status' => 'حالة الطلب : ',
+                'status-update' => [
+                    'subject'        => 'تم تحديث طلب GDPR الخاص بك',
+                    'summary'        => 'تم تحديث حالة طلب GDPR الخاص بك',
+                    'request-status' => 'حالة الطلب:',
+                    'request-type'   => 'نوع الطلب:',
+                    'message'        => 'رسالة:',
                 ],
             ],
 

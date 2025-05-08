@@ -377,18 +377,11 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'Завершено',
-                'date'                        => 'Дата',
-                'declined'                    => 'Отклонено',
-                'id'                          => 'Идентификатор',
-                'message'                     => 'Сообщение',
-                'pending'                     => 'В ожидании',
-                'processing'                  => 'Обработка',
-                'status'                      => 'Статус',
-                'success-verify'              => 'Успех! Письмо с подтверждением отправлено.',
-                'success-verify-email-unsent' => 'Успех! Письмо с подтверждением не отправлено.',
-                'type'                        => 'Тип',
-                'unable-to-sent'              => 'Не удалось отправить письмо.',
+                'create-success'              => 'Запрос успешно создан',
+                'revoked-successfully'        => 'Запрос успешно отозван',
+                'success-verify'              => 'Успех! Письмо для подтверждения отправлено.',
+                'success-verify-email-unsent' => 'Успех! Письмо для подтверждения не отправлено.',
+                'unable-to-sent'              => 'Невозможно отправить письмо.',
 
                 'index'   => [
                     'create-btn' => 'Создать запрос',
@@ -408,10 +401,26 @@ return [
                             'update' => 'Обновить',
                         ],
                     ],
+
+                    'datagrid' => [
+                        'completed'  => 'Завершено',
+                        'date'       => 'Дата',
+                        'declined'   => 'Отклонено',
+                        'delete'     => 'Удалить',
+                        'id'         => 'ID',
+                        'message'    => 'Сообщение',
+                        'pending'    => 'В ожидании',
+                        'processing' => 'В обработке',
+                        'revoke-btn' => 'Отозвать',
+                        'revoked'    => 'Отозвано',
+                        'status'     => 'Статус',
+                        'type'       => 'Тип',
+                        'update'     => 'Обновить',
+                    ],
                 ],
 
                 'pdf' => [
-                    'title' => 'Вид магазина по умолчанию',
+                    'title' => 'Просмотр магазина по умолчанию',
 
                     'account-info' => [
                         'dob'          => 'Дата рождения',
@@ -434,18 +443,18 @@ return [
                         'last-name'  => 'Фамилия',
                         'phone'      => 'Телефон',
                         'postcode'   => 'Почтовый индекс',
-                        'state'      => 'Регион',
-                        'title'      => 'Информация об адресе',
+                        'state'      => 'Штат/регион',
+                        'title'      => 'Адресная информация',
                         'vat-id'     => 'ИНН',
                     ],
 
                     'order-info' => [
                         'amount'       => 'Сумма',
-                        'order-id'     => 'Идентификатор заказа',
+                        'order-id'     => 'ID заказа',
                         'product-name' => 'Название продукта',
                         'qty'          => 'Количество',
                         'shipping'     => 'Доставка',
-                        'sku'          => 'Артикул',
+                        'sku'          => 'SKU',
                         'status'       => 'Статус',
                         'title'        => 'Информация о заказе',
                         'type'         => 'Тип',
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => 'Название',
                 ],
+
+                'booking' => [
+                    'location'    => 'Местоположение',
+                    'view-on-map' => 'Посмотреть на карте',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes минут',
+                        'slot-duration'            => 'Продолжительность слота',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'Закрыто',
+                        'see-details'              => 'Посмотреть детали',
+                        'slot-duration'            => 'Продолжительность слота',
+                        'slot-duration-in-minutes' => ':minutes минут',
+                        'today-availability'       => 'Доступность сегодня',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'Забронируйте билет',
+                        'title'            => 'Событие на :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'Выберите вариант аренды',
+                        'daily-basis'        => 'На ежедневной основе',
+                        'from'               => 'С',
+                        'hourly-basis'       => 'На почасовой основе',
+                        'rent-an-item'       => 'Арендовать предмет',
+                        'select-date'        => 'Выберите дату',
+                        'select-rent-time'   => 'Выберите время аренды',
+                        'select-slot'        => 'Выберите слот',
+                        'select-time-slot'   => 'Выберите временной слот',
+                        'slot'               => 'Слот',
+                        'no-slots-available' => 'Нет доступных слотов',
+                        'to'                 => 'До',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'Забронировать столик',
+                        'closed'                   => 'Закрыто',
+                        'slot-duration'            => 'Продолжительность слота',
+                        'slot-duration-in-minutes' => ':minutes минут',
+                        'slots-for-all-days'       => 'Показать на все дни',
+                        'special-notes'            => 'Особые запросы/заметки',
+                        'today-availability'       => 'Доступность сегодня',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'Записаться на прием',
+                        'date'                => 'Дата',
+                        'no-slots-available'  => 'Нет доступных слотов',
+                        'select-slot'         => 'Выберите слот',
+                        'title'               => 'Слот',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => 'Купите :qty по цене :price каждый и сэкономьте :discount',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'Закрыто',
+
+            'cart'             => [
+                'booking-from' => 'Бронирование с',
+                'booking-till' => 'Бронирование до',
+                'daily'        => 'Ежедневно',
+                'event-from'   => 'Событие с',
+                'event-ticket' => 'Билет на событие',
+                'event-till'   => 'Событие до',
+                'hourly'       => 'Почасовая основа',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'Это событие истекло.',
+                    ],
+
+                    'missing_options'        => 'Отсутствуют варианты для этого продукта.',
+                    'inventory_warning'      => 'Запрошенное количество недоступно, попробуйте позже.',
+                    'select_hourly_duration' => 'Выберите продолжительность слота в один час.',
+                ],
+
+                'rent-from'    => 'Аренда с',
+                'rent-till'    => 'Аренда до',
+                'rent-type'    => 'Тип аренды',
+                'renting_type' => 'Тип аренды',
+                'special-note' => 'Особые запросы/заметки',
+            ],
+
+            'per-ticket-price' => ':price за билет',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => 'Улица, дом',
                 'telephone'              => 'Телефон',
                 'title'                  => 'Адрес',
+                'vat-id'                 => 'Идентификационный номер НДС',
             ],
 
             'index' => [
@@ -1095,22 +1193,19 @@ return [
                 'new-update-request' => 'Новый запрос на обновление данных',
 
                 'new-request' => [
+                    'delete-summary' => 'Резюме запроса на удаление',
                     'message'        => 'Сообщение : ',
                     'request-status' => 'Статус запроса : ',
                     'request-type'   => 'Тип запроса : ',
-                    'summary'        => 'Сводка запроса',
+                    'update-summary' => 'Резюме запроса на обновление',
                 ],
 
-                'delete-request' => [
-                    'message'        => 'Сообщение : ',
-                    'request-status' => 'Статус запроса : ',
-                    'request-type'   => 'Тип запроса : ',
-                    'summary'        => 'Сводка запроса на удаление',
-                ],
-
-                'update-request' => [
-                    'message'        => 'Сообщение : ',
-                    'request-status' => 'Статус запроса : ',
+                'status-update' => [
+                    'subject'        => 'Ваш запрос GDPR был обновлён',
+                    'summary'        => 'Статус вашего запроса GDPR был обновлён',
+                    'request-status' => 'Статус запроса:',
+                    'request-type'   => 'Тип запроса:',
+                    'message'        => 'Сообщение:',
                 ],
             ],
 

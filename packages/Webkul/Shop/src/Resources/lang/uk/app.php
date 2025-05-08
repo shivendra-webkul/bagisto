@@ -377,18 +377,11 @@ return [
             ],
 
             'gdpr' => [
-                'completed'                   => 'Завершено',
-                'date'                        => 'Дата',
-                'declined'                    => 'Відхилено',
-                'id'                          => 'Ідентифікатор',
-                'message'                     => 'Повідомлення',
-                'pending'                     => 'В очікуванні',
-                'processing'                  => 'Обробка',
-                'status'                      => 'Статус',
-                'success-verify'              => 'Успіх! Лист для підтвердження надіслано.',
-                'success-verify-email-unsent' => 'Успіх! Лист для підтвердження не надіслано.',
-                'type'                        => 'Тип',
-                'unable-to-sent'              => 'Не вдалося надіслати лист.',
+                'create-success'              => 'Запит успішно створено',
+                'revoked-successfully'        => 'Запит успішно скасовано',
+                'success-verify'              => 'Успішно! Лист для підтвердження відправлено.',
+                'success-verify-email-unsent' => 'Успішно! Лист для підтвердження не відправлено.',
+                'unable-to-sent'              => 'Не вдалося надіслати листа.',
 
                 'index'   => [
                     'create-btn' => 'Створити запит',
@@ -402,25 +395,41 @@ return [
                         'title'   => 'Створити новий запит',
 
                         'type'    => [
-                            'choose' => 'Вибрати',
+                            'choose' => 'Обрати',
                             'delete' => 'Видалити',
                             'title'  => 'Тип',
                             'update' => 'Оновити',
                         ],
                     ],
+
+                    'datagrid' => [
+                        'completed'  => 'Завершено',
+                        'date'       => 'Дата',
+                        'declined'   => 'Відхилено',
+                        'delete'     => 'Видалити',
+                        'id'         => 'ID',
+                        'message'    => 'Повідомлення',
+                        'pending'    => 'В очікуванні',
+                        'processing' => 'В обробці',
+                        'revoke-btn' => 'Скасувати',
+                        'revoked'    => 'Скасовано',
+                        'status'     => 'Статус',
+                        'type'       => 'Тип',
+                        'update'     => 'Оновити',
+                    ],
                 ],
 
                 'pdf' => [
-                    'title' => 'Вид магазину за замовчуванням',
+                    'title' => 'Відображення магазину за замовчуванням',
 
                     'account-info' => [
                         'dob'          => 'Дата народження',
                         'email'        => 'Електронна пошта',
-                        'first-name'   => 'Ім\'я',
+                        'first-name'   => 'Ім’я',
                         'gender'       => 'Стать',
                         'last-name'    => 'Прізвище',
                         'phone'        => 'Телефон',
-                        'title'        => 'Інформація про обліковий запис',
+                        'title'        => 'Інформація про акаунт',
                     ],
 
                     'address-info' => [
@@ -430,22 +439,22 @@ return [
                         'city'       => 'Місто',
                         'company'    => 'Компанія',
                         'country'    => 'Країна',
-                        'first-name' => 'Ім\'я',
+                        'first-name' => 'Ім’я',
                         'last-name'  => 'Прізвище',
                         'phone'      => 'Телефон',
                         'postcode'   => 'Поштовий індекс',
                         'state'      => 'Область',
-                        'title'      => 'Інформація про адресу',
-                        'vat-id'     => 'Ідентифікаційний номер ПДВ',
+                        'title'      => 'Адресна інформація',
+                        'vat-id'     => 'ІПН',
                     ],
 
                     'order-info' => [
                         'amount'       => 'Сума',
-                        'order-id'     => 'Ідентифікатор замовлення',
-                        'product-name' => 'Назва товару',
+                        'order-id'     => 'ID замовлення',
+                        'product-name' => 'Назва продукту',
                         'qty'          => 'Кількість',
                         'shipping'     => 'Доставка',
-                        'sku'          => 'Артикул',
+                        'sku'          => 'SKU',
                         'status'       => 'Статус',
                         'title'        => 'Інформація про замовлення',
                         'type'         => 'Тип',
@@ -691,6 +700,62 @@ return [
                 'grouped' => [
                     'name' => 'Назва',
                 ],
+
+                'booking' => [
+                    'location'    => 'Місцезнаходження',
+                    'view-on-map' => 'Переглянути на карті',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes Хвилин',
+                        'slot-duration'            => 'Тривалість слоту',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'Закрито',
+                        'see-details'              => 'Дивитися деталі',
+                        'slot-duration'            => 'Тривалість слоту',
+                        'slot-duration-in-minutes' => ':minutes Хвилин',
+                        'today-availability'       => 'Доступність сьогодні',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'Забронюйте свій квиток',
+                        'title'            => 'Подія на :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'Виберіть варіант оренди',
+                        'daily-basis'        => 'Щоденна основа',
+                        'from'               => 'Від',
+                        'hourly-basis'       => 'Погодинна основа',
+                        'rent-an-item'       => 'Орендувати предмет',
+                        'select-date'        => 'Виберіть дату',
+                        'select-rent-time'   => 'Виберіть час оренди',
+                        'select-slot'        => 'Виберіть слот',
+                        'select-time-slot'   => 'Виберіть часовий слот',
+                        'slot'               => 'Слот',
+                        'no-slots-available' => 'Немає доступних слотів',
+                        'to'                 => 'До',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'Забронювати стіл',
+                        'closed'                   => 'Закрито',
+                        'slot-duration'            => 'Тривалість слоту',
+                        'slot-duration-in-minutes' => ':minutes Хвилин',
+                        'slots-for-all-days'       => 'Показати для всіх днів',
+                        'special-notes'            => 'Особливі запити/Примітки',
+                        'today-availability'       => 'Доступність сьогодні',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'Записатися на прийом',
+                        'date'                => 'Дата',
+                        'no-slots-available'  => 'Немає доступних слотів',
+                        'select-slot'         => 'Виберіть слот',
+                        'title'               => 'Слот',
+                    ],
+                ],
             ],
 
             'gallery' => [
@@ -735,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => 'Купуйте :qty за :price кожний і економте :discount',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'Закрито',
+
+            'cart'             => [
+                'booking-from' => 'Бронювання з',
+                'booking-till' => 'Бронювання до',
+                'daily'        => 'Щоденна основа',
+                'event-from'   => 'Подія з',
+                'event-ticket' => 'Квиток на подію',
+                'event-till'   => 'Подія до',
+                'hourly'       => 'Погодинна основа',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'Ця подія закінчилася.',
+                    ],
+
+                    'missing_options'        => 'Варіанти відсутні для цього продукту.',
+                    'inventory_warning'      => 'Запитана кількість недоступна, будь ласка, спробуйте пізніше.',
+                    'select_hourly_duration' => 'Виберіть тривалість слоту одну годину.',
+                ],
+
+                'rent-from'    => 'Оренда з',
+                'rent-till'    => 'Оренда до',
+                'rent-type'    => 'Тип оренди',
+                'renting_type' => 'Тип оренди',
+                'special-note' => 'Особливі запити/Примітки',
+            ],
+
+            'per-ticket-price' => ':price за квиток',
         ],
     ],
 
@@ -908,6 +1005,7 @@ return [
                 'street-address'         => 'Вулиця',
                 'telephone'              => 'Телефон',
                 'title'                  => 'Адреса',
+                'vat-id'                 => 'Ідентифікаційний номер ПДВ',
             ],
 
             'index' => [
@@ -1091,26 +1189,23 @@ return [
             ],
 
             'gdpr' => [
-                'new-delete-request' => 'Новий запит на видалення даних',
-                'new-update-request' => 'Новий запит на оновлення даних',
+                'new-delete-request' => 'Нове запит на видалення даних',
+                'new-update-request' => 'Нове запит на оновлення даних',
 
                 'new-request' => [
+                    'delete-summary' => 'Резюме запиту на видалення',
                     'message'        => 'Повідомлення : ',
                     'request-status' => 'Статус запиту : ',
                     'request-type'   => 'Тип запиту : ',
-                    'summary'        => 'Резюме запиту',
+                    'update-summary' => 'Резюме запиту на оновлення',
                 ],
 
-                'update-request' => [
-                    'message'        => 'Повідомлення : ',
-                    'request-status' => 'Статус запиту : ',
-                ],
-
-                'delete-request' => [
-                    'message'        => 'Повідомлення : ',
-                    'request-status' => 'Статус запиту : ',
-                    'request-type'   => 'Тип запиту : ',
-                    'summary'        => 'Резюме запиту на видалення',
+                'status-update' => [
+                    'subject'        => 'Ваш запит GDPR оновлено',
+                    'summary'        => 'Статус вашого запиту GDPR оновлено',
+                    'request-status' => 'Статус запиту:',
+                    'request-type'   => 'Тип запиту:',
+                    'message'        => 'Повідомлення:',
                 ],
             ],
 

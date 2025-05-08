@@ -259,7 +259,7 @@
         :src="route('shop.api.products.related.index', ['id' => $product->id])"
     />
 
-    <!-- Upsell Products -->
+    <!-- Up-sell Products -->
     <x-shop::products.carousel
         :title="trans('shop::app.products.view.up-sell-title')"
         :src="route('shop.api.products.up-sell.index', ['id' => $product->id])"
@@ -386,8 +386,9 @@
 
                                 @include('shop::products.view.types.downloadable')
 
+                                @include('shop::products.view.types.booking')
 
-                                <!-- Product Actions and Qunatity Box -->
+                                <!-- Product Actions and Quantity Box -->
                                 <div class="mt-8 flex max-w-[470px] gap-4 max-sm:mt-4">
 
                                     {!! view_render_event('bagisto.shop.products.view.quantity.before', ['product' => $product]) !!}

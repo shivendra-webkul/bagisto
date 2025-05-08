@@ -581,15 +581,20 @@ return [
                 'title' => 'Facturen',
 
                 'datagrid' => [
-                    'action'       => 'Acties',
-                    'grand-total'  => 'Totaalbedrag',
-                    'id'           => 'ID',
-                    'invoice-date' => 'Factuurdatum',
-                    'order-id'     => 'Bestelnummer',
-                    'overdue'      => 'Achterstallig',
-                    'paid'         => 'Betaald',
-                    'pending'      => 'In afwachting',
-                    'status'       => 'Status',
+                    'action'              => 'Acties',
+                    'days-left'           => 'Nog :count dag(en)',
+                    'days-overdue'        => ':count dag(en) te laat',
+                    'grand-total'         => 'Totaalbedrag',
+                    'id'                  => 'ID',
+                    'invoice-date'        => 'Factuurdatum',
+                    'mass-update-success' => 'Geselecteerde facturen zijn succesvol bijgewerkt.',
+                    'order-id'            => 'Bestelnummer',
+                    'overdue'             => 'Achterstallig',
+                    'overdue-by'          => ':count dag(en) te laat',
+                    'paid'                => 'Betaald',
+                    'pending'             => 'In afwachting',
+                    'status'              => 'Status',
+                    'update-status'       => 'Status bijwerken',
                 ],
             ],
 
@@ -732,6 +737,38 @@ return [
                     'transaction-id'   => 'Transactie-ID',
                 ],
             ],
+        ],
+
+        'booking' => [
+            'index' => [
+                'datagrid' => [
+                    'created-date' => 'Aanmaakdatum',
+                    'from'         => 'Van',
+                    'id'           => 'ID',
+                    'order-id'     => 'Bestelnummer',
+                    'qty'          => 'Aantal',
+                    'to'           => 'Tot',
+                    'view'         => 'Bekijken',
+                ],
+
+                'title'    => 'Boekingen',
+            ],
+
+            'calendar' => [
+                'booking-date'     => 'Boekingsdatum',
+                'booking-details'  => 'Boekingsdetails',
+                'canceled'         => 'Geannuleerd',
+                'closed'           => 'Gesloten',
+                'done'             => 'Voltooid',
+                'order-id'         => 'Bestelnummer',
+                'pending'          => 'In afwachting',
+                'price'            => 'Prijs',
+                'status'           => 'Status',
+                'time-slot'        => 'Tijdslot:',
+                'view-details'     => 'Details bekijken',
+            ],
+
+            'title' => 'Boekingsproducten',
         ],
     ],
 
@@ -1082,6 +1119,181 @@ return [
                                     'title' => 'Selecteer',
                                 ],
                             ],
+                        ],
+                    ],
+
+                    'booking' => [
+                        'available-from' => 'Beschikbaar Vanaf',
+                        'available-to'   => 'Beschikbaar Tot',
+                        'location'       => 'Locatie',
+                        'qty'            => 'Aantal',
+                        'title'          => 'Boekingstype',
+
+                        'available-every-week' => [
+                            'no'    => 'Nee',
+                            'title' => 'Elke Week Beschikbaar',
+                            'yes'   => 'Ja',
+                        ],
+
+                        'appointment' => [
+                            'break-duration'         => 'Pauzeduur tussen Tijden (Minuten)',
+                            'slot-duration'          => 'Tijdsduur (Minuten)',
+
+                            'same-slot-for-all-days' => [
+                                'no'    => 'Nee',
+                                'title' => 'Zelfde Tijd Voor Alle Dagen',
+                                'yes'   => 'Ja',
+                            ],
+                        ],
+
+                        'default' => [
+                            'add'              => 'Toevoegen',
+                            'break-duration'   => 'Pauzeduur tussen Tijden (Minuten)',
+                            'close'            => 'Sluiten',
+                            'description'      => 'Boekingsinformatie',
+                            'description-info' => 'De tijdsduur wordt aangemaakt en weergegeven volgens de slots. Deze zal uniek zijn voor alle slots en zichtbaar zijn in de etalage.',
+                            'edit'             => 'Bewerken',
+                            'many'             => 'Meerdere Boekingen Voor Eén Dag',
+                            'one'              => 'Eén Boeking Voor Meerdere Dagen',
+                            'open'             => 'Open',
+                            'slot-add'         => 'Tijden Toevoegen',
+                            'slot-duration'    => 'Tijdsduur (Minuten)',
+                            'slot-title'       => 'Tijden Tijdsduur',
+                            'title'            => 'Standaard',
+                            'unavailable'      => 'Niet Beschikbaar',
+
+                            'modal'            => [
+                                'slot' => [
+                                    'add-title'  => 'Tijden Toevoegen',
+                                    'close'      => 'Sluiten',
+                                    'day'        => 'Dag',
+                                    'edit-title' => 'Tijden Bewerken',
+                                    'friday'     => 'Vrijdag',
+                                    'from'       => 'Van',
+                                    'from-day'   => 'Van Dag',
+                                    'from-time'  => 'Van Tijd',
+                                    'monday'     => 'Maandag',
+                                    'open'       => 'Open',
+                                    'saturday'   => 'Zaterdag',
+                                    'save'       => 'Opslaan',
+                                    'select'     => 'Selecteren',
+                                    'status'     => 'Status',
+                                    'sunday'     => 'Zondag',
+                                    'thursday'   => 'Donderdag',
+                                    'to'         => 'Tot',
+                                    'to-day'     => 'Tot Dag',
+                                    'to-time'    => 'Tot Tijd',
+                                    'tuesday'    => 'Dinsdag',
+                                    'wednesday'  => 'Woensdag',
+                                    'week'       => ':day',
+                                ],
+                            ],
+                        ],
+
+                        'event' => [
+                            'add'                => 'Tickets Toevoegen',
+                            'delete'             => 'Verwijderen',
+                            'description'        => 'Beschrijving',
+                            'description-info'   => 'Er zijn geen tickets beschikbaar.',
+                            'edit'               => 'Bewerken',
+                            'name'               => 'Naam',
+                            'price'              => 'Prijs',
+                            'qty'                => 'Aantal',
+                            'special-price'      => 'Speciale Prijs',
+                            'special-price-from' => 'Speciale Prijs Vanaf',
+                            'special-price-to'   => 'Speciale Prijs Tot',
+                            'title'              => 'Tickets',
+                            'valid-from'         => 'Geldig Vanaf',
+                            'valid-until'        => 'Geldig Tot',
+
+                            'modal'              => [
+                                'edit' => 'Tickets Bewerken',
+                                'save' => 'Opslaan',
+                            ],
+                        ],
+
+                        'empty-info' => [
+                            'tickets' => [
+                                'add' => 'Tickets Toevoegen',
+                            ],
+
+                            'slots'   => [
+                                'add'         => 'Tijden Toevoegen',
+                                'description' => 'Beschikbare Tijden met Tijdsduur.',
+                            ],
+                        ],
+
+                        'rental' => [
+                            'daily'        => 'Dagelijks',
+                            'daily-hourly' => 'Beide (Dagelijks en Uurlijks)',
+                            'daily-price'  => 'Dagelijkse Prijs',
+                            'hourly'       => 'Uurlijks',
+                            'hourly-price' => 'Uurprijs',
+                            'title'        => 'Verhuurtype',
+
+                            'same-slot-for-all-days' => [
+                                'no'    => 'Nee',
+                                'title' => 'Zelfde Tijd Voor Alle Dagen',
+                                'yes'   => 'Ja',
+                            ],
+                        ],
+
+                        'slots' => [
+                            'add'              => 'Tijden Toevoegen',
+                            'description-info' => 'De tijdsduur wordt aangemaakt en weergegeven volgens de slots. Deze zal uniek zijn voor alle slots en zichtbaar zijn in de etalage.',
+                            'save'             => 'Opslaan',
+                            'title'            => 'Tijden Tijdsduur',
+                            'unavailable'      => 'Niet Beschikbaar',
+
+                            'action'           => [
+                                'add' => 'Toevoegen',
+                            ],
+
+                            'modal'            => [
+                                'slot' => [
+                                    'friday'     => 'Vrijdag',
+                                    'from'       => 'Van',
+                                    'monday'     => 'Maandag',
+                                    'saturday'   => 'Zaterdag',
+                                    'sunday'     => 'Zondag',
+                                    'thursday'   => 'Donderdag',
+                                    'to'         => 'Tot',
+                                    'tuesday'    => 'Dinsdag',
+                                    'wednesday'  => 'Woensdag',
+                                ],
+                            ],
+                        ],
+
+                        'table' => [
+                            'break-duration'            => 'Pauzeduur tussen Tijden (Minuten)',
+                            'guest-capacity'            => 'Gastcapaciteit',
+                            'guest-limit'               => 'Gastlimiet Per Tafel',
+                            'prevent-scheduling-before' => 'Voorkom Planning Voor',
+
+                            'slot-duration'             => 'Tijdsduur (Minuten)',
+
+                            'charged-per'               => [
+                                'guest'  => 'Gast',
+                                'table'  => 'Tafel',
+                                'title'  => 'In rekening gebracht per',
+                            ],
+
+                            'same-slot-for-all-days'    => [
+                                'no'    => 'Nee',
+                                'title' => 'Zelfde Tijd Voor Alle Dagen',
+                                'yes'   => 'Ja',
+                            ],
+                        ],
+
+                        'type' => [
+                            'appointment' => 'Afspraak Boeking',
+                            'default'     => 'Standaard Boeking',
+                            'event'       => 'Evenement Boeking',
+                            'many'        => 'Veel',
+                            'one'         => 'Eén',
+                            'rental'      => 'Verhuur Boeking',
+                            'table'       => 'Tafel Boeking',
+                            'title'       => 'Type',
                         ],
                     ],
 
@@ -1780,20 +1992,22 @@ return [
                     'message'       => 'Bericht',
                     'pending'       => 'In Afwachting',
                     'processing'    => 'Verwerken',
+                    'revoked'       => 'Herroepen',
                     'status'        => 'Status',
                     'type'          => 'Type',
                 ],
 
                 'modal' => [
-                    'completed'  => 'Voltooid',
-                    'declined'   => 'Afgewezen',
-                    'pending'    => 'In Afwachting',
-                    'processing' => 'Verwerken',
-                    'status'     => 'Status',
-                    'title'      => 'Bewerk GDPR Gegevensverzoek',
-                    'type'       => 'Type',
-                    'message'    => 'Bericht',
-                    'save-btn'   => 'Opslaan',
+                    'completed'     => 'Voltooid',
+                    'declined'      => 'Afgewezen',
+                    'message'       => 'Bericht',
+                    'pending'       => 'In Afwachting',
+                    'processing'    => 'Verwerken',
+                    'revoked'       => 'Herroepen',
+                    'save-btn'      => 'Opslaan',
+                    'status'        => 'Status',
+                    'title'         => 'Bewerk GDPR Gegevensverzoek',
+                    'type'          => 'Type',
                 ],
 
                 'update-success'              => 'Gegevensverzoek succesvol bijgewerkt en e-mail verzonden naar klant.',
@@ -3294,6 +3508,7 @@ return [
                 'new'                           => 'Nieuw',
                 'no'                            => 'Nee',
                 'parent-id'                     => 'Ouder-ID',
+                'parent-id-hint'                => 'U kunt meerdere ouder-IDs als gescheiden waarden invoeren (bijvoorbeeld: 12,15,34)',
                 'category-id'                   => 'Categorie-ID',
                 'preview'                       => 'Voorbeeld',
                 'product-carousel'              => 'Product Carrousel',
@@ -3455,6 +3670,7 @@ return [
 
         'view' => [
             'all-channels'  => 'Alle kanalen',
+            'back-btn'      => 'Terug',
             'day'           => 'Dag',
             'end-date'      => 'Einddatum',
             'export-csv'    => 'Exporteer CSV',
@@ -3569,42 +3785,63 @@ return [
                     ],
 
                     'review-translation' => [
-                        'dolphin-phi'       => 'Dolphin Phi',
-                        'enabled'           => 'Ingeschakeld',
-                        'gpt-3-5-turbo'     => 'OpenAI gpt-3.5-turbo',
-                        'llama2'            => 'Llama 2',
-                        'llama2-uncensored' => 'Llama 2 Ongesensitiseerd',
-                        'llama2:13b'        => 'Llama 2 13B',
-                        'llama2:70b'        => 'Llama 2 70B',
-                        'llava'             => 'LLaVA',
-                        'mistral'           => 'Mistral',
-                        'model'             => 'Model',
-                        'orca-mini'         => 'Orca Mini',
-                        'phi'               => 'Phi-2',
-                        'starling-lm'       => 'Starling',
-                        'title'             => 'Reviewvertaling',
-                        'title-info'        => 'Bied de optie aan klanten of bezoekers om klantbeoordelingen naar het Engels te vertalen.<br/><br/>Wanneer ingeschakeld, ga naar beoordelingen en je vindt de knop "Vertalen naar Engels" als je een beoordeling hebt die niet in het Engels is.',
-                        'vicuna'            => 'Vicuna',
+                        'deepseek-r1-8b'      => 'DeepSeek R1 (8b)',
+                        'enabled'             => 'Ingeschakeld',
+                        'gemini-2-0-flash'    => 'Gemini 2.0 Flash',
+                        'gpt-4-turbo'         => 'OpenAI gpt-4 Turbo',
+                        'gpt-4o'              => 'OpenAI gpt-4o',
+                        'gpt-4o-mini'         => 'OpenAI gpt-4o mini',
+                        'llama-groq'          => 'Llama 3.3 (Groq)',
+                        'llama3-1-8b'         => 'Llama 3.1 (8B)',
+                        'llama3-2-1b'         => 'Llama 3.2 (1B)',
+                        'llama3-2-3b'         => 'Llama 3.2 (3B)',
+                        'llama3-8b'           => 'Llama 3 (8B)',
+                        'llava-7b'            => 'Llava (7b)',
+                        'mistral-7b'          => 'Mistral (7b)',
+                        'model'               => 'Model',
+                        'orca-mini'           => 'Orca Mini',
+                        'phi3-5'              => 'Phi 3.5',
+                        'qwen2-5-0-5b'        => 'Qwen 2.5 (0.5b)',
+                        'qwen2-5-1-5b'        => 'Qwen 2.5 (1.5b)',
+                        'qwen2-5-14b'         => 'Qwen 2.5 (14b)',
+                        'qwen2-5-3b'          => 'Qwen 2.5 (3b)',
+                        'qwen2-5-7b'          => 'Qwen 2.5 (7b)',
+                        'starling-lm-7b'      => 'Starling-lm (7b)',
+                        'title'               => 'Beoordeling Vertaling',
+                        'title-info'          => 'Bied klanten of bezoekers de mogelijkheid om klantbeoordelingen naar het Engels te vertalen.<br/><br/>Wanneer ingeschakeld, ga naar de beoordeling en je vindt de knop "Vertalen naar Engels" als je beoordeling anders is dan Engels.',
+                        'vicuna-13b'          => 'Vicuna (13b)',
+                        'vicuna-7b'           => 'Vicuna (7b)',
                     ],
 
                     'checkout-message' => [
-                        'dolphin-phi'       => 'Dolphin Phi',
-                        'enabled'           => 'Ingeschakeld',
-                        'gpt-3-5-turbo'     => 'OpenAI gpt-3.5-turbo',
-                        'llama2'            => 'Llama 2',
-                        'llama2-uncensored' => 'Llama 2 Ongesensitiseerd',
-                        'llama2:13b'        => 'Llama 2 13B',
-                        'llama2:70b'        => 'Llama 2 70B',
-                        'llava'             => 'LLaVA',
-                        'mistral'           => 'Mistral',
-                        'model'             => 'Model',
-                        'orca-mini'         => 'Orca Mini',
-                        'phi'               => 'Phi-2',
-                        'prompt'            => 'Prompt',
-                        'starling-lm'       => 'Starling',
-                        'title'             => 'Persoonlijk bericht bij afrekenen',
-                        'title-info'        => 'Maak een persoonlijk bericht bij het afrekenen voor klanten op de bedankpagina, pas de inhoud aan op individuele voorkeuren en verbeter de algehele ervaring na aankoop.',
-                        'vicuna'            => 'Vicuna',
+                        'deepseek-r1-8b'      => 'DeepSeek R1 (8b)',
+                        'enabled'             => 'Ingeschakeld',
+                        'gemini-2-0-flash'    => 'Gemini 2.0 Flash',
+                        'gpt-4-turbo'         => 'OpenAI gpt 4 Turbo',
+                        'gpt-4o'              => 'OpenAI gpt-4o',
+                        'gpt-4o-mini'         => 'OpenAI gpt-4o mini',
+                        'llama-groq'          => 'Llama 3.3 (Groq)',
+                        'llama3-1-8b'         => 'Llama 3.1 (8B)',
+                        'llama3-2-1b'         => 'Llama 3.2 (1B)',
+                        'llama3-2-3b'         => 'Llama 3.2 (3B)',
+                        'llama3-8b'           => 'Llama 3 (8B)',
+                        'llava-7b'            => 'Llava (7b)',
+                        'mistral-7b'          => 'Mistral (7b)',
+                        'model'               => 'Model',
+                        'orca-mini'           => 'Orca Mini',
+                        'phi3-5'              => 'Phi 3.5',
+                        'prompt'              => 'Prompt',
+                        'qwen2-5-0-5b'        => 'Qwen 2.5 (0.5b)',
+                        'qwen2-5-1-5b'        => 'Qwen 2.5 (1.5b)',
+                        'qwen2-5-14b'         => 'Qwen 2.5 (14b)',
+                        'qwen2-5-3b'          => 'Qwen 2.5 (3b)',
+                        'qwen2-5-7b'          => 'Qwen 2.5 (7b)',
+                        'starling-lm-7b'      => 'Starling-lm (7b)',
+                        'title'               => 'Gepersonaliseerd Afrekenbericht',
+                        'title-info'          => 'Stel een gepersonaliseerd afrekenbericht op voor klanten op de Bedankt-pagina, waarbij de inhoud wordt afgestemd op individuele voorkeuren en de algehele ervaring na aankoop wordt verbeterd.',
+                        'vicuna'              => 'Vicuna',
+                        'vicuna-13b'          => 'Vicuna (13b)',
+                        'vicuna-7b'           => 'Vicuna (7b)',
                     ],
                 ],
 
@@ -3624,130 +3861,49 @@ return [
                         'max-url-per-file' => 'Maximaal aantal URL\'s per bestand',
                         'title'            => 'Bestandslimieten',
                     ],
-
-                    'store-url' => [
-                        'info'  => 'Stel frequentie- en prioriteitsopties in voor de winkel-URL.',
-
-                        'frequency' => [
-                            'title' => 'Frequentie',
-
-                            'options' => [
-                                'always'  => 'Altijd',
-                                'daily'   => 'Dagelijks',
-                                'hourly'  => 'Elk uur',
-                                'monthly' => 'Maandelijks',
-                                'never'   => 'Nooit',
-                                'weekly'  => 'Wekelijks',
-                                'yearly'  => 'Jaarlijks',
-                            ],
-                        ],
-
-                        'title'    => 'Winkel URL',
-                        'priority' => 'Prioriteit',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'Stel frequentie- en prioriteitsopties in voor de categorieën.',
-
-                        'frequency' => [
-                            'title' => 'Frequentie',
-
-                            'options' => [
-                                'always'  => 'Altijd',
-                                'daily'   => 'Dagelijks',
-                                'hourly'  => 'Elk uur',
-                                'monthly' => 'Maandelijks',
-                                'never'   => 'Nooit',
-                                'weekly'  => 'Wekelijks',
-                                'yearly'  => 'Jaarlijks',
-                            ],
-                        ],
-
-                        'title'    => 'Categorieën',
-                        'priority' => 'Prioriteit',
-                    ],
-
-                    'products' => [
-                        'info'  => 'Stel frequentie- en prioriteitsopties in voor de producten.',
-
-                        'frequency' => [
-                            'title' => 'Frequentie',
-
-                            'options' => [
-                                'always'  => 'Altijd',
-                                'daily'   => 'Dagelijks',
-                                'hourly'  => 'Elk uur',
-                                'monthly' => 'Maandelijks',
-                                'never'   => 'Nooit',
-                                'weekly'  => 'Wekelijks',
-                                'yearly'  => 'Jaarlijks',
-                            ],
-                        ],
-
-                        'title'    => 'Producten',
-                        'priority' => 'Prioriteit',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'Stel frequentie- en prioriteitsopties in voor de CMS-pagina\'s.',
-
-                        'frequency' => [
-                            'title' => 'Frequentie',
-
-                            'options' => [
-                                'always'  => 'Altijd',
-                                'daily'   => 'Dagelijks',
-                                'hourly'  => 'Elk uur',
-                                'monthly' => 'Maandelijks',
-                                'never'   => 'Nooit',
-                                'weekly'  => 'Wekelijks',
-                                'yearly'  => 'Jaarlijks',
-                            ],
-                        ],
-
-                        'title'    => 'CMS Pagina\'s',
-                        'priority' => 'Prioriteit',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'GDPR',
-                'info'  => 'GDPR',
+                'info'  => 'GDPR-nalevingsinstellingen',
 
                 'settings' => [
-                    'title'   => 'GDPR Instellingen',
-                    'info'    => 'GDPR Instellingen',
-                    'enabled' => 'Ingeschakeld',
+                    'title'   => 'GDPR-nalevingsinstellingen',
+                    'info'    => 'Beheer GDPR-nalevingsinstellingen, inclusief het privacybeleid. Schakel GDPR-functies in of uit indien nodig.',
+                    'enabled' => 'GDPR inschakelen',
                 ],
 
                 'agreement' => [
-                    'title'          => 'GDPR Overeenkomst',
-                    'info'           => 'GDPR Overeenkomst',
-                    'enable'         => 'Klantovereenkomst Inschakelen',
-                    'checkbox-label' => 'Overeenkomst Checkbox Label',
-                    'content'        => 'Overeenkomst Inhoud',
+                    'title'          => 'GDPR-toestemming',
+                    'info'           => 'Beheer klanttoestemming in overeenstemming met GDPR-regelgeving. Schakel verplichte toestemming in voor gegevensverzameling en -verwerking.',
+                    'enable'         => 'Klanttoestemming inschakelen',
+                    'checkbox-label' => 'Label van toestemmingsvakje',
+                    'content'        => 'Inhoud van toestemming',
                 ],
 
                 'cookie' => [
-                    'title'        => 'Cookie Bericht Instellingen',
-                    'info'         => 'Cookie Bericht Instellingen',
-                    'enable'       => 'Cookie Kennisgeving Inschakelen',
-                    'position'     => 'Cookie Blok Weergavepositie',
                     'bottom-left'  => 'Linksonder',
                     'bottom-right' => 'Rechtsonder',
-                    'identifier'   => 'Statisch Blok Identificatie',
+                    'center'       => 'Centrum',
                     'description'  => 'Beschrijving',
+                    'enable'       => 'Cookie-melding inschakelen',
+                    'identifier'   => 'Statische blok-ID',
+                    'info'         => 'Stel cookie-toestemmingsinstellingen in om gebruikers te informeren over gegevensverzameling en naleving van het privacybeleid.',
+                    'position'     => 'Positie van cookieblok',
+                    'title'        => 'Cookie-meldingsinstellingen',
+                    'top-left'     => 'Linksboven',
+                    'top-right'    => 'Rechtsboven',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => 'Uw Cookie Toestemming Voorkeur',
-                    'info'                   => 'Uw Cookie Toestemming Voorkeur',
-                    'strictly-necessary'     => 'Strikt Noodzakelijk',
-                    'basic-interaction'      => 'Basis Interacties & Functionaliteiten',
-                    'experience-enhancement' => 'Ervaring Verbeteringen',
-                    'measurement'            => 'Metingen',
-                    'targeting-advertising'  => 'Targeting & Adverteren',
+                    'title'                  => 'Beheer cookie-instellingen',
+                    'info'                   => 'Selecteer de gewenste cookie-instellingen om het gebruik van gegevens te beheren. Stel toestemmingen in voor verschillende soorten cookies.',
+                    'strictly-necessary'     => 'Strikt noodzakelijk',
+                    'basic-interaction'      => 'Basisinteractie en functionaliteit',
+                    'experience-enhancement' => 'Ervaringsverbetering',
+                    'measurement'            => 'Meting',
+                    'targeting-advertising'  => 'Targeting en advertenties',
                 ],
             ],
 
@@ -4013,13 +4169,103 @@ return [
                     ],
 
                     'social-login' => [
-                        'enable-facebook'   => 'Facebook inschakelen',
-                        'enable-github'     => 'Github inschakelen',
-                        'enable-google'     => 'Google inschakelen',
-                        'enable-linkedin'   => 'LinkedIn inschakelen',
-                        'enable-twitter'    => 'Twitter inschakelen',
-                        'social-login'      => 'Sociaal inloggen',
-                        'social-login-info' => '"Sociaal inloggen" stelt gebruikers in staat om websites te openen met behulp van hun sociale media-accounts, waardoor registratie- en inlogprocessen worden gestroomlijnd voor gemak.',
+                        'title' => 'Sociale Login',
+                        'info'  => '"Sociale login" stelt gebruikers in staat om een website te betreden met hun sociale media-accounts, waardoor registratie en inloggen eenvoudiger worden.',
+
+                        'google' => [
+                            'enable-google' => 'Google inschakelen',
+
+                            'client-id' => [
+                                'title'      => 'Client-ID',
+                                'title-info' => 'Unieke identificatiecode verstrekt door Google bij het aanmaken van jouw OAuth-applicatie.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Clientgeheim',
+                                'title-info' => 'Geheime sleutel gekoppeld aan je Google OAuth-client. Houd deze vertrouwelijk.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'Redirect-URL',
+                                'title-info' => 'Callback-URL waar gebruikers naartoe worden geleid na authenticatie via Google. Moet overeenkomen met de URL in de Google-console.',
+                            ],
+                        ],
+
+                        'facebook' => [
+                            'enable-facebook' => 'Facebook inschakelen',
+
+                            'client-id' => [
+                                'title'      => 'Client-ID',
+                                'title-info' => 'App-ID verstrekt door Facebook bij het aanmaken van een app in de Facebook Developer Console.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Clientgeheim',
+                                'title-info' => 'Geheime sleutel gekoppeld aan je Facebook-app. Houd deze veilig en privé.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'Redirect-URL',
+                                'title-info' => 'Callback-URL waar gebruikers naartoe worden geleid na authenticatie via Facebook. Moet overeenkomen met de URL in de app-instellingen van Facebook.',
+                            ],
+                        ],
+
+                        'github' => [
+                            'enable-github' => 'GitHub inschakelen',
+
+                            'client-id' => [
+                                'title'      => 'Client-ID',
+                                'title-info' => 'Unieke identificatiecode verstrekt door GitHub bij het aanmaken van jouw OAuth-applicatie.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Clientgeheim',
+                                'title-info' => 'Geheime sleutel gekoppeld aan je GitHub OAuth-client. Houd deze vertrouwelijk.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'Redirect-URL',
+                                'title-info' => 'Callback-URL waar gebruikers naartoe worden geleid na authenticatie via GitHub. Moet overeenkomen met de URL in de GitHub-console.',
+                            ],
+                        ],
+
+                        'linkedin' => [
+                            'enable-linkedin' => 'LinkedIn inschakelen',
+
+                            'client-id' => [
+                                'title'      => 'Client-ID',
+                                'title-info' => 'Unieke identificatiecode verstrekt door LinkedIn bij het aanmaken van jouw OAuth-applicatie.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Clientgeheim',
+                                'title-info' => 'Geheime sleutel gekoppeld aan je LinkedIn OAuth-client. Houd deze vertrouwelijk.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'Redirect-URL',
+                                'title-info' => 'Callback-URL waar gebruikers naartoe worden geleid na authenticatie via LinkedIn. Moet overeenkomen met de URL in de LinkedIn-console.',
+                            ],
+                        ],
+
+                        'twitter' => [
+                            'enable-twitter' => 'Twitter inschakelen',
+
+                            'client-id' => [
+                                'title'      => 'Client-ID',
+                                'title-info' => 'Unieke identificatiecode verstrekt door Twitter bij het aanmaken van jouw OAuth-applicatie.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Clientgeheim',
+                                'title-info' => 'Geheime sleutel gekoppeld aan je Twitter OAuth-client. Houd deze vertrouwelijk.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'Redirect-URL',
+                                'title-info' => 'Callback-URL waar gebruikers naartoe worden geleid na authenticatie via Twitter. Moet overeenkomen met de URL in de Twitter-console.',
+                            ],
+                        ],
                     ],
                 ],
             ],
@@ -4358,6 +4604,7 @@ return [
             'sidebar' => [
                 'attribute-families'       => 'Attribuut Families',
                 'attributes'               => 'Attributen',
+                'booking-product'          => 'Boekingen',
                 'campaigns'                => 'Campagnes',
                 'catalog'                  => 'Catalogus',
                 'categories'               => 'Categorieën',
@@ -4374,6 +4621,7 @@ return [
                 'email-templates'          => 'E-mail Templates',
                 'events'                   => 'Gebeurtenissen',
                 'exchange-rates'           => 'Wisselkoersen',
+                'gdpr-data-requests'       => 'GDPR Data Verzoeken',
                 'groups'                   => 'Groepen',
                 'imports'                  => 'Importeert',
                 'inventory-sources'        => 'Voorraadbronnen',
@@ -4403,7 +4651,6 @@ return [
                 'transactions'             => 'Transacties',
                 'url-rewrites'             => 'URL-herschrijvingen',
                 'users'                    => 'Gebruikers',
-                'gdpr-data-requests'       => 'GDPR Data Verzoeken',
             ],
 
             'powered-by' => [
@@ -4566,26 +4813,37 @@ return [
             'ai-btn-tile' => 'Magie AI',
 
             'ai-generation' => [
-                'apply'                  => 'Toepassen',
-                'dolphin-phi'            => 'Dolphin Phi',
-                'generate'               => 'Genereren',
-                'generated-content'      => 'Gegenereerde Inhoud',
-                'generated-content-info' => 'AI-inhoud kan misleidend zijn. Controleer de gegenereerde inhoud voordat u deze toepast.',
-                'generating'             => 'Aan het genereren...',
-                'gpt-3-5-turbo'          => 'OpenAI gpt-3.5-turbo',
-                'llama2'                 => 'Llama 2',
-                'llama2-uncensored'      => 'Llama 2 Ongecensureerd',
-                'llama2:13b'             => 'Llama 2 13B',
-                'llama2:70b'             => 'Llama 2 70B',
-                'llava'                  => 'LLaVA',
-                'mistral'                => 'Mistral',
-                'model'                  => 'Model',
-                'orca-mini'              => 'Orca Mini',
-                'phi'                    => 'Phi-2',
-                'prompt'                 => 'Aanwijzing',
-                'starling-lm'            => 'Starling',
-                'title'                  => 'AI-ondersteuning',
-                'vicuna'                 => 'Vicuna',
+                'apply'                    => 'Toepassen',
+                'deepseek-r1-8b'           => 'DeepSeek R1 (8b)',
+                'enabled'                  => 'Ingeschakeld',
+                'gemini-2-0-flash'         => 'Gemini 2.0 Flash',
+                'generate'                 => 'Genereren',
+                'generated-content'        => 'Gegenereerde Inhoud',
+                'generated-content-info'   => 'AI-inhoud kan misleidend zijn. Controleer de gegenereerde inhoud voordat u deze toepast.',
+                'generating'               => 'Genereren...',
+                'gpt-4-turbo'              => 'OpenAI gpt-4 Turbo',
+                'gpt-4o'                   => 'OpenAI gpt-4o',
+                'gpt-4o-mini'              => 'OpenAI gpt-4o mini',
+                'llama-groq'               => 'Llama 3.3 (Groq)',
+                'llama3-1-8b'              => 'Llama 3.1 (8B)',
+                'llama3-2-1b'              => 'Llama 3.2 (1B)',
+                'llama3-2-3b'              => 'Llama 3.2 (3B)',
+                'llama3-8b'                => 'Llama 3 (8B)',
+                'llava-7b'                 => 'Llava (7b)',
+                'mistral-7b'               => 'Mistral (7b)',
+                'model'                    => 'Model',
+                'orca-mini'                => 'Orca Mini',
+                'phi3-5'                   => 'Phi 3.5',
+                'prompt'                   => 'Prompt',
+                'qwen2-5-0-5b'             => 'Qwen 2.5 (0.5b)',
+                'qwen2-5-1-5b'             => 'Qwen 2.5 (1.5b)',
+                'qwen2-5-14b'              => 'Qwen 2.5 (14b)',
+                'qwen2-5-3b'               => 'Qwen 2.5 (3b)',
+                'qwen2-5-7b'               => 'Qwen 2.5 (7b)',
+                'starling-lm-7b'           => 'Starling-lm (7b)',
+                'title'                    => 'AI Assistentie',
+                'vicuna-13b'               => 'Vicuna (13b)',
+                'vicuna-7b'                => 'Vicuna (7b)',
             ],
         ],
     ],
@@ -4615,6 +4873,7 @@ return [
         'email-templates'          => 'E-mail Sjablonen',
         'events'                   => 'Evenementen',
         'exchange-rates'           => 'Wisselkoersen',
+        'gdpr'                     => 'AVG',
         'groups'                   => 'Groepen',
         'import'                   => 'Importeren',
         'imports'                  => 'Importeert',
@@ -4717,10 +4976,28 @@ return [
                 'greeting'    => 'Wij heten de nieuwe klant, :customer_name, die zich zojuist bij ons heeft geregistreerd, van harte welkom!',
                 'subject'     => 'Nieuwe klantregistratie',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'Uw GDPR-verzoekstatus',
+            'gdpr' => [
+                'new-delete-request' => 'Nieuwe aanvraag voor gegevensverwijdering',
+                'new-update-request' => 'Nieuwe aanvraag voor gegevensupdate',
+
+                'new-request' => [
+                    'customer-name'  => 'Klantnaam : ',
+                    'delete-summary' => 'Samenvatting van verwijderingsverzoek',
+                    'message'        => 'Bericht : ',
+                    'request-status' => 'Aanvraagstatus : ',
+                    'request-type'   => 'Aanvraagtype : ',
+                    'update-summary' => 'Samenvatting van updateverzoek',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'GDPR-aanvraag is bijgewerkt',
+                    'summary'        => 'De status van de GDPR-aanvraag is bijgewerkt',
+                    'request-status' => 'Aanvraagstatus:',
+                    'request-type'   => 'Aanvraagtype:',
+                    'message'        => 'Bericht:',
+                ],
+            ],
         ],
 
         'orders' => [

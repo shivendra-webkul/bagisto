@@ -50,6 +50,7 @@ return [
             'account-exists'              => 'Ja tens un compte?',
             'bagisto'                     => 'Bagisto',
             'button-title'                => 'Registrar-se',
+            'click-here'                  => 'Clica aquí',
             'confirm-pass'                => 'Confirmar contrasenya',
             'email'                       => 'Correu electrònic',
             'first-name'                  => 'Nom',
@@ -63,6 +64,7 @@ return [
             'success'                     => 'Compte creat amb èxit.',
             'success-verify'              => 'Compte creat amb èxit, s’ha enviat un correu electrònic per a la seva verificació.',
             'success-verify-email-unsent' => 'Compte creat amb èxit, però el correu de verificació no s’ha enviat.',
+            'terms-conditions'            => 'Termes i Condicions',
             'verification-not-sent'       => 'Error! Problema en enviar el correu de verificació, si us plau intenta-ho de nou més tard.',
             'verification-sent'           => 'Correu de verificació enviat',
             'verified'                    => 'El teu compte ha estat verificat, intenta iniciar sessió ara.',
@@ -373,6 +375,92 @@ return [
                 'success'            => 'Article afegit amb èxit a la llista de desitjos',
                 'title'              => 'Llista de Desitjos',
             ],
+
+            'gdpr' => [
+                'create-success'              => 'Sol·licitud creada correctament',
+                'revoked-successfully'        => 'Sol·licitud revocada correctament',
+                'success-verify'              => 'Èxit! S\'ha enviat el correu electrònic de verificació.',
+                'success-verify-email-unsent' => 'Èxit! El correu electrònic de verificació no s\'ha enviat.',
+                'unable-to-sent'              => 'No s\'ha pogut enviar el correu electrònic.',
+
+                'index'   => [
+                    'create-btn' => 'Crea sol·licitud',
+                    'html'       => 'HTML',
+                    'pdf'        => 'PDF',
+                    'title'      => 'Sol·licituds de dades GDPR',
+
+                    'modal' => [
+                        'message' => 'Missatge',
+                        'save'    => 'Desa',
+                        'title'   => 'Crea una nova sol·licitud',
+
+                        'type'    => [
+                            'choose' => 'Tria',
+                            'delete' => 'Elimina',
+                            'title'  => 'Tipus',
+                            'update' => 'Actualitza',
+                        ],
+                    ],
+
+                    'datagrid' => [
+                        'completed'  => 'Completat',
+                        'date'       => 'Data',
+                        'declined'   => 'Rebutjat',
+                        'delete'     => 'Eliminar',
+                        'id'         => 'ID',
+                        'message'    => 'Missatge',
+                        'pending'    => 'Pendent',
+                        'processing' => 'Processant',
+                        'revoke-btn' => 'Revoca',
+                        'revoked'    => 'Revocat',
+                        'status'     => 'Estat',
+                        'type'       => 'Tipus',
+                        'update'     => 'Actualitza',
+                    ],
+                ],
+
+                'pdf' => [
+                    'title' => 'Vista per defecte de la botiga',
+
+                    'account-info' => [
+                        'dob'          => 'Data de naixement',
+                        'email'        => 'Correu electrònic',
+                        'first-name'   => 'Nom',
+                        'gender'       => 'Gènere',
+                        'last-name'    => 'Cognom',
+                        'phone'        => 'Telèfon',
+                        'title'        => 'Informació del compte',
+                    ],
+
+                    'address-info' => [
+                        'address'    => 'Adreça',
+                        'address1'   => 'Adreça 1',
+                        'address2'   => 'Adreça 2',
+                        'city'       => 'Ciutat',
+                        'company'    => 'Empresa',
+                        'country'    => 'País',
+                        'first-name' => 'Nom',
+                        'last-name'  => 'Cognom',
+                        'phone'      => 'Telèfon',
+                        'postcode'   => 'Codi postal',
+                        'state'      => 'Estat',
+                        'title'      => 'Informació d\'adreça',
+                        'vat-id'     => 'ID d\'IVA',
+                    ],
+
+                    'order-info' => [
+                        'amount'       => 'Import',
+                        'order-id'     => 'ID de comanda',
+                        'product-name' => 'Nom del producte',
+                        'qty'          => 'Quantitat',
+                        'shipping'     => 'Enviament',
+                        'sku'          => 'SKU',
+                        'status'       => 'Estat',
+                        'title'        => 'Informació de la comanda',
+                        'type'         => 'Tipus',
+                    ],
+                ],
+            ],
         ],
     ],
 
@@ -445,6 +533,25 @@ return [
                 'subscribe-newsletter'   => 'Subscriu-te al butlletí',
                 'subscribe-stay-touch'   => 'Subscriu-te per mantenir-te en contacte.',
                 'whats-new'              => 'Novetats',
+            ],
+
+            'cookie' => [
+                'index' => [
+                    'privacy-policy'           => 'Política de Privacitat',
+                    'reject'                   => 'Rebutjar',
+                    'accept'                   => 'Acceptar',
+                    'learn-more-and-customize' => 'Més informació i personalitzar',
+                ],
+
+                'consent' => [
+                    'your-cookie-consent-preferences'        => 'Les teves preferències de consentiment de cookies',
+                    'save-and-continue'                      => 'Desar i continuar',
+                    'strictly-necessary'                     => 'Estricament necessàries',
+                    'basic-interactions'                     => 'Interaccions bàsiques i funcionalitats',
+                    'experience-enhancement'                 => 'Millora de l\'experiència',
+                    'measurements'                           => 'Mesures',
+                    'targeting-and-advertising'              => 'Orientació i publicitat',
+                ],
             ],
         ],
 
@@ -567,6 +674,13 @@ return [
 
         'view' => [
             'type' => [
+                'simple' => [
+                    'customizable-options' => [
+                        'none'         => 'Cap',
+                        'total-amount' => 'Import Total',
+                    ],
+                ],
+
                 'configurable' => [
                     'select-options'       => 'Si us plau, seleccioneu una opció',
                     'select-above-options' => 'Si us plau, seleccioneu les opcions anteriors',
@@ -585,6 +699,62 @@ return [
 
                 'grouped' => [
                     'name' => 'Nom',
+                ],
+
+                'booking' => [
+                    'location'    => 'Ubicació',
+                    'view-on-map' => 'Veure al mapa',
+
+                    'default' => [
+                        'slot-duration-in-minutes' => ':minutes Minuts',
+                        'slot-duration'            => 'Durada del slot',
+                    ],
+
+                    'appointment' => [
+                        'closed'                   => 'Tancat',
+                        'see-details'              => 'Veure detalls',
+                        'slot-duration'            => 'Durada del slot',
+                        'slot-duration-in-minutes' => ':minutes Minuts',
+                        'today-availability'       => 'Disponibilitat d\'avui',
+                    ],
+
+                    'event' => [
+                        'book-your-ticket' => 'Reserva la teva entrada',
+                        'title'            => 'Esdeveniment el :',
+                    ],
+
+                    'rental'      => [
+                        'choose-rent-option' => 'Tria l\'opció de lloguer',
+                        'daily-basis'        => 'Diari',
+                        'from'               => 'Des de',
+                        'hourly-basis'       => 'Per hores',
+                        'rent-an-item'       => 'Llogar un article',
+                        'select-date'        => 'Selecciona la data',
+                        'select-rent-time'   => 'Selecciona l\'hora de lloguer',
+                        'select-slot'        => 'Selecciona el slot',
+                        'select-time-slot'   => 'Selecciona el slot de temps',
+                        'slot'               => 'Slot',
+                        'no-slots-available' => 'No hi ha slots disponibles',
+                        'to'                 => 'Fins a',
+                    ],
+
+                    'table'       => [
+                        'book-a-table'             => 'Reserva una taula',
+                        'closed'                   => 'Tancat',
+                        'slot-duration'            => 'Durada del slot',
+                        'slot-duration-in-minutes' => ':minutes Minuts',
+                        'slots-for-all-days'       => 'Mostrar per a tots els dies',
+                        'special-notes'            => 'Sol·licitud/Notes especials',
+                        'today-availability'       => 'Disponibilitat d\'avui',
+                    ],
+
+                    'slots' => [
+                        'book-an-appointment' => 'Reserva una cita',
+                        'date'                => 'Data',
+                        'no-slots-available'  => 'No hi ha slots disponibles',
+                        'select-slot'         => 'Selecciona el slot',
+                        'title'               => 'Slot',
+                    ],
                 ],
             ],
 
@@ -630,6 +800,38 @@ return [
             'abstract' => [
                 'offers' => 'Compra :qty a :price cadascun i estalvia :discount',
             ],
+        ],
+
+        'booking' => [
+            'closed' => 'Tancat',
+
+            'cart'             => [
+                'booking-from' => 'Reserva des de',
+                'booking-till' => 'Reserva fins a',
+                'daily'        => 'Diari',
+                'event-from'   => 'Esdeveniment des de',
+                'event-ticket' => 'Entrada per a l\'esdeveniment',
+                'event-till'   => 'Esdeveniment fins a',
+                'hourly'       => 'Per hores',
+
+                'integrity'    => [
+                    'event'                  => [
+                        'expired' => 'Aquest esdeveniment ha expirat.',
+                    ],
+
+                    'missing_options'        => 'Falten opcions per a aquest producte.',
+                    'inventory_warning'      => 'La quantitat sol·licitada no està disponible, si us plau intenta-ho més tard.',
+                    'select_hourly_duration' => 'Selecciona una durada d\'una hora.',
+                ],
+
+                'rent-from'    => 'Lloguer des de',
+                'rent-till'    => 'Lloguer fins a',
+                'rent-type'    => 'Tipus de lloguer',
+                'renting_type' => 'Tipus de lloguer',
+                'special-note' => 'Sol·licitud/Notes especials',
+            ],
+
+            'per-ticket-price' => ':price Per entrada',
         ],
     ],
 
@@ -873,9 +1075,12 @@ return [
         ],
 
         'index' => [
-            'offer'               => 'Obté FINS A UN 40% DE DESCOMPTE en la teva primera compra! COMPRA ARA!',
-            'resend-verify-email' => 'Reenvia el correu de verificació',
-            'verify-email'        => 'Verifica la teva adreça de correu electrònic',
+            'categories-carousel' => 'Carrusel de Categories',
+            'image-carousel'      => 'Carrusel d\'Imatges',
+            'offer'               => 'Obté FINS A un 40% de DESCOMPTE en la teva primera comanda COMPRA ARA',
+            'product-carousel'    => 'Carrusel de Productes',
+            'resend-verify-email' => 'Reenviar Correu de Verificació',
+            'verify-email'        => 'Verifica el teu compte de correu electrònic',
         ],
 
         'thanks-for-contact' => 'Gràcies per contactar-nos amb els teus comentaris i preguntes. Et responem ben aviat.',
@@ -883,7 +1088,9 @@ return [
 
     'partials' => [
         'pagination' => [
+            'next-page'          => 'Pàgina següent',
             'pagination-showing' => 'Mostrant :firstItem a :lastItem de :total entrades',
+            'prev-page'          => 'Pàgina anterior',
         ],
     ],
 
@@ -919,6 +1126,7 @@ return [
     'layouts' => [
         'address'               => 'Adreça',
         'downloadable-products' => 'Productes descarregables',
+        'sol·licitud-gdpr'      => 'Sol·licituds de GDPR',
         'my-account'            => 'El meu compte',
         'orders'                => 'Comandes',
         'profile'               => 'Perfil',
@@ -977,6 +1185,33 @@ return [
                 'greeting'    => 'Benvingut al nostre butlletí!',
                 'subject'     => '¡Vostè! S\'ha subscrit al nostre butlletí',
                 'unsubscribe' => 'Donar-se de baixa',
+            ],
+
+            'gdpr' => [
+                'new-delete-request' => 'New Request For Data Delete',
+                'new-update-request' => 'New Request For Data Update',
+
+                'new-request' => [
+                    'delete-summary' => 'Zusammenfassung der Löschanforderung',
+                    'message'        => 'Message : ',
+                    'request-status' => 'Request Status : ',
+                    'request-type'   => 'Request Type : ',
+                    'update-summary' => 'Zusammenfassung der Aktualisierungsanforderung',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'Your GDPR Request Has Been Updated',
+                    'summary'        => 'Your GDPR Request Status has been Updated',
+                    'request-status' => 'Request Status:',
+                    'request-type'   => 'Request Type:',
+                    'message'        => 'Message:',
+                ],
+            ],
+
+            'reminder' => [
+                'already-paid'    => 'Si ja heu fet el pagament, si us plau, ignoreu aquest missatge.',
+                'invoice-overdue' => 'Aquest és un recordatori amable que la vostra factura està vençuda. Us demanem amablement que feu el pagament tan aviat com sigui possible.',
+                'subject'         => 'Recordatori de factura',
             ],
         ],
 

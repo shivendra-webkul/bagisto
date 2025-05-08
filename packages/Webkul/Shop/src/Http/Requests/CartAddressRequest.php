@@ -5,6 +5,7 @@ namespace Webkul\Shop\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Webkul\Core\Rules\PhoneNumber;
 use Webkul\Core\Rules\PostCode;
+use Webkul\Customer\Rules\VatIdRule;
 
 class CartAddressRequest extends FormRequest
 {
@@ -41,10 +42,8 @@ class CartAddressRequest extends FormRequest
 
     /**
      * Merge new address rules.
-     *
-     * @return void
      */
-    private function mergeAddressRules(string $addressType)
+    private function mergeAddressRules(string $addressType): void
     {
         $this->mergeWithRules([
             "{$addressType}.company_name" => ['nullable'],
@@ -58,6 +57,12 @@ class CartAddressRequest extends FormRequest
             "{$addressType}.postcode"     => core()->isPostCodeRequired() ? ['required', new PostCode] : [new PostCode],
             "{$addressType}.phone"        => ['required', new PhoneNumber],
         ]);
+
+        if ($addressType == 'billing') {
+            $this->mergeWithRules([
+                "{$addressType}.vat_id" => [(new VatIdRule)->setCountry($this->input('billing.country'))],
+            ]);
+        }
     }
 
     /**

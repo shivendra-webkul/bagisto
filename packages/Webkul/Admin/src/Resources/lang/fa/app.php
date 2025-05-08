@@ -581,15 +581,20 @@ return [
                 'title' => 'صورتحساب‌ها',
 
                 'datagrid' => [
-                    'action'       => 'عملیات',
-                    'grand-total'  => 'جمع کل',
-                    'id'           => 'شناسه',
-                    'invoice-date' => 'تاریخ صورتحساب',
-                    'order-id'     => 'شماره سفارش',
-                    'overdue'      => 'سررسید',
-                    'paid'         => 'پرداخت شده',
-                    'pending'      => 'در انتظار',
-                    'status'       => 'وضعیت',
+                    'action'              => 'عملیات',
+                    'days-left'           => ':count روز باقی مانده',
+                    'days-overdue'        => ':count روز تأخیر',
+                    'grand-total'         => 'جمع کل',
+                    'id'                  => 'شناسه',
+                    'invoice-date'        => 'تاریخ صورتحساب',
+                    'mass-update-success' => 'فاکتورهای انتخاب شده با موفقیت به‌روزرسانی شدند.',
+                    'order-id'            => 'شماره سفارش',
+                    'overdue'             => 'سررسید',
+                    'overdue-by'          => ':count روز تأخیر دارد',
+                    'paid'                => 'پرداخت شده',
+                    'pending'             => 'در انتظار',
+                    'status'              => 'وضعیت',
+                    'update-status'       => 'به‌روزرسانی وضعیت',
                 ],
             ],
 
@@ -732,6 +737,38 @@ return [
                     'transaction-id'   => 'شناسه تراکنش',
                 ],
             ],
+        ],
+
+        'booking' => [
+            'index' => [
+                'datagrid' => [
+                    'created-date' => 'تاریخ ایجاد',
+                    'from'         => 'از',
+                    'id'           => 'شناسه',
+                    'order-id'     => 'شناسه سفارش',
+                    'qty'          => 'تعداد',
+                    'to'           => 'تا',
+                    'view'         => 'مشاهده',
+                ],
+
+                'title'    => 'رزروها',
+            ],
+
+            'calendar' => [
+                'booking-date'     => 'تاریخ رزرو',
+                'booking-details'  => 'جزئیات رزرو',
+                'canceled'         => 'لغو شده',
+                'closed'           => 'بسته شده',
+                'done'             => 'انجام شده',
+                'order-id'         => 'شناسه سفارش',
+                'pending'          => 'در انتظار',
+                'price'            => 'قیمت',
+                'status'           => 'وضعیت',
+                'time-slot'        => 'بازه زمانی:',
+                'view-details'     => 'مشاهده جزئیات',
+            ],
+
+            'title' => 'محصولات رزرو',
         ],
     ],
 
@@ -1082,6 +1119,180 @@ return [
                                     'title' => 'انتخاب',
                                 ],
                             ],
+                        ],
+                    ],
+
+                    'booking' => [
+                        'available-from' => 'در دسترس از',
+                        'available-to'   => 'در دسترس تا',
+                        'location'       => 'موقعیت',
+                        'qty'            => 'تعداد',
+                        'title'          => 'نوع رزرو',
+
+                        'available-every-week' => [
+                            'no'    => 'خیر',
+                            'title' => 'در دسترس هر هفته',
+                            'yes'   => 'بله',
+                        ],
+
+                        'appointment' => [
+                            'break-duration' => 'مدت زمان استراحت بین اسلات‌ها (دقیقه)',
+                            'slot-duration'  => 'مدت زمان اسلات (دقیقه)',
+
+                            'same-slot-for-all-days' => [
+                                'no'    => 'خیر',
+                                'title' => 'همان اسلات برای همه روزها',
+                                'yes'   => 'بله',
+                            ],
+                        ],
+
+                        'default' => [
+                            'add'              => 'افزودن',
+                            'break-duration'   => 'مدت زمان استراحت بین اسلات‌ها (دقیقه)',
+                            'close'            => 'بستن',
+                            'description'      => 'اطلاعات رزرو',
+                            'description-info' => 'مدت زمان بر اساس اسلات‌ها ایجاد و نمایش داده خواهد شد. این مدت زمان در تمام اسلات‌ها منحصر به فرد خواهد بود و در فروشگاه قابل مشاهده خواهد بود.',
+                            'edit'             => 'ویرایش',
+                            'many'             => 'چندین رزرو برای یک روز',
+                            'one'              => 'یک رزرو برای چندین روز',
+                            'open'             => 'باز کردن',
+                            'slot-add'         => 'افزودن اسلات‌ها',
+                            'slot-duration'    => 'مدت زمان اسلات (دقیقه)',
+                            'slot-title'       => 'مدت زمان اسلات‌ها',
+                            'title'            => 'پیش‌فرض',
+                            'unavailable'      => 'غیر قابل دسترس',
+
+                            'modal' => [
+                                'slot' => [
+                                    'add-title'  => 'افزودن اسلات‌ها',
+                                    'close'      => 'بستن',
+                                    'day'        => 'روز',
+                                    'edit-title' => 'ویرایش اسلات‌ها',
+                                    'friday'     => 'جمعه',
+                                    'from'       => 'از',
+                                    'from-day'   => 'از روز',
+                                    'from-time'  => 'از زمان',
+                                    'monday'     => 'دوشنبه',
+                                    'open'       => 'باز کردن',
+                                    'saturday'   => 'شنبه',
+                                    'save'       => 'ذخیره',
+                                    'select'     => 'انتخاب',
+                                    'status'     => 'وضعیت',
+                                    'sunday'     => 'یکشنبه',
+                                    'thursday'   => 'پنجشنبه',
+                                    'to'         => 'تا',
+                                    'to-day'     => 'تا روز',
+                                    'to-time'    => 'تا زمان',
+                                    'tuesday'    => 'سه‌شنبه',
+                                    'wednesday'  => 'چهارشنبه',
+                                    'week'       => ':day',
+                                ],
+                            ],
+                        ],
+
+                        'event' => [
+                            'add'                => 'افزودن بلیط‌ها',
+                            'delete'             => 'حذف',
+                            'description'        => 'توضیحات',
+                            'description-info'   => 'بلیطی موجود نیست.',
+                            'edit'               => 'ویرایش',
+                            'name'               => 'نام',
+                            'price'              => 'قیمت',
+                            'qty'                => 'تعداد',
+                            'special-price'      => 'قیمت ویژه',
+                            'special-price-from' => 'قیمت ویژه از',
+                            'special-price-to'   => 'قیمت ویژه تا',
+                            'title'              => 'بلیط‌ها',
+                            'valid-from'         => 'معتبر از',
+                            'valid-until'        => 'معتبر تا',
+
+                            'modal'              => [
+                                'edit' => 'ویرایش بلیط‌ها',
+                                'save' => 'ذخیره',
+                            ],
+                        ],
+
+                        'empty-info' => [
+                            'tickets' => [
+                                'add' => 'افزودن بلیط‌ها',
+                            ],
+
+                            'slots'   => [
+                                'add'         => 'افزودن اسلات‌ها',
+                                'description' => 'اسلات‌های موجود با مدت زمان.',
+                            ],
+                        ],
+
+                        'rental' => [
+                            'daily'        => 'بر اساس روزانه',
+                            'daily-hourly' => 'هر دو (روزانه و ساعتی)',
+                            'daily-price'  => 'قیمت روزانه',
+                            'hourly'       => 'بر اساس ساعتی',
+                            'hourly-price' => 'قیمت ساعتی',
+                            'title'        => 'نوع اجاره',
+
+                            'same-slot-for-all-days' => [
+                                'no'    => 'خیر',
+                                'title' => 'همان اسلات برای همه روزها',
+                                'yes'   => 'بله',
+                            ],
+                        ],
+
+                        'slots' => [
+                            'add'              => 'افزودن اسلات‌ها',
+                            'description-info' => 'مدت زمان بر اساس اسلات‌ها ایجاد و نمایش داده خواهد شد. این مدت زمان در تمام اسلات‌ها منحصر به فرد خواهد بود و در فروشگاه قابل مشاهده خواهد بود.',
+                            'save'             => 'ذخیره',
+                            'title'            => 'مدت زمان اسلات‌ها',
+                            'unavailable'      => 'غیر قابل دسترس',
+
+                            'action'           => [
+                                'add' => 'افزودن',
+                            ],
+
+                            'modal'            => [
+                                'slot' => [
+                                    'friday'     => 'جمعه',
+                                    'from'       => 'از',
+                                    'monday'     => 'دوشنبه',
+                                    'saturday'   => 'شنبه',
+                                    'sunday'     => 'یکشنبه',
+                                    'thursday'   => 'پنجشنبه',
+                                    'to'         => 'تا',
+                                    'tuesday'    => 'سه‌شنبه',
+                                    'wednesday'  => 'چهارشنبه',
+                                ],
+                            ],
+                        ],
+
+                        'table' => [
+                            'break-duration'            => 'مدت زمان استراحت بین اسلات‌ها (دقیقه)',
+                            'guest-capacity'            => 'ظرفیت مهمان',
+                            'guest-limit'               => 'محدودیت مهمان در هر میز',
+                            'prevent-scheduling-before' => 'جلوگیری از برنامه‌ریزی قبل از',
+                            'slot-duration'             => 'مدت زمان اسلات (دقیقه)',
+
+                            'charged-per' => [
+                                'guest'  => 'مهمان',
+                                'table'  => 'میز',
+                                'title'  => 'شارژ بر اساس',
+                            ],
+
+                            'same-slot-for-all-days' => [
+                                'no'    => 'خیر',
+                                'title' => 'همان اسلات برای همه روزها',
+                                'yes'   => 'بله',
+                            ],
+                        ],
+
+                        'type' => [
+                            'appointment' => 'رزرو وقت ملاقات',
+                            'default'     => 'رزرو پیش‌فرض',
+                            'event'       => 'رزرو رویداد',
+                            'many'        => 'چندین',
+                            'one'         => 'یک',
+                            'rental'      => 'رزرو اجاره',
+                            'table'       => 'رزرو میز',
+                            'title'       => 'نوع',
                         ],
                     ],
 
@@ -1780,20 +1991,22 @@ return [
                     'message'       => 'پیام',
                     'pending'       => 'در انتظار',
                     'processing'    => 'در حال پردازش',
+                    'revoked'       => 'ابطال شده',
                     'status'        => 'وضعیت',
                     'type'          => 'نوع',
                 ],
 
                 'modal' => [
-                    'completed'  => 'تکمیل شده',
-                    'declined'   => 'رد شده',
-                    'pending'    => 'در انتظار',
-                    'processing' => 'در حال پردازش',
-                    'status'     => 'وضعیت',
-                    'title'      => 'ویرایش درخواست داده GDPR',
-                    'type'       => 'نوع',
-                    'message'    => 'پیام',
-                    'save-btn'   => 'ذخیره',
+                    'completed'     => 'تکمیل شده',
+                    'declined'      => 'رد شده',
+                    'message'       => 'پیام',
+                    'pending'       => 'در انتظار',
+                    'processing'    => 'در حال پردازش',
+                    'revoked'       => 'ابطال شده',
+                    'save-btn'      => 'ذخیره',
+                    'status'        => 'وضعیت',
+                    'title'         => 'ویرایش درخواست داده GDPR',
+                    'type'          => 'نوع',
                 ],
 
                 'update-success'              => 'درخواست داده با موفقیت به‌روزرسانی شد و ایمیل به مشتری ارسال شد.',
@@ -3294,6 +3507,7 @@ return [
                 'new'                           => 'جدید',
                 'no'                            => 'خیر',
                 'parent-id'                     => 'شناسه والد',
+                'parent-id-hint'                => 'شما می‌توانید چندین شناسه والد را به عنوان مقادیر جدا شده از کاما وارد کنید (مثل: 12,15,34)',
                 'category-id'                   => 'شناسه دسته‌بندی',
                 'preview'                       => 'پیش‌نمایش',
                 'product-carousel'              => 'کاروسل محصولات',
@@ -3455,6 +3669,7 @@ return [
 
         'view' => [
             'all-channels'  => 'همه کانال‌ها',
+            'back-btn'      => 'بازگشت',
             'day'           => 'روز',
             'end-date'      => 'تاریخ پایان',
             'export-csv'    => 'خروجی CSV',
@@ -3569,42 +3784,63 @@ return [
                     ],
 
                     'review-translation' => [
-                        'dolphin-phi'       => 'دلفین فای',
-                        'enabled'           => 'فعال شده',
-                        'gpt-3-5-turbo'     => 'OpenAI gpt-3.5-turbo',
-                        'llama2'            => 'لاما 2',
-                        'llama2-uncensored' => 'لاما 2 بدون سانسور',
-                        'llama2:13b'        => 'لاما 2 13B',
-                        'llama2:70b'        => 'لاما 2 70B',
-                        'llava'             => 'LLaVA',
-                        'mistral'           => 'میسترال',
-                        'model'             => 'مدل',
-                        'orca-mini'         => 'اورکا مینی',
-                        'phi'               => 'فای-2',
-                        'starling-lm'       => 'استارلینگ',
-                        'title'             => 'ترجمه نقد و بررسی',
-                        'title-info'        => 'گزینه‌ای برای مشتری یا بازدیدکننده فراهم کنید تا نقد و بررسی مشتری را به انگلیسی ترجمه کند. <br/> <br/> وقتی فعال شود، به بخش نقد و بررسی بروید و دکمه "ترجمه به انگلیسی" را پیدا خواهید کرد اگر نقد شما به غیر از انگلیسی باشد.',
-                        'vicuna'            => 'ویکونا',
+                        'deepseek-r1-8b'      => 'DeepSeek R1 (8b)',
+                        'enabled'             => 'فعال شده',
+                        'gemini-2-0-flash'    => 'Gemini 2.0 Flash',
+                        'gpt-4-turbo'         => 'OpenAI gpt-4 Turbo',
+                        'gpt-4o'              => 'OpenAI gpt-4o',
+                        'gpt-4o-mini'         => 'OpenAI gpt-4o mini',
+                        'llama-groq'          => 'Llama 3.3 (Groq)',
+                        'llama3-1-8b'         => 'Llama 3.1 (8B)',
+                        'llama3-2-1b'         => 'Llama 3.2 (1B)',
+                        'llama3-2-3b'         => 'Llama 3.2 (3B)',
+                        'llama3-8b'           => 'Llama 3 (8B)',
+                        'llava-7b'            => 'Llava (7b)',
+                        'mistral-7b'          => 'Mistral (7b)',
+                        'model'               => 'مدل',
+                        'orca-mini'           => 'Orca Mini',
+                        'phi3-5'              => 'Phi 3.5',
+                        'qwen2-5-0-5b'        => 'Qwen 2.5 (0.5b)',
+                        'qwen2-5-1-5b'        => 'Qwen 2.5 (1.5b)',
+                        'qwen2-5-14b'         => 'Qwen 2.5 (14b)',
+                        'qwen2-5-3b'          => 'Qwen 2.5 (3b)',
+                        'qwen2-5-7b'          => 'Qwen 2.5 (7b)',
+                        'starling-lm-7b'      => 'Starling-lm (7b)',
+                        'title'               => 'ترجمه بررسی',
+                        'title-info'          => 'به مشتری یا بازدیدکننده امکان ترجمه بررسی مشتری به انگلیسی را بدهید.<br/><br/>وقتی فعال شود، به بررسی بروید و دکمه "ترجمه به انگلیسی" را پیدا خواهید کرد اگر بررسی به غیر از انگلیسی باشد.',
+                        'vicuna-13b'          => 'Vicuna (13b)',
+                        'vicuna-7b'           => 'Vicuna (7b)',
                     ],
 
                     'checkout-message' => [
-                        'dolphin-phi'       => 'دلفین فای',
-                        'enabled'           => 'فعال شده',
-                        'gpt-3-5-turbo'     => 'OpenAI gpt-3.5-turbo',
-                        'llama2'            => 'لاما 2',
-                        'llama2-uncensored' => 'لاما 2 بدون سانسور',
-                        'llama2:13b'        => 'لاما 2 13B',
-                        'llama2:70b'        => 'لاما 2 70B',
-                        'llava'             => 'LLaVA',
-                        'mistral'           => 'میسترال',
-                        'model'             => 'مدل',
-                        'orca-mini'         => 'اورکا مینی',
-                        'phi'               => 'فای-2',
-                        'prompt'            => 'پیشنهاد',
-                        'starling-lm'       => 'استارلینگ',
-                        'title'             => 'پیام سفارشی تسویه حساب',
-                        'title-info'        => 'یک پیام سفارشی تسویه حساب برای مشتریان در صفحه تشکر ایجاد کنید و محتوا را بر اساس ترجیحات فردی بهینه کنید و تجربه کلی پس از خرید را بهبود بخشید.',
-                        'vicuna'            => 'ویکونا',
+                        'deepseek-r1-8b'      => 'DeepSeek R1 (8b)',
+                        'enabled'             => 'فعال شده',
+                        'gemini-2-0-flash'    => 'Gemini 2.0 Flash',
+                        'gpt-4-turbo'         => 'OpenAI gpt 4 Turbo',
+                        'gpt-4o'              => 'OpenAI gpt-4o',
+                        'gpt-4o-mini'         => 'OpenAI gpt-4o mini',
+                        'llama-groq'          => 'Llama 3.3 (Groq)',
+                        'llama3-1-8b'         => 'Llama 3.1 (8B)',
+                        'llama3-2-1b'         => 'Llama 3.2 (1B)',
+                        'llama3-2-3b'         => 'Llama 3.2 (3B)',
+                        'llama3-8b'           => 'Llama 3 (8B)',
+                        'llava-7b'            => 'Llava (7b)',
+                        'mistral-7b'          => 'Mistral (7b)',
+                        'model'               => 'مدل',
+                        'orca-mini'           => 'Orca Mini',
+                        'phi3-5'              => 'Phi 3.5',
+                        'prompt'              => 'پیشنهاد',
+                        'qwen2-5-0-5b'        => 'Qwen 2.5 (0.5b)',
+                        'qwen2-5-1-5b'        => 'Qwen 2.5 (1.5b)',
+                        'qwen2-5-14b'         => 'Qwen 2.5 (14b)',
+                        'qwen2-5-3b'          => 'Qwen 2.5 (3b)',
+                        'qwen2-5-7b'          => 'Qwen 2.5 (7b)',
+                        'starling-lm-7b'      => 'Starling-lm (7b)',
+                        'title'               => 'پیام شخصی‌سازی شده تسویه حساب',
+                        'title-info'          => 'ایجاد یک پیام شخصی‌سازی شده برای مشتریان در صفحه تشکر، با محتوایی که با ترجیحات فردی هماهنگ است و تجربه پس از خرید را بهبود می‌بخشد.',
+                        'vicuna'              => 'Vicuna',
+                        'vicuna-13b'          => 'Vicuna (13b)',
+                        'vicuna-7b'           => 'Vicuna (7b)',
                     ],
                 ],
 
@@ -3624,129 +3860,48 @@ return [
                         'max-url-per-file' => 'حداکثر تعداد URL‌ها در هر فایل',
                         'title'            => 'محدودیت‌های فایل',
                     ],
-
-                    'store-url' => [
-                        'info'  => 'تنظیم گزینه فرکانس و اولویت برای URL فروشگاه.',
-
-                        'frequency' => [
-                            'title' => 'فرکانس',
-
-                            'options' => [
-                                'always'  => 'همیشه',
-                                'daily'   => 'روزانه',
-                                'hourly'  => 'ساعتی',
-                                'monthly' => 'ماهانه',
-                                'never'   => 'هرگز',
-                                'weekly'  => 'هفتگی',
-                                'yearly'  => 'سالانه',
-                            ],
-                        ],
-
-                        'title'    => 'URL فروشگاه',
-                        'priority' => 'اولویت',
-                    ],
-
-                    'categories' => [
-                        'info'  => 'تنظیم گزینه فرکانس و اولویت برای دسته‌بندی‌ها.',
-
-                        'frequency' => [
-                            'title' => 'فرکانس',
-
-                            'options' => [
-                                'always'  => 'همیشه',
-                                'daily'   => 'روزانه',
-                                'hourly'  => 'ساعتی',
-                                'monthly' => 'ماهانه',
-                                'never'   => 'هرگز',
-                                'weekly'  => 'هفتگی',
-                                'yearly'  => 'سالانه',
-                            ],
-                        ],
-
-                        'title'    => 'دسته‌بندی‌ها',
-                        'priority' => 'اولویت',
-                    ],
-
-                    'products' => [
-                        'info'  => 'تنظیم گزینه فرکانس و اولویت برای محصولات.',
-
-                        'frequency' => [
-                            'title' => 'فرکانس',
-
-                            'options' => [
-                                'always'  => 'همیشه',
-                                'daily'   => 'روزانه',
-                                'hourly'  => 'ساعتی',
-                                'monthly' => 'ماهانه',
-                                'never'   => 'هرگز',
-                                'weekly'  => 'هفتگی',
-                                'yearly'  => 'سالانه',
-                            ],
-                        ],
-
-                        'title'    => 'محصولات',
-                        'priority' => 'اولویت',
-                    ],
-
-                    'cms' => [
-                        'info'  => 'تنظیم گزینه فرکانس و اولویت برای صفحات CMS.',
-
-                        'frequency' => [
-                            'title' => 'فرکانس',
-
-                            'options' => [
-                                'always'  => 'همیشه',
-                                'daily'   => 'روزانه',
-                                'hourly'  => 'ساعتی',
-                                'monthly' => 'ماهانه',
-                                'never'   => 'هرگز',
-                                'weekly'  => 'هفتگی',
-                                'yearly'  => 'سالانه',
-                            ],
-                        ],
-
-                        'title'    => 'صفحات CMS',
-                        'priority' => 'اولویت',
-                    ],
                 ],
             ],
 
             'gdpr' => [
                 'title' => 'GDPR',
-                'info'  => 'GDPR',
+                'info'  => 'تنظیمات انطباق با GDPR',
 
                 'settings' => [
-                    'title'   => 'تنظیمات GDPR',
-                    'info'    => 'تنظیمات GDPR',
-                    'enabled' => 'فعال شده',
+                    'title'   => 'تنظیمات انطباق با GDPR',
+                    'info'    => 'مدیریت تنظیمات انطباق با GDPR، از جمله سیاست حفظ حریم خصوصی. فعال یا غیرفعال کردن ویژگی‌های GDPR بر اساس نیاز.',
+                    'enabled' => 'فعال کردن GDPR',
                 ],
 
                 'agreement' => [
-                    'title'          => 'توافق GDPR',
-                    'info'           => 'توافق GDPR',
-                    'enable'         => 'فعال کردن توافق مشتری',
-                    'checkbox-label' => 'برچسب چک‌باکس توافق',
-                    'content'        => 'محتوای توافق',
+                    'title'          => 'توافقنامه GDPR',
+                    'info'           => 'مدیریت رضایت مشتریان مطابق با مقررات GDPR. فعال کردن رضایت اجباری برای جمع‌آوری و پردازش داده‌ها.',
+                    'enable'         => 'فعال کردن رضایت مشتری',
+                    'checkbox-label' => 'برچسب چک‌باکس برای رضایت',
+                    'content'        => 'محتوای رضایت',
                 ],
 
                 'cookie' => [
-                    'title'        => 'تنظیمات پیام کوکی',
-                    'info'         => 'تنظیمات پیام کوکی',
-                    'enable'       => 'فعال کردن اعلان کوکی',
-                    'position'     => 'موقعیت نمایش بلوک کوکی',
                     'bottom-left'  => 'پایین چپ',
                     'bottom-right' => 'پایین راست',
-                    'identifier'   => 'شناسه بلوک استاتیک',
+                    'center'       => 'مرکز',
                     'description'  => 'توضیحات',
+                    'enable'       => 'فعال کردن اعلان کوکی‌ها',
+                    'identifier'   => 'شناسه بلوک استاتیک',
+                    'info'         => 'تنظیمات رضایت کوکی‌ها را برای اطلاع کاربران از جمع‌آوری داده‌ها و انطباق با سیاست‌های حفظ حریم خصوصی تنظیم کنید.',
+                    'position'     => 'موقعیت نمایش بلوک کوکی‌ها',
+                    'title'        => 'تنظیمات اعلان کوکی‌ها',
+                    'top-left'     => 'بالا چپ',
+                    'top-right'    => 'بالا راست',
                 ],
 
                 'cookie-consent' => [
-                    'title'                  => 'ترجیحات رضایت کوکی شما',
-                    'info'                   => 'ترجیحات رضایت کوکی شما',
+                    'title'                  => 'مدیریت تنظیمات کوکی‌های شما',
+                    'info'                   => 'کنترل کنید که چگونه داده‌های شما با انتخاب تنظیمات کوکی‌های مورد نظر استفاده می‌شود. مجوزها را برای انواع مختلف کوکی‌ها تنظیم کنید.',
                     'strictly-necessary'     => 'کاملاً ضروری',
-                    'basic-interaction'      => 'تعاملات و عملکردهای پایه',
+                    'basic-interaction'      => 'تعامل و عملکرد پایه',
                     'experience-enhancement' => 'بهبود تجربه',
-                    'measurement'            => 'اندازه‌گیری‌ها',
+                    'measurement'            => 'اندازه‌گیری',
                     'targeting-advertising'  => 'هدف‌گیری و تبلیغات',
                 ],
             ],
@@ -4013,13 +4168,103 @@ return [
                     ],
 
                     'social-login' => [
-                        'enable-facebook'   => 'فعال‌سازی فیس‌بوک',
-                        'enable-github'     => 'فعال‌سازی گیت‌هاب',
-                        'enable-google'     => 'فعال‌سازی گوگل',
-                        'enable-linkedin'   => 'فعال‌سازی لینکدین',
-                        'enable-twitter'    => 'فعال‌سازی توییتر',
-                        'social-login'      => 'ورود اجتماعی',
-                        'social-login-info' => '«ورود اجتماعی» به کاربران امکان می‌دهد با استفاده از حساب‌های رسانه‌های اجتماعی خود به وب سایت دسترسی پیدا کنند و فرآیندهای ثبت نام و ورود را برای راحتی ساده‌تر کنند.',
+                        'title' => 'ورود با شبکه‌های اجتماعی',
+                        'info'  => '"ورود با شبکه‌های اجتماعی" به کاربران اجازه می‌دهد با استفاده از حساب‌های شبکه‌های اجتماعی خود وارد وب‌سایت شوند و فرآیند ثبت‌نام و ورود را ساده‌تر می‌کند.',
+
+                        'google' => [
+                            'enable-google' => 'فعال‌سازی گوگل',
+
+                            'client-id' => [
+                                'title'      => 'شناسه کلاینت (Client ID)',
+                                'title-info' => 'شناسه منحصربه‌فردی که هنگام ایجاد برنامه OAuth توسط گوگل ارائه می‌شود.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'رمز کلاینت (Client Secret)',
+                                'title-info' => 'کلید محرمانه مرتبط با کلاینت OAuth گوگل شما. آن را محرمانه نگه دارید.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'آدرس بازگشت (Redirect)',
+                                'title-info' => 'آدرس URL که پس از احراز هویت کاربران با گوگل به آن هدایت می‌شوند. باید با آدرسی که در کنسول گوگل تنظیم کرده‌اید مطابقت داشته باشد.',
+                            ],
+                        ],
+
+                        'facebook' => [
+                            'enable-facebook' => 'فعال‌سازی فیسبوک',
+
+                            'client-id' => [
+                                'title'      => 'شناسه کلاینت (Client ID)',
+                                'title-info' => 'شناسه برنامه‌ای که هنگام ایجاد اپلیکیشن در کنسول توسعه‌دهندگان فیسبوک ارائه می‌شود.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'رمز کلاینت (Client Secret)',
+                                'title-info' => 'رمز برنامه مرتبط با اپلیکیشن فیسبوک شما. آن را ایمن و خصوصی نگه دارید.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'آدرس بازگشت (Redirect URL)',
+                                'title-info' => 'آدرس URL که کاربران پس از احراز هویت با فیسبوک به آن بازگردانده می‌شوند. باید با آدرس تنظیم‌شده در اپلیکیشن فیسبوک مطابقت داشته باشد.',
+                            ],
+                        ],
+
+                        'github' => [
+                            'enable-github' => 'فعال‌سازی گیت‌هاب',
+
+                            'client-id' => [
+                                'title'      => 'شناسه کلاینت (Client ID)',
+                                'title-info' => 'شناسه منحصربه‌فردی که هنگام ایجاد برنامه OAuth توسط گیت‌هاب ارائه می‌شود.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'رمز کلاینت (Client Secret)',
+                                'title-info' => 'کلید محرمانه مرتبط با کلاینت OAuth گیت‌هاب شما. آن را محرمانه نگه دارید.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'آدرس بازگشت (Redirect URL)',
+                                'title-info' => 'آدرس URL که کاربران پس از احراز هویت با گیت‌هاب به آن هدایت می‌شوند. باید با آدرس تنظیم‌شده در کنسول گیت‌هاب مطابقت داشته باشد.',
+                            ],
+                        ],
+
+                        'linkedin' => [
+                            'enable-linkedin' => 'فعال‌سازی لینکدین',
+
+                            'client-id' => [
+                                'title'      => 'شناسه کلاینت (Client ID)',
+                                'title-info' => 'شناسه منحصربه‌فردی که هنگام ایجاد برنامه OAuth توسط لینکدین ارائه می‌شود.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'رمز کلاینت (Client Secret)',
+                                'title-info' => 'کلید محرمانه مرتبط با کلاینت OAuth لینکدین شما. آن را محرمانه نگه دارید.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'آدرس بازگشت (Redirect URL)',
+                                'title-info' => 'آدرس URL که کاربران پس از احراز هویت با لینکدین به آن هدایت می‌شوند. باید با آدرس تنظیم‌شده در کنسول لینکدین مطابقت داشته باشد.',
+                            ],
+                        ],
+
+                        'twitter' => [
+                            'enable-twitter' => 'فعال‌سازی توییتر',
+
+                            'client-id' => [
+                                'title'      => 'شناسه کلاینت (Client ID)',
+                                'title-info' => 'شناسه منحصربه‌فردی که هنگام ایجاد برنامه OAuth توسط توییتر ارائه می‌شود.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'رمز کلاینت (Client Secret)',
+                                'title-info' => 'کلید محرمانه مرتبط با کلاینت OAuth توییتر شما. آن را محرمانه نگه دارید.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'آدرس بازگشت (Redirect URL)',
+                                'title-info' => 'آدرس URL که کاربران پس از احراز هویت با توییتر به آن هدایت می‌شوند. باید با آدرس تنظیم‌شده در کنسول توییتر مطابقت داشته باشد.',
+                            ],
+                        ],
                     ],
                 ],
             ],
@@ -4358,6 +4603,7 @@ return [
             'sidebar' => [
                 'attribute-families'       => 'خانواده‌های ویژگی',
                 'attributes'               => 'ویژگی‌ها',
+                'booking-product'          => 'رزروها',
                 'campaigns'                => 'کمپین‌ها',
                 'catalog'                  => 'کاتالوگ',
                 'categories'               => 'دسته‌بندی‌ها',
@@ -4374,6 +4620,7 @@ return [
                 'email-templates'          => 'قالب‌های ایمیل',
                 'events'                   => 'رویدادها',
                 'exchange-rates'           => 'نرخ‌های تبادل',
+                'gdpr-data-requests'       => 'درخواست‌های داده GDPR',
                 'groups'                   => 'گروه‌ها',
                 'imports'                  => 'واردات',
                 'inventory-sources'        => 'منابع موجودی',
@@ -4403,7 +4650,6 @@ return [
                 'transactions'             => 'تراکنش‌ها',
                 'url-rewrites'             => 'بازنویسی URL',
                 'users'                    => 'کاربران',
-                'gdpr-data-requests'       => 'درخواست‌های داده GDPR',
             ],
 
             'powered-by' => [
@@ -4566,26 +4812,37 @@ return [
             'ai-btn-tile' => 'هوش مصنوعی',
 
             'ai-generation' => [
-                'apply'                  => 'اعمال کردن',
-                'generate'               => 'تولید کردن',
-                'generated-content'      => 'محتوای تولیدشده',
-                'generated-content-info' => 'ممکن است محتوای هوش مصنوعی گمراه‌کننده باشد. لطفاً محتوای تولیدشده را قبل از اعمال آن بررسی کنید.',
-                'generating'             => 'در حال تولید...',
-                'prompt'                 => 'پرسش',
-                'title'                  => 'یاری از هوش مصنوعی',
-                'model'                  => 'مدل',
-                'gpt-3-5-turbo'          => 'OpenAI GPT-3.5 Turbo',
-                'llama2'                 => 'Llama 2',
-                'mistral'                => 'Mistral',
-                'dolphin-phi'            => 'Dolphin Phi',
-                'phi'                    => 'Phi-2',
-                'starling-lm'            => 'Starling',
-                'llama2-uncensored'      => 'Llama 2 بدون سانسور',
-                'llama2:13b'             => 'Llama 2 13B',
-                'llama2:70b'             => 'Llama 2 70B',
-                'orca-mini'              => 'اورکا مینی',
-                'vicuna'                 => 'ویکونا',
-                'llava'                  => 'LLaVA',
+                'apply'                    => 'اعمال',
+                'deepseek-r1-8b'           => 'DeepSeek R1 (8b)',
+                'enabled'                  => 'فعال شده',
+                'gemini-2-0-flash'         => 'Gemini 2.0 Flash',
+                'generate'                 => 'تولید',
+                'generated-content'        => 'محتوای تولید شده',
+                'generated-content-info'   => 'محتوای هوش مصنوعی ممکن است گمراه‌کننده باشد. لطفاً قبل از اعمال، محتوای تولید شده را بررسی کنید.',
+                'generating'               => 'در حال تولید...',
+                'gpt-4-turbo'              => 'OpenAI gpt-4 Turbo',
+                'gpt-4o'                   => 'OpenAI gpt-4o',
+                'gpt-4o-mini'              => 'OpenAI gpt-4o mini',
+                'llama-groq'               => 'Llama 3.3 (Groq)',
+                'llama3-1-8b'              => 'Llama 3.1 (8B)',
+                'llama3-2-1b'              => 'Llama 3.2 (1B)',
+                'llama3-2-3b'              => 'Llama 3.2 (3B)',
+                'llama3-8b'                => 'Llama 3 (8B)',
+                'llava-7b'                 => 'Llava (7b)',
+                'mistral-7b'               => 'Mistral (7b)',
+                'model'                    => 'مدل',
+                'orca-mini'                => 'Orca Mini',
+                'phi3-5'                   => 'Phi 3.5',
+                'prompt'                   => 'پیشنهاد',
+                'qwen2-5-0-5b'             => 'Qwen 2.5 (0.5b)',
+                'qwen2-5-1-5b'             => 'Qwen 2.5 (1.5b)',
+                'qwen2-5-14b'              => 'Qwen 2.5 (14b)',
+                'qwen2-5-3b'               => 'Qwen 2.5 (3b)',
+                'qwen2-5-7b'               => 'Qwen 2.5 (7b)',
+                'starling-lm-7b'           => 'Starling-lm (7b)',
+                'title'                    => 'کمک هوش مصنوعی',
+                'vicuna-13b'               => 'Vicuna (13b)',
+                'vicuna-7b'                => 'Vicuna (7b)',
             ],
         ],
     ],
@@ -4615,6 +4872,7 @@ return [
         'email-templates'          => 'قالب‌های ایمیل',
         'events'                   => 'رویدادها',
         'exchange-rates'           => 'نرخ‌های ارزی',
+        'gdpr'                     => 'GDPR',
         'groups'                   => 'گروه‌ها',
         'import'                   => 'وارد كردن',
         'imports'                  => 'واردات',
@@ -4717,10 +4975,28 @@ return [
                 'greeting'    => 'ما به مشتری جدید، :customer_name که به تازگی با ما ثبت نام کرده است، خوش آمد می گوییم!',
                 'subject'     => 'ثبت نام مشتری جدید',
             ],
-        ],
 
-        'gdpr' => [
-            'status' => 'وضعیت درخواست GDPR شما',
+            'gdpr' => [
+                'new-delete-request' => 'درخواست جدید برای حذف داده',
+                'new-update-request' => 'درخواست جدید برای به‌روزرسانی داده',
+
+                'new-request' => [
+                    'customer-name'  => 'نام مشتری : ',
+                    'delete-summary' => 'خلاصه درخواست حذف',
+                    'message'        => 'پیام : ',
+                    'request-status' => 'وضعیت درخواست : ',
+                    'request-type'   => 'نوع درخواست : ',
+                    'update-summary' => 'خلاصه درخواست به‌روزرسانی',
+                ],
+
+                'status-update' => [
+                    'subject'        => 'درخواست GDPR به‌روزرسانی شد',
+                    'summary'        => 'وضعیت درخواست GDPR به‌روزرسانی شد',
+                    'request-status' => 'وضعیت درخواست:',
+                    'request-type'   => 'نوع درخواست:',
+                    'message'        => 'پیام:',
+                ],
+            ],
         ],
 
         'orders' => [
