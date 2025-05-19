@@ -3734,6 +3734,25 @@ return [
                         'redirection-link'  => 'Lien de redirection',
                     ],
 
+                    'speculation-rules' => [
+                        'info'  => 'Configurez les paramètres pour activer ou désactiver la logique de spéculation automatique.',
+                        'title' => 'Règles de spéculation',
+
+                        'settings' => [
+                            'eagerness'              => 'Niveau d’empressement',
+                            'eager'                  => 'Elevé',
+                            'moderate'               => 'Modéré',
+                            'conservative'           => 'Conservateur',
+                            'eagerness-info'         => 'Contrôle l’intensité des règles de spéculation. Options : élevé (max), modéré (défaut), conservateur (faible).',
+                            'ignore-url-params'      => 'Ignorer les paramètres URL',
+                            'ignore-url-params-info' => 'Spécifiez les paramètres d’URL à ignorer. Utilisez le symbole | pour les séparer.',
+                            'ignore-urls'            => 'Ignorer les URLs',
+                            'ignore-urls-info'       => 'Entrez les URLs à exclure de la logique de spéculation. Séparez-les avec le symbole |.',
+                            'info'                   => 'Définir l’état des règles de spéculation.',
+                            'title'                  => 'Activer les règles de spéculation',
+                        ],
+                    ],
+
                     'custom-scripts' => [
                         'custom-css'        => 'CSS personnalisé',
                         'custom-javascript' => 'Javascript personnalisé',
@@ -3751,6 +3770,15 @@ return [
                         'logo-image' => 'Image du logo',
                         'title'      => 'Logo de l\'administrateur',
                         'title-info' => 'Configurez les images du logo et du favicon pour la partie frontale de votre site web afin d\'améliorer votre image de marque et votre reconnaissance.',
+                    ],
+
+                    'menu-category' => [
+                        'default'         => 'Menu par défaut',
+                        'info'            => 'Ce paramètre contrôle la visibilité des catégories dans le menu d’en-tête. Vous pouvez choisir d’afficher uniquement les catégories parentes ou toutes les catégories imbriquées.',
+                        'preview-default' => 'Aperçu du menu par défaut',
+                        'preview-sidebar' => 'Aperçu du menu latéral',
+                        'sidebar'         => 'Menu latéral',
+                        'title'           => 'Vue de la catégorie du menu',
                     ],
                 ],
 

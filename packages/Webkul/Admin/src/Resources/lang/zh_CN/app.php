@@ -3734,6 +3734,25 @@ return [
                         'redirection-link'  => '重定向链接',
                     ],
 
+                    'speculation-rules' => [
+                        'info'  => '配置启用或禁用自动推测逻辑的设置。',
+                        'title' => '推测规则',
+
+                        'settings' => [
+                            'eagerness'              => '渴望程度',
+                            'eager'                  => '渴望',
+                            'moderate'               => '适度',
+                            'conservative'           => '保守',
+                            'eagerness-info'         => '控制推测规则应用的激进程度。选项：eager（最大），moderate（默认），conservative（低）。',
+                            'ignore-url-params'      => '忽略URL参数',
+                            'ignore-url-params-info' => '指定在推测规则中忽略的URL参数。使用竖线（|）分隔多个参数。',
+                            'ignore-urls'            => '忽略URLs',
+                            'ignore-urls-info'       => '输入需要从推测逻辑中排除的URLs。使用竖线（|）分隔多个URLs。',
+                            'info'                   => '设置推测规则状态。',
+                            'title'                  => '启用推测规则',
+                        ],
+                    ],
+
                     'custom-scripts' => [
                         'custom-css'        => '自定义CSS',
                         'custom-javascript' => '自定义Javascript',
@@ -3751,6 +3770,15 @@ return [
                         'logo-image' => '标志图像',
                         'title'      => '管理标志',
                         'title-info' => '为您的网站前端配置标志和网站图标图像，以提升品牌形象和识别度。',
+                    ],
+
+                    'menu-category' => [
+                        'default'         => '默认菜单',
+                        'info'            => '此设置控制标题菜单中类别的可见性。您可以选择仅显示父类别或显示所有嵌套类别。',
+                        'preview-default' => '预览默认菜单',
+                        'preview-sidebar' => '预览侧边栏菜单',
+                        'sidebar'         => '侧边栏菜单',
+                        'title'           => '菜单类别视图',
                     ],
                 ],
 

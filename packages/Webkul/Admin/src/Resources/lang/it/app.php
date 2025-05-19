@@ -3734,6 +3734,25 @@ return [
                         'redirection-link'  => 'Link Reindirizzamento',
                     ],
 
+                    'speculation-rules' => [
+                        'info'  => 'Configura le impostazioni per abilitare o disabilitare la logica di speculazione automatica.',
+                        'title' => 'Regole di speculazione',
+
+                        'settings' => [
+                            'eagerness'              => 'Livello di entusiasmo',
+                            'eager'                  => 'Entusiasta',
+                            'moderate'               => 'Moderato',
+                            'conservative'           => 'Conservatore',
+                            'eagerness-info'         => 'Controlla quanto aggressivamente si applicano le regole di speculazione. Opzioni: entusiasta (max), moderato (default), conservatore (basso).',
+                            'ignore-url-params'      => 'Ignora parametri URL',
+                            'ignore-url-params-info' => 'Specifica i parametri URL da ignorare. Usa il simbolo | per separare.',
+                            'ignore-urls'            => 'Ignora URL',
+                            'ignore-urls-info'       => 'Inserisci gli URL da escludere dalla logica di speculazione. Separali con |.',
+                            'info'                   => 'Imposta lo stato delle regole di speculazione.',
+                            'title'                  => 'Abilita regole di speculazione',
+                        ],
+                    ],
+
                     'custom-scripts' => [
                         'custom-css'        => 'CSS Personalizzato',
                         'custom-javascript' => 'Javascript Personalizzato',
@@ -3751,6 +3770,15 @@ return [
                         'logo-image' => 'Immagine Logo',
                         'title'      => 'Logo Admin',
                         'title-info' => 'Configura le immagini del logo e del favicon per il front-end del tuo sito web per un miglior branding e riconoscimento.',
+                    ],
+
+                    'menu-category' => [
+                        'default'         => 'Menu predefinito',
+                        'info'            => 'Questa impostazione controlla la visibilità delle categorie nel menu intestazione. Puoi scegliere di mostrare solo le categorie principali o tutte le categorie annidate.',
+                        'preview-default' => 'Anteprima menu predefinito',
+                        'preview-sidebar' => 'Anteprima menu laterale',
+                        'sidebar'         => 'Menu laterale',
+                        'title'           => 'Vista categoria menu',
                     ],
                 ],
 

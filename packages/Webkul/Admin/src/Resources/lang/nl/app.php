@@ -1269,7 +1269,6 @@ return [
                             'guest-capacity'            => 'Gastcapaciteit',
                             'guest-limit'               => 'Gastlimiet Per Tafel',
                             'prevent-scheduling-before' => 'Voorkom Planning Voor',
-
                             'slot-duration'             => 'Tijdsduur (Minuten)',
 
                             'charged-per'               => [
@@ -3735,6 +3734,25 @@ return [
                         'redirection-link'  => 'Omleidingslink',
                     ],
 
+                    'speculation-rules' => [
+                        'info'  => 'Configureer instellingen voor het in- of uitschakelen van geautomatiseerde speculatie logica.',
+                        'title' => 'Speculatie Regels',
+
+                        'settings' => [
+                            'eagerness'              => 'Eagerness Niveau',
+                            'eager'                  => 'Eager',
+                            'moderate'               => 'Gemiddeld',
+                            'conservative'           => 'Conservatief',
+                            'eagerness-info'         => 'Bepaalt hoe agressief de speculatie regels worden toegepast. Opties: eager (max), moderate (standaard), conservative (laag).',
+                            'ignore-url-params'      => 'Negeer URL Parameters',
+                            'ignore-url-params-info' => 'Specificeer URL-parameters die genegeerd moeten worden in speculatie regels. Gebruik een pipe (|) om meerdere parameters te scheiden.',
+                            'ignore-urls'            => 'Negeer URLs',
+                            'ignore-urls-info'       => 'Voer URLs in die uitgesloten moeten worden van de speculatie logica. Scheid meerdere URLs met een pipe (|) symbool.',
+                            'info'                   => 'Stel status van speculatie regels in.',
+                            'title'                  => 'Speculatie Regels Inschakelen',
+                        ],
+                    ],
+
                     'custom-scripts' => [
                         'custom-css'        => 'Aangepaste CSS',
                         'custom-javascript' => 'Aangepast Javascript',
@@ -3752,6 +3770,15 @@ return [
                         'logo-image' => 'Logo-afbeelding',
                         'title'      => 'Admin-logo',
                         'title-info' => 'Configureer het logo en de favicon-afbeeldingen voor de voorkant van uw website voor een betere branding en herkenning.',
+                    ],
+
+                    'menu-category' => [
+                        'default'         => 'Standaardmenu',
+                        'info'            => 'Deze instelling bepaalt de zichtbaarheid van categorieën in het hoofdmenu. Je kunt ervoor kiezen om alleen hoofdcategorieën of alle geneste categorieën weer te geven.',
+                        'preview-default' => 'Voorbeeld standaardmenu',
+                        'preview-sidebar' => 'Voorbeeld zijbalkmenu',
+                        'sidebar'         => 'Zijbalkmenu',
+                        'title'           => 'Menucategorie weergave',
                     ],
                 ],
 

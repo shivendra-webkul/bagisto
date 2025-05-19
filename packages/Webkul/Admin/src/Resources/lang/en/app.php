@@ -3734,6 +3734,25 @@ return [
                         'redirection-link'  => 'Redirection Link',
                     ],
 
+                    'speculation-rules' => [
+                        'info'  => 'Configure settings for enabling or disabling automated speculation logic.',
+                        'title' => 'Speculation Rules',
+
+                        'settings' => [
+                            'eagerness'              => 'Eagerness Level',
+                            'eager'                  => 'Eager',
+                            'moderate'               => 'Moderate',
+                            'conservative'           => 'Conservative',
+                            'eagerness-info'         => 'Controls how aggressively speculation rules are applied. Options: eager (max), moderate (default), conservative (low).',
+                            'ignore-url-params'      => 'Ignore URL Parameters',
+                            'ignore-url-params-info' => 'Specify URL parameters to ignore in speculation rules. Use pipe (|) to separate multiple parameters.',
+                            'ignore-urls'            => 'Ignore URLs',
+                            'ignore-urls-info'       => 'Enter URLs to be excluded from speculation logic. Separate multiple URLs with a pipe (|) symbol.',
+                            'info'                   => 'Set speculation rules status.',
+                            'title'                  => 'Enable Speculation Rules',
+                        ],
+                    ],
+
                     'custom-scripts' => [
                         'custom-css'        => 'Custom CSS',
                         'custom-javascript' => 'Custom Javascript',
@@ -3751,6 +3770,15 @@ return [
                         'logo-image' => 'Logo Image',
                         'title'      => 'Admin Logo',
                         'title-info' => 'Configure logo and favicon images for your website\'s front end for better branding and recognition.',
+                    ],
+
+                    'menu-category' => [
+                        'default'         => 'Default Menu',
+                        'info'            => 'This setting controls the visibility of categories in the header menu. You can choose to display only parent categories or all nested categories.',
+                        'preview-default' => 'Preview Default Menu',
+                        'preview-sidebar' => 'Preview Sidebar Menu',
+                        'sidebar'         => 'Sidebar Menu',
+                        'title'           => 'Menu Category View',
                     ],
                 ],
 

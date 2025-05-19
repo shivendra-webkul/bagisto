@@ -3734,6 +3734,25 @@ return [
                         'redirection-link'  => 'Enlace de Redirección',
                     ],
 
+                    'speculation-rules' => [
+                        'info'  => 'Configura los ajustes para habilitar o deshabilitar la lógica de especulación automática.',
+                        'title' => 'Reglas de especulación',
+
+                        'settings' => [
+                            'eagerness'              => 'Nivel de entusiasmo',
+                            'eager'                  => 'Entusiasta',
+                            'moderate'               => 'Moderado',
+                            'conservative'           => 'Conservador',
+                            'eagerness-info'         => 'Controla cuán agresivamente se aplican las reglas de especulación. Opciones: entusiasta (máximo), moderado (por defecto), conservador (bajo).',
+                            'ignore-url-params'      => 'Ignorar parámetros de URL',
+                            'ignore-url-params-info' => 'Especifique los parámetros de URL que se deben ignorar. Use | para separar múltiples valores.',
+                            'ignore-urls'            => 'Ignorar URLs',
+                            'ignore-urls-info'       => 'Introduzca URLs que deben excluirse de la lógica de especulación. Sepárelos con |.',
+                            'info'                   => 'Establece el estado de las reglas de especulación.',
+                            'title'                  => 'Habilitar reglas de especulación',
+                        ],
+                    ],
+
                     'custom-scripts' => [
                         'custom-css'        => 'CSS Personalizado',
                         'custom-javascript' => 'Javascript Personalizado',
@@ -3751,6 +3770,15 @@ return [
                         'logo-image' => 'Imagen de Logotipo',
                         'title'      => 'Logotipo de Administrador',
                         'title-info' => 'Configure imágenes de logotipo y favicon para la interfaz de su sitio web para una mejor marca y reconocimiento.',
+                    ],
+
+                    'menu-category' => [
+                        'default'         => 'Menú predeterminado',
+                        'info'            => 'Esta configuración controla la visibilidad de las categorías en el menú de encabezado. Puedes elegir mostrar solo las categorías principales o todas las categorías anidadas.',
+                        'preview-default' => 'Vista previa del menú predeterminado',
+                        'preview-sidebar' => 'Vista previa del menú lateral',
+                        'sidebar'         => 'Menú lateral',
+                        'title'           => 'Vista de categoría del menú',
                     ],
                 ],
 

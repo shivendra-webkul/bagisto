@@ -3734,6 +3734,25 @@ return [
                         'redirection-link'  => 'Link przekierowania',
                     ],
 
+                    'speculation-rules' => [
+                        'info'  => 'Skonfiguruj ustawienia włączania lub wyłączania automatycznej logiki spekulacji.',
+                        'title' => 'Zasady Spekulacji',
+
+                        'settings' => [
+                            'eagerness'              => 'Poziom Eagerness',
+                            'eager'                  => 'Eager',
+                            'moderate'               => 'Umiarkowane',
+                            'conservative'           => 'Konserwatywne',
+                            'eagerness-info'         => 'Określa, jak agresywnie będą stosowane zasady spekulacji. Opcje: eager (maksymalny), moderate (domyślny), conservative (niski).',
+                            'ignore-url-params'      => 'Ignoruj Parametry URL',
+                            'ignore-url-params-info' => 'Określ parametry URL, które mają zostać zignorowane w zasadach spekulacji. Użyj pionowej kreski (|), aby oddzielić wiele parametrów.',
+                            'ignore-urls'            => 'Ignoruj URL',
+                            'ignore-urls-info'       => 'Wpisz URL, które mają zostać wyłączone z logiki spekulacji. Oddzielaj wiele URL-ów pionową kreską (|).',
+                            'info'                   => 'Ustaw status zasad spekulacji.',
+                            'title'                  => 'Włącz zasady spekulacji',
+                        ],
+                    ],
+
                     'custom-scripts' => [
                         'custom-css'        => 'Niestandardowy CSS',
                         'custom-javascript' => 'Niestandardowy JavaScript',
@@ -3751,6 +3770,15 @@ return [
                         'logo-image' => 'Obraz logo',
                         'title'      => 'Logo administratora',
                         'title-info' => 'Skonfiguruj obrazy logo i favicon dla front-endu Twojej witryny, aby poprawić rozpoznawalność i branding.',
+                    ],
+
+                    'menu-category' => [
+                        'default'         => 'Domyślne menu',
+                        'info'            => 'To ustawienie kontroluje widoczność kategorii w menu nagłówka. Możesz wybrać wyświetlanie tylko kategorii nadrzędnych lub wszystkich zagnieżdżonych kategorii.',
+                        'preview-default' => 'Podgląd domyślnego menu',
+                        'preview-sidebar' => 'Podgląd menu bocznego',
+                        'sidebar'         => 'Menu boczne',
+                        'title'           => 'Widok kategorii menu',
                     ],
                 ],
 

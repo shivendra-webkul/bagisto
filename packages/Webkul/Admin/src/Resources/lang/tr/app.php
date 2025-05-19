@@ -3734,6 +3734,25 @@ return [
                         'redirection-link'  => 'Yönlendirme Bağlantısı',
                     ],
 
+                    'speculation-rules' => [
+                        'info'  => 'Otomatik spekülasyon mantığını etkinleştirme veya devre dışı bırakma ayarlarını yapılandırın.',
+                        'title' => 'Spekülasyon Kuralları',
+
+                        'settings' => [
+                            'eagerness'              => 'Heves Düzeyi',
+                            'eager'                  => 'Hevesli',
+                            'moderate'               => 'Ilımlı',
+                            'conservative'           => 'Muhafazakar',
+                            'eagerness-info'         => 'Spekülasyon kurallarının ne kadar agresif uygulanacağını kontrol eder. Seçenekler: eager (maksimum), moderate (varsayılan), conservative (düşük).',
+                            'ignore-url-params'      => 'URL Parametrelerini Yoksay',
+                            'ignore-url-params-info' => 'Spekülasyon kurallarında göz ardı edilecek URL parametrelerini belirtin. Birden fazla parametreyi ayırmak için boru (|) kullanın.',
+                            'ignore-urls'            => 'URL\'leri Yoksay',
+                            'ignore-urls-info'       => 'Spekülasyon mantığından hariç tutmak için URL\'ler girin. Birden fazla URL\'yi ayırmak için boru (|) sembolü kullanın.',
+                            'info'                   => 'Spekülasyon kurallarının durumunu belirleyin.',
+                            'title'                  => 'Spekülasyon Kurallarını Etkinleştir',
+                        ],
+                    ],
+
                     'custom-scripts' => [
                         'custom-css'        => 'Özel CSS',
                         'custom-javascript' => 'Özel Javascript',
@@ -3751,6 +3770,15 @@ return [
                         'logo-image' => 'Logo Resmi',
                         'title'      => 'Yönetici Logosu',
                         'title-info' => 'Web sitenizin ön ucu için logo ve favicon görüntülerini daha iyi markalaşma ve tanınma için yapılandırın.',
+                    ],
+
+                    'menu-category' => [
+                        'default'         => 'Varsayılan Menü',
+                        'info'            => 'Bu ayar, başlık menüsündeki kategorilerin görünürlüğünü kontrol eder. Yalnızca ana kategorileri veya tüm iç içe kategorileri gösterebilirsiniz.',
+                        'preview-default' => 'Varsayılan Menüyü Önizle',
+                        'preview-sidebar' => 'Kenar Çubuğu Menüsünü Önizle',
+                        'sidebar'         => 'Kenar Çubuğu Menüsü',
+                        'title'           => 'Menü Kategori Görünümü',
                     ],
                 ],
 

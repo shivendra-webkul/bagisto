@@ -84,6 +84,50 @@ return [
             ],
         ],
     ], [
+        'key'    => 'general.content.speculation_rules',
+        'name'   => 'admin::app.configuration.index.general.content.speculation-rules.title',
+        'info'   => 'admin::app.configuration.index.general.content.speculation-rules.info',
+        'sort'   => 1,
+        'fields' => [
+            [
+                'name'    => 'enabled',
+                'title'   => 'admin::app.configuration.index.general.content.speculation-rules.settings.title',
+                'type'    => 'boolean',
+                'default' => true,
+            ], [
+                'name'    => 'ignore_urls',
+                'title'   => 'admin::app.configuration.index.general.content.speculation-rules.settings.ignore-urls',
+                'info'    => 'admin::app.configuration.index.general.content.speculation-rules.settings.ignore-urls-info',
+                'type'    => 'textarea',
+                'default' => 'account|checkout|onepage|cart',
+            ], [
+                'name'    => 'ignore_url_params',
+                'title'   => 'admin::app.configuration.index.general.content.speculation-rules.settings.ignore-url-params',
+                'info'    => 'admin::app.configuration.index.general.content.speculation-rules.settings.ignore-url-params-info',
+                'type'    => 'textarea',
+            ], [
+                'name'    => 'eagerness',
+                'title'   => 'admin::app.configuration.index.general.content.speculation-rules.settings.eagerness',
+                'type'    => 'select',
+                'info'    => 'admin::app.configuration.index.general.content.speculation-rules.settings.eagerness-info',
+                'default' => 'moderate',
+                'options' => [
+                    [
+                        'title' => 'admin::app.configuration.index.general.content.speculation-rules.settings.eager',
+                        'value' => 'eager',
+                    ],
+                    [
+                        'title' => 'admin::app.configuration.index.general.content.speculation-rules.settings.moderate',
+                        'value' => 'moderate',
+                    ],
+                    [
+                        'title' => 'admin::app.configuration.index.general.content.speculation-rules.settings.conservative',
+                        'value' => 'conservative',
+                    ],
+                ],
+            ],
+        ],
+    ], [
         'key'    => 'general.content.custom_scripts',
         'name'   => 'admin::app.configuration.index.general.content.custom-scripts.title',
         'info'   => 'admin::app.configuration.index.general.content.custom-scripts.title-info',
@@ -127,6 +171,33 @@ return [
                 'type'          => 'image',
                 'channel_based' => false,
                 'validation'    => 'mimes:bmp,jpeg,jpg,png,webp,svg,ico',
+            ],
+        ],
+    ], [
+        'key'    => 'general.design.categories',
+        'name'   => 'admin::app.configuration.index.general.design.menu-category.title',
+        'info'   => 'admin::app.configuration.index.general.design.menu-category.info',
+        'sort'   => 2,
+        'fields' => [
+            [
+                'name'    => 'category_view',
+                'title'   => 'admin::app.configuration.index.general.design.menu-category.title',
+                'type'    => 'select',
+                'default' => 'default',
+                'options' => [
+                    [
+                        'title' => 'admin::app.configuration.index.general.design.menu-category.default',
+                        'value' => 'default',
+                    ], [
+                        'title' => 'admin::app.configuration.index.general.design.menu-category.sidebar',
+                        'value' => 'sidebar',
+                    ],
+                ],
+            ], [
+                'name'          => 'agreement_label',
+                'title'         => 'admin::app.configuration.index.general.gdpr.agreement.checkbox-label',
+                'type'          => 'blade',
+                'path'          => 'admin::configuration.custom-views.category-menu',
             ],
         ],
     ], [

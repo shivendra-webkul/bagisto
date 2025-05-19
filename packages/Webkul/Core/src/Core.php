@@ -24,7 +24,7 @@ class Core
      *
      * @var string
      */
-    const BAGISTO_VERSION = '2.3.x-dev';
+    const BAGISTO_VERSION = '2.3.1';
 
     /**
      * Current Channel.
@@ -933,5 +933,53 @@ class Core
     public function getMaxUploadSize()
     {
         return ini_get('upload_max_filesize');
+    }
+
+    /**
+     * Get Speculation Rules.
+     *
+     * @return array
+     */
+    public function getSpeculationRules()
+    {
+        $configPath = 'general.content.speculation_rules.';
+
+        $eagerness = $this->getConfigData($configPath.'eagerness') ?? 'moderate';
+
+        $ignoreUrls = array_filter(
+            explode('|', $this->getConfigData($configPath.'ignore_urls')),
+            fn ($url) => trim($url) !== ''
+        );
+
+        $ignoreUrlParams = array_filter(
+            explode('|', $this->getConfigData($configPath.'ignore_url_params')),
+            fn ($param) => trim($param) !== ''
+        );
+
+        $conditions = [['href_matches' => '/*']];
+
+        foreach ($ignoreUrls as $url) {
+            $conditions[] = ['not' => ['href_matches' => trim($url)]];
+        }
+
+        foreach ($ignoreUrlParams as $param) {
+            $param = trim($param);
+            $conditions[] = ['not' => ['selector_matches' => "[href*='?{$param}=']"]];
+        }
+
+        return [
+            'prerender' => [[
+                'source'    => 'document',
+                'where'     => ['and' => $conditions],
+                'eagerness' => $eagerness,
+            ]],
+            'prefetch' => [[
+                'source'          => 'document',
+                'where'           => ['and' => $conditions],
+                'requires'        => ['anonymous-client-ip-when-cross-origin'],
+                'referrer_policy' => 'no-referrer',
+                'eagerness'       => $eagerness,
+            ]],
+        ];
     }
 }
