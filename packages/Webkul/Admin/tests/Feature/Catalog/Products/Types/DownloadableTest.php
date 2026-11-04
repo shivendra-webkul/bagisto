@@ -143,6 +143,48 @@ it('should upload a downloadable sample file', function () {
     }
 });
 
+it('should refuse a downloadable link file larger than the file media setting allows', function (string $field) {
+    $this->setConfig('file_management.media.files.max_size', 100);
+
+    $product = $this->storeAndUpdateDownloadableProduct();
+
+    postJson(route('admin.catalog.products.upload_link', $product->id), [
+        $field => UploadedFile::fake()->create('document.pdf', 101),
+    ])->assertJsonValidationErrorFor($field);
+})->with(['file', 'sample_file']);
+
+it('should refuse a downloadable sample file larger than the file media setting allows', function () {
+    $this->setConfig('file_management.media.files.max_size', 100);
+
+    $product = $this->storeAndUpdateDownloadableProduct();
+
+    postJson(route('admin.catalog.products.upload_sample', $product->id), [
+        'file' => UploadedFile::fake()->create('sample.pdf', 101),
+    ])->assertJsonValidationErrorFor('file');
+});
+
+it('should store only the link file and its sample file, whatever other files the request carries', function () {
+    Storage::fake('private');
+
+    $product = $this->storeAndUpdateDownloadableProduct();
+
+    postJson(route('admin.catalog.products.upload_link', $product->id), [
+        'payload' => UploadedFile::fake()->create('payload.pdf', 10),
+    ])
+        ->assertOk()
+        ->assertExactJson([]);
+
+    expect(Storage::disk('private')->allFiles())->toBeEmpty();
+});
+
+it('should refuse a downloadable upload for a product that does not exist', function (string $route) {
+    $this->loginAsAdmin();
+
+    postJson(route($route, PHP_INT_MAX), [
+        'file' => UploadedFile::fake()->create('document.pdf', 10),
+    ])->assertNotFound();
+})->with(['admin.catalog.products.upload_link', 'admin.catalog.products.upload_sample']);
+
 // ============================================================================
 // Update Validation
 // ============================================================================

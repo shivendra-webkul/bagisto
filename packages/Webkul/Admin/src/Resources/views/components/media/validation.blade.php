@@ -51,14 +51,18 @@
 
             /**
              * Return why a file cannot be uploaded, or null when its extension, type and size are allowed.
+             * A file of any extension passes when no extensions are given.
              */
-            validate(file, { extensions, maxSize, mimePrefix }) {
+            validate(file, { extensions = [], maxSize, mimePrefix }) {
                 const extension = file.name.includes('.')
                     ? file.name.split('.').pop().toLowerCase()
                     : '';
 
                 if (
-                    ! extensions.includes(extension)
+                    (
+                        extensions.length
+                        && ! extensions.includes(extension)
+                    )
                     || (
                         mimePrefix
                         && file.type

@@ -12,6 +12,7 @@ use Webkul\Attribute\Contracts\Group;
 use Webkul\Attribute\Repositories\AttributeRepository;
 use Webkul\Checkout\Facades\Cart;
 use Webkul\Checkout\Models\CartItem;
+use Webkul\Core\Helpers\MediaUpload;
 use Webkul\Customer\Contracts\Wishlist;
 use Webkul\Customer\Repositories\CustomerRepository;
 use Webkul\Product\Contracts\ProductInventoryIndex;
@@ -33,11 +34,6 @@ use Webkul\Tax\Models\TaxCategory;
 
 abstract class AbstractType
 {
-    /**
-     * The largest upload a customer may attach to a file option, in bytes.
-     */
-    public const MAX_CUSTOMIZABLE_FILE_SIZE = 10485760;
-
     /**
      * Extensions a customer's upload is never stored under, since a web server would run or render them as a page.
      */
@@ -1158,7 +1154,7 @@ abstract class AbstractType
             ! preg_match('/^[a-z0-9]{1,10}$/', $extension)
             || in_array($extension, self::BLOCKED_UPLOAD_EXTENSIONS)
             || in_array(strtolower((string) $file->getMimeType()), self::BLOCKED_UPLOAD_MIME_TYPES)
-            || $file->getSize() > self::MAX_CUSTOMIZABLE_FILE_SIZE
+            || $file->getSize() > app(MediaUpload::class)->maxSize(MediaUpload::FILE) * 1024
         ) {
             return false;
         }

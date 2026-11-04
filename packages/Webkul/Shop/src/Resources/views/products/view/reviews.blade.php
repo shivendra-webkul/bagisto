@@ -1,3 +1,15 @@
+@php
+    use Webkul\Core\Helpers\MediaUpload;
+
+    $mediaUpload = app(MediaUpload::class);
+
+    $reviewAttachmentTypes = collect([
+        ...$mediaUpload->extensions(MediaUpload::IMAGE),
+        'svg',
+        ...$mediaUpload->extensions(MediaUpload::VIDEO),
+    ])->map(fn ($extension) => '.'.$extension)->implode(',');
+@endphp
+
 {!! view_render_event('bagisto.shop.products.view.reviews.after', ['product' => $product]) !!}
 
 <v-product-reviews>
@@ -38,6 +50,7 @@
                                     name="attachments"
                                     :label="trans('shop::app.products.view.reviews.attachments')"
                                     :is-multiple="true"
+                                    accepted-types="{{ $reviewAttachmentTypes }}"
                                     ref="reviewImages"
                                 />
 

@@ -9,6 +9,8 @@ use Webkul\Product\Models\ProductReviewAttachment;
 use Webkul\Product\Repositories\ProductReviewAttachmentRepository;
 use Webkul\Product\Repositories\ProductReviewRepository;
 
+use function Pest\Laravel\postJson;
+
 /**
  * A review for attachments to belong to.
  */
@@ -89,3 +91,47 @@ it('should leave no review behind when an attachment cannot be sanitized', funct
     expect($create)->toThrow(ValidationException::class)
         ->and(ProductReview::where('product_id', $product->id)->count())->toBe(0);
 });
+
+// ============================================================================
+// Validating Attachments
+// ============================================================================
+
+it('should take a review attachment the media upload settings allow', function (UploadedFile $attachment) {
+    $product = $this->createSimpleProduct();
+
+    $this->setConfig(['catalog.products.review.guest_review' => 1]);
+
+    postJson(route('shop.api.products.reviews.store', $product->id), [
+        'title' => 'Nice',
+        'name' => 'Guest',
+        'comment' => 'Arrived quickly.',
+        'rating' => 5,
+        'attachments' => [$attachment],
+    ])->assertOk();
+})->with([
+    'an image' => fn () => UploadedFile::fake()->image('photo.png'),
+    'a video' => fn () => UploadedFile::fake()->create('clip.mp4', 8, 'video/mp4'),
+    'an svg' => fn () => svgAttachment('drawing.svg', '<svg><rect/></svg>'),
+]);
+
+it('should refuse a review attachment the media upload settings do not allow', function (UploadedFile $attachment) {
+    $product = $this->createSimpleProduct();
+
+    $this->setConfig([
+        'catalog.products.review.guest_review' => 1,
+        'file_management.media.images.max_size' => 100,
+    ]);
+
+    postJson(route('shop.api.products.reviews.store', $product->id), [
+        'title' => 'Nice',
+        'name' => 'Guest',
+        'comment' => 'Arrived quickly.',
+        'rating' => 5,
+        'attachments' => [$attachment],
+    ])->assertJsonValidationErrorFor('attachments.0');
+})->with([
+    'a type that is not allowed' => fn () => UploadedFile::fake()->image('photo.gif'),
+    'an image that is too large' => fn () => UploadedFile::fake()->image('photo.png')->size(101),
+    'a video type that is not allowed' => fn () => UploadedFile::fake()->create('clip.mkv', 8, 'video/x-matroska'),
+    'a script' => fn () => UploadedFile::fake()->create('payload.php', 8, 'text/x-php'),
+]);

@@ -1,3 +1,9 @@
+@php
+    use Webkul\Core\Helpers\MediaUpload;
+
+    $fileMaxSize = app(MediaUpload::class)->maxSize(MediaUpload::FILE);
+@endphp
+
 {!! view_render_event('bagisto.admin.catalog.product.edit.form.types.downloadable.before', ['product' => $product]) !!}
 
 <v-downloadable-links :errors="errors"></v-downloadable-links>
@@ -5,6 +11,8 @@
 <v-downloadable-samples :errors="errors"></v-downloadable-samples>
 
 {!! view_render_event('bagisto.admin.catalog.product.edit.form.types.downloadable.after', ['product' => $product]) !!}
+
+@include('admin::components.media.validation')
 
 @pushOnce('scripts')
     <script
@@ -967,22 +975,38 @@
                     }
                 },
 
+                /**
+                 * Upload the picked file once it is within the size allowed, reporting why it was refused otherwise.
+                 */
                 uploadFile(type) {
-                    let self = this;
+                    const [file] = this.$mediaUpload.takeFiles(this.$refs[type]);
 
-                    let formData = new FormData();
+                    if (! file) {
+                        return;
+                    }
 
-                    formData.append(type, this.$refs[type].files[0]);
+                    const error = this.$mediaUpload.validate(file, { maxSize: {{ $fileMaxSize }} });
+
+                    if (error) {
+                        this.$emitter.emit('add-flash', { type: 'warning', message: error });
+
+                        return;
+                    }
+
+                    const formData = new FormData();
+
+                    formData.append(type, file);
 
                     this.$axios.post("{{ route('admin.catalog.products.upload_link', $product->id) }}", formData, {
                             headers: {
                                 'Content-Type': 'multipart/form-data'
                             }
                         })
-                        .then(function(response) {
-                            Object.assign(self.selectedLink, response.data);
-                        })
-                        .catch(function() {});
+                        .then(response => Object.assign(this.selectedLink, response.data))
+                        .catch(error => this.$emitter.emit('add-flash', {
+                            type: 'error',
+                            message: error.response?.data?.message ?? error.message,
+                        }));
                 },
 
                 remove(link) {
@@ -1055,22 +1079,38 @@
                     }
                 },
 
+                /**
+                 * Upload the picked file once it is within the size allowed, reporting why it was refused otherwise.
+                 */
                 uploadFile(type) {
-                    let self = this;
+                    const [file] = this.$mediaUpload.takeFiles(this.$refs[type]);
 
-                    let formData = new FormData();
+                    if (! file) {
+                        return;
+                    }
 
-                    formData.append(type, this.$refs[type].files[0]);
+                    const error = this.$mediaUpload.validate(file, { maxSize: {{ $fileMaxSize }} });
+
+                    if (error) {
+                        this.$emitter.emit('add-flash', { type: 'warning', message: error });
+
+                        return;
+                    }
+
+                    const formData = new FormData();
+
+                    formData.append(type, file);
 
                     this.$axios.post("{{ route('admin.catalog.products.upload_sample', $product->id) }}", formData, {
                             headers: {
                                 'Content-Type': 'multipart/form-data'
                             }
                         })
-                        .then(function(response) {
-                            Object.assign(self.selectedSample, response.data);
-                        })
-                        .catch(function() {});
+                        .then(response => Object.assign(this.selectedSample, response.data))
+                        .catch(error => this.$emitter.emit('add-flash', {
+                            type: 'error',
+                            message: error.response?.data?.message ?? error.message,
+                        }));
                 },
 
                 remove(sample) {

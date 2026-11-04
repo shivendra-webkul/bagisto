@@ -4,7 +4,11 @@ namespace Webkul\Shop\Http\Controllers\API;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Validation\NestedRules;
+use Illuminate\Validation\Rule;
+use Webkul\Core\Helpers\MediaUpload;
 use Webkul\MagicAI\Facades\MagicAI;
 use Webkul\Product\Repositories\ProductRepository;
 use Webkul\Product\Repositories\ProductReviewRepository;
@@ -74,7 +78,7 @@ class ReviewController extends APIController
             'name' => [auth()->guard('customer')->check() ? 'nullable' : 'required', 'string', 'max:255'],
             'rating' => 'required|numeric|min:1|max:5',
             'attachments' => 'array|max:5',
-            'attachments.*' => 'file|mimetypes:image/*,video/*|max:10240',
+            'attachments.*' => $this->attachmentRules(),
         ]);
 
         $data = array_merge(request()->only([
@@ -132,6 +136,21 @@ class ReviewController extends APIController
                 'message' => trans('shop::app.errors.500.title'),
             ], 500);
         }
+    }
+
+    /**
+     * Get the rules of a review attachment, an image or a video as the media upload settings allow. An SVG
+     * is accepted too, since the attachment repository sanitizes it before storing.
+     */
+    protected function attachmentRules(): NestedRules
+    {
+        $mediaUpload = app(MediaUpload::class);
+
+        return Rule::forEach(fn ($value) => $value instanceof UploadedFile
+            && str_starts_with((string) $value->getMimeType(), 'video/')
+                ? $mediaUpload->videoRules()
+                : $mediaUpload->imageRules(['svg'])
+        );
     }
 
     /**

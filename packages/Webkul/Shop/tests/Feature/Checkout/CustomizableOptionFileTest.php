@@ -196,3 +196,17 @@ it('should store a customer upload in the cart it was added to, whatever cart id
     expect(Storage::allFiles('carts/elsewhere'))->toBeEmpty()
         ->and(Storage::allFiles('carts/'.$cartId))->toHaveCount(1);
 });
+
+it('should refuse a customer upload larger than the file media setting allows', function () {
+    Storage::fake();
+
+    $this->setConfig('file_management.media.files.max_size', 1);
+
+    [$product, $option] = productWithFileOption('txt');
+
+    addToCartWithUpload($product, $option, $this->uploadedFileWithContents('notes.txt', str_repeat('a', 2048)))
+        ->assertBadRequest()
+        ->assertJsonPath('message', trans('product::app.checkout.cart.invalid-file-extension'));
+
+    expect(Storage::allFiles('carts'))->toBeEmpty();
+});

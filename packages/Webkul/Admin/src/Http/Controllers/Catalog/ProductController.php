@@ -16,6 +16,7 @@ use Webkul\Admin\Http\Requests\ProductForm;
 use Webkul\Admin\Http\Resources\AttributeResource;
 use Webkul\Admin\Http\Resources\ProductResource;
 use Webkul\Attribute\Repositories\AttributeFamilyRepository;
+use Webkul\Core\Helpers\MediaUpload;
 use Webkul\Core\Rules\Slug;
 use Webkul\Customer\Repositories\CustomerRepository;
 use Webkul\Product\Enums\SearchContextEnum;
@@ -184,14 +185,19 @@ class ProductController extends Controller
     }
 
     /**
-     * Uploads downloadable file.
-     *
-     * @return Response
+     * Upload the file or the sample file of a downloadable link.
      */
-    public function uploadLink(int $id)
+    public function uploadLink(int $id, MediaUpload $mediaUpload): JsonResponse
     {
-        return response()->json(
-            $this->productDownloadableLinkRepository->upload(request()->all(), $id)
+        $this->productRepository->findOrFail($id);
+
+        $this->validate(request(), [
+            'file' => ['sometimes', ...$mediaUpload->fileRules()],
+            'sample_file' => ['sometimes', ...$mediaUpload->fileRules()],
+        ]);
+
+        return new JsonResponse(
+            $this->productDownloadableLinkRepository->upload(request()->only(['file', 'sample_file']), $id)
         );
     }
 
@@ -220,14 +226,18 @@ class ProductController extends Controller
     }
 
     /**
-     * Uploads downloadable sample file.
-     *
-     * @return Response
+     * Upload the file of a downloadable sample.
      */
-    public function uploadSample(int $id)
+    public function uploadSample(int $id, MediaUpload $mediaUpload): JsonResponse
     {
-        return response()->json(
-            $this->productDownloadableSampleRepository->upload(request()->all(), $id)
+        $this->productRepository->findOrFail($id);
+
+        $this->validate(request(), [
+            'file' => ['required', ...$mediaUpload->fileRules()],
+        ]);
+
+        return new JsonResponse(
+            $this->productDownloadableSampleRepository->upload(request()->only(['file']), $id)
         );
     }
 
